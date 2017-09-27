@@ -1,0 +1,38 @@
+---------------------------------------------------------------
+[ 2017-09-27T21:54:00+08:00 ] ::1 ::1 GET /OneShop/public/
+[ info ] localhost/OneShop/public/ [运行时间：0.037039s][吞吐率：27.00req/s] [内存消耗：2,673.23kb] [文件加载：48]
+[ info ] [ LANG ] /Users/tonytian/project/PHP/OneShop/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'CNZZDATA4535640=cnzz_eid%3D658421713-1506518560-%26ntime%3D1506518560; UM_distinctid=15ec39a61b0377-073b4db189ea6c8-1c401429-13c680-15ec39a61b17b0',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/603.3.8 (KHTML, like Gecko) Version/10.1.2 Safari/603.3.8',
+  'accept-language' => 'zh-cn',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] osc\index\controller\Index->index[ /Users/tonytian/project/PHP/OneShop/oscshop/index/controller/Index.php ]
+[ info ] [ VIEW ] ../oscshop/index/view/index/index.html [ array (
+  0 => 'top_nav',
+  1 => 'empty',
+  2 => 'list',
+  3 => 'SEO',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
