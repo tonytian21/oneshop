@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:38:"../oscshop/admin/view/goods/index.html";i:1506516777;s:38:"../oscshop/admin/view/public/base.html";i:1506516777;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:37:"./oscshop/admin/view/index/index.html";i:1506516777;s:37:"./oscshop/admin/view/public/base.html";i:1506516777;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -203,160 +203,167 @@
 			<div class="main-content">
 				<div class="main-content-inner">
 					<div class="page-content">
-							
-
-<div class="page-header">
-	<h1>	
-		<?php echo $breadcrumb1; ?>
-		<small>
-			<i class="ace-icon fa fa-angle-double-right"></i>
-			<?php echo $breadcrumb2; ?>
-		</small>
-	</h1>
-</div>
-
-<div class="page-header">	
-	<a href="<?php echo url('Goods/add'); ?>" class="btn btn-primary">新增</a>
-	<span href="<?php echo url('Goods/copy_goods'); ?>" class="btn btn-primary copy">复制</span>
-</div>	
-	
-<table class="table table-striped table-bordered table-hover search-form">
-	<thead>
-		<input name="type" type="hidden"  value="search" />
-		<th><input name="name" type="text" placeholder="输入商品名称" value="<?php echo input('name'); ?>" /></th>
-		<th>    				
-			<select name="category">
-				<option value="">全部分类</option>			
-				<?php $input_cid=input('category'); if(is_array($category) || $category instanceof \think\Collection || $category instanceof \think\Paginator): $i = 0; $__LIST__ = $category;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$cat): $mod = ($i % 2 );++$i;?>
-					<option <?php if($input_cid == $cat['id']): ?> selected="selected"<?php endif; ?> value="<?php echo $cat['id']; ?>"><?php echo $cat['title_show']; ?></option>
-				<?php endforeach; endif; else: echo "" ;endif; ?>
-				
-			</select>
-		</th>	
-		<th>    				
-			<select name="status">
-				<option value="">全部状态</option>							
-				<option <?php if(input('status') == 1): ?> selected="selected"<?php endif; ?>value="1">启用</option>
-				<option <?php if(input('status') == 2): ?> selected="selected"<?php endif; ?> value="2">停用</option>
-			</select>
-		</th>
-		<th>
-			<a class="btn btn-primary" href="javascript:;" id="search" url="<?php echo url('Goods/index'); ?>">查询</a>
-		</th>
-	</thead>
-</table>	
-	
-
-	
+						
+<link rel="stylesheet" href="__ADMIN__/css/index.css" />	
 <div class="row">
 	<div class="col-xs-12">	
-		<div>
-			<table id="table" class="table table-striped table-bordered table-hover">
-				<thead>
-					<tr>
-						<th class="center">
-							<label>
-								<input type="checkbox" class="ace check-all" />
-								<span class="lbl"></span>
-							</label>
-						</th>											
-						<th>ID</th> 
-						<th>图片</th> 
-						<th>商品名称</th> 			
-						<th>价格</th>
-						<th>数量</th>
-						<th>排序</th>
-						<th>状态</th>						
-						<th>操作</th>				
-					</tr>
-				</thead>
-				<tbody>
-						<?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "$empty" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?>
-						<tr>		
-							<td class="center">
-							<label>
-								<input class="ace ids" type="checkbox" name="id[]" value="<?php echo $v['goods_id']; ?>"/>
-								<span class="lbl"></span>
-							</label>
-							</td>				
-							<td><?php echo $v['goods_id']; ?></td>
-							<td>
-								<?php if($v['image']): ?>
-		                  			<img src="IMG_ROOT<?php echo resize($v['image'],50,50); ?>" />
-			                  	<?php else: ?>
-			                  		<img src="__PUBLIC__/image/no_image_50x50.jpg" />
-			                  	<?php endif; ?>
-							</td>
-							<td><?php echo $v['name']; if($v['shipping'] == 0): ?>
-								<span class="warning">免配送</span> 								
-								<?php endif; if($v['subtract'] == 0): ?>
-								<span class="warning">不减库存</span> 								
-								<?php endif; ?>
-							</td>
-							
-							<td>
-								<input name="price" type="text" size="2" class="price" goods_id='<?php echo $v['goods_id']; ?>' value="<?php echo $v['price']; ?>" />
-							</td>
-							<td>							
-								<input name="quantity" type="text" size="2" class="quantity" goods_id='<?php echo $v['goods_id']; ?>' value="<?php echo $v['quantity']; ?>" />
-							</td>
-							<td>
-								<input name="sort" type="text" size="1" class="sort" goods_id='<?php echo $v['goods_id']; ?>' value="<?php echo $v['sort_order']; ?>" />								
-							</td>
-							<td>
-								<?php switch($v['status']): case "1": ?><a href='<?php echo url("Goods/set_status",array("id"=>$v["goods_id"],"status"=>2)); ?>'><span class="btn btn-xs btn-info"><i class="fa fa-unlock bigger-120"></i></span></a><?php break; case "2": ?><a href='<?php echo url("Goods/set_status",array("id"=>$v["goods_id"],"status"=>1)); ?>'><span class="btn btn-xs btn-danger"><i class="fa fa-lock bigger-120"></i></span></a><?php break; endswitch; ?>
-							</td>
-							<td>
-								
-								
-								<div class="btn-group">
-									<button class="btn btn-xs btn-info">
-										<i class="fa fa-edit bigger-120"></i>
-									</button>
-									<button class="btn btn-info btn-xs dropdown-toggle no-radius" data-toggle="dropdown" aria-expanded="false">
-										<span class="bigger-110 ace-icon fa fa-caret-down icon-only"></span>
-									</button>
-									<ul class="dropdown-menu dropdown-info dropdown-menu-right">																
-										<li>
-											<a href='<?php echo url("Goods/edit_general",array("id"=>$v["goods_id"])); ?>'>基本信息</a>
-										</li>									
-																		
-										<li>
-											<a href='<?php echo url("Goods/edit_links",array("id"=>$v["goods_id"])); ?>'>关联</a>
-										</li>
-										<li>
-											<a href='<?php echo url("Goods/edit_option",array("id"=>$v["goods_id"])); ?>'>选项</a>
-										</li>
-										<li>
-											<a href='<?php echo url("Goods/edit_discount",array("id"=>$v["goods_id"])); ?>'>折扣</a>
-										</li>
-										<li>
-											<a href='<?php echo url("Goods/edit_image",array("id"=>$v["goods_id"])); ?>'>商品相册</a>
-										</li>
-										<li>
-											<a href='<?php echo url("Goods/edit_mobile",array("id"=>$v["goods_id"])); ?>'>手机端描述</a>
-										</li>									
-									</ul>
-								</div>
-								
-								<a class="delete btn btn-xs btn-danger" href='<?php echo url("Goods/del",array("id"=>$v["goods_id"])); ?>' >
-									<i class="fa fa-trash bigger-120"></i>
-								</a>
-								
-							</td>
-						</tr>
-						<?php endforeach; endif; else: echo "$empty" ;endif; ?>
+		    <div class="row">
+		      <div class="col-lg-3 col-md-3 col-sm-6">
+					<div class="tile">
+						<div class="tile-heading">
+							今日订单
+							<span class="pull-right"> 总<?php echo $total_order; ?>单</span>
+						</div>
+						<div class="tile-body">
+							<i class="fa fa-shopping-cart"></i>
+							<h2 class="pull-right"><?php echo $today_order; ?></h2>
+						</div>
+						<div class="tile-footer">
+							<a href="<?php echo url('member/OrderBackend/index'); ?>">显示详细...</a>
+						</div>
+					</div>
+			  </div>
+		      <div class="col-lg-3 col-md-3 col-sm-6">
+					<div class="tile">
+					<div class="tile-heading">
+					今日销售额 
+					<span class="pull-right"> 总<?php echo $total_money; ?> </span>
+					</div>
+					<div class="tile-body">
+					<i class="fa fa-credit-card"></i>
+					<h2 class="pull-right"><?php echo $today_money; ?></h2>
+					</div>
+					<div class="tile-footer">
+					<a href="<?php echo url('member/OrderBackend/index'); ?>">显示详细...</a>
+					</div>
+					</div> 	
+		      </div>
+		      <div class="col-lg-3 col-md-3 col-sm-6">
+					<div class="tile">
+					<div class="tile-heading">
+					新增客户 
+					<span class="pull-right"> 总<?php echo $member_count; ?>个</span>
+					</div>
+					<div class="tile-body">
+					<i class="fa fa-user"></i>
+					<h2 class="pull-right"><?php echo $today_member; ?></h2>
+					</div>
+					<div class="tile-footer">
+					<a href="<?php echo url('member/MemberBackend/index'); ?>">显示详细...</a>
+					</div>
+					</div>
+			  </div>
+		      <div class="col-lg-3 col-md-3 col-sm-6">
+					<div class="tile">
+					<div class="tile-heading">新增用户行为
+					<span class="pull-right"> 总<?php echo $user_action_total; ?>个</span>	
+					</div>
+					<div class="tile-body">
+					<i class="fa fa-eye"></i>
+					<h2 class="pull-right"><?php echo $today_user_action; ?>个</h2>
+					</div>
+					<div class="tile-footer">
+					<a href="<?php echo url('admin/UserAction/index'); ?>">显示详细...</a>
+					</div>
+					</div>	  
+			  </div>
+		    </div>
+		    <div class="row">
+		      <div class="col-lg-4 col-md-12 col-sm-12 col-sx-12">
+				  	<div class="panel panel-default">
+					<div class="panel-heading">
+					<h3 class="panel-title">
+					<i class="fa fa-calendar"></i>
+					用户行为
+					<a style="font-size: 14px" href="<?php echo url('UserAction/index'); ?>" class="pull-right">更多..</a>
+					</h3>
+					</div>
+					<ul class="list-group">
 						
-						<tr>
-							<td colspan="20" class="page"><?php echo $list->render(); ?></td>
-						</tr>
-						<tr>
-							<td colspan="20">总计 <?php echo ($list->total() ?: "0"); ?> 个商品</td>
-						</tr>
-				</tbody>
-				
-			</table>
-		</div>
+						<?php if(is_array($user_action) || $user_action instanceof \think\Collection || $user_action instanceof \think\Paginator): $i = 0; $__LIST__ = $user_action;if( count($__LIST__)==0 ) : echo "$uc_empty" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?>
+							<li class="list-group-item">
+							<?php if(empty($v['uname'])): ?>	
+								<a href="<?php echo url('member/MemberBackend/edit',array('id'=>$v['user_id'])); ?>"><?php echo $v['user_id']; ?></a>
+							<?php else: ?>
+								 <?php echo $v['uname']; endif; ?>
+							
+							<?php echo $v['info']; ?>
+							<br>
+							<small class="text-muted">						
+								<?php echo date("Y-m-d H:i:s",$v['add_time']); ?>
+							</small>
+							</li>	
+						<?php endforeach; endif; else: echo "$uc_empty" ;endif; ?>
+					</ul>
+					</div>
+			  </div>
+		      <div class="col-lg-8 col-md-12 col-sm-12 col-sx-12">
+		      	<div class="panel panel-default">
+		      		<div class="panel-heading">
+						<h3 class="panel-title">
+						<i class="fa fa-shopping-cart"></i>
+						最新订单
+						<a style="font-size: 14px" href="<?php echo url('member/OrderBackend/index'); ?>" class="pull-right">更多..</a>
+						</h3>
+					</div>
+					<div class="table-responsive">
+						<table class="table">
+							<thead>
+							<tr>
+							<td>订单号</td>
+							<td>支付方式</td>
+							<th>客户端</th> 
+							<td>客户名称</td>
+							<td>状态</td>
+							<td>生成日期</td>
+							<td>金额</td>
+							<td>操作</td>
+							</tr>
+							</thead>
+							<tbody>								
+								<?php if(is_array($order_list) || $order_list instanceof \think\Collection || $order_list instanceof \think\Paginator): $i = 0; $__LIST__ = $order_list;if( count($__LIST__)==0 ) : echo "$empty" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?>
+								<tr>
+									<td>
+										<?php echo $v['order_num_alias']; ?>
+									</td>
+									<td>
+										<?php echo $v['payment_code']; ?>
+									</td>
+									<td>
+										<?php echo $v['reg_type']; ?>
+									</td>
+									<td>
+										<?php if($v['reg_type'] != 'weixin'): ?>
+											<?php echo $v['username']; else: ?>
+											<?php echo $v['nickname']; endif; ?>
+									</td>
+									<td>
+										<?php echo $v['name']; ?>
+									</td>
+									<td>
+										<?php echo date('Y-m-d H:i:s',$v['date_added']); ?>
+									</td>
+									<td>
+										<?php if($v['points_order'] == 1): ?>
+											积分 <?php echo $v['pay_points']; else: ?>
+											&yen; <?php echo $v['total']; endif; ?>										
+									</td>
+									<td>
+										<a  class="btn btn-info" href='<?php echo url("member/OrderBackend/show_order",array("id"=>$v["order_id"])); ?>'>
+											<i class="fa-eye fa"></i>
+										</a> 
+									</td>
+								</tr>
+								<?php endforeach; endif; else: echo "$empty" ;endif; ?>	
+							</tbody>
+						</table>
+						
+					</div>
+		      	</div>
+		      	
+		      	
+			  </div>
+		    </div>
 	</div>
 </div>
 
@@ -400,104 +407,7 @@
 		<script src="__ADMIN__/ace/js/ace.min.js"></script>
 
 		
-<style>
-.warning{
-	border:1px solid red;
-	color:#f60;
-}	
-</style>
-<script>
-$(function(){
-
-	$('.price').blur(function(){
-		
-		$.post(
-			"<?php echo url('Goods/update_price'); ?>",
-			{price:$(this).val(),goods_id:$(this).attr('goods_id')},
-			function(data){
-				if(data){
-					window.location.reload();
-				}
-			}
-		);
-	});
-	
-	$('.quantity').blur(function(){
-		
-		$.post(
-			"<?php echo url('Goods/update_quantity'); ?>",
-			{quantity:$(this).val(),goods_id:$(this).attr('goods_id')},
-			function(data){
-				if(data){
-					window.location.reload();
-				}
-			}
-		);
-	});
-	
-	$('.sort').blur(function(){
-		
-		$.post(
-			"<?php echo url('Goods/update_sort'); ?>",
-			{sort:$(this).val(),goods_id:$(this).attr('goods_id')},
-			function(data){
-				if(data){
-					window.location.reload();
-				}
-			}
-		);
-	});
-	
-	
-	$("#search").click(function () {
-        var url = $(this).attr('url');
-        var query = $('.search-form').find('input,select').serialize();
-        query = query.replace(/(&|^)(\w*?\d*?\-*?_*?)*?=?((?=&)|(?=$))/g, '');
-        query = query.replace(/^&/g, '');
-        if (url.indexOf('?') > 0) {
-            url += '&' + query;
-        } else {
-            url += '?' + query;
-        }
-        window.location.href = url;
-    });
-	
-	$('.copy').click(function(){
-		
-		if($('input:checked').size()==0){
-			alert('请选择一个商品');
-			return ;
-		}
-		
-		$.ajax({
-		url: "<?php echo url('Goods/copy_goods'); ?>",
-		type: 'post',
-		data: $('input:checked'),
-		dataType: 'json',
-		beforeSend: function() {
-			$('.copy').attr('disabled', true);
-			$('.copy').after('<span class="wait">&nbsp;<img src="__PUBLIC__/image/loading.gif" alt="" /></span>');
-		},	
-		complete: function() {
-			$('.copy').attr('disabled', false); 
-			$('.wait').remove();
-		},			
-		success: function(json) {
-			$('.warning, .error').remove();
-					
-			if (json['redirect']) {				
-				
-				location = json['redirect']
 								
-			} 
-		},
-		error: function(xhr, ajaxOptions, thrownError) {
-			alert('修改失败');
-		}
-	});	
-	});
-});		
-</script>
-
+		
 	</body>
 </html>

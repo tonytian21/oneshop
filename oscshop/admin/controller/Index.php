@@ -17,7 +17,7 @@ use think\Db;
 class Index extends AdminBase{
 	
     public function index()
-    {
+    {	
     	//订单数量    
 		$this->assign('total_order',$this->get_total_order());
 		$this->assign('today_order',$this->get_total_order(array('date_added' => date('Y-m-d'))));	

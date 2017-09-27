@@ -17,7 +17,7 @@ use osc\common\controller\HomeBase;
 class Index extends HomeBase
 {
     public function index()
-    {    			
+    {    		
 		$list = osc_goods()->get_home_goods_list();
 		
 		$this->assign('empty', '~~暂无数据');
