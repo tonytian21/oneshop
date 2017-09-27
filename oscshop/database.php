@@ -3,7 +3,7 @@ return [
     'type'        => 'mysql',
     'dsn'         => '',   
     'hostname'    => '127.0.0.1',  
-    'database'    => 'oscshop',   
+    'database'    => 'oneshop',   
     'username'    => 'root',    
     'password'    => 'root',    
     'hostport'    => '3306',    
