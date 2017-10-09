@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:45:"../oscshop/admin/view/length_class/index.html";i:1506516777;s:38:"../oscshop/admin/view/public/base.html";i:1506516777;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:45:"../oscshop/admin/view/weight_class/index.html";i:1506516777;s:38:"../oscshop/admin/view/public/base.html";i:1506516777;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -215,7 +215,7 @@
 	</h1>
 </div>
 <div class="page-header">
-	<a href="<?php echo url('length_class/add'); ?>" class="btn btn-primary">新增</a>
+	<a href="<?php echo url('weight_class/add'); ?>" class="btn btn-primary">新增</a>
 </div>	
 	
 <div class="row">
@@ -224,9 +224,9 @@
 			<table class="table table-striped table-bordered table-hover">
 				<thead>
 					<tr>											
-						<th>长度名称</th>
-						<th>长度单位</th> 
-						<th>值(1m换算为该单位的值)</th>  
+						<th>重量名称</th>
+						<th>重量单位</th> 
+						<th>值(1kg换算为该单位的值)</th>  
 						<th>操作</th>				
 					</tr>
 				</thead>
@@ -238,10 +238,10 @@
 							<td><?php echo $data['unit']; ?></td>
 							<td><?php echo $data['value']; ?></td>
 							<td>
-								<a  class="btn btn-xs btn-info" href='<?php echo url("length_class/edit",array("id"=>$data["length_class_id"])); ?>'>
+								<a  class="btn btn-xs btn-info" href='<?php echo url("weight_class/edit",array("id"=>$data["weight_class_id"])); ?>'>
 									<i class="fa fa-edit bigger-120"></i>
 								</a> 
-								<a class="delete btn btn-xs btn-danger" href='<?php echo url("length_class/del",array("id"=>$data["length_class_id"])); ?>' >
+								<a class="delete btn btn-xs btn-danger" href='<?php echo url("weight_class/del",array("id"=>$data["weight_class_id"])); ?>' >
 									<i class="fa fa-trash bigger-120"></i>
 								</a>
 							</td>

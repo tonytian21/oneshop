@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:45:"../oscshop/admin/view/length_class/index.html";i:1506516777;s:38:"../oscshop/admin/view/public/base.html";i:1506516777;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:39:"../oscshop/admin/view/option/index.html";i:1506516777;s:38:"../oscshop/admin/view/public/base.html";i:1506516777;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -203,8 +203,7 @@
 			<div class="main-content">
 				<div class="main-content-inner">
 					<div class="page-content">
-						
-
+							
 <div class="page-header">
 	<h1>	
 		<?php echo $breadcrumb1; ?>
@@ -215,7 +214,7 @@
 	</h1>
 </div>
 <div class="page-header">
-	<a href="<?php echo url('length_class/add'); ?>" class="btn btn-primary">新增</a>
+	<a href="<?php echo url('Option/add'); ?>" class="btn btn-primary">新增选项</a>
 </div>	
 	
 <div class="row">
@@ -224,24 +223,26 @@
 			<table class="table table-striped table-bordered table-hover">
 				<thead>
 					<tr>											
-						<th>长度名称</th>
-						<th>长度单位</th> 
-						<th>值(1m换算为该单位的值)</th>  
+						<th>选项名称</th>
+						<th>选项值</th> 
+						<th>类型</th>  
+						
 						<th>操作</th>				
 					</tr>
 				</thead>
 				<tbody>
-						<?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "$empty" ;else: foreach($__LIST__ as $key=>$data): $mod = ($i % 2 );++$i;?>
-						<tr>
-							
-							<td><?php echo $data['title']; ?></td>
-							<td><?php echo $data['unit']; ?></td>
-							<td><?php echo $data['value']; ?></td>
+						<?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "$empty" ;else: foreach($__LIST__ as $key=>$o): $mod = ($i % 2 );++$i;?>
+						<tr>		
+							<td><?php echo $o['name']; ?></td>		
+							<td><?php echo $o['value']; ?></td>	
+							<td>								
+							<?php switch($o['type']): case "select": ?>下拉列表<?php break; case "radio": ?>单选组<?php break; case "checkbox": ?>多选组<?php break; endswitch; ?>
+							</td>				
 							<td>
-								<a  class="btn btn-xs btn-info" href='<?php echo url("length_class/edit",array("id"=>$data["length_class_id"])); ?>'>
+								<a  class="btn btn-xs btn-info" href='<?php echo url("Option/edit",array("id"=>$o["option_id"])); ?>'>
 									<i class="fa fa-edit bigger-120"></i>
 								</a> 
-								<a class="delete btn btn-xs btn-danger" href='<?php echo url("length_class/del",array("id"=>$data["length_class_id"])); ?>' >
+								<a class="delete btn btn-xs btn-danger" href='<?php echo url("Option/del",array("id"=>$o["option_id"])); ?>' >
 									<i class="fa fa-trash bigger-120"></i>
 								</a>
 							</td>
@@ -249,7 +250,7 @@
 						<?php endforeach; endif; else: echo "$empty" ;endif; ?>	
 						
 						<tr>
-							<td colspan="5" class="page"><?php echo $list->render(); ?></td>
+							<td colspan="20" class="page"><?php echo $list->render(); ?></td>
 						</tr>
 				</tbody>
 				

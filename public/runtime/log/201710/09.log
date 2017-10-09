@@ -1,0 +1,1213 @@
+---------------------------------------------------------------
+[ 2017-10-09T19:20:12+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ info ] localhost:8080/ [运行时间：0.029304s][吞吐率：34.13req/s] [内存消耗：1,683.94kb] [文件加载：46]
+[ info ] [ LANG ] /Users/tonytian/project/PHP/OneShop/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'UM_distinctid=15ee0c1fcdc930-0783a553889fdc-31657c00-13c680-15ee0c1fcdd94a; Hm_lvt_32e3cb4cf7e5c6772c4dc1f5d496b6af=1506522953,1506933029,1506955119,1507007889; CNZZDATA4535640=cnzz_eid%3D1618188279-1507006199-%26ntime%3D1507045594; checkcode=feb2feb6243377c951727c91c9a4f79c',
+  'accept-language' => 'zh-CN,zh;q=0.8,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'localhost:8080',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] osc\index\controller\Index->index[ /Users/tonytian/project/PHP/OneShop/oscshop/index/controller/Index.php ]
+[ info ] [ VIEW ] ../oscshop/index/view/index/index.html [ array (
+  0 => 'top_nav',
+  1 => 'empty',
+  2 => 'list',
+  3 => 'SEO',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-09T19:20:13+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ info ] localhost:8080/ [运行时间：0.015713s][吞吐率：63.64req/s] [内存消耗：1,683.86kb] [文件加载：46]
+[ info ] [ LANG ] /Users/tonytian/project/PHP/OneShop/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'UM_distinctid=15ee0c1fcdc930-0783a553889fdc-31657c00-13c680-15ee0c1fcdd94a; Hm_lvt_32e3cb4cf7e5c6772c4dc1f5d496b6af=1506522953,1506933029,1506955119,1507007889; CNZZDATA4535640=cnzz_eid%3D1618188279-1507006199-%26ntime%3D1507045594; checkcode=feb2feb6243377c951727c91c9a4f79c; PHPSESSID=2ap0edncpcr2nq56hildlk3rpc',
+  'accept-language' => 'zh-CN,zh;q=0.8,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'localhost:8080',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] osc\index\controller\Index->index[ /Users/tonytian/project/PHP/OneShop/oscshop/index/controller/Index.php ]
+[ info ] [ VIEW ] ../oscshop/index/view/index/index.html [ array (
+  0 => 'top_nav',
+  1 => 'empty',
+  2 => 'list',
+  3 => 'SEO',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-09T19:20:19+08:00 ] 127.0.0.1 127.0.0.1 GET /admin
+[ info ] localhost:8080/admin [运行时间：0.020565s][吞吐率：48.63req/s] [内存消耗：1,622.18kb] [文件加载：46]
+[ info ] [ LANG ] /Users/tonytian/project/PHP/OneShop/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'UM_distinctid=15ee0c1fcdc930-0783a553889fdc-31657c00-13c680-15ee0c1fcdd94a; CNZZDATA4535640=cnzz_eid%3D1618188279-1507006199-%26ntime%3D1507045594; checkcode=feb2feb6243377c951727c91c9a4f79c; PHPSESSID=2ap0edncpcr2nq56hildlk3rpc; Hm_lvt_32e3cb4cf7e5c6772c4dc1f5d496b6af=1506933029,1506955119,1507007889,1507548013; Hm_lpvt_32e3cb4cf7e5c6772c4dc1f5d496b6af=1507548013',
+  'accept-language' => 'zh-CN,zh;q=0.8,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'localhost:8080',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ SESSION ] INIT array (
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-09T19:20:19+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/Login/login
+[ info ] localhost:8080/admin/Login/login [运行时间：0.017797s][吞吐率：56.19req/s] [内存消耗：1,587.14kb] [文件加载：44]
+[ info ] [ LANG ] /Users/tonytian/project/PHP/OneShop/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'UM_distinctid=15ee0c1fcdc930-0783a553889fdc-31657c00-13c680-15ee0c1fcdd94a; CNZZDATA4535640=cnzz_eid%3D1618188279-1507006199-%26ntime%3D1507045594; checkcode=feb2feb6243377c951727c91c9a4f79c; PHPSESSID=2ap0edncpcr2nq56hildlk3rpc; Hm_lvt_32e3cb4cf7e5c6772c4dc1f5d496b6af=1506933029,1506955119,1507007889,1507548013; Hm_lpvt_32e3cb4cf7e5c6772c4dc1f5d496b6af=1507548013',
+  'accept-language' => 'zh-CN,zh;q=0.8,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'localhost:8080',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] osc\admin\controller\Login->login[ /Users/tonytian/project/PHP/OneShop/oscshop/admin/controller/Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] ../oscshop/admin/view/public/login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-09T19:20:29+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/Login/login
+[ info ] localhost:8080/admin/Login/login [运行时间：0.046062s][吞吐率：21.71req/s] [内存消耗：2,261.59kb] [文件加载：51]
+[ info ] [ LANG ] /Users/tonytian/project/PHP/OneShop/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'UM_distinctid=15ee0c1fcdc930-0783a553889fdc-31657c00-13c680-15ee0c1fcdd94a; CNZZDATA4535640=cnzz_eid%3D1618188279-1507006199-%26ntime%3D1507045594; checkcode=feb2feb6243377c951727c91c9a4f79c; PHPSESSID=2ap0edncpcr2nq56hildlk3rpc; Hm_lvt_32e3cb4cf7e5c6772c4dc1f5d496b6af=1506933029,1506955119,1507007889,1507548013; Hm_lpvt_32e3cb4cf7e5c6772c4dc1f5d496b6af=1507548013',
+  'accept-language' => 'zh-CN,zh;q=0.8,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/admin/Login/login',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://localhost:8080',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '30',
+  'connection' => 'keep-alive',
+  'host' => 'localhost:8080',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => '123456',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] osc\admin\controller\Login->login[ /Users/tonytian/project/PHP/OneShop/oscshop/admin/controller/Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-09T19:20:29+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/Index/index
+[ info ] localhost:8080/admin/Index/index [运行时间：0.046381s][吞吐率：21.56req/s] [内存消耗：2,566.01kb] [文件加载：55]
+[ info ] [ LANG ] /Users/tonytian/project/PHP/OneShop/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'UM_distinctid=15ee0c1fcdc930-0783a553889fdc-31657c00-13c680-15ee0c1fcdd94a; CNZZDATA4535640=cnzz_eid%3D1618188279-1507006199-%26ntime%3D1507045594; checkcode=feb2feb6243377c951727c91c9a4f79c; PHPSESSID=2ap0edncpcr2nq56hildlk3rpc; Hm_lvt_32e3cb4cf7e5c6772c4dc1f5d496b6af=1506933029,1506955119,1507007889,1507548013; Hm_lpvt_32e3cb4cf7e5c6772c4dc1f5d496b6af=1507548013',
+  'accept-language' => 'zh-CN,zh;q=0.8,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/admin/Login/login',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'localhost:8080',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ SESSION ] INIT array (
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] osc\admin\controller\Index->index[ /Users/tonytian/project/PHP/OneShop/oscshop/admin/controller/Index.php ]
+[ info ] [ VIEW ] ../oscshop/admin/view/index/index.html [ array (
+  0 => 'admin_menu',
+  1 => 'total_order',
+  2 => 'today_order',
+  3 => 'total_money',
+  4 => 'today_money',
+  5 => 'user_action_total',
+  6 => 'today_user_action',
+  7 => 'today_member',
+  8 => 'member_count',
+  9 => 'user_action',
+  10 => 'uc_empty',
+  11 => 'order_list',
+  12 => 'empty',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-09T19:34:11+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/goods/index
+[ info ] localhost:8080/admin/goods/index [运行时间：0.030559s][吞吐率：32.72req/s] [内存消耗：2,565.53kb] [文件加载：56]
+[ info ] [ LANG ] /Users/tonytian/project/PHP/OneShop/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'UM_distinctid=15ee0c1fcdc930-0783a553889fdc-31657c00-13c680-15ee0c1fcdd94a; CNZZDATA4535640=cnzz_eid%3D1618188279-1507006199-%26ntime%3D1507045594; checkcode=feb2feb6243377c951727c91c9a4f79c; PHPSESSID=2ap0edncpcr2nq56hildlk3rpc; Hm_lvt_32e3cb4cf7e5c6772c4dc1f5d496b6af=1506933029,1506955119,1507007889,1507548013; Hm_lpvt_32e3cb4cf7e5c6772c4dc1f5d496b6af=1507548013; AID=1152CQYGAlVWU1FUCVRWVVtbXF8AUwZRDQYGUVJS; ASHELL=6995BlMBCQBVVQRRB1tdUlZWBgRXUQBdBFUAAAYDVVJeCFACWwIPCQFWUgNRDg5XUwZQAAUGBwoGAgIAAg',
+  'accept-language' => 'zh-CN,zh;q=0.8,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/admin/Index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'localhost:8080',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ SESSION ] INIT array (
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] osc\admin\controller\Goods->index[ /Users/tonytian/project/PHP/OneShop/oscshop/admin/controller/Goods.php ]
+[ info ] [ VIEW ] ../oscshop/admin/view/goods/index.html [ array (
+  0 => 'admin_menu',
+  1 => 'breadcrumb1',
+  2 => 'breadcrumb2',
+  3 => 'empty',
+  4 => 'category',
+  5 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-09T19:34:11+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ info ] localhost:8080/ [运行时间：0.015685s][吞吐率：63.75req/s] [内存消耗：1,686.43kb] [文件加载：46]
+[ info ] [ LANG ] /Users/tonytian/project/PHP/OneShop/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'UM_distinctid=15ee0c1fcdc930-0783a553889fdc-31657c00-13c680-15ee0c1fcdd94a; CNZZDATA4535640=cnzz_eid%3D1618188279-1507006199-%26ntime%3D1507045594; checkcode=feb2feb6243377c951727c91c9a4f79c; PHPSESSID=2ap0edncpcr2nq56hildlk3rpc; Hm_lvt_32e3cb4cf7e5c6772c4dc1f5d496b6af=1506933029,1506955119,1507007889,1507548013; Hm_lpvt_32e3cb4cf7e5c6772c4dc1f5d496b6af=1507548013; AID=1152CQYGAlVWU1FUCVRWVVtbXF8AUwZRDQYGUVJS; ASHELL=6995BlMBCQBVVQRRB1tdUlZWBgRXUQBdBFUAAAYDVVJeCFACWwIPCQFWUgNRDg5XUwZQAAUGBwoGAgIAAg',
+  'accept-language' => 'zh-CN,zh;q=0.8,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/admin/goods/index',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'localhost:8080',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] osc\index\controller\Index->index[ /Users/tonytian/project/PHP/OneShop/oscshop/index/controller/Index.php ]
+[ info ] [ VIEW ] ../oscshop/index/view/index/index.html [ array (
+  0 => 'top_nav',
+  1 => 'empty',
+  2 => 'list',
+  3 => 'SEO',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-09T19:34:11+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ info ] localhost:8080/ [运行时间：0.013707s][吞吐率：72.95req/s] [内存消耗：1,686.43kb] [文件加载：46]
+[ info ] [ LANG ] /Users/tonytian/project/PHP/OneShop/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'UM_distinctid=15ee0c1fcdc930-0783a553889fdc-31657c00-13c680-15ee0c1fcdd94a; CNZZDATA4535640=cnzz_eid%3D1618188279-1507006199-%26ntime%3D1507045594; checkcode=feb2feb6243377c951727c91c9a4f79c; PHPSESSID=2ap0edncpcr2nq56hildlk3rpc; Hm_lvt_32e3cb4cf7e5c6772c4dc1f5d496b6af=1506933029,1506955119,1507007889,1507548013; Hm_lpvt_32e3cb4cf7e5c6772c4dc1f5d496b6af=1507548013; AID=1152CQYGAlVWU1FUCVRWVVtbXF8AUwZRDQYGUVJS; ASHELL=6995BlMBCQBVVQRRB1tdUlZWBgRXUQBdBFUAAAYDVVJeCFACWwIPCQFWUgNRDg5XUwZQAAUGBwoGAgIAAg',
+  'accept-language' => 'zh-CN,zh;q=0.8,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/admin/goods/index',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'localhost:8080',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] osc\index\controller\Index->index[ /Users/tonytian/project/PHP/OneShop/oscshop/index/controller/Index.php ]
+[ info ] [ VIEW ] ../oscshop/index/view/index/index.html [ array (
+  0 => 'top_nav',
+  1 => 'empty',
+  2 => 'list',
+  3 => 'SEO',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-09T19:34:13+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/Goods/add
+[ info ] localhost:8080/admin/Goods/add [运行时间：0.029191s][吞吐率：34.26req/s] [内存消耗：2,683.97kb] [文件加载：53]
+[ info ] [ LANG ] /Users/tonytian/project/PHP/OneShop/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Goods',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'UM_distinctid=15ee0c1fcdc930-0783a553889fdc-31657c00-13c680-15ee0c1fcdd94a; CNZZDATA4535640=cnzz_eid%3D1618188279-1507006199-%26ntime%3D1507045594; checkcode=feb2feb6243377c951727c91c9a4f79c; PHPSESSID=2ap0edncpcr2nq56hildlk3rpc; Hm_lvt_32e3cb4cf7e5c6772c4dc1f5d496b6af=1506933029,1506955119,1507007889,1507548013; Hm_lpvt_32e3cb4cf7e5c6772c4dc1f5d496b6af=1507548013; AID=1152CQYGAlVWU1FUCVRWVVtbXF8AUwZRDQYGUVJS; ASHELL=6995BlMBCQBVVQRRB1tdUlZWBgRXUQBdBFUAAAYDVVJeCFACWwIPCQFWUgNRDg5XUwZQAAUGBwoGAgIAAg',
+  'accept-language' => 'zh-CN,zh;q=0.8,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/admin/goods/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'localhost:8080',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ SESSION ] INIT array (
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] osc\admin\controller\Goods->add[ /Users/tonytian/project/PHP/OneShop/oscshop/admin/controller/Goods.php ]
+[ info ] [ VIEW ] ../oscshop/admin/view/goods/edit.html [ array (
+  0 => 'admin_menu',
+  1 => 'breadcrumb1',
+  2 => 'breadcrumb2',
+  3 => 'weight_class',
+  4 => 'length_class',
+  5 => 'crumbs',
+  6 => 'action',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-09T19:34:24+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/Option/autocomplete/filter_name/
+[ info ] localhost:8080/admin/Option/autocomplete/filter_name/ [运行时间：0.020320s][吞吐率：49.21req/s] [内存消耗：1,841.21kb] [文件加载：49]
+[ info ] [ LANG ] /Users/tonytian/project/PHP/OneShop/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Option',
+    2 => 'autocomplete',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'UM_distinctid=15ee0c1fcdc930-0783a553889fdc-31657c00-13c680-15ee0c1fcdd94a; CNZZDATA4535640=cnzz_eid%3D1618188279-1507006199-%26ntime%3D1507045594; checkcode=feb2feb6243377c951727c91c9a4f79c; PHPSESSID=2ap0edncpcr2nq56hildlk3rpc; Hm_lvt_32e3cb4cf7e5c6772c4dc1f5d496b6af=1506933029,1506955119,1507007889,1507548013; Hm_lpvt_32e3cb4cf7e5c6772c4dc1f5d496b6af=1507548013; AID=1152CQYGAlVWU1FUCVRWVVtbXF8AUwZRDQYGUVJS; ASHELL=6995BlMBCQBVVQRRB1tdUlZWBgRXUQBdBFUAAAYDVVJeCFACWwIPCQFWUgNRDg5XUwZQAAUGBwoGAgIAAg',
+  'accept-language' => 'zh-CN,zh;q=0.8,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/admin/Goods/add',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'localhost:8080',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ SESSION ] INIT array (
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] osc\admin\controller\Option->autocomplete[ /Users/tonytian/project/PHP/OneShop/oscshop/admin/controller/Option.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-09T19:34:36+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/Category/autocomplete/filter_name/
+[ info ] localhost:8080/admin/Category/autocomplete/filter_name/ [运行时间：0.026301s][吞吐率：38.02req/s] [内存消耗：1,786.52kb] [文件加载：47]
+[ info ] [ LANG ] /Users/tonytian/project/PHP/OneShop/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Category',
+    2 => 'autocomplete',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'UM_distinctid=15ee0c1fcdc930-0783a553889fdc-31657c00-13c680-15ee0c1fcdd94a; CNZZDATA4535640=cnzz_eid%3D1618188279-1507006199-%26ntime%3D1507045594; checkcode=feb2feb6243377c951727c91c9a4f79c; PHPSESSID=2ap0edncpcr2nq56hildlk3rpc; Hm_lvt_32e3cb4cf7e5c6772c4dc1f5d496b6af=1506933029,1506955119,1507007889,1507548013; Hm_lpvt_32e3cb4cf7e5c6772c4dc1f5d496b6af=1507548013; AID=1152CQYGAlVWU1FUCVRWVVtbXF8AUwZRDQYGUVJS; ASHELL=6995BlMBCQBVVQRRB1tdUlZWBgRXUQBdBFUAAAYDVVJeCFACWwIPCQFWUgNRDg5XUwZQAAUGBwoGAgIAAg',
+  'accept-language' => 'zh-CN,zh;q=0.8,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/admin/Goods/add',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'localhost:8080',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ SESSION ] INIT array (
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] osc\admin\controller\Category->autocomplete[ /Users/tonytian/project/PHP/OneShop/oscshop/admin/controller/Category.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-09T19:34:40+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/Attribute/autocomplete/filter_name/
+[ info ] localhost:8080/admin/Attribute/autocomplete/filter_name/ [运行时间：0.021261s][吞吐率：47.03req/s] [内存消耗：1,786.16kb] [文件加载：47]
+[ info ] [ LANG ] /Users/tonytian/project/PHP/OneShop/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Attribute',
+    2 => 'autocomplete',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'UM_distinctid=15ee0c1fcdc930-0783a553889fdc-31657c00-13c680-15ee0c1fcdd94a; CNZZDATA4535640=cnzz_eid%3D1618188279-1507006199-%26ntime%3D1507045594; checkcode=feb2feb6243377c951727c91c9a4f79c; PHPSESSID=2ap0edncpcr2nq56hildlk3rpc; Hm_lvt_32e3cb4cf7e5c6772c4dc1f5d496b6af=1506933029,1506955119,1507007889,1507548013; Hm_lpvt_32e3cb4cf7e5c6772c4dc1f5d496b6af=1507548013; AID=1152CQYGAlVWU1FUCVRWVVtbXF8AUwZRDQYGUVJS; ASHELL=6995BlMBCQBVVQRRB1tdUlZWBgRXUQBdBFUAAAYDVVJeCFACWwIPCQFWUgNRDg5XUwZQAAUGBwoGAgIAAg',
+  'accept-language' => 'zh-CN,zh;q=0.8,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/admin/Goods/add',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'localhost:8080',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ SESSION ] INIT array (
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] osc\admin\controller\Attribute->autocomplete[ /Users/tonytian/project/PHP/OneShop/oscshop/admin/controller/Attribute.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-09T19:34:43+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/Brand/autocomplete/filter_name/
+[ info ] localhost:8080/admin/Brand/autocomplete/filter_name/ [运行时间：0.020534s][吞吐率：48.70req/s] [内存消耗：1,772.58kb] [文件加载：47]
+[ info ] [ LANG ] /Users/tonytian/project/PHP/OneShop/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Brand',
+    2 => 'autocomplete',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'UM_distinctid=15ee0c1fcdc930-0783a553889fdc-31657c00-13c680-15ee0c1fcdd94a; CNZZDATA4535640=cnzz_eid%3D1618188279-1507006199-%26ntime%3D1507045594; checkcode=feb2feb6243377c951727c91c9a4f79c; PHPSESSID=2ap0edncpcr2nq56hildlk3rpc; Hm_lvt_32e3cb4cf7e5c6772c4dc1f5d496b6af=1506933029,1506955119,1507007889,1507548013; Hm_lpvt_32e3cb4cf7e5c6772c4dc1f5d496b6af=1507548013; AID=1152CQYGAlVWU1FUCVRWVVtbXF8AUwZRDQYGUVJS; ASHELL=6995BlMBCQBVVQRRB1tdUlZWBgRXUQBdBFUAAAYDVVJeCFACWwIPCQFWUgNRDg5XUwZQAAUGBwoGAgIAAg',
+  'accept-language' => 'zh-CN,zh;q=0.8,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/admin/Goods/add',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'localhost:8080',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ SESSION ] INIT array (
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] osc\admin\controller\Brand->autocomplete[ /Users/tonytian/project/PHP/OneShop/oscshop/admin/controller/Brand.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-09T19:37:28+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/module/index
+[ info ] localhost:8080/admin/module/index [运行时间：0.028185s][吞吐率：35.48req/s] [内存消耗：2,416.58kb] [文件加载：58]
+[ info ] [ LANG ] /Users/tonytian/project/PHP/OneShop/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'module',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'UM_distinctid=15ee0c1fcdc930-0783a553889fdc-31657c00-13c680-15ee0c1fcdd94a; CNZZDATA4535640=cnzz_eid%3D1618188279-1507006199-%26ntime%3D1507045594; checkcode=feb2feb6243377c951727c91c9a4f79c; PHPSESSID=2ap0edncpcr2nq56hildlk3rpc; Hm_lvt_32e3cb4cf7e5c6772c4dc1f5d496b6af=1506933029,1506955119,1507007889,1507548013; Hm_lpvt_32e3cb4cf7e5c6772c4dc1f5d496b6af=1507548013; AID=1152CQYGAlVWU1FUCVRWVVtbXF8AUwZRDQYGUVJS; ASHELL=6995BlMBCQBVVQRRB1tdUlZWBgRXUQBdBFUAAAYDVVJeCFACWwIPCQFWUgNRDg5XUwZQAAUGBwoGAgIAAg',
+  'accept-language' => 'zh-CN,zh;q=0.8,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/admin/Goods/add',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'localhost:8080',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ SESSION ] INIT array (
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] osc\admin\controller\Module->index[ /Users/tonytian/project/PHP/OneShop/oscshop/admin/controller/Module.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [2]unlink(/Users/tonytian/project/PHP/OneShop/public/runtime/cache//03/b7a397f5511851422bd7639917a546.php): Permission denied[/Users/tonytian/project/PHP/OneShop/extend/oscshop/Dir.php:433]
+---------------------------------------------------------------
+[ 2017-10-09T19:38:39+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/module/index
+[ info ] localhost:8080/admin/module/index [运行时间：0.024496s][吞吐率：40.82req/s] [内存消耗：2,432.89kb] [文件加载：56]
+[ info ] [ LANG ] /Users/tonytian/project/PHP/OneShop/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'module',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'UM_distinctid=15ee0c1fcdc930-0783a553889fdc-31657c00-13c680-15ee0c1fcdd94a; CNZZDATA4535640=cnzz_eid%3D1618188279-1507006199-%26ntime%3D1507045594; checkcode=feb2feb6243377c951727c91c9a4f79c; PHPSESSID=2ap0edncpcr2nq56hildlk3rpc; Hm_lvt_32e3cb4cf7e5c6772c4dc1f5d496b6af=1506933029,1506955119,1507007889,1507548013; Hm_lpvt_32e3cb4cf7e5c6772c4dc1f5d496b6af=1507548013; AID=1152CQYGAlVWU1FUCVRWVVtbXF8AUwZRDQYGUVJS; ASHELL=6995BlMBCQBVVQRRB1tdUlZWBgRXUQBdBFUAAAYDVVJeCFACWwIPCQFWUgNRDg5XUwZQAAUGBwoGAgIAAg',
+  'accept-language' => 'zh-CN,zh;q=0.8,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/admin/Goods/add',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'localhost:8080',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ SESSION ] INIT array (
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] osc\admin\controller\Module->index[ /Users/tonytian/project/PHP/OneShop/oscshop/admin/controller/Module.php ]
+[ info ] [ VIEW ] ../oscshop/admin/view/module/index.html [ array (
+  0 => 'admin_menu',
+  1 => 'list',
+  2 => 'breadcrumb1',
+  3 => 'breadcrumb2',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-09T19:38:46+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/settings/other
+[ info ] localhost:8080/admin/settings/other [运行时间：0.030630s][吞吐率：32.65req/s] [内存消耗：2,557.27kb] [文件加载：53]
+[ info ] [ LANG ] /Users/tonytian/project/PHP/OneShop/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'settings',
+    2 => 'other',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'UM_distinctid=15ee0c1fcdc930-0783a553889fdc-31657c00-13c680-15ee0c1fcdd94a; CNZZDATA4535640=cnzz_eid%3D1618188279-1507006199-%26ntime%3D1507045594; checkcode=feb2feb6243377c951727c91c9a4f79c; PHPSESSID=2ap0edncpcr2nq56hildlk3rpc; Hm_lvt_32e3cb4cf7e5c6772c4dc1f5d496b6af=1506933029,1506955119,1507007889,1507548013; Hm_lpvt_32e3cb4cf7e5c6772c4dc1f5d496b6af=1507548013; AID=1152CQYGAlVWU1FUCVRWVVtbXF8AUwZRDQYGUVJS; ASHELL=6995BlMBCQBVVQRRB1tdUlZWBgRXUQBdBFUAAAYDVVJeCFACWwIPCQFWUgNRDg5XUwZQAAUGBwoGAgIAAg',
+  'accept-language' => 'zh-CN,zh;q=0.8,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/admin/module/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'localhost:8080',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] osc\admin\controller\Settings->other[ /Users/tonytian/project/PHP/OneShop/oscshop/admin/controller/Settings.php ]
+[ info ] [ VIEW ] ../oscshop/admin/view/settings/other.html [ array (
+  0 => 'admin_menu',
+  1 => 'breadcrumb1',
+  2 => 'length',
+  3 => 'weight',
+  4 => 'order_status',
+  5 => 'member_auth_group',
+  6 => 'breadcrumb2',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-09T19:38:50+08:00 ] 127.0.0.1 127.0.0.1 GET /member/menu_backend/index
+[ info ] localhost:8080/member/menu_backend/index [运行时间：0.023531s][吞吐率：42.50req/s] [内存消耗：2,362.60kb] [文件加载：52]
+[ info ] [ LANG ] /Users/tonytian/project/PHP/OneShop/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'menu_backend',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'UM_distinctid=15ee0c1fcdc930-0783a553889fdc-31657c00-13c680-15ee0c1fcdd94a; CNZZDATA4535640=cnzz_eid%3D1618188279-1507006199-%26ntime%3D1507045594; checkcode=feb2feb6243377c951727c91c9a4f79c; PHPSESSID=2ap0edncpcr2nq56hildlk3rpc; Hm_lvt_32e3cb4cf7e5c6772c4dc1f5d496b6af=1506933029,1506955119,1507007889,1507548013; Hm_lpvt_32e3cb4cf7e5c6772c4dc1f5d496b6af=1507548013; AID=1152CQYGAlVWU1FUCVRWVVtbXF8AUwZRDQYGUVJS; ASHELL=6995BlMBCQBVVQRRB1tdUlZWBgRXUQBdBFUAAAYDVVJeCFACWwIPCQFWUgNRDg5XUwZQAAUGBwoGAgIAAg',
+  'accept-language' => 'zh-CN,zh;q=0.8,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/admin/settings/other',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'localhost:8080',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ SESSION ] INIT array (
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] osc\member\controller\MenuBackend->index[ /Users/tonytian/project/PHP/OneShop/oscshop/member/controller/MenuBackend.php ]
+[ info ] [ VIEW ] ../oscshop/member/view/menu_backend/index.html [ array (
+  0 => 'admin_menu',
+  1 => 'breadcrumb1',
+  2 => 'breadcrumb2',
+  3 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-09T19:38:52+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/goods/index
+[ info ] localhost:8080/admin/goods/index [运行时间：0.026455s][吞吐率：37.80req/s] [内存消耗：2,565.56kb] [文件加载：56]
+[ info ] [ LANG ] /Users/tonytian/project/PHP/OneShop/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'UM_distinctid=15ee0c1fcdc930-0783a553889fdc-31657c00-13c680-15ee0c1fcdd94a; CNZZDATA4535640=cnzz_eid%3D1618188279-1507006199-%26ntime%3D1507045594; checkcode=feb2feb6243377c951727c91c9a4f79c; PHPSESSID=2ap0edncpcr2nq56hildlk3rpc; Hm_lvt_32e3cb4cf7e5c6772c4dc1f5d496b6af=1506933029,1506955119,1507007889,1507548013; Hm_lpvt_32e3cb4cf7e5c6772c4dc1f5d496b6af=1507548013; AID=1152CQYGAlVWU1FUCVRWVVtbXF8AUwZRDQYGUVJS; ASHELL=6995BlMBCQBVVQRRB1tdUlZWBgRXUQBdBFUAAAYDVVJeCFACWwIPCQFWUgNRDg5XUwZQAAUGBwoGAgIAAg',
+  'accept-language' => 'zh-CN,zh;q=0.8,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/member/menu_backend/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'localhost:8080',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ SESSION ] INIT array (
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] osc\admin\controller\Goods->index[ /Users/tonytian/project/PHP/OneShop/oscshop/admin/controller/Goods.php ]
+[ info ] [ VIEW ] ../oscshop/admin/view/goods/index.html [ array (
+  0 => 'admin_menu',
+  1 => 'breadcrumb1',
+  2 => 'breadcrumb2',
+  3 => 'empty',
+  4 => 'category',
+  5 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-09T19:38:52+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ info ] localhost:8080/ [运行时间：0.022996s][吞吐率：43.49req/s] [内存消耗：2,407.70kb] [文件加载：52]
+[ info ] [ LANG ] /Users/tonytian/project/PHP/OneShop/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'UM_distinctid=15ee0c1fcdc930-0783a553889fdc-31657c00-13c680-15ee0c1fcdd94a; CNZZDATA4535640=cnzz_eid%3D1618188279-1507006199-%26ntime%3D1507045594; checkcode=feb2feb6243377c951727c91c9a4f79c; PHPSESSID=2ap0edncpcr2nq56hildlk3rpc; Hm_lvt_32e3cb4cf7e5c6772c4dc1f5d496b6af=1506933029,1506955119,1507007889,1507548013; Hm_lpvt_32e3cb4cf7e5c6772c4dc1f5d496b6af=1507548013; AID=1152CQYGAlVWU1FUCVRWVVtbXF8AUwZRDQYGUVJS; ASHELL=6995BlMBCQBVVQRRB1tdUlZWBgRXUQBdBFUAAAYDVVJeCFACWwIPCQFWUgNRDg5XUwZQAAUGBwoGAgIAAg',
+  'accept-language' => 'zh-CN,zh;q=0.8,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/admin/goods/index',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'localhost:8080',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] osc\index\controller\Index->index[ /Users/tonytian/project/PHP/OneShop/oscshop/index/controller/Index.php ]
+[ info ] [ VIEW ] ../oscshop/index/view/index/index.html [ array (
+  0 => 'top_nav',
+  1 => 'empty',
+  2 => 'list',
+  3 => 'SEO',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-09T19:38:52+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ info ] localhost:8080/ [运行时间：0.013927s][吞吐率：71.80req/s] [内存消耗：1,686.43kb] [文件加载：46]
+[ info ] [ LANG ] /Users/tonytian/project/PHP/OneShop/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'UM_distinctid=15ee0c1fcdc930-0783a553889fdc-31657c00-13c680-15ee0c1fcdd94a; CNZZDATA4535640=cnzz_eid%3D1618188279-1507006199-%26ntime%3D1507045594; checkcode=feb2feb6243377c951727c91c9a4f79c; PHPSESSID=2ap0edncpcr2nq56hildlk3rpc; Hm_lvt_32e3cb4cf7e5c6772c4dc1f5d496b6af=1506933029,1506955119,1507007889,1507548013; Hm_lpvt_32e3cb4cf7e5c6772c4dc1f5d496b6af=1507548013; AID=1152CQYGAlVWU1FUCVRWVVtbXF8AUwZRDQYGUVJS; ASHELL=6995BlMBCQBVVQRRB1tdUlZWBgRXUQBdBFUAAAYDVVJeCFACWwIPCQFWUgNRDg5XUwZQAAUGBwoGAgIAAg',
+  'accept-language' => 'zh-CN,zh;q=0.8,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/admin/goods/index',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'localhost:8080',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] osc\index\controller\Index->index[ /Users/tonytian/project/PHP/OneShop/oscshop/index/controller/Index.php ]
+[ info ] [ VIEW ] ../oscshop/index/view/index/index.html [ array (
+  0 => 'top_nav',
+  1 => 'empty',
+  2 => 'list',
+  3 => 'SEO',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-09T19:39:13+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/Goods/set_status/id/12/status/2
+[ info ] localhost:8080/admin/Goods/set_status/id/12/status/2 [运行时间：0.028929s][吞吐率：34.57req/s] [内存消耗：2,366.71kb] [文件加载：52]
+[ info ] [ LANG ] /Users/tonytian/project/PHP/OneShop/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Goods',
+    2 => 'set_status',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'UM_distinctid=15ee0c1fcdc930-0783a553889fdc-31657c00-13c680-15ee0c1fcdd94a; CNZZDATA4535640=cnzz_eid%3D1618188279-1507006199-%26ntime%3D1507045594; checkcode=feb2feb6243377c951727c91c9a4f79c; PHPSESSID=2ap0edncpcr2nq56hildlk3rpc; Hm_lvt_32e3cb4cf7e5c6772c4dc1f5d496b6af=1506933029,1506955119,1507007889,1507548013; Hm_lpvt_32e3cb4cf7e5c6772c4dc1f5d496b6af=1507548013; AID=1152CQYGAlVWU1FUCVRWVVtbXF8AUwZRDQYGUVJS; ASHELL=6995BlMBCQBVVQRRB1tdUlZWBgRXUQBdBFUAAAYDVVJeCFACWwIPCQFWUgNRDg5XUwZQAAUGBwoGAgIAAg',
+  'accept-language' => 'zh-CN,zh;q=0.8,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/admin/goods/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'localhost:8080',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '12',
+  'status' => '2',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ SESSION ] INIT array (
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] osc\admin\controller\Goods->set_status[ /Users/tonytian/project/PHP/OneShop/oscshop/admin/controller/Goods.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-09T19:39:13+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/Goods/index
+[ info ] localhost:8080/admin/Goods/index [运行时间：0.027933s][吞吐率：35.80req/s] [内存消耗：2,565.53kb] [文件加载：56]
+[ info ] [ LANG ] /Users/tonytian/project/PHP/OneShop/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Goods',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'UM_distinctid=15ee0c1fcdc930-0783a553889fdc-31657c00-13c680-15ee0c1fcdd94a; CNZZDATA4535640=cnzz_eid%3D1618188279-1507006199-%26ntime%3D1507045594; checkcode=feb2feb6243377c951727c91c9a4f79c; PHPSESSID=2ap0edncpcr2nq56hildlk3rpc; Hm_lvt_32e3cb4cf7e5c6772c4dc1f5d496b6af=1506933029,1506955119,1507007889,1507548013; Hm_lpvt_32e3cb4cf7e5c6772c4dc1f5d496b6af=1507548013; AID=1152CQYGAlVWU1FUCVRWVVtbXF8AUwZRDQYGUVJS; ASHELL=6995BlMBCQBVVQRRB1tdUlZWBgRXUQBdBFUAAAYDVVJeCFACWwIPCQFWUgNRDg5XUwZQAAUGBwoGAgIAAg',
+  'accept-language' => 'zh-CN,zh;q=0.8,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/admin/goods/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'localhost:8080',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ SESSION ] INIT array (
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] osc\admin\controller\Goods->index[ /Users/tonytian/project/PHP/OneShop/oscshop/admin/controller/Goods.php ]
+[ info ] [ VIEW ] ../oscshop/admin/view/goods/index.html [ array (
+  0 => 'admin_menu',
+  1 => 'breadcrumb1',
+  2 => 'breadcrumb2',
+  3 => 'empty',
+  4 => 'category',
+  5 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-09T19:39:13+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ info ] localhost:8080/ [运行时间：0.014686s][吞吐率：68.09req/s] [内存消耗：1,686.43kb] [文件加载：46]
+[ info ] [ LANG ] /Users/tonytian/project/PHP/OneShop/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'UM_distinctid=15ee0c1fcdc930-0783a553889fdc-31657c00-13c680-15ee0c1fcdd94a; CNZZDATA4535640=cnzz_eid%3D1618188279-1507006199-%26ntime%3D1507045594; checkcode=feb2feb6243377c951727c91c9a4f79c; PHPSESSID=2ap0edncpcr2nq56hildlk3rpc; Hm_lvt_32e3cb4cf7e5c6772c4dc1f5d496b6af=1506933029,1506955119,1507007889,1507548013; Hm_lpvt_32e3cb4cf7e5c6772c4dc1f5d496b6af=1507548013; AID=1152CQYGAlVWU1FUCVRWVVtbXF8AUwZRDQYGUVJS; ASHELL=6995BlMBCQBVVQRRB1tdUlZWBgRXUQBdBFUAAAYDVVJeCFACWwIPCQFWUgNRDg5XUwZQAAUGBwoGAgIAAg',
+  'accept-language' => 'zh-CN,zh;q=0.8,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/admin/Goods/index',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'localhost:8080',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] osc\index\controller\Index->index[ /Users/tonytian/project/PHP/OneShop/oscshop/index/controller/Index.php ]
+[ info ] [ VIEW ] ../oscshop/index/view/index/index.html [ array (
+  0 => 'top_nav',
+  1 => 'empty',
+  2 => 'list',
+  3 => 'SEO',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-09T19:39:13+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ info ] localhost:8080/ [运行时间：0.014011s][吞吐率：71.37req/s] [内存消耗：1,686.43kb] [文件加载：46]
+[ info ] [ LANG ] /Users/tonytian/project/PHP/OneShop/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'UM_distinctid=15ee0c1fcdc930-0783a553889fdc-31657c00-13c680-15ee0c1fcdd94a; CNZZDATA4535640=cnzz_eid%3D1618188279-1507006199-%26ntime%3D1507045594; checkcode=feb2feb6243377c951727c91c9a4f79c; PHPSESSID=2ap0edncpcr2nq56hildlk3rpc; Hm_lvt_32e3cb4cf7e5c6772c4dc1f5d496b6af=1506933029,1506955119,1507007889,1507548013; Hm_lpvt_32e3cb4cf7e5c6772c4dc1f5d496b6af=1507548013; AID=1152CQYGAlVWU1FUCVRWVVtbXF8AUwZRDQYGUVJS; ASHELL=6995BlMBCQBVVQRRB1tdUlZWBgRXUQBdBFUAAAYDVVJeCFACWwIPCQFWUgNRDg5XUwZQAAUGBwoGAgIAAg',
+  'accept-language' => 'zh-CN,zh;q=0.8,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/admin/Goods/index',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'localhost:8080',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] osc\index\controller\Index->index[ /Users/tonytian/project/PHP/OneShop/oscshop/index/controller/Index.php ]
+[ info ] [ VIEW ] ../oscshop/index/view/index/index.html [ array (
+  0 => 'top_nav',
+  1 => 'empty',
+  2 => 'list',
+  3 => 'SEO',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-09T19:39:14+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/Goods/set_status/id/12/status/1
+[ info ] localhost:8080/admin/Goods/set_status/id/12/status/1 [运行时间：0.023710s][吞吐率：42.18req/s] [内存消耗：2,366.71kb] [文件加载：52]
+[ info ] [ LANG ] /Users/tonytian/project/PHP/OneShop/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Goods',
+    2 => 'set_status',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'UM_distinctid=15ee0c1fcdc930-0783a553889fdc-31657c00-13c680-15ee0c1fcdd94a; CNZZDATA4535640=cnzz_eid%3D1618188279-1507006199-%26ntime%3D1507045594; checkcode=feb2feb6243377c951727c91c9a4f79c; PHPSESSID=2ap0edncpcr2nq56hildlk3rpc; Hm_lvt_32e3cb4cf7e5c6772c4dc1f5d496b6af=1506933029,1506955119,1507007889,1507548013; Hm_lpvt_32e3cb4cf7e5c6772c4dc1f5d496b6af=1507548013; AID=1152CQYGAlVWU1FUCVRWVVtbXF8AUwZRDQYGUVJS; ASHELL=6995BlMBCQBVVQRRB1tdUlZWBgRXUQBdBFUAAAYDVVJeCFACWwIPCQFWUgNRDg5XUwZQAAUGBwoGAgIAAg',
+  'accept-language' => 'zh-CN,zh;q=0.8,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/admin/Goods/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'localhost:8080',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '12',
+  'status' => '1',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ SESSION ] INIT array (
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] osc\admin\controller\Goods->set_status[ /Users/tonytian/project/PHP/OneShop/oscshop/admin/controller/Goods.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-09T19:39:14+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/Goods/index
+[ info ] localhost:8080/admin/Goods/index [运行时间：0.023203s][吞吐率：43.10req/s] [内存消耗：2,565.53kb] [文件加载：56]
+[ info ] [ LANG ] /Users/tonytian/project/PHP/OneShop/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Goods',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'UM_distinctid=15ee0c1fcdc930-0783a553889fdc-31657c00-13c680-15ee0c1fcdd94a; CNZZDATA4535640=cnzz_eid%3D1618188279-1507006199-%26ntime%3D1507045594; checkcode=feb2feb6243377c951727c91c9a4f79c; PHPSESSID=2ap0edncpcr2nq56hildlk3rpc; Hm_lvt_32e3cb4cf7e5c6772c4dc1f5d496b6af=1506933029,1506955119,1507007889,1507548013; Hm_lpvt_32e3cb4cf7e5c6772c4dc1f5d496b6af=1507548013; AID=1152CQYGAlVWU1FUCVRWVVtbXF8AUwZRDQYGUVJS; ASHELL=6995BlMBCQBVVQRRB1tdUlZWBgRXUQBdBFUAAAYDVVJeCFACWwIPCQFWUgNRDg5XUwZQAAUGBwoGAgIAAg',
+  'accept-language' => 'zh-CN,zh;q=0.8,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/admin/Goods/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'localhost:8080',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ SESSION ] INIT array (
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] osc\admin\controller\Goods->index[ /Users/tonytian/project/PHP/OneShop/oscshop/admin/controller/Goods.php ]
+[ info ] [ VIEW ] ../oscshop/admin/view/goods/index.html [ array (
+  0 => 'admin_menu',
+  1 => 'breadcrumb1',
+  2 => 'breadcrumb2',
+  3 => 'empty',
+  4 => 'category',
+  5 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-09T19:39:14+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ info ] localhost:8080/ [运行时间：0.016633s][吞吐率：60.12req/s] [内存消耗：1,686.43kb] [文件加载：46]
+[ info ] [ LANG ] /Users/tonytian/project/PHP/OneShop/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'UM_distinctid=15ee0c1fcdc930-0783a553889fdc-31657c00-13c680-15ee0c1fcdd94a; CNZZDATA4535640=cnzz_eid%3D1618188279-1507006199-%26ntime%3D1507045594; checkcode=feb2feb6243377c951727c91c9a4f79c; PHPSESSID=2ap0edncpcr2nq56hildlk3rpc; Hm_lvt_32e3cb4cf7e5c6772c4dc1f5d496b6af=1506933029,1506955119,1507007889,1507548013; Hm_lpvt_32e3cb4cf7e5c6772c4dc1f5d496b6af=1507548013; AID=1152CQYGAlVWU1FUCVRWVVtbXF8AUwZRDQYGUVJS; ASHELL=6995BlMBCQBVVQRRB1tdUlZWBgRXUQBdBFUAAAYDVVJeCFACWwIPCQFWUgNRDg5XUwZQAAUGBwoGAgIAAg',
+  'accept-language' => 'zh-CN,zh;q=0.8,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/admin/Goods/index',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'localhost:8080',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] osc\index\controller\Index->index[ /Users/tonytian/project/PHP/OneShop/oscshop/index/controller/Index.php ]
+[ info ] [ VIEW ] ../oscshop/index/view/index/index.html [ array (
+  0 => 'top_nav',
+  1 => 'empty',
+  2 => 'list',
+  3 => 'SEO',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-09T19:39:14+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ info ] localhost:8080/ [运行时间：0.013274s][吞吐率：75.34req/s] [内存消耗：1,686.43kb] [文件加载：46]
+[ info ] [ LANG ] /Users/tonytian/project/PHP/OneShop/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'UM_distinctid=15ee0c1fcdc930-0783a553889fdc-31657c00-13c680-15ee0c1fcdd94a; CNZZDATA4535640=cnzz_eid%3D1618188279-1507006199-%26ntime%3D1507045594; checkcode=feb2feb6243377c951727c91c9a4f79c; PHPSESSID=2ap0edncpcr2nq56hildlk3rpc; Hm_lvt_32e3cb4cf7e5c6772c4dc1f5d496b6af=1506933029,1506955119,1507007889,1507548013; Hm_lpvt_32e3cb4cf7e5c6772c4dc1f5d496b6af=1507548013; AID=1152CQYGAlVWU1FUCVRWVVtbXF8AUwZRDQYGUVJS; ASHELL=6995BlMBCQBVVQRRB1tdUlZWBgRXUQBdBFUAAAYDVVJeCFACWwIPCQFWUgNRDg5XUwZQAAUGBwoGAgIAAg',
+  'accept-language' => 'zh-CN,zh;q=0.8,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/admin/Goods/index',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'localhost:8080',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] osc\index\controller\Index->index[ /Users/tonytian/project/PHP/OneShop/oscshop/index/controller/Index.php ]
+[ info ] [ VIEW ] ../oscshop/index/view/index/index.html [ array (
+  0 => 'top_nav',
+  1 => 'empty',
+  2 => 'list',
+  3 => 'SEO',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-09T19:39:17+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/Goods/add
+[ info ] localhost:8080/admin/Goods/add [运行时间：0.021580s][吞吐率：46.34req/s] [内存消耗：2,432.23kb] [文件加载：51]
+[ info ] [ LANG ] /Users/tonytian/project/PHP/OneShop/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Goods',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'UM_distinctid=15ee0c1fcdc930-0783a553889fdc-31657c00-13c680-15ee0c1fcdd94a; CNZZDATA4535640=cnzz_eid%3D1618188279-1507006199-%26ntime%3D1507045594; checkcode=feb2feb6243377c951727c91c9a4f79c; PHPSESSID=2ap0edncpcr2nq56hildlk3rpc; Hm_lvt_32e3cb4cf7e5c6772c4dc1f5d496b6af=1506933029,1506955119,1507007889,1507548013; Hm_lpvt_32e3cb4cf7e5c6772c4dc1f5d496b6af=1507548013; AID=1152CQYGAlVWU1FUCVRWVVtbXF8AUwZRDQYGUVJS; ASHELL=6995BlMBCQBVVQRRB1tdUlZWBgRXUQBdBFUAAAYDVVJeCFACWwIPCQFWUgNRDg5XUwZQAAUGBwoGAgIAAg',
+  'accept-language' => 'zh-CN,zh;q=0.8,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/admin/Goods/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'localhost:8080',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ SESSION ] INIT array (
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] osc\admin\controller\Goods->add[ /Users/tonytian/project/PHP/OneShop/oscshop/admin/controller/Goods.php ]
+[ info ] [ VIEW ] ../oscshop/admin/view/goods/edit.html [ array (
+  0 => 'admin_menu',
+  1 => 'breadcrumb1',
+  2 => 'breadcrumb2',
+  3 => 'weight_class',
+  4 => 'length_class',
+  5 => 'crumbs',
+  6 => 'action',
+) ]
+[ info ] [ LOG ] INIT File
