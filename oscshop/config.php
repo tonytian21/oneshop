@@ -33,4 +33,10 @@ return [
 	'dispatch_error_tmpl' => APP_PATH.'common/view/public/error.tpl',
 	//默认成功跳转对应的模板文件
 	'dispatch_success_tmpl' => APP_PATH.'common/view/public/success.tpl',	
+	//'配置项'=>'配置值'
+    'LANG_SWITCH_ON'     =>     true,    //开启语言包功能        
+    'LANG_AUTO_DETECT'     =>     true, // 自动侦测语言
+    'DEFAULT_LANG'         =>     'zh-cn', // 默认语言        
+    'LANG_LIST'            =>    'en-us,zh-cn', //必须写可允许的语言列表
+    'VAR_LANGUAGE'     => 'l', // 默认语言切换变量
 ];
