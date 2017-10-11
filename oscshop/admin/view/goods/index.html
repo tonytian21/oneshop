@@ -22,7 +22,7 @@
 		<th><input name="name" type="text" placeholder="输入商品名称" value="{:input('name')}" /></th>
 		<th>    				
 			<select name="category">
-				<option value="">全部分类</option>			
+				<option value="">{:lang('全部分类')}</option>			
 				<?php $input_cid=input('category'); ?>				
 				{volist name="category" id="cat"}
 					<option {if condition="$input_cid eq $cat['id']"} selected="selected"{/if} value="{$cat.id}">{$cat.title_show}</option>
@@ -32,7 +32,7 @@
 		</th>	
 		<th>    				
 			<select name="status">
-				<option value="">全部状态</option>							
+				<option value="">{:lang('全部状态')}</option>							
 				<option {if condition="input('status') eq 1"} selected="selected"{/if}value="1">启用</option>
 				<option {if condition="input('status') eq 2"} selected="selected"{/if} value="2">停用</option>
 			</select>

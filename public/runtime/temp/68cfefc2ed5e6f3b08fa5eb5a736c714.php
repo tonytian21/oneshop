@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:38:"../oscshop/admin/view/goods/index.html";i:1506516777;s:38:"../oscshop/admin/view/public/base.html";i:1506516777;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:38:"../oscshop/admin/view/goods/index.html";i:1507727274;s:38:"../oscshop/admin/view/public/base.html";i:1506516777;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -226,7 +226,7 @@
 		<th><input name="name" type="text" placeholder="输入商品名称" value="<?php echo input('name'); ?>" /></th>
 		<th>    				
 			<select name="category">
-				<option value="">全部分类</option>			
+				<option value=""><?php echo lang('全部分类'); ?></option>			
 				<?php $input_cid=input('category'); if(is_array($category) || $category instanceof \think\Collection || $category instanceof \think\Paginator): $i = 0; $__LIST__ = $category;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$cat): $mod = ($i % 2 );++$i;?>
 					<option <?php if($input_cid == $cat['id']): ?> selected="selected"<?php endif; ?> value="<?php echo $cat['id']; ?>"><?php echo $cat['title_show']; ?></option>
 				<?php endforeach; endif; else: echo "" ;endif; ?>
@@ -235,7 +235,7 @@
 		</th>	
 		<th>    				
 			<select name="status">
-				<option value="">全部状态</option>							
+				<option value=""><?php echo lang('全部状态'); ?></option>							
 				<option <?php if(input('status') == 1): ?> selected="selected"<?php endif; ?>value="1">启用</option>
 				<option <?php if(input('status') == 2): ?> selected="selected"<?php endif; ?> value="2">停用</option>
 			</select>
