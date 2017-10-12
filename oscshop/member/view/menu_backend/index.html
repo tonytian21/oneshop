@@ -67,7 +67,7 @@ function save(type){
 							alert(d.error);
 						
 						}else if(d.status=='success'){											
-							//有父节点
+							//{:lang('有父节点')}
 					    	if(treeNode){
 					    		treeNode = zTree.addNodes(treeNode, {id:d.id, pId:id, isParent:isp, name:d.name});
 					    	}else{
@@ -98,7 +98,7 @@ function add(e) {
 	
 	var dialog=$('#dialog').html();
 	
-	var title='新增菜单';
+	var title='{:lang('新增菜单')}';
 	
 	art.dialog({
 		title: title,
@@ -108,7 +108,7 @@ function add(e) {
 	 	  save('add');	    	
 	      return false;
 	    },
-	    cancelVal: '关闭',
+	    cancelVal: '{:lang('关闭')}',
 		cancel: true 
 	});	
 }
@@ -118,7 +118,7 @@ function edit() {
 		nodes = zTree.getSelectedNodes(),
 		treeNode = nodes[0];
 		if (nodes.length == 0) {
-			alert("请先选择一个节点");
+			alert("{:lang('请先选择一个节点')}");
 			return;
 		}else{
 			var id=treeNode.id;
@@ -147,7 +147,7 @@ function edit() {
 			
 	var dialog=$('#dialog').html();
 
-	var title='修改菜单';
+	var title='{:lang('修改菜单')}';
 	
 	art.dialog({
 		title: title,
@@ -157,7 +157,7 @@ function edit() {
 				save('edit');
 				return false;
 			},
-		    cancelVal: '关闭',
+		    cancelVal: '{:lang('关闭')}',
 			cancel: true 
 	});	
 				
@@ -165,7 +165,7 @@ function edit() {
 }
 function remove(e) {
 	
-			if(!confirm('确认要删除吗！！')){
+			if(!confirm('{:lang('确认要删除吗！！')}')){
 				return false;
 			}
 			
@@ -173,7 +173,7 @@ function remove(e) {
 			nodes = zTree.getSelectedNodes(),
 			treeNode = nodes[0];
 			if (nodes.length == 0) {
-				alert("请先选择一个节点");
+				alert("{:lang('请先选择一个节点')}");
 				return;
 			}
 			$.post(
@@ -215,9 +215,9 @@ $(document).ready(function(){
 	</h1>
 </div>
 <div class="page-header">
-	<a id="addParent" class="btn btn-primary">新增</a>
-	<a id="edit" class="btn btn-primary">编辑</a>
-	<a id="remove" class="btn btn-primary">删除</a>
+	<a id="addParent" class="btn btn-primary">{:lang('新增')}</a>
+	<a id="edit" class="btn btn-primary">{:lang('编辑')}</a>
+	<a id="remove" class="btn btn-primary">{:lang('删除')}</a>
 </div>
 
 <div class="row">
@@ -229,28 +229,28 @@ $(document).ready(function(){
     <div class="dialog_content">
     
         <dl>
-        	<dt>菜单名称</dt>
+        	<dt>{:lang('菜单名称')}</dt>
         	<dd><input type="text" name="title" class="text" /></dd>
         	<dt>URL</dt>
     		<dd><input name="url" type="text" value="" size="50"  /></dd>    	
     		
-    		<dt>模块</dt>
+    		<dt>{:lang('模块')}</dt>
     		<dd><input name="module" type="text" value=""  /></dd>  
     		
-    		<dt>图标</dt>
+    		<dt>{:lang('图标')}</dt>
     		<dd><input name="icon" type="text" value=""  /></dd> 
     		
-    		<dt>类型</dt>
+    		<dt>{:lang('类型')}</dt>
     		<dd>
     			<label>
-    				<input id="nav" name="type" type="radio" value="nav" checked="checked" /> 显示 
+    				<input id="nav" name="type" type="radio" value="nav" checked="checked" /> {:lang('显示')} 
     			</label>
     			<label>
-    				<input id="auth" name="type" type="radio" value="auth"  /> 不显示
+    				<input id="auth" name="type" type="radio" value="auth"  /> {:lang('不显示')}
     			</label>
     		</dd>   
     			
-    		<dt>排序</dt>
+    		<dt>{:lang('排序')}</dt>
     		<dd>
     			<input name="sort_order" type="text" value="" />
     		</dd>

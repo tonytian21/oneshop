@@ -2,14 +2,14 @@
 {block name="content"}
 <div class="page-header">
 <h1>	
-		移动端
+		{:lang('移动端')}
 		<small>
 			<i class="ace-icon fa fa-angle-double-right"></i>
 			{$breadcrumb1}
 		</small>
 		<small>
 			<i class="ace-icon fa fa-angle-double-right"></i>
-			分享记录
+			{:lang('分享记录')}
 		</small>
 	</h1>
 </div>	
@@ -21,10 +21,10 @@
 				<thead>
 					<tr>
 						
-						<th>姓名</th> 
-						<th>类型</th>
-						<th>分享链接</th> 
-						<th>分享时间</th> 
+						<th>{:lang('姓名')}</th> 
+						<th>{:lang('类型')}</th>
+						<th>{:lang('分享链接')}</th> 
+						<th>{:lang('分享时间')}</th> 
 						
 					</tr>
 				</thead>
@@ -43,7 +43,7 @@
 							<td colspan="20" class="page">{$list->render()}</td>
 						</tr>
 						<tr>
-							<td colspan="20" class="page">总计 {$list->total()|default="0"} 个分享</td>
+							<td colspan="20" class="page">{:lang('总计')} {$list->total()|default="0"} {:lang('个分享')}</td>
 						</tr>
 				</tbody>
 				

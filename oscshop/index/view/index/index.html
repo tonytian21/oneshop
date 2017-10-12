@@ -5,7 +5,7 @@
 			{volist name="list" id="goods" empty="$empty"}
 			 <dl>
 			 	{if condition="isset($goods['shipping']) and ($goods['shipping'] eq 0)"}
-			 	<span class="no_shipping">免配送商品</span>
+			 	<span class="no_shipping">{:lang('免配送商品')}</span>
 			 	{/if}
 			 	<dt><a href="{:url('/goods/'.$goods['goods_id'])}">
 			 		{if condition="!empty($goods['image'])"}

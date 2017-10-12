@@ -1,20 +1,20 @@
 <?php if ($addresses) { ?>
 <input type="radio" name="shipping_address" value="existing" id="shipping-address-existing" checked="checked" />
-<label for="shipping-address-existing">使用已有地址</label>
+<label for="shipping-address-existing">{:lang('使用已有地址')}</label>
 <div id="shipping-existing">
   <select name="address_id" style="width: 100%; margin-bottom: 15px;" size="5">
     <?php foreach ($addresses as $address) { ?>
     <?php if ($address['address_id'] == $address_id) { ?>
-    <option value="<?php echo $address['address_id']; ?>" selected="selected">姓名：<?php echo $address['name']; ?>, 电话：<?php echo $address['telephone']; ?>,  地址：<?php echo $address['province']; ?>, <?php echo $address['city']; ?>, <?php echo $address['country']; ?>,<?php echo $address['address']; ?></option>
+    <option value="<?php echo $address['address_id']; ?>" selected="selected">{:lang('姓名：')}<?php echo $address['name']; ?>, {:lang('电话：')}<?php echo $address['telephone']; ?>,  {:lang('地址：')}<?php echo $address['province']; ?>, <?php echo $address['city']; ?>, <?php echo $address['country']; ?>,<?php echo $address['address']; ?></option>
     <?php } else { ?>
-    <option value="<?php echo $address['address_id']; ?>">姓名：<?php echo $address['name']; ?>, 电话：<?php echo $address['telephone']; ?>, 地址： <?php echo $address['province']; ?>, <?php echo $address['city']; ?>, <?php echo $address['country']; ?>,<?php echo $address['address']; ?></option>
+    <option value="<?php echo $address['address_id']; ?>">{:lang('姓名：')}<?php echo $address['name']; ?>, {:lang('电话：')}<?php echo $address['telephone']; ?>, {:lang('地址：')} <?php echo $address['province']; ?>, <?php echo $address['city']; ?>, <?php echo $address['country']; ?>,<?php echo $address['address']; ?></option>
     <?php } ?>
     <?php } ?>
   </select>
 </div>
 <p>
   <input type="radio" name="shipping_address" value="new" id="shipping-address-new" />
-  <label for="shipping-address-new">使用新地址</label>
+  <label for="shipping-address-new">{:lang('使用新地址')}</label>
 </p>
 <?php }else{ ?>
 <input type="hidden" name="shipping_address" value="new" />
@@ -23,19 +23,19 @@
   <table class="form">
   	
     <tr>
-      <td><span class="required">*</span> 姓名</td></tr>
+      <td><span class="required">*</span> {:lang('姓名')}</td></tr>
 	<tr>  
       <td><input type="text" name="name" value="" class="large-field text" /></td>
     </tr>
 
      <tr>
-      <td><span class="required">*</span> 电话</td></tr>
+      <td><span class="required">*</span> {:lang('电话')}</td></tr>
 	<tr>
       <td><input type="text" name="telephone" value="" class="large-field text" /></td>
     </tr>
  
      <tr>
-      <td><span class="required">*</span> 所在地</td></tr>
+      <td><span class="required">*</span> {:lang('所在地')}</td></tr>
       <style>
 		#area select{width:100px;}
 		
@@ -43,19 +43,19 @@
 	<tr>
       <td> <p id="area">
         <select name="province_id" id="province">
-            <option value="-1" selected>省份</option>
+            <option value="-1" selected>{:lang('省份')}</option>
             {volist name="province" id="v"}
                 <option value="{$v.area_id}">{$v.area_name}</option>
             {/volist}
         </select>
         <select name="city_id" id="city">
-            <option value="-1">城市</option>
+            <option value="-1">{:lang('城市')}</option>
         </select>  
      </p></td>
     </tr>
  
     <tr>
-      <td><span class="required">*</span> 地址</td></tr>
+      <td><span class="required">*</span> {:lang('地址')}</td></tr>
 	<tr>
       <td><input type="text" name="address" value="" class="large-field text" /></td>
     </tr>
@@ -67,7 +67,7 @@
 <br />
 <div class="buttons">
   <div class="left">
-    <input type="button" value="继续" id="button-shipping-address" class="btn btn-primary btn-continue" />
+    <input type="button" value="{:lang('继续')}" id="button-shipping-address" class="btn btn-primary btn-continue" />
   </div>
 </div>
 <script type="text/javascript">
@@ -88,7 +88,7 @@ $("#province").change(function(){
             if(areaId!=-1){
             $.post(ajaxurl,{'areaId':areaId},function(data){                
                 if(areaType==='city'){
-                   $('#'+areaType).html('<option value="-1">城市</option>');              
+                   $('#'+areaType).html('<option value="-1">{:lang('城市')}</option>');              
                 }
               
                 if(areaType!=='null'){
@@ -98,7 +98,7 @@ $("#province").change(function(){
                 }
             });
            }else{
-           	$('#'+areaType).html('<option value="-1">城市</option>');       
+           	$('#'+areaType).html('<option value="-1">{:lang('城市')}</option>');       
            }
         }); 
         

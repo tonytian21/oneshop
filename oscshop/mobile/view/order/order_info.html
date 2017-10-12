@@ -10,7 +10,7 @@
 <?php use think\Db; ?>
 <div class="exp-item-info clearfix" style="margin-top:0;">
     <span class="order-status"><?php echo get_order_status_name($order['order']['order_status_id']); ?></span>
-    <span class="order-id">订单号： {$order.order.order_num_alias} </span>
+    <span class="order-id">{:lang('订单号：')} {$order.order.order_num_alias} </span>
 </div>
 {if condition="$order['order']['address_id'] NEQ 0"}
 <div class="exp-item-info" style="background:url(__RES__/mobile/images/icon/od-exp-bh.png) left top repeat-x #fff;padding:0;padding-top:15px;">
@@ -27,7 +27,7 @@
 </div>
 {/if}
 <div class="exp-item-info">
-    <div class="exp-item-caption">物品信息</div>
+    <div class="exp-item-caption">{:lang('物品信息')}</div>
     {volist name="order['order_product']" id="d"}
         <div class="clearfix items" onclick="location = '{:url("goods/detail",array("id"=>$d["goods_id"]))}';">
             <img class="ucoi-pic" src="IMG_ROOT{$d.image|resize=100,100}">
@@ -47,45 +47,45 @@
     {/volist}
 </div>
 <div class="exp-item-info">
-    <div class="exp-item-caption">订单信息</div>
+    <div class="exp-item-caption">{:lang('订单信息')}</div>
     
     <div class="exp-payinfo clearfix">
-        <span class="left">订单编号：</span>
+        <span class="left">{:lang('订单编号：')}</span>
         <span class="right" style="color:#777;">{$order.order.order_num_alias}</span>
     </div>    
 
     {if condition="$order['order']['return_points'] NEQ 0"}	
         <div class="exp-payinfo clearfix">
-            <span class="left">获得积分：</span>
+            <span class="left">{:lang('获得积分：')}</span>
             <span class="right" style="color:#777;">{$order.order.return_points}</span>
         </div>
     {/if}    
 
    {if condition="$order['order']['points_order'] EQ 0"}	
         <div class="exp-payinfo clearfix">
-            <span class="left">订单总额：</span>
+            <span class="left">{:lang('订单总额：')}</span>
             <span class="right prices"><?php echo $order['order_total'][2]['text']; ?></span>
         </div>
         {if condition="$order['order']['address_id'] NEQ 0"}
         <div class="exp-payinfo clearfix">
-            <span class="left">运费：</span>
+            <span class="left">{:lang('运费：')}</span>
             <span class="right prices"><?php echo $order['order_total'][1]['text']; ?></span>
         </div>
         {/if}
    {else/}
    		<div class="exp-payinfo clearfix">
-            <span class="left">使用积分：</span>
+            <span class="left">{:lang('使用积分：')}</span>
             <span class="right prices"><?php echo $order['order']['pay_points']; ?></span>
         </div>
    {/if}
 </div>
 
 <div class="exp-item-info">
-    <div class="exp-item-caption">订单历史</div>    
+    <div class="exp-item-caption">{:lang('订单历史')}</div>    
   {volist name="order['order_history']" id="d"}
     <div class="exp-payinfo clearfix">
         <span class="left"><?php echo date("Y-m-d H:i:s",$d['date_added']).' '.get_order_status_name($d['order_status_id']); ?> </span>
-        <span class="right">{if condition="!empty($d['comment'])"}留言 : {$d.comment}{/if} </span>
+        <span class="right">{if condition="!empty($d['comment'])"}{:lang('留言')} : {$d.comment}{/if} </span>
     </div>
   {/volist}
 </div>

@@ -38,23 +38,23 @@ wx.ready(function(){
 	
    		var url = '<?php echo request()->url(true); ?>';
    		var site_url='<?php echo request()->domain(); ?>';
-        //获取“分享到朋友圈”按钮点击状态及自定义分享内容接口
+        //{:lang('获取“分享到朋友圈”按钮点击状态及自定义分享内容接口')}
         wx.onMenuShareTimeline({
             title: '{$article.title}',
             link: url, 
             imgUrl: site_url+'/uploads/<?php echo config("SITE_ICON"); ?>',
             success: function () {
-               pvShareCallback(url,'分享到朋友圈');
+               pvShareCallback(url,'{:lang('分享到朋友圈')}');
             }
         });
-        //获取“分享给朋友”按钮点击状态及自定义分享内容接口
+        //{:lang('获取“分享给朋友”按钮点击状态及自定义分享内容接口')}
         wx.onMenuShareAppMessage({
             title: '{$article.title}',
             desc: '{$article.title}',
             link: url,
             imgUrl: site_url+'/uploads/<?php echo config("SITE_ICON"); ?>',
             success: function () {
-              pvShareCallback(url,'分享给朋友');
+              pvShareCallback(url,'{:lang('分享给朋友')}');
             }
         });
         function pvShareCallback(url,type) {

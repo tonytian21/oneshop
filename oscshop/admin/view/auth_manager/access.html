@@ -93,7 +93,7 @@
 			<div class="form-group">
 				
 				<div class="col-sm-12">
-					<input  type="submit" value="提交" class="btn btn-primary" />
+					<input  type="submit" value="{:lang('提交')}" class="btn btn-primary" />
 				</div>
 			</div>
 			
@@ -139,7 +139,7 @@ $(function(){
             }
         });
 
-        //全选节点
+        //{:lang('全选节点')}
         $('.rules_all').on('change',function(){
             $(this).closest('dl').find('dd').find('input').prop('checked',this.checked);
         });

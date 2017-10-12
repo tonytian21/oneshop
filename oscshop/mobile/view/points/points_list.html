@@ -9,10 +9,10 @@
 
 {block name="content"}
 <div class="comspreadstat clearfix">
-	<span class="spread-item" style="width:50%;">总积分<b>{$user_info.points|default='0'}</b></span>
-	<span class="spread-item" style="width:50%;">已兑换<b>{$user_info.cash_points|default='0'}</b></span>
+	<span class="spread-item" style="width:50%;">{:lang('总积分')}<b>{$user_info.points|default='0'}</b></span>
+	<span class="spread-item" style="width:50%;">{:lang('已兑换')}<b>{$user_info.cash_points|default='0'}</b></span>
 </div>
-<header class="Thead">积分记录</header>
+<header class="Thead">{:lang('积分记录')}</header>
 <div id="ulist">            
     {volist name="list" id="p" empty="$empty"}            
         <section class="ulist clearfix">

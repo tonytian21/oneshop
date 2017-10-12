@@ -2,20 +2,20 @@
 {block name="content"}
 <div class="page-header">
 	<h1>	
-		移动端
+		{:lang('移动端')}
 		<small>
 			<i class="ace-icon fa fa-angle-double-right"></i>
 			{$breadcrumb1}
 		</small>
 		<small>
 			<i class="ace-icon fa fa-angle-double-right"></i>
-			代理级别
+			{:lang('代理级别')}
 		</small>
 	</h1>
 </div>	
 	
 <div class="page-header">
-	<a href="{:url('AgentBackend/add_level')}" class="btn btn-primary">新增代理等级</a>
+	<a href="{:url('AgentBackend/add_level')}" class="btn btn-primary">{:lang('新增代理等级')}</a>
 </div>		
 
 	
@@ -25,10 +25,10 @@
 			<table class="table table-striped table-bordered table-hover">
 				<thead>
 					<tr>
-						<th>代理等级</th>											
-						<th>等级名称</th>
-						<th>返佣比例</th> 						
-						<th>操作</th>				
+						<th>{:lang('代理等级')}</th>											
+						<th>{:lang('等级名称')}</th>
+						<th>{:lang('返佣比例')}</th> 						
+						<th>{:lang('操作')}</th>				
 					</tr>
 				</thead>
 				<tbody>

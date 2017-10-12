@@ -4,27 +4,27 @@
 <div id="checkout-box" class="allWrap">
 	<div class="clearfix">
 		<div>
-			<h1>商品结算</h1>
+			<h1>{:lang('商品结算')}</h1>
 		</div>
 		<div class="checkout">		   
 		    
 		    <?php if ($shipping_required) { ?>
 			    <div id="shipping-address">
-			      <div class="checkout-heading"><span>收货地址</span></div>
+			      <div class="checkout-heading"><span>{:lang('收货地址')}</span></div>
 			      <div class="checkout-content"></div>
 			    </div>
 			    <div id="shipping-method">
-			      <div class="checkout-heading"><span>货运方式</span></div>
+			      <div class="checkout-heading"><span>{:lang('货运方式')}</span></div>
 			      <div class="checkout-content"></div>
 			    </div>
 		    <?php } ?>
 		    
 		    <div id="payment-method">
-		      <div class="checkout-heading"><span>支付方式</span></div>
+		      <div class="checkout-heading"><span>{:lang('支付方式')}</span></div>
 		      <div class="checkout-content"></div>
 		    </div>
 		    <div id="confirm">
-		      <div class="checkout-heading"><span>完成订单</span></div>
+		      <div class="checkout-heading"><span>{:lang('完成订单')}</span></div>
 		      <div class="checkout-content"></div>
 		    </div>
 		  </div>	
@@ -33,14 +33,14 @@
 {/block}
 {block name="javascript"}
 <script>	
-//div下滑效果
+//div{:lang('下滑效果')}
 $('.checkout-heading a').live('click', function() {
 	$('.checkout-content').slideUp('slow');
 	
 	$(this).parent().parent().find('.checkout-content').slideDown('slow');
 });
 <?php if (osc_service('member','user')->is_login()) { ?> 
-//已经登录
+//{:lang('已经登录')}
 
 <?php if($shipping_required){ ?>
 $(document).ready(function() {	
@@ -75,7 +75,7 @@ $(document).ready(function() {
 				$('#shipping-method .checkout-heading a').remove();
 				$('#payment-method .checkout-heading a').remove();
 				
-				$('#shipping-method .checkout-heading').append('<a>修改</a>');	
+				$('#shipping-method .checkout-heading').append('<a>{:lang('修改')}</a>');	
 			},
 			error: function(xhr, ajaxOptions, thrownError) {
 				alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
@@ -83,7 +83,7 @@ $(document).ready(function() {
 		});		
 });
 <?php } ?>
-//收货地址
+//{:lang('收货地址')}
 $('#button-shipping-address').live('click', function() {
 	$.ajax({
 		url: '{:url("/validate_shipping_address")}',
@@ -130,7 +130,7 @@ $('#button-shipping-address').live('click', function() {
 						$('#shipping-method .checkout-heading a').remove();
 						$('#payment-method .checkout-heading a').remove();
 						
-						$('#shipping-address .checkout-heading').append('<a>修改</a>');							
+						$('#shipping-address .checkout-heading').append('<a>{:lang('修改')}</a>');							
 						
 						$.ajax({
 							url: '{:url("/shipping_address")}',
@@ -156,7 +156,7 @@ $('#button-shipping-address').live('click', function() {
 	});	
 });
 
-//货运方式
+//{:lang('货运方式')}
 $('#button-shipping-method').live('click', function() {
 	$.ajax({
 		url: '{:url("/validate_shipping_method")}',
@@ -196,7 +196,7 @@ $('#button-shipping-method').live('click', function() {
 						$('#shipping-method .checkout-heading a').remove();
 						$('#payment-method .checkout-heading a').remove();
 						
-						$('#shipping-method .checkout-heading').append('<a>修改</a>');	
+						$('#shipping-method .checkout-heading').append('<a>{:lang('修改')}</a>');	
 					},
 					error: function(xhr, ajaxOptions, thrownError) {
 						alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
@@ -210,7 +210,7 @@ $('#button-shipping-method').live('click', function() {
 	});	
 });
 
-//支付方式
+//{:lang('支付方式')}
 $('#button-payment-method').live('click', function() {
 	$.ajax({
 		url: '{:url("/validate_payment_method")}', 
@@ -249,7 +249,7 @@ $('#button-payment-method').live('click', function() {
 						
 						$('#payment-method .checkout-heading a').remove();
 						
-						$('#payment-method .checkout-heading').append('<a>修改</a>');	
+						$('#payment-method .checkout-heading').append('<a>{:lang('修改')}</a>');	
 					},
 					error: function(xhr, ajaxOptions, thrownError) {
 						alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);

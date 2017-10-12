@@ -3,7 +3,7 @@
 
 {if condition="!empty($attribute)"}
 	<div id="attribute" class="allWrap">
-		<p>属性</p>
+		<p>{:lang('属性')}</p>
 		{volist name="attribute" id="value"}
 			<div class="clearfix attribute-value">
 				<span style="float:left;">{$key}:</span>
@@ -21,7 +21,7 @@
 
 {if condition="!empty($brand)"}
 	<div id="brand" class="allWrap">
-		<p>品牌</p>		
+		<p>{:lang('品牌')}</p>		
 			<div class="clearfix brand-value">
 				<ul>
 					{volist name="brand" id="v"}						
@@ -51,7 +51,7 @@
 			{/volist}			
 		</div>
 		<div id="page" class="clearfix">{$list->render()}</div>
-		<div id="total" class="clearfix">总计 {$list->total()|default="0"} </div>	
+		<div id="total" class="clearfix">{:lang('总计')} {$list->total()|default="0"} </div>	
 		
 </div>			
 {/block}

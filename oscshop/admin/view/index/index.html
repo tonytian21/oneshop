@@ -7,59 +7,59 @@
 		      <div class="col-lg-3 col-md-3 col-sm-6">
 					<div class="tile">
 						<div class="tile-heading">
-							今日订单
-							<span class="pull-right"> 总{$total_order}单</span>
+							{:lang('今日订单')}
+							<span class="pull-right"> {:lang('总')}{$total_order}{:lang('单')}</span>
 						</div>
 						<div class="tile-body">
 							<i class="fa fa-shopping-cart"></i>
 							<h2 class="pull-right">{$today_order}</h2>
 						</div>
 						<div class="tile-footer">
-							<a href="{:url('member/OrderBackend/index')}">显示详细...</a>
+							<a href="{:url('member/OrderBackend/index')}">{:lang('显示详细')}...</a>
 						</div>
 					</div>
 			  </div>
 		      <div class="col-lg-3 col-md-3 col-sm-6">
 					<div class="tile">
 					<div class="tile-heading">
-					今日销售额 
-					<span class="pull-right"> 总{$total_money} </span>
+					{:lang('今日销售额')} 
+					<span class="pull-right"> {:lang('总')}{$total_money} </span>
 					</div>
 					<div class="tile-body">
 					<i class="fa fa-credit-card"></i>
 					<h2 class="pull-right">{$today_money}</h2>
 					</div>
 					<div class="tile-footer">
-					<a href="{:url('member/OrderBackend/index')}">显示详细...</a>
+					<a href="{:url('member/OrderBackend/index')}">{:lang('显示详细')}...</a>
 					</div>
 					</div> 	
 		      </div>
 		      <div class="col-lg-3 col-md-3 col-sm-6">
 					<div class="tile">
 					<div class="tile-heading">
-					新增客户 
-					<span class="pull-right"> 总{$member_count}个</span>
+					{:lang('新增客户')} 
+					<span class="pull-right"> {:lang('总')}{$member_count}{:lang('个')}</span>
 					</div>
 					<div class="tile-body">
 					<i class="fa fa-user"></i>
 					<h2 class="pull-right">{$today_member}</h2>
 					</div>
 					<div class="tile-footer">
-					<a href="{:url('member/MemberBackend/index')}">显示详细...</a>
+					<a href="{:url('member/MemberBackend/index')}">{:lang('显示详细')}...</a>
 					</div>
 					</div>
 			  </div>
 		      <div class="col-lg-3 col-md-3 col-sm-6">
 					<div class="tile">
-					<div class="tile-heading">新增用户行为
-					<span class="pull-right"> 总{$user_action_total}个</span>	
+					<div class="tile-heading">{:lang('新增用户行为')}
+					<span class="pull-right"> {:lang('总')}{$user_action_total}{:lang('个')}</span>	
 					</div>
 					<div class="tile-body">
 					<i class="fa fa-eye"></i>
-					<h2 class="pull-right">{$today_user_action}个</h2>
+					<h2 class="pull-right">{$today_user_action}{:lang('个')}</h2>
 					</div>
 					<div class="tile-footer">
-					<a href="{:url('admin/UserAction/index')}">显示详细...</a>
+					<a href="{:url('admin/UserAction/index')}">{:lang('显示详细')}...</a>
 					</div>
 					</div>	  
 			  </div>
@@ -70,8 +70,8 @@
 					<div class="panel-heading">
 					<h3 class="panel-title">
 					<i class="fa fa-calendar"></i>
-					用户行为
-					<a style="font-size: 14px" href="{:url('UserAction/index')}" class="pull-right">更多..</a>
+					{:lang('用户行为')}
+					<a style="font-size: 14px" href="{:url('UserAction/index')}" class="pull-right">{:lang('更多')}..</a>
 					</h3>
 					</div>
 					<ul class="list-group">
@@ -99,22 +99,22 @@
 		      		<div class="panel-heading">
 						<h3 class="panel-title">
 						<i class="fa fa-shopping-cart"></i>
-						最新订单
-						<a style="font-size: 14px" href="{:url('member/OrderBackend/index')}" class="pull-right">更多..</a>
+						{:lang('最新订单')}
+						<a style="font-size: 14px" href="{:url('member/OrderBackend/index')}" class="pull-right">{:lang('更多')}..</a>
 						</h3>
 					</div>
 					<div class="table-responsive">
 						<table class="table">
 							<thead>
 							<tr>
-							<td>订单号</td>
-							<td>支付方式</td>
-							<th>客户端</th> 
-							<td>客户名称</td>
-							<td>状态</td>
-							<td>生成日期</td>
-							<td>金额</td>
-							<td>操作</td>
+							<td>{:lang('订单号')}</td>
+							<td>{:lang('支付方式')}</td>
+							<th>{:lang('客户端')}</th> 
+							<td>{:lang('客户名称')}</td>
+							<td>{:lang('状态')}</td>
+							<td>{:lang('生成日期')}</td>
+							<td>{:lang('金额')}</td>
+							<td>{:lang('操作')}</td>
 							</tr>
 							</thead>
 							<tbody>								
@@ -144,7 +144,7 @@
 									</td>
 									<td>
 										{if condition="$v['points_order'] EQ 1 "}
-											积分 {$v.pay_points}
+											{:lang('积分')} {$v.pay_points}
 										{else/}
 											&yen; {$v.total}
 										{/if}										

@@ -3,14 +3,14 @@
 <div class="page-header">
 	
 <h1>	
-	移动端
+	{:lang('移动端')}
 	<small>
 		<i class="ace-icon fa fa-angle-double-right"></i>
 		{$breadcrumb1}
 	</small>
 	<small>
 		<i class="ace-icon fa fa-angle-double-right"></i>
-		代理管理
+		{:lang('代理管理')}
 	</small>
 </h1>	
 
@@ -23,18 +23,18 @@
 				<thead>
 					<tr>
 						
-						<th>姓名</th> 
-						<th>级别</th> 
-						<th>电话</th> 
-						<th>加入时间</th>
-						<th>返点</th>
-						<th>名下会员</th>
-						<th>成交</th>						
-						<th>本月收益</th>								
-						<th>总收益</th>	
-						<th>未结算</th>	
-						<th>状态</th>	
-						<th>操作</th>
+						<th>{:lang('姓名')}</th> 
+						<th>{:lang('级别')}</th> 
+						<th>{:lang('电话')}</th> 
+						<th>{:lang('加入时间')}</th>
+						<th>{:lang('返点')}</th>
+						<th>{:lang('名下会员')}</th>
+						<th>{:lang('成交')}</th>						
+						<th>{:lang('本月收益')}</th>								
+						<th>{:lang('总收益')}</th>	
+						<th>{:lang('未结算')}</th>	
+						<th>{:lang('状态')}</th>	
+						<th>{:lang('操作')}</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -47,19 +47,19 @@
 							<td>{$v.tel}</td>
 							<td><?php echo date('Y-m-d',$v['create_time']); ?></td>
 							<td><?php echo num_to_percent($v['return_percent']); ?></td>
-							<td><a href="{:url('AgentBackend/sub_member',array('uid'=>$v['uid']))}"> {$v.member|default='0'}人 </a></td>
-							<td><a href="{:url('AgentBackend/sub_order',array('uid'=>$v['uid']))}"> {$v.order|default='0'}笔 </a></td>
-							<td><span class="red bold">￥{$v.month|default='0.00'}</span></td>
-							<td><span class="red bold">￥{$v.total_bonus|default='0.00'}</span></td>
-							<td><span class="red bold">￥{$v.no_cash|default='0.00'}</span></td>
+							<td><a href="{:url('AgentBackend/sub_member',array('uid'=>$v['uid']))}"> {$v.member|default='0'}{:lang('人')} </a></td>
+							<td><a href="{:url('AgentBackend/sub_order',array('uid'=>$v['uid']))}"> {$v.order|default='0'}{:lang('笔')} </a></td>
+							<td><span class="red bold">{:lang('￥')}{$v.month|default='0.00'}</span></td>
+							<td><span class="red bold">{:lang('￥')}{$v.total_bonus|default='0.00'}</span></td>
+							<td><span class="red bold">{:lang('￥')}{$v.no_cash|default='0.00'}</span></td>
 							<td>
 								{switch name="v.status"}
-									    {case value="1"}<span class="green bold">开启</span>{/case}
-								        {case value="0"}<span class="red bold">关闭</span>{/case} 							         
+									    {case value="1"}<span class="green bold">{:lang('开启')}</span>{/case}
+								        {case value="0"}<span class="red bold">{:lang('关闭')}</span>{/case} 							         
 							    {/switch}
 							</td>
 							<td>
-								<a href="{:url('AgentBackend/edit_agent',array('id'=>$v['agent_id']))}">编辑</a>
+								<a href="{:url('AgentBackend/edit_agent',array('id'=>$v['agent_id']))}">{:lang('编辑')}</a>
 							</td>
 						</tr>
 						{/volist}	
@@ -68,7 +68,7 @@
 							<td colspan="20" class="page">{$page->render()}</td>
 						</tr>
 						<tr>
-							<td colspan="20" class="page">总计 {$page->total()|default="0"} 个代理</td>
+							<td colspan="20" class="page">{:lang('总计')} {$page->total()|default="0"} {:lang('个代理')}</td>
 						</tr>
 				</tbody>
 				

@@ -14,13 +14,13 @@
 {if condition="isset($apply_result)"}	
 	{if condition="$apply_result['status'] EQ 2 "}
 	<div style="margin:5px 0;padding:0px 8px; line-height: 20px;color:red;">
-	由于您提交的资料中,{$apply_result.answer}，审核没有通过，请修改后在提交申请。
+	{:lang('由于您提交的资料中')},{$apply_result.answer}{:lang('，审核没有通过，请修改后在提交申请。')}
 	</div>	
 	{/if}
 {/if}
 <!-- from -->
 <form id="login-wrap">
-    <header class="Thead">手机号</header>
+    <header class="Thead">{:lang('手机号')}</header>
     
     {if condition="isset($apply_result)"}
     	<input type="hidden" name="aa_id" value="{$apply_result.aa_id}" />
@@ -28,33 +28,33 @@
     
     <div style="padding:0 10px;">
         <div class="gs-text">
-            <input type="tel" name="tel" value="{$apply_result.tel|default=''}" tabindex="1" placeholder="手机号" />
+            <input type="tel" name="tel" value="{$apply_result.tel|default=''}" tabindex="1" placeholder="{:lang('手机号')}" />
         </div>
     </div>
 
-    <header class="Thead">真实姓名</header>
+    <header class="Thead">{:lang('真实姓名')}</header>
     <div style="margin:0 10px;">
         <div class="gs-text">
-            <input type="text" name="name" value="{$apply_result.name|default=''}"  tabindex="2" placeholder="真实姓名" />
+            <input type="text" name="name" value="{$apply_result.name|default=''}"  tabindex="2" placeholder="{:lang('真实姓名')}" />
         </div>
     </div>
 
-    <header class="Thead">电子邮箱</header>
+    <header class="Thead">{:lang('电子邮箱')}</header>
     <div style="padding:0 10px;">
         <div class="gs-text">
-            <input type="text" name="email" value="{$apply_result.email|default=''}"  tabindex="3" placeholder="电子邮箱" />
+            <input type="text" name="email" value="{$apply_result.email|default=''}"  tabindex="3" placeholder="{:lang('电子邮箱')}" />
         </div>
     </div>
 
-    <header class="Thead">身份证号</header>
+    <header class="Thead">{:lang('身份证号')}</header>
     <div style="padding:0 10px;">
         <div class="gs-text">
-            <input type="text" name="id_cart" value="{$apply_result.id_cart|default=''}" tabindex="4" placeholder="身份证号" />
+            <input type="text" name="id_cart" value="{$apply_result.id_cart|default=''}" tabindex="4" placeholder="{:lang('身份证号')}" />
         </div>
     </div>
 </form>
 
-<a class="button green" href="javascript:;" id="reg-btn">提交申请</a>
+<a class="button green" href="javascript:;" id="reg-btn">{:lang('提交申请')}</a>
 
 
 {/block}

@@ -21,17 +21,17 @@
 
 {block name="content"}
 
-<input type="hidden" id="weight" value="{$weight}" />{//重量}
-<input type="hidden" id="shipping" value="{$shipping|default=''}" />{//是否需要配送}
-<input type="hidden" id="city_id" value="{$address.city_id|default=''}" />{//配送的城市}
-<input type="hidden" id="address_id" value="{$address.address_id|default=''}" />{//配送的地址}
+<input type="hidden" id="weight" value="{$weight}" />{//{:lang('重量')}}
+<input type="hidden" id="shipping" value="{$shipping|default=''}" />{//{:lang('是否需要配送')}}
+<input type="hidden" id="city_id" value="{$address.city_id|default=''}" />{//{:lang('配送的城市')}}
+<input type="hidden" id="address_id" value="{$address.address_id|default=''}" />{//{:lang('配送的地址')}}
 
-<!-- 收货地址 start -->
+<!-- {:lang('收货地址')} start -->
 {if condition="!empty($goods)"}
 	{if condition="$shipping"}
 		<div id="shipping_box">
 			<div id="addrPick"></div>
-			<header class="Thead">收货信息</header>
+			<header class="Thead">{:lang('收货信息')}</header>
 			<div id="express-bar"></div>
 			<div id="express_address">	
 			{if condition="isset($address)"}   
@@ -44,7 +44,7 @@
 			    <span  id="express-address">{$address.address|default=''}</span>
 			</div>
 			{else/}
-				<div id="wrp-btn">点击选择收货地址</div>
+				<div id="wrp-btn">{:lang('点击选择收货地址')}</div>
 				<div class="express-person-info clearfix">
 			    <div class="express-person-name">
 			        <span id="express-name"></span><span id="express-person-phone"></span>
@@ -58,9 +58,9 @@
 		</div>
 	{/if}
 {/if}	
-<!-- 收货地址 end -->
+<!-- {:lang('收货地址')} end -->
 
-<header class="Thead">订单信息</header>
+<header class="Thead">{:lang('订单信息')}</header>
 
 <div id="orderDetailsWrapper" data-minheight="68px">
 	
@@ -76,7 +76,7 @@
         </p>
         <p class="count">
         	{if condition="$d['shipping'] eq 0"}
-        	<span class="spec Elipsis" style="border:1px solid #f60;color:#f60;">免配送</span><br />
+        	<span class="spec Elipsis" style="border:1px solid #f60;color:#f60;">{:lang('免配送')}</span><br />
         	{/if}
             <span class="spec Elipsis">
               
@@ -86,7 +86,7 @@
 				
             </span>
             {if condition="isset($points)"}
-            	<span class="dprice prices">积分：{$d.pay_points|round=2}</span>
+            	<span class="dprice prices">{:lang('积分：')}{$d.pay_points|round=2}</span>
             {else/}
             	<span class="dprice prices" id="prices{$d.cart_id}">&yen;{$d.price|round=2}	</span>
             {/if}	
@@ -109,9 +109,9 @@
 	{/volist}
 	{else/}
 		{if condition="!isset($points)"}
-			<div id="cartnothing" onclick="location='{:url("/mobile")}'">购物车空空如也，去逛逛吧</div>
+			<div id="cartnothing" onclick="location='{:url("/mobile")}'">{:lang('购物车空空如也，去逛逛吧')}</div>
 		{else/}
-			<div id="cartnothing" onclick="location='{:url("points/index")}'">购物车空空如也，去逛逛吧</div>
+			<div id="cartnothing" onclick="location='{:url("points/index")}'">{:lang('购物车空空如也，去逛逛吧')}</div>
 		{/if}
 	{/if}
 </div>
@@ -120,33 +120,33 @@
 
 {if condition="!empty($goods)"}		
 		<section class="orderopt inp" id="beizhu">
-            <span class="label">订单备注</span>
-            <input type="text" class="Elipsis" value="" id="comment" name="comment" id="input-remark" placeholder="选填，可填写您的特殊要求" />
+            <span class="label">{:lang('订单备注')}</span>
+            <input type="text" class="Elipsis" value="" id="comment" name="comment" id="input-remark" placeholder="{:lang('选填，可填写您的特殊要求')}" />
         </section>	
 			
-        <!-- 订单总额 -->
+        <!-- {:lang('订单总额')} -->
         <div id="orderSummay">
         	{if condition="!isset($points)"}
 	            {if condition="$shipping"}
 	            <div>
-	                运费 :<b class="prices"> &yen;</b> <b class="prices font13" id="order_yunfei">{$transport}</b>
+	                {:lang('运费')} :<b class="prices"> &yen;</b> <b class="prices font13" id="order_yunfei">{$transport}</b>
 	            </div>
 				
 	            <div>
-	                总价 : <b class="prices"> &yen;</b> <b class="prices font13 last" id="order_amount_sig">{$total_price}</b>
+	                {:lang('总价')} : <b class="prices"> &yen;</b> <b class="prices font13 last" id="order_amount_sig">{$total_price}</b>
 	            </div>
 	            <div>
-	                总计 : <b class="prices"> &yen;</b> <b class="prices last" id="order_amount">{$total_price+$transport}</b>
+	                {:lang('总计')} : <b class="prices"> &yen;</b> <b class="prices last" id="order_amount">{$total_price+$transport}</b>
 	            </div>
 	            
 	            {else/}
 	            <div>
-	                总计 : <b class="prices"> &yen;</b> <b class="prices last" id="order_amount">{$total_price}</b>
+	                {:lang('总计')} : <b class="prices"> &yen;</b> <b class="prices last" id="order_amount">{$total_price}</b>
 	            </div>
 	            {/if}
 	        {else/}
 	            <div>
-	                总计 : <b class="prices"> </b> <b class="prices last" id="order_amount">{$total_point} 积分</b>
+	                {:lang('总计')} : <b class="prices"> </b> <b class="prices last" id="order_amount">{$total_point} {:lang('积分')}</b>
 	            </div>
             {/if}
             
@@ -155,22 +155,22 @@
 		{if condition="!isset($points)"}
 			{if condition="in_wechat()"}
 	        	<div class="weui_btn_area">
-				   <a class="weui_btn weui_btn_primary payment" id="wechat-payment-btn">微信安全支付</a>
+				   <a class="weui_btn weui_btn_primary payment" id="wechat-payment-btn">{:lang('微信安全支付')}</a>
 				</div>
 	       {else/}
 	       		<div class="weui_btn_area">
-				   <a class="weui_btn weui_btn_primary payment" id="alipay-payment-btn">支付宝支付</a>
+				   <a class="weui_btn weui_btn_primary payment" id="alipay-payment-btn">{:lang('支付宝支付')}</a>
 				</div>
 	       {/if}
 	    {else/}   
 	    		<div class="weui_btn_area">
-				   <a class="weui_btn weui_btn_primary payment" id="points-payment-btn">立即兑换</a>
+				   <a class="weui_btn weui_btn_primary payment" id="points-payment-btn">{:lang('立即兑换')}</a>
 				</div>
 		{/if}
        
 {/if}
 
-{//*************手机版 收货地址  START  *************}
+{//*************{:lang('手机版')} {:lang('收货地址')}  START  *************}
 {if condition="!in_wechat()"}
 <script id="address_list" type="text/html">
     	<@each list as value i@>	        
@@ -202,8 +202,8 @@
       <div class="weui-popup-modal">
         <div class="toolbar">
           <div class="toolbar-inner">
-            <a href="javascript:;" class="picker-button close-popup">关闭</a>
-            <h1 class="title">选择收货地址</h1>
+            <a href="javascript:;" class="picker-button close-popup">{:lang('关闭')}</a>
+            <h1 class="title">{:lang('选择收货地址')}</h1>
           </div>
         </div>
         <div class="modal-content">
@@ -216,7 +216,7 @@
 		  	<div class="weui-col-20">
 		  		<a class="add_address"></a>
 		  	</div>
-		  	<div class="weui-col-80 weui_panel_access"><a class="weui_panel_ft" href="javascript:void(0);">添加新地址</a></div>
+		  	<div class="weui-col-80 weui_panel_access"><a class="weui_panel_ft" href="javascript:void(0);">{:lang('添加新地址')}</a></div>
 		  </div>	
         </div>
       </div>
@@ -227,8 +227,8 @@
       <div class="weui-popup-modal">
         <div class="toolbar">
           <div class="toolbar-inner">
-            <a href="javascript:;" class="picker-button close-popup">关闭</a>
-            <h1 class="title">收货地址</h1>
+            <a href="javascript:;" class="picker-button close-popup">{:lang('关闭')}</a>
+            <h1 class="title">{:lang('收货地址')}</h1>
           </div>
         </div>
         
@@ -238,31 +238,31 @@
         <div class="modal-content">
         	<div class="weui_cells weui_cells_form">
         		<div class="weui_cell">
-			        <div class="weui_cell_hd"><label class="weui_label">收货人</label></div>
+			        <div class="weui_cell_hd"><label class="weui_label">{:lang('收货人')}</label></div>
 			        <div class="weui_cell_bd weui_cell_primary">
-			          <input class="weui_input" name="name" type="text" placeholder="请输入收货人">
+			          <input class="weui_input" name="name" type="text" placeholder="{:lang('请输入收货人')}">
 			        </div>
 			    </div>
 			    <div class="weui_cell">
-			        <div class="weui_cell_hd"><label class="weui_label">手机号码</label></div>
+			        <div class="weui_cell_hd"><label class="weui_label">{:lang('手机号码')}</label></div>
 			        <div class="weui_cell_bd weui_cell_primary">
-			          <input class="weui_input" name="tel" type="text" placeholder="请输入手机号码">
+			          <input class="weui_input" name="tel" type="text" placeholder="{:lang('请输入手机号码')}">
 			        </div>
 			    </div>
 			    <div class="weui_cell">
-			        <div class="weui_cell_hd"><label class="weui_label">地区信息</label></div>
+			        <div class="weui_cell_hd"><label class="weui_label">{:lang('地区信息')}</label></div>
 			        <div class="weui_cell_bd weui_cell_primary">
-			          <input class="weui_input" name="area" id="area" type="text" placeholder="请输入地区信息">
+			          <input class="weui_input" name="area" id="area" type="text" placeholder="{:lang('请输入地区信息')}">
 			        </div>
 			    </div>
 			    <div class="weui_cell">
-			        <div class="weui_cell_hd"><label class="weui_label">详细地址</label></div>
+			        <div class="weui_cell_hd"><label class="weui_label">{:lang('详细地址')}</label></div>
 			        <div class="weui_cell_bd weui_cell_primary">
-			           <input class="weui_input" name="address" type="text" placeholder="请输入详细地址"> 			          
+			           <input class="weui_input" name="address" type="text" placeholder="{:lang('请输入详细地址')}"> 			          
 			        </div>
 			    </div>
 			    <div class="weui_btn_area">
-			        <a class="weui_btn weui_btn_primary" href="javascript:" id="add_address_button">确定</a>
+			        <a class="weui_btn weui_btn_primary" href="javascript:" id="add_address_button">{:lang('确定')}</a>
 			      </div>
         	</div>
         </div>
@@ -271,7 +271,7 @@
     
 <script>
 
-//清空编辑地址的表单
+//{:lang('清空编辑地址的表单')}
 function clear_form(){
 	$('input[name="name"]').val('');
 	$('input[name="tel"]').val('');
@@ -282,7 +282,7 @@ function clear_form(){
 $(function(){
 	
 /**
- * 选择收货地址
+ * {:lang('选择收货地址')}
  */
 $('.weui_check').live('click', function() {
 	
@@ -311,7 +311,7 @@ $('.weui_check').live('click', function() {
 
 });
 /**
- * 编辑收货地址
+ * {:lang('编辑收货地址')}
  */
 $('.edit_address').live('click', function() {
 	$.closePopup()
@@ -346,7 +346,7 @@ $('.edit_address').live('click', function() {
 
 });
 /**
- * 新增收货地址
+ * {:lang('新增收货地址')}
  */
 $('#add_address').live('click', function() {
 	$.closePopup(); 
@@ -358,9 +358,9 @@ $('#add_address').live('click', function() {
 	$("#eidt_address_form").popup();
 });
 $("#area").cityPicker({
-        title: "选择地区"
+        title: "{:lang('选择地区')}"
 });
-//添加收货地址
+//{:lang('添加收货地址')}
 $('#add_address_button').live('click', function() {
 	
 	var name=$('input[name="name"]').val();
@@ -369,21 +369,21 @@ $('#add_address_button').live('click', function() {
 	var address=$('input[name="address"]').val();
 	
 	if(name==''){
-		$.toast('收货人必填',"forbidden");
+		$.toast('{:lang('收货人必填')}',"forbidden");
 	}
 	if(tel==''){
-		$.toast('联系电话必填',"forbidden");
+		$.toast('{:lang('联系电话必填')}',"forbidden");
 	}
 	if(area==''){
-		$.toast('地区信息必填',"forbidden");
+		$.toast('{:lang('地区信息必填')}',"forbidden");
 	}
 	if(address==''){
-		$.toast('详细地址必填',"forbidden");
+		$.toast('{:lang('详细地址必填')}',"forbidden");
 	}
 
 
 	var strs= new Array();
-	strs=area.split(" "); //字符分割 
+	strs=area.split(" "); //{:lang('字符分割')} 
 	
 	$.showLoading();
 	
@@ -428,7 +428,7 @@ $('#add_address_button').live('click', function() {
     }, 500);
 	
 });	
-//加载收货地址
+//{:lang('加载收货地址')}
 $('#express_address').click(function(){
 	
 	$.showLoading();
@@ -457,7 +457,7 @@ $('#express_address').click(function(){
 	
 });
 
-//支付宝支付
+//{:lang('支付宝支付')}
 $('#alipay-payment-btn').click(function(){
 	
 	var city_id=$('#city_id').val();
@@ -489,7 +489,7 @@ $('#alipay-payment-btn').click(function(){
 </script>    
     
 {/if}
-{//*************手机版 END  *************}
+{//*************{:lang('手机版')} END  *************}
 
 
 {/block}
@@ -500,7 +500,7 @@ $('#alipay-payment-btn').click(function(){
 	$.toast('<?php echo $error; ?>', "forbidden");
 <?php } ?>
 
-//计算,更新运费
+//{:lang('计算')},{:lang('更新运费')}
 function update_transport(address_id,city_id,weight){
 	
 	$.post(
@@ -532,18 +532,18 @@ function change_quantity(goods_id,input,cart_id,key){
 	var min=$(input).attr('minimum');	
 	
 	if(qty<min){		
-		$.toast('最小起订量是'+min,"forbidden");
+		$.toast('{:lang('最小起订量是')}'+min,"forbidden");
 		qty=min;
 	}
 	
 	update_cart(goods_id,qty,cart_id,key);
 }
-/***更新数量 start*****/
+/***{:lang('更新数量')} start*****/
 function changeQty(increase,goods_id,cart_id,key) {
     var qty = parseFloat($('#quantity' + key).val()); 
 
     if ( !isNaN(qty) ) {
-    	//增加
+    	//{:lang('增加')}
 		if(increase){			
 			update_cart(goods_id,(qty+1),cart_id,key);
 		}else{
@@ -551,7 +551,7 @@ function changeQty(increase,goods_id,cart_id,key) {
 		}     
     }
 }	
-{/* id:商品id,qty:数量,cart_id:购物车id,key:用于选择标签 */}
+{/* id:{:lang('商品')}id,qty:{:lang('数量')},cart_id:{:lang('购物车')}id,key:{:lang('用于选择标签')} */}
 function update_cart(id,qty,cart_id,key){
 	
 	var city_id=$('#city_id').val();
@@ -575,7 +575,7 @@ function update_cart(id,qty,cart_id,key){
 			}else{
 				$('#quantity' + key).val(qty);		
 					
-				$('#prices' + key).text('￥'+json['price']);			
+				$('#prices' + key).text('{:lang('￥')}'+json['price']);			
 				
 				$('#order_amount_sig').text(json['total_all_price']);
 				
@@ -588,9 +588,9 @@ function update_cart(id,qty,cart_id,key){
 		}
 	);
 }
-/***更新数量 end *****/
+/***{:lang('更新数量')} end *****/
 
-/***删除 *****/
+/***{:lang('删除')} *****/
 $('.cartDelbtn').click(function(){
 	
 	var key=$(this).attr('cart_id');
@@ -632,19 +632,19 @@ $('.cartDelbtn').click(function(){
 						
 						$('#weight').val(json['weight']);
 					}else{							
-						//总价
+						//{:lang('总价')}
 						$('#order_amount_sig').text(json['total_all_price']);
 						
 						if(json['transport']){
-							//总计
+							//{:lang('总计')}
 							$('#order_amount').text((parseFloat(json.total_all_price)+parseFloat(json.transport)).toFixed(2));
-							//运费
+							//{:lang('运费')}
 							$('#order_yunfei').text(json['transport']);
 						}else{
-							//免配送的
-							//总计
+							//{:lang('免配送的')}
+							//{:lang('总计')}
 							$('#order_amount').text((parseFloat(json.total_all_price)+parseFloat(0)).toFixed(2));
-							//运费
+							//{:lang('运费')}
 							$('#order_yunfei').text(0);
 							$('#shipping_box').remove();
 							
@@ -656,11 +656,11 @@ $('.cartDelbtn').click(function(){
 					}
 				
 				<?php }else{ ?>
-					$('#order_amount').text(json.total_pay_points+' 积分');
+					$('#order_amount').text(json.total_pay_points+' {:lang('积分')}');
 					if(json['transport']){
 						
 					}else{
-						//免配送的						
+						//{:lang('免配送的')}						
 						$('#shipping_box').remove();				
 						$('#city_id').val('');
 						$('#address_id').val('');
@@ -668,9 +668,9 @@ $('.cartDelbtn').click(function(){
 				<?php } ?>
 			}else if(json['total_num']==0){
 				<?php if(!isset($points)){ ?>
-					$('#orderDetailsWrapper').append('<div id="cartnothing" onclick="location=\'{:url("/mobile")}\'">购物车空空如也，去逛逛吧</div>');
+					$('#orderDetailsWrapper').append('<div id="cartnothing" onclick="location=\'{:url("/mobile")}\'">{:lang('购物车空空如也，去逛逛吧')}</div>');
 				<?php }else{ ?>
-					$('#orderDetailsWrapper').append('<div id="cartnothing" onclick="location=\'{:url("/mobile")}\'">购物车空空如也，去逛逛吧</div>');	
+					$('#orderDetailsWrapper').append('<div id="cartnothing" onclick="location=\'{:url("/mobile")}\'">{:lang('购物车空空如也，去逛逛吧')}</div>');	
 				<?php } ?>	
 				$('#beizhu').remove();
 				$('#shipping_box').remove();
@@ -690,7 +690,7 @@ $('.cartDelbtn').click(function(){
 	
 });
 
-//积分兑换
+//{:lang('积分兑换')}
 $('#points-payment-btn').click(function(){
 	
 	var city_id=$('#city_id').val();
@@ -711,7 +711,7 @@ $('#points-payment-btn').click(function(){
 			}
 			
 			if(d.success){
-				$.toast('兑换成功');
+				$.toast('{:lang('兑换成功')}');
 				
 				setTimeout(function (){
 			      location='{:url("order/index")}'; 
@@ -726,9 +726,9 @@ $('#points-payment-btn').click(function(){
 </script>
 
 <?php if(in_wechat()){ ?>
-<!-- 微信JSSDK -->
+<!-- {:lang('微信')}JSSDK -->
 <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
-<!-- 微信JSSDK -->
+<!-- {:lang('微信')}JSSDK -->
 <script type="text/javascript">
 wx.config({
     debug: false,
@@ -741,7 +741,7 @@ wx.config({
 addrsignPackage = {$addrsignPackage};
 
 
-//计算总价运费
+//{:lang('计算总价运费')}
 function count_transport(area_id,weight,name,tel,address,first_name,third_name){
 	
 	$.post(
@@ -766,15 +766,15 @@ function count_transport(area_id,weight,name,tel,address,first_name,third_name){
 } 
 
 var o = {};
-// localStorage对象
+// localStorage{:lang('对象')}
 o.Storage = window.localStorage;
- // 收货地址加载标记
+ // {:lang('收货地址加载标记')}
 window.addressloaded = false;
-// order id 生成标记
+// order id {:lang('生成标记')}
 window.orderId = false;
  
 /**
- * 获取收货地址回调函数
+ * {:lang('获取收货地址回调函数')}
  * @param {type} res
  * @returns {undefined}
  */
@@ -783,25 +783,25 @@ function addAddressCallback(res) {
         window.expressData = res;
         expressData.Address = expressData.proviceFirstStageName + expressData.addressCitySecondStageName + expressData.addressCountiesThirdStageName + expressData.addressDetailInfo;
         res.Address = expressData.Address;
-        // 缓存到Storage
+        // {:lang('缓存到')}Storage
         o.Storage.setItem('addr-set', '1');
         o.Storage.setItem('orderAddress', JSON.stringify(res));
         
-        // 收货地址加载标记
+        // {:lang('收货地址加载标记')}
         window.addressloaded = true;
         addressShow();
-        // 地址变动 重新计算订单总额
+        // {:lang('地址变动')} {:lang('重新计算订单总额')}
         count_transport(expressData.addressCitySecondStageName,$('#weight').val(),expressData.userName,expressData.telNumber,expressData.Address,expressData.proviceFirstStageName,expressData.addressCountiesThirdStageName);
        
         //$('#address_name').val(expressData.addressCitySecondStageName);
     } else {
-        $('#wrp-btn').html('授权失败');
+        $('#wrp-btn').html('{:lang('授权失败')}');
     }
 }
 
 
 /**
- * 显示收货地址数据
+ * {:lang('显示收货地址数据')}
  */
 function addressShow() {
     $('#wrp-btn').remove();
@@ -811,12 +811,12 @@ function addressShow() {
 }
 
 /**
- * 选择收货地址
+ * {:lang('选择收货地址')}
  */
 $('#express_address').click(fnSelectAddr);    
     
 /**
- * 获取收货地址
+ * {:lang('获取收货地址')}
  * @returns {undefined}
  */
 function fnSelectAddr() {	
@@ -826,18 +826,18 @@ function fnSelectAddr() {
 }
 
 /**
- * 发起微信支付
+ * {:lang('发起微信支付')}
  */
 $('#wechat-payment-btn').click(wepayCall);
 
 /**
- * 发起微信支付
+ * {:lang('发起微信支付')}
  * @returns {undefined}
  */
 function wepayCall() {
 
 	
-    //需要配送的，判断收货地址是否已经获取    
+    //{:lang('需要配送的，判断收货地址是否已经获取')}    
     <?php if($shipping){ ?>
     var address=$('#address_id').val();
 
@@ -852,7 +852,7 @@ function wepayCall() {
 	var comment=$('#comment').val();
 
     	
-    $('#wechat-payment-btn').addClass('disable').html('支付发起中...');             
+    $('#wechat-payment-btn').addClass('disable').html('{:lang('支付发起中')}...');             
 
   	$.post("{:url('Payment/weixin_pay')}",
   	{
@@ -870,30 +870,30 @@ function wepayCall() {
         if (r.ret_code === 0) {
         
           if (r.bizPackage.package !== 'prepay_id=') {
-                // 支付操作成功
+                // {:lang('支付操作成功')}
                 r.bizPackage.success = wepayCallback;
-                // 支付操作取消
+                // {:lang('支付操作取消')}
                 r.bizPackage.cancel = wepayCancel;
-                // 支付操作出错
+                // {:lang('支付操作出错')}
                 r.bizPackage.fail = wepayError;
-                // 发起微信支付
+                // {:lang('发起微信支付')}
                 
                 wx.chooseWXPay(r.bizPackage);
-                // 按钮恢复
-                $('#wechat-payment-btn').removeClass('disable').html('微信安全支付');
+                // {:lang('按钮恢复')}
+                $('#wechat-payment-btn').removeClass('disable').html('{:lang('微信安全支付')}');
             } else {
                 wepayError();
             }
         } else if(r.ret_code === 11){
-            $('#wechat-payment-btn').removeClass('disable').html('微信安全支付');
-            alert('订单创建失败！' + r.ret_msg);
+            $('#wechat-payment-btn').removeClass('disable').html('{:lang('微信安全支付')}');
+            alert('{:lang('订单创建失败！')}' + r.ret_msg);
         }
     });
       	
     
 }
 /**
- * 微信支付回调
+ * {:lang('微信支付回调')}
  * @param {type} res
  * @returns {undefined}
  */
@@ -902,26 +902,26 @@ function wepayCallback(res) {
 	 if(res.errMsg == "chooseWXPay:ok" ) {
         location.href = "{:url('PaySuccess/index')}";
     
-    	$('#wechat-payment-btn').removeClass('disable').html('微信安全支付');
+    	$('#wechat-payment-btn').removeClass('disable').html('{:lang('微信安全支付')}');
         }else{
             alert(res.errMsg);
         }
         
     }
    /**
- * 微信支付失败
+ * {:lang('微信支付失败')}
  */
 function wepayError() {
-    alert('微信支付发起失败');
-    // 按钮恢复
-    $('#wechat-payment-btn').removeClass('disable').html('微信安全支付');
+    alert('{:lang('微信支付发起失败')}');
+    // {:lang('按钮恢复')}
+    $('#wechat-payment-btn').removeClass('disable').html('{:lang('微信安全支付')}');
     }      
    /**
- * 微信支付手动取消
+ * {:lang('微信支付手动取消')}
  */
 function wepayCancel() {
-    // 按钮恢复
-    $('#wechat-payment-btn').removeClass('disable').html('微信安全支付');
+    // {:lang('按钮恢复')}
+    $('#wechat-payment-btn').removeClass('disable').html('{:lang('微信安全支付')}');
 }         
     
 </script>

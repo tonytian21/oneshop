@@ -18,16 +18,16 @@
 			<div class="allWrap">
 				<ul class="left">
 					{if condition="member('uid')"}
-						<li><a href="{:url('member/order_member/index')}">会员中心</a></li>
-						<li><a href="{:url('/logout')}">退出</a></li>
+						<li><a href="{:url('member/order_member/index')}">{:lang('会员中心')}</a></li>
+						<li><a href="{:url('/logout')}">{:lang('退出')}</a></li>
 					{else /}
-						<li><a class="pointer" id="reg">注册</a></li>
-						<li><a class="pointer" id="login">登录</a></li>
+						<li><a class="pointer" id="reg">{:lang('注册')}</a></li>
+						<li><a class="pointer" id="login">{:lang('登录')}</a></li>
 					{/if}
 				</ul>
 				<ul class="right">
 					<li id="cart">
-						 购物车(<a href="{:url('/cart')}"> {if condition="session('total')"}{$Think.session.total} {else/}0{/if} </a>)
+						 {:lang('购物车')}(<a href="{:url('/cart')}"> {if condition="session('total')"}{$Think.session.total} {else/}0{/if} </a>)
 					</li>
 				</ul>
 				<div class="clearfix"></div>
@@ -37,7 +37,7 @@
 	
 	<div id="header" class="allWrap">
 		<ul id="home">
-			<li><a href="{$Request.root.true}">首页</a></li>
+			<li><a href="{$Request.root.true}">{:lang('首页')}</a></li>
 		</ul>  
 		<ul class="nav">
 		{volist name="top_nav" id="category"}
@@ -60,7 +60,7 @@
 		
 	<div id="footer">
 		<div class="allWrap">
-		<p>Copyright © 2015-<?php echo date('Y',time()); ?> {$Think.config.SITE_TITLE}  {$Think.config.SITE_URL} All Rights Reserved. 备案号：{$Think.config.SITE_ICP} </p>
+		<p>Copyright © 2015-<?php echo date('Y',time()); ?> {$Think.config.SITE_TITLE}  {$Think.config.SITE_URL} All Rights Reserved. {:lang('备案号：')}{$Think.config.SITE_ICP} </p>
 		</div>
 	</div>	
 </body>

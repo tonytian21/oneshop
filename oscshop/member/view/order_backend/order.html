@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>下单成功-<?php echo config('SITE_NAME'); ?></title>
+<title>{:lang('下单成功')}-<?php echo config('SITE_NAME'); ?></title>
 </head>
 <?php use think\Db; ?>
 <body style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #000000;">
@@ -12,32 +12,32 @@
   <p style="color:#000;font-size:20px;font-weight:bold;"><?php echo $seller_comment; ?></p>
   <?php } ?>
   
-  <p style="margin-top: 0px; margin-bottom: 20px;">感谢您对<?php echo config('SITE_NAME'); ?>产品的支持</p>
+  <p style="margin-top: 0px; margin-bottom: 20px;">{:lang('感谢您对')}<?php echo config('SITE_NAME'); ?>{:lang('产品的支持')}</p>
  
 
   <table style="border-collapse: collapse; width: 100%; border-top: 1px solid #DDDDDD; border-left: 1px solid #DDDDDD; margin-bottom: 20px;">
     <thead>
       <tr>
-        <td style="font-size: 12px; border-right: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD; background-color: #EFEFEF; font-weight: bold; text-align: left; padding: 7px; color: #222222;" colspan="2">订单信息</td>
+        <td style="font-size: 12px; border-right: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD; background-color: #EFEFEF; font-weight: bold; text-align: left; padding: 7px; color: #222222;" colspan="2">{:lang('订单信息')}</td>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td style="font-size: 12px;	border-right: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD; text-align: left; padding: 7px;"><b>订单号</b> <?php echo $order['order']['order_num_alias']; ?><br />
-          <b>付款时间</b> <?php if($order['order']['pay_time']){echo date('Y-m-d H:i:s',$order['order']['pay_time']);}else{echo '无';} ?><br />
-          <b>支付方式</b> 
+        <td style="font-size: 12px;	border-right: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD; text-align: left; padding: 7px;"><b>{:lang('订单号')}</b> <?php echo $order['order']['order_num_alias']; ?><br />
+          <b>{:lang('付款时间')}</b> <?php if($order['order']['pay_time']){echo date('Y-m-d H:i:s',$order['order']['pay_time']);}else{echo '{:lang('无')}';} ?><br />
+          <b>{:lang('支付方式')}</b> 
           {switch name="order.order.payment_code"}   
-					{case value="alipay"}支付宝{/case}    
-					{case value="weixin"}微信支付{/case}
+					{case value="alipay"}{:lang('支付宝')}{/case}    
+					{case value="weixin"}{:lang('微信支付')}{/case}
 				{/switch}
 				<br />
           <?php if ($order['order']['shipping_method']) { ?>
-          <b>货运方式</b> <?php echo get_shipping_name($order['order']['shipping_method']); ?>
+          <b>{:lang('货运方式')}</b> <?php echo get_shipping_name($order['order']['shipping_method']); ?>
           <?php } ?></td>
-          <td style="font-size: 12px;	border-right: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD; text-align: left; padding: 7px;"><b>邮箱</b> <?php echo $order['order']['email']; ?><br />
-          <b>收货人联系号码</b><?php echo $order['order']['shipping_tel']; ?><br />
-          <b>收货人</b> <?php echo $order['order']['shipping_name']; ?><br />
-          <b>订单状态</b> <?php echo $order['order']['name']; ?><br /></td>
+          <td style="font-size: 12px;	border-right: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD; text-align: left; padding: 7px;"><b>{:lang('邮箱')}</b> <?php echo $order['order']['email']; ?><br />
+          <b>{:lang('收货人联系号码')}</b><?php echo $order['order']['shipping_tel']; ?><br />
+          <b>{:lang('收货人')}</b> <?php echo $order['order']['shipping_name']; ?><br />
+          <b>{:lang('订单状态')}</b> <?php echo $order['order']['name']; ?><br /></td>
       </tr>
     </tbody>
   </table>
@@ -45,7 +45,7 @@
   <table style="border-collapse: collapse; width: 100%; border-top: 1px solid #DDDDDD; border-left: 1px solid #DDDDDD; margin-bottom: 20px;">
     <thead>
       <tr>
-        <td style="font-size: 12px; border-right: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD; background-color: #EFEFEF; font-weight: bold; text-align: left; padding: 7px; color: #222222;">订单留言</td>
+        <td style="font-size: 12px; border-right: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD; background-color: #EFEFEF; font-weight: bold; text-align: left; padding: 7px; color: #222222;">{:lang('订单留言')}</td>
       </tr>
     </thead>
     <tbody>
@@ -60,7 +60,7 @@
     <thead>
       <tr>
         
-        <td style="font-size: 12px; border-right: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD; background-color: #EFEFEF; font-weight: bold; text-align: left; padding: 7px; color: #222222;">收货地址</td>
+        <td style="font-size: 12px; border-right: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD; background-color: #EFEFEF; font-weight: bold; text-align: left; padding: 7px; color: #222222;">{:lang('收货地址')}</td>
         
       </tr>
     </thead>
@@ -77,11 +77,11 @@
   <table style="border-collapse: collapse; width: 100%; border-top: 1px solid #DDDDDD; border-left: 1px solid #DDDDDD; margin-bottom: 20px;">
     <thead>
       <tr>
-        <td style="font-size: 12px; border-right: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD; background-color: #EFEFEF; font-weight: bold; text-align: left; padding: 7px; color: #222222;">产品名称</td>
-        <td style="font-size: 12px; border-right: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD; background-color: #EFEFEF; font-weight: bold; text-align: left; padding: 7px; color: #222222;">型号</td>
-        <td style="font-size: 12px; border-right: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD; background-color: #EFEFEF; font-weight: bold; text-align: right; padding: 7px; color: #222222;">数量</td>
-        <td style="font-size: 12px; border-right: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD; background-color: #EFEFEF; font-weight: bold; text-align: right; padding: 7px; color: #222222;">单价</td>
-        <td style="font-size: 12px; border-right: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD; background-color: #EFEFEF; font-weight: bold; text-align: right; padding: 7px; color: #222222;">总计</td>
+        <td style="font-size: 12px; border-right: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD; background-color: #EFEFEF; font-weight: bold; text-align: left; padding: 7px; color: #222222;">{:lang('产品名称')}</td>
+        <td style="font-size: 12px; border-right: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD; background-color: #EFEFEF; font-weight: bold; text-align: left; padding: 7px; color: #222222;">{:lang('型号')}</td>
+        <td style="font-size: 12px; border-right: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD; background-color: #EFEFEF; font-weight: bold; text-align: right; padding: 7px; color: #222222;">{:lang('数量')}</td>
+        <td style="font-size: 12px; border-right: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD; background-color: #EFEFEF; font-weight: bold; text-align: right; padding: 7px; color: #222222;">{:lang('单价')}</td>
+        <td style="font-size: 12px; border-right: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD; background-color: #EFEFEF; font-weight: bold; text-align: right; padding: 7px; color: #222222;">{:lang('总计')}</td>
       </tr>
     </thead>
     <tbody>
@@ -99,8 +99,8 @@
        
         <td style="font-size: 12px;	border-right: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD; text-align: left; padding: 7px;"><?php echo $product['model']; ?></td>
         <td style="font-size: 12px;	border-right: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD; text-align: right; padding: 7px;"><?php echo $product['quantity']; ?></td>
-        <td style="font-size: 12px;	border-right: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD; text-align: right; padding: 7px;"><?php echo '￥'.$product['price']; ?></td>
-        <td style="font-size: 12px;	border-right: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD; text-align: right; padding: 7px;"><?php echo '￥'.$product['total']; ?></td>
+        <td style="font-size: 12px;	border-right: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD; text-align: right; padding: 7px;"><?php echo '{:lang('￥')}'.$product['price']; ?></td>
+        <td style="font-size: 12px;	border-right: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD; text-align: right; padding: 7px;"><?php echo '{:lang('￥')}'.$product['total']; ?></td>
       </tr>
       <?php } ?>
    
@@ -115,8 +115,8 @@
     </tfoot>
   </table>
 
-  <p>您可以登录网站查看订单</p>
-  <p style="margin-top: 0px; margin-bottom: 20px;">感谢您对<?php echo config('SITE_NAME'); ?>产品的支持，欢迎下次光顾</p>
+  <p>{:lang('您可以登录网站查看订单')}</p>
+  <p style="margin-top: 0px; margin-bottom: 20px;">{:lang('感谢您对')}<?php echo config('SITE_NAME'); ?>{:lang('产品的支持，欢迎下次光顾')}</p>
 
 </div>
 </body>

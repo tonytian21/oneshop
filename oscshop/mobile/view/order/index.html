@@ -12,11 +12,11 @@
 <input type="hidden" value="{:input('param.status')}" id="status"/>
 
 <div class='clearfix' id='uc-order-sort-bar'>
-    <div class="uc-order-sort <?php if($status==''){echo 'hover';} ?>" data-status=""><b>全部</b></div>
-    <div class="uc-order-sort <?php if($status==config('default_order_status_id')){echo 'hover';} ?>" data-status="<?php echo config('default_order_status_id'); ?>"><b>待付款</b></div>
-    <div class="uc-order-sort <?php if($status==config('paid_order_status_id')){echo 'hover';} ?>" data-status="<?php echo config('paid_order_status_id'); ?>"><b>待发货</b></div>	
-    <div class="uc-order-sort <?php if($status==config('cancel_order_status_id')){echo 'hover';} ?>" data-status="<?php echo config('cancel_order_status_id'); ?>"><b>已取消</b></div>
-    <div class="uc-order-sort <?php if($status==config('complete_order_status_id')){echo 'hover';} ?>" data-status="<?php echo config('complete_order_status_id'); ?>"><b>已完成</b></div>
+    <div class="uc-order-sort <?php if($status==''){echo 'hover';} ?>" data-status=""><b>{:lang('全部')}</b></div>
+    <div class="uc-order-sort <?php if($status==config('default_order_status_id')){echo 'hover';} ?>" data-status="<?php echo config('default_order_status_id'); ?>"><b>{:lang('待付款')}</b></div>
+    <div class="uc-order-sort <?php if($status==config('paid_order_status_id')){echo 'hover';} ?>" data-status="<?php echo config('paid_order_status_id'); ?>"><b>{:lang('待发货')}</b></div>	
+    <div class="uc-order-sort <?php if($status==config('cancel_order_status_id')){echo 'hover';} ?>" data-status="<?php echo config('cancel_order_status_id'); ?>"><b>{:lang('已取消')}</b></div>
+    <div class="uc-order-sort <?php if($status==config('complete_order_status_id')){echo 'hover';} ?>" data-status="<?php echo config('complete_order_status_id'); ?>"><b>{:lang('已完成')}</b></div>
 </div>
 
 <div id="uc-orderlist"></div>
@@ -46,7 +46,7 @@ var orderLoading = false;
 var orderLoadingLock = false;
 var totalheight;
 
-// orderlist列表页面
+// orderlist{:lang('列表页面')}
 if ($('#uc-orderlist').length > 0) {
     // init list
     loadOrderList(currentOrderpage);
@@ -54,7 +54,7 @@ if ($('#uc-orderlist').length > 0) {
     $(window).scroll(function () {
         totalheight = parseFloat($(window).height()) + parseFloat($(window).scrollTop()) + 150;
         if ($(document).height() <= totalheight && !orderLoading) {
-            //加载数据
+            //{:lang('加载数据')}
             loadOrderList(++currentOrderpage);
         }
     });
@@ -83,8 +83,8 @@ function loadOrderList(page) {
             $.get('{:url("order/ajax_order_list")}'+'/page/'+ page +'/status/'+ $('#status').val(), function (HTML) {            	
             orderLoading = false;            
             if (HTML === '' && page === 0) {
-                // 什么都没有
-                $("#uc-orderlist").append('<div class="emptyTip">暂无数据</div>');
+                // {:lang('什么都没有')}
+                $("#uc-orderlist").append('<div class="emptyTip">{:lang('暂无数据')}</div>');
             } else if (HTML !== '') {
                 if (page === 0) {
                     $("#uc-orderlist").html(HTML);
@@ -103,14 +103,14 @@ function loadOrderList(page) {
 function cancelOrder(orderId, node) {
         orderId = parseInt(orderId);
         if (orderId > 0) {
-            if (confirm('你确认要取消订单吗?')) {
+            if (confirm('{:lang('你确认要取消订单吗')}?')) {
                 $.post('{:url("order/cancel_order")}', {
                     order_id: orderId
                 }, function(res) {
                     if (res == "1") {
                         $(node).parent().parent().slideUp();
                     } else {
-                        alert('订单取消失败！');
+                        alert('{:lang('订单取消失败！')}');
                     }
                 });
             }
@@ -120,7 +120,7 @@ function cancelOrder(orderId, node) {
 function alipayOrder(orderId){
 	orderId = parseInt(orderId);
     if (orderId > 0) {
-        if (confirm('你确认要支付吗?')) {
+        if (confirm('{:lang('你确认要支付吗')}?')) {
             $.post('{:url("payment/alipay_repay")}', {
                 order_id: orderId
             }, function(d) {
@@ -153,13 +153,13 @@ function wxpayOrder(orderId){
                if (r.ret_code === 0) {
         
 		          if (r.bizPackage.package !== 'prepay_id=') {
-		                // 支付操作成功
+		                // {:lang('支付操作成功')}
 		                r.bizPackage.success = wepayCallback;
-		                // 支付操作取消
+		                // {:lang('支付操作取消')}
 		                r.bizPackage.cancel = wepayCancel;
-		                // 支付操作出错
+		                // {:lang('支付操作出错')}
 		                r.bizPackage.fail = wepayError;
-		                // 发起微信支付		                
+		                // {:lang('发起微信支付')}		                
 		                wx.chooseWXPay(r.bizPackage);
 		           
 		            } else {
@@ -167,7 +167,7 @@ function wxpayOrder(orderId){
 		            }
 		        } else if(r.ret_code === 11){
 		       
-		            alert('订单创建失败！' + r.ret_msg);
+		            alert('{:lang('订单创建失败！')}' + r.ret_msg);
 		        }
                
             });
@@ -176,7 +176,7 @@ function wxpayOrder(orderId){
 }
 
 /**
- * 微信支付回调
+ * {:lang('微信支付回调')}
  * @param {type} res
  * @returns {undefined}
  */
@@ -190,13 +190,13 @@ function wepayCallback(res) {
         
 }
 /**
- * 微信支付失败
+ * {:lang('微信支付失败')}
  */
 function wepayError(res) {
-    alert('微信支付发起失败');    
+    alert('{:lang('微信支付发起失败')}');    
 }      
 /**
- * 微信支付手动取消
+ * {:lang('微信支付手动取消')}
  */
 function wepayCancel() {
 

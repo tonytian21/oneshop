@@ -2,14 +2,14 @@
 {block name="content"}
 <div class="page-header">
 <h1>	
-	移动端
+	{:lang('移动端')}
 	<small>
 		<i class="ace-icon fa fa-angle-double-right"></i>
 		{$breadcrumb1}
 	</small>
 	<small>
 		<i class="ace-icon fa fa-angle-double-right"></i>
-		提现记录
+		{:lang('提现记录')}
 	</small>
 </h1>
 </div>	
@@ -21,16 +21,16 @@
 				<thead>
 					<tr>
 						
-						<th>姓名</th> 
-						<th>电话</th> 
-						<th>提现金额</th> 
-						<th>收款银行</th> 
-						<th>收款账户</th> 
-						<th>支付宝账户</th>	
-						<th>申请时间</th>		
-						<th>处理时间</th>	
-<!-- 						<th>管理员</th>				 -->
-						<th>状态</th>
+						<th>{:lang('姓名')}</th> 
+						<th>{:lang('电话')}</th> 
+						<th>{:lang('提现金额')}</th> 
+						<th>{:lang('收款银行')}</th> 
+						<th>{:lang('收款账户')}</th> 
+						<th>{:lang('支付宝账户')}</th>	
+						<th>{:lang('申请时间')}</th>		
+						<th>{:lang('处理时间')}</th>	
+<!-- 						<th>{:lang('管理员')}</th>				 -->
+						<th>{:lang('状态')}</th>
 						
 					</tr>
 				</thead>
@@ -49,7 +49,7 @@
 							<td><?php echo date('Y-m-d',$v['create_time']); ?></td>
 							<!-- 	<td>{$v.admin_user}</td> -->
 							<td>
-								 <span class="green bold">已经通过</span>
+								 <span class="green bold">{:lang('已经通过')}</span>
 							</td>
 						
 						</tr>
@@ -59,7 +59,7 @@
 							<td colspan="20" class="page">{$list->render()}</td>
 						</tr>
 						<tr>
-							<td colspan="20" class="page">总计 {$list->total()|default="0"} 个申请</td>
+							<td colspan="20" class="page">{:lang('总计')} {$list->total()|default="0"} {:lang('个申请')}</td>
 						</tr>
 				</tbody>
 				

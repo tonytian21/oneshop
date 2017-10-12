@@ -2,14 +2,14 @@
 {block name="content"}
 <div class="page-header">
 <h1>	
-		移动端
+		{:lang('移动端')}
 		<small>
 			<i class="ace-icon fa fa-angle-double-right"></i>
 			{$breadcrumb1}
 		</small>
 		<small>
 			<i class="ace-icon fa fa-angle-double-right"></i>
-			提现申请
+			{:lang('提现申请')}
 		</small>
 	</h1>
 </div>	
@@ -21,15 +21,15 @@
 				<thead>
 					<tr>
 						
-						<th>姓名</th> 
-						<th>电话</th> 
-						<th>提现金额</th> 
-						<th>收款银行</th> 
-						<th>收款账户</th> 
-						<th>支付宝账户</th>	
-						<th>申请时间</th>					
-						<th>状态</th>
-						<th>操作</th>
+						<th>{:lang('姓名')}</th> 
+						<th>{:lang('电话')}</th> 
+						<th>{:lang('提现金额')}</th> 
+						<th>{:lang('收款银行')}</th> 
+						<th>{:lang('收款账户')}</th> 
+						<th>{:lang('支付宝账户')}</th>	
+						<th>{:lang('申请时间')}</th>					
+						<th>{:lang('状态')}</th>
+						<th>{:lang('操作')}</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -47,11 +47,11 @@
 							
 							<td>
 								{switch name="v.status"}
-								    {case value="0"}<span class="red bold">未审核</span> {/case}
+								    {case value="0"}<span class="red bold">{:lang('未审核')}</span> {/case}
 								{/switch}
 							</td>
 							<td>
-								<a class="pass" href="{:url('CashBackend/pass_cash_apply',array('id'=>$v['aca_id'],'agent_id'=>$v['agent_id'],'cash'=>$v['cash'],'uid'=>$v['uid']))}">通过</a>
+								<a class="pass" href="{:url('CashBackend/pass_cash_apply',array('id'=>$v['aca_id'],'agent_id'=>$v['agent_id'],'cash'=>$v['cash'],'uid'=>$v['uid']))}">{:lang('通过')}</a>
 							</td>
 						</tr>
 						{/volist}	
@@ -60,7 +60,7 @@
 							<td colspan="20" class="page">{$list->render()}</td>
 						</tr>
 						<tr>
-							<td colspan="20" class="page">总计 {$list->total()|default="0"} 个申请</td>
+							<td colspan="20" class="page">{:lang('总计')} {$list->total()|default="0"} {:lang('个申请')}</td>
 						</tr>
 				</tbody>
 				
@@ -72,7 +72,7 @@
 {block name="javascript"}
 <script>
 	$('.pass').click(function(){
-			var f=confirm('确认要执行该操作吗？');
+			var f=confirm('{:lang('确认要执行该操作吗？')}');
 			if(f==false){
 				return false;
 			}

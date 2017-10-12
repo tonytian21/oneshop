@@ -12,7 +12,7 @@
 <div class="row">
 	<div class="col-xs-12">	
 		<div class="form-horizontal">	
-			<legend>系统参数 </legend>
+			<legend>{:lang('系统参数')} </legend>
 			
 			<div class="form-group">
 				<label class="col-sm-2 control-label no-padding-left">page_num </label>
@@ -24,37 +24,37 @@
 			</div>
 			
 			<div class="form-group">
-				<label class="col-sm-2 control-label no-padding-left">是否保存用户行为 </label>
+				<label class="col-sm-2 control-label no-padding-left">{:lang('是否保存用户行为')} </label>
 			<div class="col-sm-10">
 				<div class="clearfix">					
-						<label class="radio-inline"><input type="radio" checked="checked" value="true" name="storage_user_action">是</label>	
-						<label class="radio-inline"><input type="radio" value="false" name="storage_user_action">否</label>				
+						<label class="radio-inline"><input type="radio" checked="checked" value="true" name="storage_user_action">{:lang('是')}</label>	
+						<label class="radio-inline"><input type="radio" value="false" name="storage_user_action">{:lang('否')}</label>				
 				</div>
 			</div>
 			</div>
 			
 			<div class="form-group">
-				<label class="col-sm-2 control-label no-padding-left">会员登录状态持久化 </label>
+				<label class="col-sm-2 control-label no-padding-left">{:lang('会员登录状态持久化')} </label>
 			<div class="col-sm-10">
 				<div class="clearfix">					
-						<label class="radio-inline"><input type="radio" checked="checked" value="cookie" name="member_login_type">是</label>	
-						<label class="radio-inline"><input type="radio" value="session" name="member_login_type">否</label>				
+						<label class="radio-inline"><input type="radio" checked="checked" value="cookie" name="member_login_type">{:lang('是')}</label>	
+						<label class="radio-inline"><input type="radio" value="session" name="member_login_type">{:lang('否')}</label>				
 				</div>
 			</div>
 			</div>
 			
 			<div class="form-group">
-				<label class="col-sm-2 control-label no-padding-left">注册需要审核 </label>
+				<label class="col-sm-2 control-label no-padding-left">{:lang('注册需要审核')} </label>
 			<div class="col-sm-10">
 				<div class="clearfix">					
-						<label class="radio-inline"><input type="radio" checked="checked" value="1" name="reg_check">是</label>	
-						<label class="radio-inline"><input type="radio" value="0" name="reg_check">否</label>				
+						<label class="radio-inline"><input type="radio" checked="checked" value="1" name="reg_check">{:lang('是')}</label>	
+						<label class="radio-inline"><input type="radio" value="0" name="reg_check">{:lang('否')}</label>				
 				</div>
 			</div>
 			</div>
 			
 			<div class="form-group">
-				<label class="col-sm-2 control-label no-padding-left">默认会员组 </label>
+				<label class="col-sm-2 control-label no-padding-left">{:lang('默认会员组')} </label>
 			<div class="col-sm-10">
 				<div class="clearfix">					
 						<select class="form-control" name="default_group_id">							
@@ -67,9 +67,9 @@
 			</div>
 			
 		
-			<legend>单位参数 </legend>
+			<legend>{:lang('单位参数')} </legend>
 			<div class="form-group">
-				<label class="col-sm-2 control-label no-padding-left">  长度单位 </label>
+				<label class="col-sm-2 control-label no-padding-left">  {:lang('长度单位')} </label>
 			<div class="col-sm-10">
 				<div class="clearfix">
 					<select class="form-control" name="length_id">							
@@ -82,7 +82,7 @@
 			</div>
 			
 			<div class="form-group">
-				<label class="col-sm-2 control-label no-padding-left">  重量单位 </label>
+				<label class="col-sm-2 control-label no-padding-left">  {:lang('重量单位')} </label>
 			<div class="col-sm-10">
 				<div class="clearfix">
 					<select class="form-control" name="weight_id">							
@@ -93,9 +93,9 @@
 				</div>
 			</div>
 			</div>
-			<legend>订单状态 </legend>
+			<legend>{:lang('订单状态')} </legend>
 			<div class="form-group">			
-				<label class="col-sm-2 control-label no-padding-left"> 默认订单状态 </label>
+				<label class="col-sm-2 control-label no-padding-left"> {:lang('默认订单状态')} </label>
 			<div class="col-sm-10">
 				<div class="clearfix">
 					<select class="form-control" name="default_order_status_id">						
@@ -108,7 +108,7 @@
 			</div>
 			
 			<div class="form-group">			
-				<label class="col-sm-2 control-label no-padding-left"> 订单付款状态 </label>
+				<label class="col-sm-2 control-label no-padding-left"> {:lang('订单付款状态')} </label>
 			<div class="col-sm-10">
 				<div class="clearfix">
 					<select class="form-control" name="paid_order_status_id">						
@@ -121,7 +121,7 @@
 			</div>
 			
 			<div class="form-group">			
-				<label class="col-sm-2 control-label no-padding-left"> 订单完成状态 </label>
+				<label class="col-sm-2 control-label no-padding-left"> {:lang('订单完成状态')} </label>
 			<div class="col-sm-10">
 				<div class="clearfix">
 					<select class="form-control" name="complete_order_status_id">						
@@ -134,7 +134,7 @@
 			</div>
 			
 			<div class="form-group">			
-				<label class="col-sm-2 control-label no-padding-left"> 订单取消状态 </label>
+				<label class="col-sm-2 control-label no-padding-left"> {:lang('订单取消状态')} </label>
 			<div class="col-sm-10">
 				<div class="clearfix">
 					<select class="form-control" name="cancel_order_status_id">						
@@ -150,7 +150,7 @@
 		<div class="form-group">
 			<label class="col-sm-1 control-label no-padding-left"> </label>	
 			<div class="col-sm-11">
-				<button form="form" type="submit" id="send"  class="btn btn-sm btn-primary">提交</button>		
+				<button form="form" type="submit" id="send"  class="btn btn-sm btn-primary">{:lang('提交')}</button>		
 			</div>
 		</div>
 	</div>

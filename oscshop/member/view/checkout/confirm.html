@@ -3,11 +3,11 @@
   <table class="table table-bordered">
     <thead>
       <tr>
-        <td class="name">名称</td>
-        <td class="model">型号</td>
-        <td class="quantity">数量</td>
-        <td class="price">价格</td>
-        <td class="total">总计</td>
+        <td class="name">{:lang('名称')}</td>
+        <td class="model">{:lang('型号')}</td>
+        <td class="quantity">{:lang('数量')}</td>
+        <td class="price">{:lang('价格')}</td>
+        <td class="total">{:lang('总计')}</td>
       </tr>
     </thead>
     <tbody>
@@ -38,20 +38,20 @@
    	  
    	  
  	  <tr>
-        <td colspan="4" class="price" style="text-align: right;"><b style="color: #C30005;">商品总价:</b></td>
-        <td class="total"><div class="price"><?php echo '￥'.$t; ?></div></td>
+        <td colspan="4" class="price" style="text-align: right;"><b style="color: #C30005;">{:lang('商品总价')}:</b></td>
+        <td class="total"><div class="price"><?php echo '{:lang('￥')}'.$t; ?></div></td>
       </tr> 
       
       <?php if($shipping_required){ ?> 	  
 	      <tr>
-	        <td colspan="4" class="price" style="text-align: right;"><b style="color: #C30005;">运费:</b></td>
-	        <td class="total"><div class="price"><?php echo '￥'.$transport_fee['price']; ?></div></td>
+	        <td colspan="4" class="price" style="text-align: right;"><b style="color: #C30005;">{:lang('运费')}:</b></td>
+	        <td class="total"><div class="price"><?php echo '{:lang('￥')}'.$transport_fee['price']; ?></div></td>
 	      </tr>
  	  <?php } ?>
  	  
       <tr>
-        <td colspan="4" class="price" style="text-align: right;"><b style="color: #C30005;">总计:</b></td>
-        <td class="total"><div class="price"><?php echo '￥'.($t+$transport_fee['price']) ?></div></td>
+        <td colspan="4" class="price" style="text-align: right;"><b style="color: #C30005;">{:lang('总计')}:</b></td>
+        <td class="total"><div class="price"><?php echo '{:lang('￥')}'.($t+$transport_fee['price']) ?></div></td>
       </tr> 
       
     </tfoot>
@@ -61,7 +61,7 @@
 	<div class="buttons">
 		<div class="right" style="margin-right:10px;">
 	
-			<input type="button" value="下单" id="pay" class="btn btn-primary btn-continue" />		
+			<input type="button" value="{:lang('下单')}" id="pay" class="btn btn-primary btn-continue" />		
 		</div>
 	</div>	
 </div>
@@ -84,7 +84,7 @@ $(function(){
 			if(json.type=='wx_pay'){			
 				art.dialog.open(json.url, 
 					{	id:'pay',
-						title: '微信支付',
+						title: '{:lang('微信支付')}',
 						lock: true
 				});					
 			}else{

@@ -11,7 +11,7 @@ summary{extend name="public:base" /}
 			<i class="ace-icon fa fa-angle-double-right"></i>
 			{$crumbs}
 		</small>			
-	<button type="submit" style="float:right;" form="form-goods"  class="btn button btn-sm btn-primary">提交</button>
+	<button type="submit" style="float:right;" form="form-goods"  class="btn button btn-sm btn-primary">{:lang('提交')}</button>
 	</h1>
 </div>
 	<div class="row">
@@ -63,15 +63,15 @@ summary{extend name="public:base" /}
                       <input type="hidden" name="goods_option[<?php echo $option_row; ?>][option_id]" value="<?php echo $goods_option['option_id']; ?>" />
                       <input type="hidden" name="goods_option[<?php echo $option_row; ?>][type]" value="<?php echo $goods_option['type']; ?>" />
                       <div class="form-group">
-                        <label class="col-sm-2 control-label" for="input-required<?php echo $option_row; ?>">必选</label>
+                        <label class="col-sm-2 control-label" for="input-required<?php echo $option_row; ?>">{:lang('必选')}</label>
                         <div class="col-sm-10">
                           <select name="goods_option[<?php echo $option_row; ?>][required]" id="input-required<?php echo $option_row; ?>" class="form-control">
                             <?php if ($goods_option['required']) { ?>
-                            <option value="1" selected="selected">是</option>
-                            <option value="0">否</option>
+                            <option value="1" selected="selected">{:lang('是')}</option>
+                            <option value="0">{:lang('否')}</option>
                             <?php } else { ?>
-                            <option value="1">是</option>
-                            <option value="0" selected="selected">否</option>
+                            <option value="1">{:lang('是')}</option>
+                            <option value="0" selected="selected">{:lang('否')}</option>
                             <?php } ?>
                           </select>
                         </div>
@@ -86,15 +86,15 @@ summary{extend name="public:base" /}
                               <?php if($goods_option['type'] == 'select'){ ?>
                               	<td class="text-left"></td>
                               <?php }else{ ?>
-                              	<td class="text-left">图片</td>
+                              	<td class="text-left">{:lang('图片')}</td>
                               <?php } ?>
                               
-                              <td class="text-left">选项值</td>
-                              <td class="text-right">商品数量</td>
-                              <td class="text-left">扣减库存</td>
-                              <td class="text-right">销售价格</td>
+                              <td class="text-left">{:lang('选项值')}</td>
+                              <td class="text-right">{:lang('商品数量')}</td>
+                              <td class="text-left">{:lang('扣减库存')}</td>
+                              <td class="text-right">{:lang('销售价格')}</td>
                              
-                              <td class="text-right">重 量</td>
+                              <td class="text-right">{:lang('重')} {:lang('量')}</td>
                               <td></td>
                             </tr>
                           </thead>
@@ -126,11 +126,11 @@ summary{extend name="public:base" /}
                               <td class="text-right"><input type="text" name="goods_option[<?php echo $option_row; ?>][goods_option_value][<?php echo $option_value_row; ?>][quantity]" value="<?php echo $goods_option_value['quantity']; ?>"  class="form-control" /></td>
                               <td class="text-left"><select name="goods_option[<?php echo $option_row; ?>][goods_option_value][<?php echo $option_value_row; ?>][subtract]" class="form-control">
                                   <?php if ($goods_option_value['subtract']) { ?>
-	                                  <option value="1" selected="selected">是</option>
-	                                  <option value="0">否</option>
+	                                  <option value="1" selected="selected">{:lang('是')}</option>
+	                                  <option value="0">{:lang('否')}</option>
                                   <?php } else { ?>
-	                                  <option value="1">是</option>
-	                                  <option value="0" selected="selected">否</option>
+	                                  <option value="1">{:lang('是')}</option>
+	                                  <option value="0" selected="selected">{:lang('否')}</option>
                                   <?php } ?>
                                 </select></td>
                               <td class="text-right"><select name="goods_option[<?php echo $option_row; ?>][goods_option_value][<?php echo $option_value_row; ?>][price_prefix]" class="form-control">
@@ -167,7 +167,7 @@ summary{extend name="public:base" /}
                           <tfoot>
                             <tr>
                               <td colspan="6"></td>
-                              <td class="text-left"><button type="button" onclick="addOptionValue('<?php echo $option_row; ?>','<?php echo $goods_option['type']; ?>');" data-toggle="tooltip"  class="btn btn-primary">添加选项</button></td>
+                              <td class="text-left"><button type="button" onclick="addOptionValue('<?php echo $option_row; ?>','<?php echo $goods_option['type']; ?>');" data-toggle="tooltip"  class="btn btn-primary">{:lang('添加选项')}</button></td>
                             </tr>
                           </tfoot>
                         </table>
@@ -228,10 +228,10 @@ $('input[name=\'option\']').autocomplete({
 		html += '	<input type="hidden" name="goods_option[' + option_row + '][type]" value="' + item['type'] + '" />';
 		
 		html += '	<div class="form-group">';
-		html += '	  <label class="col-sm-2 control-label" for="input-required' + option_row + '">必选</label>';
+		html += '	  <label class="col-sm-2 control-label" for="input-required' + option_row + '">{:lang('必选')}</label>';
 		html += '	  <div class="col-sm-10"><select name="goods_option[' + option_row + '][required]" id="input-required' + option_row + '" class="form-control">';
-		html += '	      <option value="1">是</option>';
-		html += '	      <option value="0">否</option>';
+		html += '	      <option value="1">{:lang('是')}</option>';
+		html += '	      <option value="0">{:lang('否')}</option>';
 		html += '	  </select></div>';
 		html += '	</div>';
 			
@@ -243,16 +243,16 @@ $('input[name=\'option\']').autocomplete({
 			html += '      <tr>';
 			
 			if(item['type']!='select'){			
-				html += '    <td class="text-right">图片</td>';				
+				html += '    <td class="text-right">{:lang('图片')}</td>';				
 			}else{
 				html += '    <td class="text-right"></td>';	
 			}	
 			
-			html += '        <td class="text-left">选项值</td>';			
-			html += '        <td class="text-right">商品数量</td>';
-			html += '        <td class="text-left">扣减库存</td>';
-			html += '        <td class="text-right">销售价格</td>';				
-			html += '        <td class="text-right">重  量</td>';					
+			html += '        <td class="text-left">{:lang('选项值')}</td>';			
+			html += '        <td class="text-right">{:lang('商品数量')}</td>';
+			html += '        <td class="text-left">{:lang('扣减库存')}</td>';
+			html += '        <td class="text-right">{:lang('销售价格')}</td>';				
+			html += '        <td class="text-right">{:lang('重')}  {:lang('量')}</td>';					
 			html += '        <td></td>';
 			html += '      </tr>';
 			html += '  	 </thead>';
@@ -261,7 +261,7 @@ $('input[name=\'option\']').autocomplete({
 			html += '    <tfoot>';
 			html += '      <tr>';
 			html += '        <td colspan="6"></td>';
-			html += '        <td class="text-left"><button type="button" onclick="addOptionValue(' + option_row+",'"+item['type']+"'"+');" data-toggle="tooltip" class="btn btn-primary">新增</button></td>';
+			html += '        <td class="text-left"><button type="button" onclick="addOptionValue(' + option_row+",'"+item['type']+"'"+');" data-toggle="tooltip" class="btn btn-primary">{:lang('新增')}</button></td>';
 			html += '      </tr>';
 			html += '    </tfoot>';
 			html += '  </table>';
@@ -303,8 +303,8 @@ function addOptionValue(option_row,type) {
 	html += '  </select><input type="hidden" name="goods_option[' + option_row + '][goods_option_value][' + option_value_row + '][goods_option_value_id]" value="" /></td>';
 	html += '  <td class="text-right"><input type="text" name="goods_option[' + option_row + '][goods_option_value][' + option_value_row + '][quantity]" value=""  class="form-control" /></td>'; 
 	html += '  <td class="text-left"><select name="goods_option[' + option_row + '][goods_option_value][' + option_value_row + '][subtract]" class="form-control">';
-	html += '    <option value="1">是</option>';
-	html += '    <option value="0">否</option>';
+	html += '    <option value="1">{:lang('是')}</option>';
+	html += '    <option value="0">{:lang('否')}</option>';
 	html += '  </select></td>';
 	html += '  <td class="text-right"><select name="goods_option[' + option_row + '][goods_option_value][' + option_value_row + '][price_prefix]" class="form-control">';
 	html += '    <option value="+">+</option>';

@@ -17,45 +17,45 @@
 			<input name="address_id" type="hidden" value="{$Request.param.id}" />
 			{/if}
 			<div class="form-group">
-				<label class="col-sm-2 control-label no-padding-left">  收货人 </label>
+				<label class="col-sm-2 control-label no-padding-left">  {:lang('收货人')} </label>
 			<div class="col-sm-5">
 				<div class="clearfix">
-					<input name="name" class="col-xs-10 col-sm-10 form-control" placeholder="收货人"  value="{$address.name|default=''}" type="text">
+					<input name="name" class="col-xs-10 col-sm-10 form-control" placeholder="{:lang('收货人')}"  value="{$address.name|default=''}" type="text">
 				</div>
 			</div>
 			</div>
 			
 			<div class="form-group">
-				<label class="col-sm-2 control-label no-padding-left">  手机号码 </label>
+				<label class="col-sm-2 control-label no-padding-left">  {:lang('手机号码')} </label>
 			<div class="col-sm-5">
 				<div class="clearfix">
-					<input name="telephone" class="col-xs-10 col-sm-10 form-control" placeholder="联系电话" value="{$address.telephone|default=''}" type="text">
+					<input name="telephone" class="col-xs-10 col-sm-10 form-control" placeholder="{:lang('联系电话')}" value="{$address.telephone|default=''}" type="text">
 				</div>
 			</div>
 			</div> 
 			
 			<div class="form-group">
-				<label class="col-sm-2 control-label no-padding-left">  收货地址 </label>
+				<label class="col-sm-2 control-label no-padding-left">  {:lang('收货地址')} </label>
 			<div class="col-sm-8">
 				<div class="clearfix">
-					<input name="address" class="col-xs-10 col-sm-10 form-control" placeholder="收货地址" value="{$address.address|default=''}" type="text">
+					<input name="address" class="col-xs-10 col-sm-10 form-control" placeholder="{:lang('收货地址')}" value="{$address.address|default=''}" type="text">
 				</div>
 			</div>
 			</div> 
 			
 			
 			<div class="form-group required clearfix">
-				<label class="col-sm-2 control-label">区域</label>
+				<label class="col-sm-2 control-label">{:lang('区域')}</label>
 				<div class="col-sm-10">
 					<p id="area">
 				        <select name="province_id" id="province">
-				            <option value="-1" selected>省份</option>
+				            <option value="-1" selected>{:lang('省份')}</option>
 				            {volist name="province" id="v"}
 				                <option <?php if(isset($address)&&($address['province_id']==$v['area_id'])){echo ' selected="selected"';} ?> value="{$v.area_id}">{$v.area_name}</option>
 				            {/volist}
 				        </select>
 				        <select name="city_id" id="city">
-				            <option value="-1">城市</option>
+				            <option value="-1">{:lang('城市')}</option>
 				            {if condition="isset($city)"}
 					            {volist name="city" id="v"}
 					                <option <?php if(isset($address)&&($address['city_id']==$v['area_id'])){echo ' selected="selected"';} ?> value="{$v.area_id}">{$v.area_name}</option>
@@ -80,7 +80,7 @@
 		<div class="form-group">
 			<label class="col-sm-1 control-label no-padding-left"> </label>	
 			<div class="col-sm-11">
-				<button form="form" type="submit" id="submit"  class="btn btn-sm btn-primary">提交</button>		
+				<button form="form" type="submit" id="submit"  class="btn btn-sm btn-primary">{:lang('提交')}</button>		
 			</div>
 		</div>
 	</div>
@@ -96,7 +96,7 @@ $("#province").change(function(){
     if(areaId!=-1){
     $.post(ajaxurl,{'areaId':areaId},function(data){                
         if(areaType==='city'){
-           $('#'+areaType).html('<option value="-1">城市</option>');              
+           $('#'+areaType).html('<option value="-1">{:lang('城市')}</option>');              
         }
       
         if(areaType!=='null'){
@@ -106,7 +106,7 @@ $("#province").change(function(){
         }
     });
    }else{
-   	$('#'+areaType).html('<option value="-1">城市</option>');       
+   	$('#'+areaType).html('<option value="-1">{:lang('城市')}</option>');       
    }
 }); 
         

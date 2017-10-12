@@ -7,19 +7,19 @@
     <div class="modal-body">
       <div class="row">
         <div class="col-sm-5">
-        	<a href="<?php echo $data['parent']; ?>" data-toggle="tooltip" title="上级" id="button-parent" class="btn btn-default"><i class="fa fa-level-up"></i></a> 
-        	<a href="<?php echo $data['refresh']; ?>" data-toggle="tooltip" title="刷新" id="button-refresh" class="btn btn-default"><i class="fa fa-refresh"></i></a>
-          <button type="button" data-toggle="tooltip" title="上传" id="button-upload" class="btn btn-primary"><i class="fa fa-upload"></i></button>
-          <button type="button" data-toggle="tooltip" title="新建" id="button-folder" class="btn btn-default"><i class="fa fa-folder"></i></button>
-          <button type="button" data-toggle="tooltip" title="删除" id="button-delete" class="btn btn-danger"><i class="fa fa-trash-o"></i></button>
+        	<a href="<?php echo $data['parent']; ?>" data-toggle="tooltip" title="{:lang('上级')}" id="button-parent" class="btn btn-default"><i class="fa fa-level-up"></i></a> 
+        	<a href="<?php echo $data['refresh']; ?>" data-toggle="tooltip" title="{:lang('刷新')}" id="button-refresh" class="btn btn-default"><i class="fa fa-refresh"></i></a>
+          <button type="button" data-toggle="tooltip" title="{:lang('上传')}" id="button-upload" class="btn btn-primary"><i class="fa fa-upload"></i></button>
+          <button type="button" data-toggle="tooltip" title="{:lang('新建')}" id="button-folder" class="btn btn-default"><i class="fa fa-folder"></i></button>
+          <button type="button" data-toggle="tooltip" title="{:lang('删除')}" id="button-delete" class="btn btn-danger"><i class="fa fa-trash-o"></i></button>
         </div>
         <div class="col-sm-7">
           <div class="input-group">
-            <input class="form-control search-query" type="text" placeholder="搜索"  name="search">
+            <input class="form-control search-query" type="text" placeholder="{:lang('搜索')}"  name="search">
 			<span class="input-group-btn">
 				<button id="button-search" class="btn btn-primary btn-sm" type="button">
 					<span class="ace-icon fa fa-search icon-on-right bigger-110"></span>
-					搜索
+					{:lang('搜索')}
 				</button>
 			</span>
           </div>
@@ -176,11 +176,11 @@ $('#button-folder').popover({
 	html: true,
 	placement: 'bottom',
 	trigger: 'click',
-	title: '新建文件夹',
+	title: '{:lang('新建文件夹')}',
 	content: function() {
 		html  = '<div class="input-group">';
-		html += '  <input type="text" name="folder" value="" placeholder="文件夹名称" class="form-control">';
-		html += '  <span class="input-group-btn"><button type="button" title="新建文件夹" id="button-create" class="btn btn-primary btn-sm""><i class="fa fa-plus-circle"></i></button></span>';
+		html += '  <input type="text" name="folder" value="" placeholder="{:lang('文件夹名称')}" class="form-control">';
+		html += '  <span class="input-group-btn"><button type="button" title="{:lang('新建文件夹')}" id="button-create" class="btn btn-primary btn-sm""><i class="fa fa-plus-circle"></i></button></span>';
 		html += '</div>';
 
 		return html;
@@ -219,7 +219,7 @@ $('#button-folder').on('shown.bs.popover', function() {
 });
 
 $('#modal-image #button-delete').on('click', function(e) {
-	if (confirm('是否要删除')) {
+	if (confirm('{:lang('是否要删除')}')) {
 		$.ajax({
 			url: "<?php echo $data['delete_url']; ?>",
 			type: 'post',

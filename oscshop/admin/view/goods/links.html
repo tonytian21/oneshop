@@ -11,7 +11,7 @@
 			<i class="ace-icon fa fa-angle-double-right"></i>
 			{$crumbs}
 		</small>			
-	<button type="submit" style="float:right;" form="form-goods"  class="btn button btn-sm btn-primary">提交</button>
+	<button type="submit" style="float:right;" form="form-goods"  class="btn button btn-sm btn-primary">{:lang('提交')}</button>
 	</h1>
 </div>
 	<div class="row">
@@ -24,18 +24,18 @@
 		{/if}
           <ul class="nav nav-tabs">
           	
-          	<li class="active"><a href="#tab-data" data-toggle="tab">关联</a></li>
+          	<li class="active"><a href="#tab-data" data-toggle="tab">{:lang('关联')}</a></li>
            
           </ul>
           <div class="tab-content">
           		
-	       	<!-- 关联 START -->
+	       	<!-- {:lang('关联')} START -->
 	          	<div class="tab-pane active" id="tab-data">	          		
 	         
 	          		<div class="form-group">
-	                <label class="col-sm-2 control-label" for="input-category"><span data-toggle="tooltip" title="(自动完成)">商品分类</span></label>
+	                <label class="col-sm-2 control-label" for="input-category"><span data-toggle="tooltip" title="({:lang('自动完成')})">{:lang('商品分类')}</span></label>
 	                <div class="col-sm-10">
-	                  <input type="text" name="category" value="" placeholder="商品分类" id="input-category" class="form-control" />
+	                  <input type="text" name="category" value="" placeholder="{:lang('商品分类')}" id="input-category" class="form-control" />
 	                  <div id="goods-category" class="well well-sm" style="height: 150px; overflow: auto;">
 	                  	<?php if(isset($goods_categories)){ ?>
 		                    <?php foreach ($goods_categories as $goods_category) { ?>
@@ -49,9 +49,9 @@
 	              </div>
 	              
 	              <div class="form-group">
-		                <label class="col-sm-2 control-label" for="input-attribute"><span data-toggle="tooltip" title="(自动完成)">商品属性</span></label>
+		                <label class="col-sm-2 control-label" for="input-attribute"><span data-toggle="tooltip" title="({:lang('自动完成')})">{:lang('商品属性')}</span></label>
 		                <div class="col-sm-10">
-		                  <input type="text" name="attribute" value="" placeholder="商品属性" id="input-attribute" class="form-control" />
+		                  <input type="text" name="attribute" value="" placeholder="{:lang('商品属性')}" id="input-attribute" class="form-control" />
 		                  <div id="goods-attribute" class="well well-sm" style="height: 150px; overflow: auto;">
 		                  	<?php if(isset($goods_attribute)){ ?>
 		                    <?php foreach ($goods_attribute as $attribute) { ?>
@@ -66,9 +66,9 @@
 	              	</div>	
 	              	
 	              	<div class="form-group">
-		                <label class="col-sm-2 control-label" for="input-brand"><span data-toggle="tooltip" title="(自动完成)">商品品牌</span></label>
+		                <label class="col-sm-2 control-label" for="input-brand"><span data-toggle="tooltip" title="({:lang('自动完成')})">{:lang('商品品牌')}</span></label>
 		                <div class="col-sm-10">
-		                  <input type="text" name="brand" value="" placeholder="商品品牌" id="input-brand" class="form-control" />
+		                  <input type="text" name="brand" value="" placeholder="{:lang('商品品牌')}" id="input-brand" class="form-control" />
 		                  <div id="goods-brand" class="well well-sm" style="height: 150px; overflow: auto;">
 		                  	<?php if(isset($goods_brand)){ ?>
 		                    <?php foreach ($goods_brand as $brand) { ?>
@@ -84,7 +84,7 @@
 
 	              
 	          
-	          	<!-- 关联 END -->
+	          	<!-- {:lang('关联')} END -->
 	          	
         		</div>
           </div>

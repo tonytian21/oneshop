@@ -9,16 +9,16 @@
 </head>
 <body>		
 	<ul class="form">
-		<li><span>用户名：</span><input class="text" name="username" type="text" /></li>
-		<li><span>邮箱：</span><input class="text" name="email" type="text" /></li>
-		<li><span>密 码：</span><input class="text" name="password" type="password" /></li>
-		<li><span>确认密码：</span><input class="text" name="rpassword" type="password" /></li>		
-		<li><span>昵称：</span><input class="text" name="nickname" type="text" /></li>	
+		<li><span>{:lang('用户名：')}</span><input class="text" name="username" type="text" /></li>
+		<li><span>{:lang('邮箱：')}</span><input class="text" name="email" type="text" /></li>
+		<li><span>{:lang('密')} {:lang('码：')}</span><input class="text" name="password" type="password" /></li>
+		<li><span>{:lang('确认密码：')}</span><input class="text" name="rpassword" type="password" /></li>		
+		<li><span>{:lang('昵称：')}</span><input class="text" name="nickname" type="text" /></li>	
 		{if condition="1 eq config('use_captcha')"}	
-		<li class="clearfix"><span>验证码：</span><input class="text" name="captcha" type="text" /></li>
+		<li class="clearfix"><span>{:lang('验证码：')}</span><input class="text" name="captcha" type="text" /></li>
 		<li class="clearfix"><span></span><img class="verifyimg reloadverify" src="{:url('login/verify')}" alt="captcha" /></li>
 		{/if}	
-		<li><span></span><input type="submit" id="send" value="注册" /></li>
+		<li><span></span><input type="submit" id="send" value="{:lang('注册')}" /></li>
 	</ul>	
 </body>
 <script src="__PUBLIC__/js/jquery/jquery-2.0.3.min.js"></script>
@@ -26,7 +26,7 @@
 
 <script>
 	<?php if(1==config('use_captcha')){ ?>
-		//刷新验证码
+		//{:lang('刷新验证码')}
 		var verifyimg = $(".verifyimg").attr("src");
 	    $(".reloadverify").click(function(){
 	        if( verifyimg.indexOf('?')>0){
@@ -47,23 +47,23 @@
 		
 		
 		if(username==''){
-			alert('请输入账号');
+			alert('{:lang('请输入账号')}');
 			return false;
 		}else if(pwd==''){
-			alert('请输入密码');
+			alert('{:lang('请输入密码')}');
 			return false;
 		}else if(pwd2==''){
-			alert('请输入确认密码');
+			alert('{:lang('请输入确认密码')}');
 			return false;
 		}else if(pwd2!=pwd){
-			alert('两次密码不一致');
+			alert('{:lang('两次密码不一致')}');
 			return false;
 		}
 		
 		<?php if(1==config('use_captcha')){ ?>
 			var captcha=$("input[name='captcha']").val();		
 			if(captcha==''){
-				alert('请输入验证码');
+				alert('{:lang('请输入验证码')}');
 				return false;
 			}			
 		<?php } ?>
@@ -91,7 +91,7 @@
 						
 						var p=$("#top",window.parent.document).find('ul');						
 						p.html('');					
-						p.append('<li><a href="{:url(\'member/order_member/index\')}">会员中心</a></li><li><a href="{:url(\'/logout\')}">退出</a></li>');								
+						p.append('<li><a href="{:url(\'member/order_member/index\')}">{:lang('会员中心')}</a></li><li><a href="{:url(\'/logout\')}">{:lang('退出')}</a></li>');								
 					}
 					parent.window.art.dialog.list['reg'].close();	
 					

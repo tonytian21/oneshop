@@ -44,20 +44,20 @@
 			<div id="info">
 				<dl>
 					<dt>{$goods.name}</dt>					
-					<dd><span>价格：</span>￥{$goods.price}</dd>
-					<dd><span>货号：</span>{$goods.model}</dd>
-					<dd><span>产地：</span>{$goods.location}</dd>
+					<dd><span>{:lang('价格：')}</span>{:lang('￥')}{$goods.price}</dd>
+					<dd><span>{:lang('货号：')}</span>{$goods.model}</dd>
+					<dd><span>{:lang('产地：')}</span>{$goods.location}</dd>
 					{if condition="$goods['subtract']"}
-					<dd><span>数量：</span>{$goods.quantity}{$goods.sku}</dd>
+					<dd><span>{:lang('数量：')}</span>{$goods.quantity}{$goods.sku}</dd>
 					{/if}
 					{if condition="!empty($discount)"}
 						<?php $disc=0; ?>
 						{volist name="discount" id="v"}
 						<?php $disc+=1; ?>
 						{if condition="$disc eq 1"}						
-							<dd><span>折扣：</span><?php echo $v['quantity'].$goods['sku'].' 或更多 ￥'.$v['price']; ?></dd>
+							<dd><span>{:lang('折扣：')}</span><?php echo $v['quantity'].$goods['sku'].' {:lang('或更多')} {:lang('￥')}'.$v['price']; ?></dd>
 						{else/}
-							<dd><span></span><?php echo $v['quantity'].$goods['sku'].' 或更多 ￥'.$v['price']; ?></dd>
+							<dd><span></span><?php echo $v['quantity'].$goods['sku'].' {:lang('或更多')} {:lang('￥')}'.$v['price']; ?></dd>
 						{/if}
 							
 						{/volist}	
@@ -70,7 +70,7 @@
 				
 				  {if condition="$options"}	
 			      <div class="options">
-			        <h2>可选项</h2>			        
+			        <h2>{:lang('可选项')}</h2>			        
 			        {volist name="options" id="option"}				        
 				        {if condition="$option['type'] eq 'select' "}			        	
 				        <div class="boss_check">
@@ -82,11 +82,11 @@
 							          	{/if}
 						          </div>
 						          <select name="option[{$goods.goods_id},{$option.option_id}]">
-						            <option value=""> --- 请选择 --- </option>
+						            <option value=""> --- {:lang('请选择')} --- </option>
 						            {volist name="$option['goods_option_value']" id="option_value" }	
-							            <option title="数量{$option_value.quantity}" value="{$option_value.option_value_id}">{$option_value.name}							            
+							            <option title="{:lang('数量')}{$option_value.quantity}" value="{$option_value.option_value_id}">{$option_value.name}							            
 								            {if condition="$option_value['goods_price'] neq '0.00' "}		
-							            		({$option_value.price_prefix}￥{$option_value.price})
+							            		({$option_value.price_prefix}{:lang('￥')}{$option_value.price})
 							            	{/if}
 							            </option>
 						            {/volist}
@@ -110,13 +110,13 @@
 							          	<input  class="option" type="radio" name="option[{$goods.goods_id},{$option.option_id}]" value="{$option_value.option_value_id}" id="option-value-{$option_value.goods_option_value_id}" />								          	       										          	
 								          
 								          	{if condition="!empty($option_value['image'])"}			
-									          	<a title="数量{$option_value.quantity}" href="/public/uploads/{$option_value.image}" class="cloud-zoom-gallery" rel="useZoom: 'zoom1', smallImage: 'IMG_ROOT{$option_value.image|resize=300,300}'">
+									          	<a title="{:lang('数量')}{$option_value.quantity}" href="/public/uploads/{$option_value.image}" class="cloud-zoom-gallery" rel="useZoom: 'zoom1', smallImage: 'IMG_ROOT{$option_value.image|resize=300,300}'">
 									          		<img src="IMG_ROOT{$option_value.image|resize=30,30}" />									          										          
 									          	</a>
 								          	 {/if}
-								          	<span title="数量{$option_value.quantity}">{$option_value.name}</span> 						          
+								          	<span title="{:lang('数量')}{$option_value.quantity}">{$option_value.name}</span> 						          
 								            {if condition="$option_value['goods_price'] neq '0.00' "}		
-								            	({$option_value.price_prefix}￥{$option_value.price})
+								            	({$option_value.price_prefix}{:lang('￥')}{$option_value.price})
 								            {/if}								            
 							          </label>
 							          <br />
@@ -138,13 +138,13 @@
 						          <input type="checkbox" name="option[{$goods.goods_id},{$option.option_id}][]" value="{$option_value.option_value_id}" id="option-value-{$option_value.goods_option_value_id}" />
 						          <label for="option-value-{$option_value.goods_option_value_id}">
 							           {if condition="!empty($option_value['image'])"}			
-							          	<a title="数量{$option_value.quantity}" href="/public/uploads/{$option_value.image}" class="cloud-zoom-gallery" rel="useZoom: 'zoom1', smallImage: 'IMG_ROOT{$option_value.image|resize=300,300}'">
+							          	<a title="{:lang('数量')}{$option_value.quantity}" href="/public/uploads/{$option_value.image}" class="cloud-zoom-gallery" rel="useZoom: 'zoom1', smallImage: 'IMG_ROOT{$option_value.image|resize=300,300}'">
 							          		<img src="IMG_ROOT{$option_value.image|resize=30,30}" />									          										          
 							          	</a>
 						          	   {/if}
-							          <span title="数量{$option_value.quantity}">{$option_value.name}</span> 						          
+							          <span title="{:lang('数量')}{$option_value.quantity}">{$option_value.name}</span> 						          
 							           {if condition="$option_value['goods_price'] neq '0.00' "}		
-							            	({$option_value.price_prefix}￥{$option_value.price})
+							            	({$option_value.price_prefix}{:lang('￥')}{$option_value.price})
 							           {/if}
 						          </label>
 						          <br />
@@ -170,7 +170,7 @@
 		                </div> 					
 		                <div class="pull-left">
 			                <button id="button-cart" class="button btn-cart" data-loading-text="Loading..." type="button">
-								<span>加入购物车</span>
+								<span>{:lang('加入购物车')}</span>
 							</button>					              
 		            	</div>
 	          		</div>							
@@ -182,7 +182,7 @@
 			</div>
 			
 			<div id="description">
-				<h2>商品详情</h2>
+				<h2>{:lang('商品详情')}</h2>
 				<div>
 					{if condition="!empty($mobile_description)"}
 						{volist name="mobile_description" id="mobile" }

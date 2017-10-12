@@ -12,14 +12,14 @@
 </div>
 
 <div class="page-header">	
-	<a href="{:url('Goods/add')}" class="btn btn-primary">新增</a>
-	<span href="{:url('Goods/copy_goods')}" class="btn btn-primary copy">复制</span>
+	<a href="{:url('Goods/add')}" class="btn btn-primary">{:lang('新增')}</a>
+	<span href="{:url('Goods/copy_goods')}" class="btn btn-primary copy">{:lang('复制')}</span>
 </div>	
 	
 <table class="table table-striped table-bordered table-hover search-form">
 	<thead>
 		<input name="type" type="hidden"  value="search" />
-		<th><input name="name" type="text" placeholder="输入商品名称" value="{:input('name')}" /></th>
+		<th><input name="name" type="text" placeholder="{:lang('输入商品名称')}" value="{:input('name')}" /></th>
 		<th>    				
 			<select name="category">
 				<option value="">{:lang('全部分类')}</option>			
@@ -33,12 +33,12 @@
 		<th>    				
 			<select name="status">
 				<option value="">{:lang('全部状态')}</option>							
-				<option {if condition="input('status') eq 1"} selected="selected"{/if}value="1">启用</option>
-				<option {if condition="input('status') eq 2"} selected="selected"{/if} value="2">停用</option>
+				<option {if condition="input('status') eq 1"} selected="selected"{/if}value="1">{:lang('启用')}</option>
+				<option {if condition="input('status') eq 2"} selected="selected"{/if} value="2">{:lang('停用')}</option>
 			</select>
 		</th>
 		<th>
-			<a class="btn btn-primary" href="javascript:;" id="search" url="{:url('Goods/index')}">查询</a>
+			<a class="btn btn-primary" href="javascript:;" id="search" url="{:url('Goods/index')}">{:lang('查询')}</a>
 		</th>
 	</thead>
 </table>	
@@ -58,13 +58,13 @@
 							</label>
 						</th>											
 						<th>ID</th> 
-						<th>图片</th> 
-						<th>商品名称</th> 			
-						<th>价格</th>
-						<th>数量</th>
-						<th>排序</th>
-						<th>状态</th>						
-						<th>操作</th>				
+						<th>{:lang('图片')}</th> 
+						<th>{:lang('商品名称')}</th> 			
+						<th>{:lang('价格')}</th>
+						<th>{:lang('数量')}</th>
+						<th>{:lang('排序')}</th>
+						<th>{:lang('状态')}</th>						
+						<th>{:lang('操作')}</th>				
 					</tr>
 				</thead>
 				<tbody>
@@ -86,10 +86,10 @@
 							</td>
 							<td>{$v.name} 
 								{if condition="$v['shipping'] eq 0"}
-								<span class="warning">免配送</span> 								
+								<span class="warning">{:lang('免配送')}</span> 								
 								{/if}
 								{if condition="$v['subtract'] eq 0"}
-								<span class="warning">不减库存</span> 								
+								<span class="warning">{:lang('不减库存')}</span> 								
 								{/if}
 							</td>
 							
@@ -120,23 +120,23 @@
 									</button>
 									<ul class="dropdown-menu dropdown-info dropdown-menu-right">																
 										<li>
-											<a href='{:url("Goods/edit_general",array("id"=>$v["goods_id"]))}'>基本信息</a>
+											<a href='{:url("Goods/edit_general",array("id"=>$v["goods_id"]))}'>{:lang('基本信息')}</a>
 										</li>									
 																		
 										<li>
-											<a href='{:url("Goods/edit_links",array("id"=>$v["goods_id"]))}'>关联</a>
+											<a href='{:url("Goods/edit_links",array("id"=>$v["goods_id"]))}'>{:lang('关联')}</a>
 										</li>
 										<li>
-											<a href='{:url("Goods/edit_option",array("id"=>$v["goods_id"]))}'>选项</a>
+											<a href='{:url("Goods/edit_option",array("id"=>$v["goods_id"]))}'>{:lang('选项')}</a>
 										</li>
 										<li>
-											<a href='{:url("Goods/edit_discount",array("id"=>$v["goods_id"]))}'>折扣</a>
+											<a href='{:url("Goods/edit_discount",array("id"=>$v["goods_id"]))}'>{:lang('折扣')}</a>
 										</li>
 										<li>
-											<a href='{:url("Goods/edit_image",array("id"=>$v["goods_id"]))}'>商品相册</a>
+											<a href='{:url("Goods/edit_image",array("id"=>$v["goods_id"]))}'>{:lang('商品相册')}</a>
 										</li>
 										<li>
-											<a href='{:url("Goods/edit_mobile",array("id"=>$v["goods_id"]))}'>手机端描述</a>
+											<a href='{:url("Goods/edit_mobile",array("id"=>$v["goods_id"]))}'>{:lang('手机端描述')}</a>
 										</li>									
 									</ul>
 								</div>
@@ -153,7 +153,7 @@
 							<td colspan="20" class="page">{$list->render()}</td>
 						</tr>
 						<tr>
-							<td colspan="20">总计 {$list->total()|default="0"} 个商品</td>
+							<td colspan="20">{:lang('总计')} {$list->total()|default="0"} {:lang('个商品')}</td>
 						</tr>
 				</tbody>
 				
@@ -228,7 +228,7 @@ $(function(){
 	$('.copy').click(function(){
 		
 		if($('input:checked').size()==0){
-			alert('请选择一个商品');
+			alert('{:lang('请选择一个商品')}');
 			return ;
 		}
 		
@@ -255,7 +255,7 @@ $(function(){
 			} 
 		},
 		error: function(xhr, ajaxOptions, thrownError) {
-			alert('修改失败');
+			alert('{:lang('修改失败')}');
 		}
 	});	
 	});

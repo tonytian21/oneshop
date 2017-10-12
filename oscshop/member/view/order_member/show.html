@@ -13,13 +13,13 @@
 	</div>	
 	<ul class="nav nav-tabs">
 		
-	  <li class="active"><a href="#tab-order" data-toggle="tab">订单详情</a></li>
+	  <li class="active"><a href="#tab-order" data-toggle="tab">{:lang('订单详情')}</a></li>
 	 {if condition="$data['order']['shipping_method']"}
-	  <li><a href="#tab-shipping" data-toggle="tab">收货地址</a></li>
+	  <li><a href="#tab-shipping" data-toggle="tab">{:lang('收货地址')}</a></li>
 	 {/if}
-	  <li><a href="#tab-product" data-toggle="tab">商品清单</a></li>
+	  <li><a href="#tab-product" data-toggle="tab">{:lang('商品清单')}</a></li>
 	  
-	  <li><a href="#tab-history" data-toggle="tab">订单历史</a></li>          
+	  <li><a href="#tab-history" data-toggle="tab">{:lang('订单历史')}</a></li>          
 	  
 	</ul>
 	<div class="tab-content">
@@ -27,21 +27,21 @@
 			<table class="table table-bordered">
 				
 				<tr>
-					<td>订单编号</td>
+					<td>{:lang('订单编号')}</td>
 					<td>{$data.order.order_num_alias}</td>
 				</tr>
 				 <tr>
-		            <td>支付方式</td>
+		            <td>{:lang('支付方式')}</td>
 		            <td>
 		            	{switch name="data.order.payment_code"}    
-							{case value="alipay"}支付宝{/case}   
-							{case value="weixin"}微信支付{/case}
-							{case value="points"}积分兑换{/case}
+							{case value="alipay"}{:lang('支付宝')}{/case}   
+							{case value="weixin"}{:lang('微信支付')}{/case}
+							{case value="points"}{:lang('积分兑换')}{/case}
 						{/switch}
 		            </td>
 		          </tr>
 				<tr>
-					<td>会员名称</td>
+					<td>{:lang('会员名称')}</td>
 					<td>					
 						
 							{$data.order.username}
@@ -49,46 +49,46 @@
 					</td>
 				</tr>
 				<tr>
-				    <td>电子邮件</td>
+				    <td>{:lang('电子邮件')}</td>
 				    <td>{$data.order.email}</td>
 				</tr>
 				  <tr>
-				    <td>联系电话</td>
+				    <td>{:lang('联系电话')}</td>
 				    <td>{$data.order.telephone}</td>
 				</tr> 
 				<?php if($data['order']['points_order']==0){ ?>
 				<tr>
-				    <td>合计金额</td>
+				    <td>{:lang('合计金额')}</td>
 				    <td>
-				    	￥{$data.order.total}
+				    	{:lang('￥')}{$data.order.total}
 				    </td>
 				</tr>
 				<?php }elseif($data['order']['points_order']==1){ ?>
 				<tr>
-				    <td>兑换积分</td>
+				    <td>{:lang('兑换积分')}</td>
 				    <td>
 				    	{$data.order.pay_points}
 				    </td>
 				</tr>	
 				<?php } ?>
 				<tr>
-				    <td>订单状态</td>
+				    <td>{:lang('订单状态')}</td>
 				    <td id="order-status"> <?php echo get_order_status_name($data['order']['order_status_id']); ?></td>
 				</tr>     
 				<tr>
-					<td>IP地址</td>
+					<td>IP{:lang('地址')}</td>
 					<td>{$data.order.ip}</td>
 				</tr>  
 				<tr>
-					<td>用户系统</td>
+					<td>{:lang('用户系统')}</td>
 					<td>{$data.order.user_agent}</td>
 				</tr>
 				<tr>
-					<td>下单时间</td>
+					<td>{:lang('下单时间')}</td>
 					<td>{$data.order.date_added|date='Y/m/d H:i:s',###}</td>
 				</tr>
 				<tr>
-					<td>修改时间</td>
+					<td>{:lang('修改时间')}</td>
 					<td>{$data.order.date_modified|date='Y/m/d H:i:s',###}</td>
 				</tr>
 				</table>
@@ -97,31 +97,31 @@
 		<div class="tab-pane" id="tab-shipping">
             <table class="table table-bordered">
           <tr>
-            <td>收货人姓名</td>
+            <td>{:lang('收货人姓名')}</td>
             <td>{$data.order.shipping_name}</td>
           </tr>
                   
           <tr>
-            <td>所在地</td>
+            <td>{:lang('所在地')}</td>
             <td>
-            	<?php echo get_area_name($data['order']['shipping_province_id']); ?>，
-            	<?php echo get_area_name($data['order']['shipping_city_id']); ?>，
+            	<?php echo get_area_name($data['order']['shipping_province_id']); ?>{:lang('，')}
+            	<?php echo get_area_name($data['order']['shipping_city_id']); ?>{:lang('，')}
             	<?php echo get_area_name($data['order']['shipping_country_id']); ?>
             </td>
           </tr>
           
           <tr>
-            <td>地址</td>
+            <td>{:lang('地址')}</td>
             <td>{$data.order.address}</td>
           </tr>
          
          
            <tr>
-          	<td>货运方式</td>
+          	<td>{:lang('货运方式')}</td>
           	<td><?php echo get_shipping_name($data['order']['shipping_method']); ?></td>
           </tr>
           <tr>
-          	<td>联系电话</td>
+          	<td>{:lang('联系电话')}</td>
           	<td>{$data.order.shipping_tel}</td>
           </tr>
           
@@ -132,12 +132,12 @@
        <table class="table table-bordered">
           <thead>
             <tr>
-              <td class="left">商品品名</td>
-              <td class="left">型号</td>
-              <td class="right">数量</td>
+              <td class="left">{:lang('商品品名')}</td>
+              <td class="left">{:lang('型号')}</td>
+              <td class="right">{:lang('数量')}</td>
               <?php if($data['order']['points_order']==0){ ?>
-              <td class="right">价格</td>              
-              <td class="right">总计</td>
+              <td class="right">{:lang('价格')}</td>              
+              <td class="right">{:lang('总计')}</td>
               <?php } ?>
             </tr>
           </thead>
@@ -162,10 +162,10 @@
 	              	<?php echo $product['quantity']; ?>
 	              </td>
 	              
-	              <td class="right">￥
+	              <td class="right">{:lang('￥')}
 	              <?php echo $product['price']; ?>
 	              </td>
-	              <td class="right">￥<?php echo $product['total']; ?></td>
+	              <td class="right">{:lang('￥')}<?php echo $product['total']; ?></td>
 	            </tr>
 	            <?php } ?>
             <?php } ?>
@@ -177,7 +177,7 @@
 	            <tr>
 	              <?php if($totals['code']=='shipping'){ ?>	
 	              	<td colspan="4" class="right"><?php echo $totals['title']; ?>:</td>
-	              	<td class="right">￥
+	              	<td class="right">{:lang('￥')}
 	                	<?php echo $totals['value']; ?>
 	                </td>
 	              <?php }else{ ?>	
@@ -219,7 +219,7 @@
           
 	          <tbody>
 	            <tr>	             
-		              <td colspan="2" class="right">积分: <?php echo $data['order']['pay_points']; ?> </td>
+		              <td colspan="2" class="right">{:lang('积分')}: <?php echo $data['order']['pay_points']; ?> </td>
 		              
 		              <td class="right"></td>	              
 	            </tr>

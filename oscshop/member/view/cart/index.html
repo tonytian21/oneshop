@@ -3,16 +3,16 @@
 <div id="cart-list" class="allWrap">
 	<div class="clearfix">
 		<div class="page-title">
-			<h1>购物车  (<span id="weight">{$weight}</span>kg ) </h1>
+			<h1>{:lang('购物车')}  (<span id="weight">{$weight}</span>kg ) </h1>
 		</div>
 		<table class="table">
 			<thead>
 				<tr>									
-					<td  colspan="2" class="text-left">商品名称</td>
-					<td class="text-left">货号</td>
-					<td class="text-left">数量</td>
-					<td class="text-left">单价</td>
-					<td class="text-left">总计</td>
+					<td  colspan="2" class="text-left">{:lang('商品名称')}</td>
+					<td class="text-left">{:lang('货号')}</td>
+					<td class="text-left">{:lang('数量')}</td>
+					<td class="text-left">{:lang('单价')}</td>
+					<td class="text-left">{:lang('总计')}</td>
 					<td class="remove"></td>
 				</tr>
 			</thead>
@@ -25,7 +25,7 @@
 							
 							<a style="position:relative;display:block;" href="{:url('/goods/'.$d['goods_id'])}"><img src="IMG_ROOT{$d.image}" />
 								{if condition="$d['shipping'] eq 0"}
-							 		<span class="no_shipping">免配送商品</span>
+							 		<span class="no_shipping">{:lang('免配送商品')}</span>
 							 	{/if}
 								
 							</a>
@@ -53,12 +53,12 @@
 							</div>						
 						</td>		
 						
-						<td class="price">￥<?php echo round($d['price'] ,2); ?></td>
-						<td class="total">￥<?php echo round($d['total'] ,2); ?></td>
+						<td class="price">{:lang('￥')}<?php echo round($d['price'] ,2); ?></td>
+						<td class="total">{:lang('￥')}<?php echo round($d['total'] ,2); ?></td>
 						
 						<td>
 							<a href="{:url('/remove/'.$d['cart_id'])}">
-								<img class="btooltip" data-toggle="tooltip" data-placement="bottom" data-original-title="删除" src="__RES__/home/images/remove.png" alt="删除" title="删除" />
+								<img class="btooltip" data-toggle="tooltip" data-placement="bottom" data-original-title="{:lang('删除')}" src="__RES__/home/images/remove.png" alt="{:lang('删除')}" title="{:lang('删除')}" />
 							</a>
 						</td>
 					</tr>
@@ -70,13 +70,13 @@
 		<div class="cart-total ">
 		    <table id="total">				      
 		      <tr>				
-		        <td class="right price last">总计：<?php echo '￥'.$total_price; ?></td>
+		        <td class="right price last">{:lang('总计：')}<?php echo '{:lang('￥')}'.$total_price; ?></td>
 		      </tr>				      
 		    </table>
 		 </div>
 	     <div id="cart-bottom">					  
-		      <a href="{:url('/checkout')}" class="btn checkout">结算</a>
-		      <a href="/" class="btn continue">继续购物</a>
+		      <a href="{:url('/checkout')}" class="btn checkout">{:lang('结算')}</a>
+		      <a href="/" class="btn continue">{:lang('继续购物')}</a>
 	     </div> 
 	     
 	</div>		
@@ -84,7 +84,7 @@
 {/block}
 {block name="javascript"}
 <script>	
-{/* id:商品id,qty:数量,cart_id:购物车id,key:用于选择标签 */}
+{/* id:{:lang('商品')}id,qty:{:lang('数量')},cart_id:{:lang('购物车')}id,key:{:lang('用于选择标签')} */}
 function update_cart(id,qty,cart_id,key){
 	$.post(
 		'{:url("/update")}',
@@ -97,11 +97,11 @@ function update_cart(id,qty,cart_id,key){
 				
 				$('#select_number' + key).find("input").val(qty);
 				
-				$('.goods' + key).find("td.price").text('￥ '+json['price']);
+				$('.goods' + key).find("td.price").text('{:lang('￥')} '+json['price']);
 				
-				$('.goods' + key).find("td.total").text('￥ '+json['total_price']);
+				$('.goods' + key).find("td.total").text('{:lang('￥')} '+json['total_price']);
 				
-				$('.last').text('总计： ￥ '+json['total_all_price']);
+				$('.last').text('{:lang('总计：')} {:lang('￥')} '+json['total_all_price']);
 				
 				$('#weight').text(json['weight']);
 				
@@ -123,7 +123,7 @@ function changeQty(increase,goods_id,cart_id,key) {
     var qty = parseInt($('#select_number' + key).find("input").val());  
 
     if ( !isNaN(qty) ) {
-    	//增加
+    	//{:lang('增加')}
 		if(increase){			
 			update_cart(goods_id,(qty+1),cart_id,key);
 		}else{

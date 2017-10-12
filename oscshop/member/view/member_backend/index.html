@@ -11,15 +11,15 @@
 </div>
 
 <div class="page-header">	
-	<a href="{:url('MemberBackend/add')}" class="btn btn-primary">新增</a>
+	<a href="{:url('MemberBackend/add')}" class="btn btn-primary">{:lang('新增')}</a>
 </div>		
 <table class="table table-striped table-bordered table-hover search-form">
 	<thead>
 		
-		<th><input name="user_name" type="text" placeholder="输入会员用户名" value="{:input('param.user_name')}" /></th>		
+		<th><input name="user_name" type="text" placeholder="{:lang('输入会员用户名')}" value="{:input('param.user_name')}" /></th>		
 		
 		<th>
-			<a class="btn btn-primary" href="javascript:;" id="search" url="{:url('MemberBackend/index')}">查询</a>
+			<a class="btn btn-primary" href="javascript:;" id="search" url="{:url('MemberBackend/index')}">{:lang('查询')}</a>
 		</th>
 	</thead>
 </table>	
@@ -31,14 +31,14 @@
 				<thead>
 					<tr>											
 						<th>ID</th>
-						<th>客户端</th> 
-						<th>用户名</th> 
-						<th>用户组</th>
-						<th>登录次数</th> 						
-						<th>创建时间</th>							
-						<th>最后登录</th>		
+						<th>{:lang('客户端')}</th> 
+						<th>{:lang('用户名')}</th> 
+						<th>{:lang('用户组')}</th>
+						<th>{:lang('登录次数')}</th> 						
+						<th>{:lang('创建时间')}</th>							
+						<th>{:lang('最后登录')}</th>		
 					
-						<th>操作</th>	
+						<th>{:lang('操作')}</th>	
 					</tr>
 				</thead>
 				<tbody>
@@ -57,9 +57,9 @@
 								{$v.title}
 							</td>
 							<td>{$v.loginnum}</td>
-							<td>{if condition="$v['regdate'] neq 0"}{$v.regdate|date="Y-m-d",###}{else/}无{/if}</td>
+							<td>{if condition="$v['regdate'] neq 0"}{$v.regdate|date="Y-m-d",###}{else/}{:lang('无')}{/if}</td>
 							<td>
-								{if condition="$v['lastdate'] neq 0"}{$v.lastdate|date="Y-m-d",###}{else/}无{/if}							
+								{if condition="$v['lastdate'] neq 0"}{$v.lastdate|date="Y-m-d",###}{else/}{:lang('无')}{/if}							
 							</td>
 							<td>
 								<a  class="btn btn-xs btn-info" href='{:url("MemberBackend/edit",array("id"=>$v["uid"]))}'>

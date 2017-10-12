@@ -9,13 +9,13 @@
 </head>
 <body>		
 	<ul class="form">
-		<li><span>用户名：</span><input class="text" name="username" type="text" /></li>	
-		<li><span>密 码：</span><input class="text" name="password" type="password" /></li>	
+		<li><span>{:lang('用户名：')}</span><input class="text" name="username" type="text" /></li>	
+		<li><span>{:lang('密')} {:lang('码：')}</span><input class="text" name="password" type="password" /></li>	
 		{if condition="1 eq config('use_captcha')"}	
-		<li class="clearfix"><span>验证码：</span><input class="text" name="captcha" type="text" /></li>
+		<li class="clearfix"><span>{:lang('验证码：')}</span><input class="text" name="captcha" type="text" /></li>
 		<li class="clearfix"><span></span><img class="verifyimg reloadverify" src="{:url('login/verify')}" alt="captcha" /></li>
 		{/if}
-		<li><span></span><input type="submit" id="send" value="登录" /></li>	
+		<li><span></span><input type="submit" id="send" value="{:lang('登录')}" /></li>	
 	</ul>	
 </body>
 <script src="__PUBLIC__/js/jquery/jquery-2.0.3.min.js"></script>
@@ -23,7 +23,7 @@
 <script>
 	
 	<?php if(1==config('use_captcha')){ ?>
-		//刷新验证码
+		//{:lang('刷新验证码')}
 		var verifyimg = $(".verifyimg").attr("src");
 	    $(".reloadverify").click(function(){
 	        if( verifyimg.indexOf('?')>0){
@@ -42,16 +42,16 @@
 		<?php if(1==config('use_captcha')){ ?>
 			var captcha=$("input[name='captcha']").val();		
 			if(captcha==''){
-				alert('请输入验证码');
+				alert('{:lang('请输入验证码')}');
 				return false;
 			}			
 		<?php } ?>
 		
 		if(username==''){
-			alert('请输入账号');
+			alert('{:lang('请输入账号')}');
 			return false;
 		}else if(pwd==''){
-			alert('请输入密码');
+			alert('{:lang('请输入密码')}');
 			return false;
 		}
 		
@@ -63,11 +63,11 @@
 					alert(d.error);
 				}else if(d.success){
 					
-					alert('登录成功');
+					alert('{:lang('登录成功')}');
 					
 					var user=$("#top",window.parent.document).find('ul.left');						
 					user.html('');					
-					user.append('<li><a href="{:url(\'member/order_member/index\')}">会员中心</a></li><li><a href="{:url(\'/logout\')}">退出</a></li>');
+					user.append('<li><a href="{:url(\'member/order_member/index\')}">{:lang('会员中心')}</a></li><li><a href="{:url(\'/logout\')}">{:lang('退出')}</a></li>');
 					
 					var cart=$("#top",window.parent.document).find('#cart a');						
 					cart.html('');					

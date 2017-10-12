@@ -3,7 +3,7 @@
 
 {if condition="!empty($attribute)"}
 	<div id="attribute" class="allWrap">
-		<p>属性</p>
+		<p>{:lang('属性')}</p>
 		{volist name="attribute" id="value"}
 			<div class="clearfix attribute-value">
 				<span style="float:left;">{$key}:</span>
@@ -26,7 +26,7 @@
 			{volist name="list" id="goods" empty="$empty"}
 			 <dl>
 			 	{if condition="isset($goods['shipping']) and ($goods['shipping'] eq 0)"}
-			 	<span class="no_shipping">免配送商品</span>
+			 	<span class="no_shipping">{:lang('免配送商品')}</span>
 			 	{/if}
 			 	<dt><a href="{:url('/goods/'.$goods['goods_id'])}">
 			 		{if condition="!empty($goods['image'])"}
@@ -42,7 +42,7 @@
 			{/volist}			
 		</div>
 		<div id="page" class="clearfix">{$list->render()}</div>
-		<div id="total" class="clearfix">总计 {$list->total()|default="0"} </div>	
+		<div id="total" class="clearfix">{:lang('总计')} {$list->total()|default="0"} </div>	
 		
 </div>			
 {/block}

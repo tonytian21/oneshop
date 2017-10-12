@@ -2,14 +2,14 @@
 {block name="content"}
 <div class="page-header">
 	<h1>	
-		移动端
+		{:lang('移动端')}
 		<small>
 			<i class="ace-icon fa fa-angle-double-right"></i>
-			代理分销
+			{:lang('代理分销')}
 		</small>
 		<small>
 			<i class="ace-icon fa fa-angle-double-right"></i>
-			下级会员
+			{:lang('下级会员')}
 		</small>
 	</h1>
 </div>	
@@ -20,9 +20,9 @@
 			<table id="table" class="table table-striped table-bordered table-hover">
 				<thead>
 					<tr>
-						<th>头像</th>						
-						<th>微信</th> 						
-						<th>加入时间</th>
+						<th>{:lang('头像')}</th>						
+						<th>{:lang('微信')}</th> 						
+						<th>{:lang('加入时间')}</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -38,7 +38,7 @@
 							<td colspan="20" class="page">{$list->render()}</td>
 						</tr>
 						<tr>
-							<td colspan="20" class="page">总计 {$list->total()|default="0"} 个</td>
+							<td colspan="20" class="page">{:lang('总计')} {$list->total()|default="0"} {:lang('个')}</td>
 						</tr>
 				</tbody>
 				

@@ -10,7 +10,7 @@
 	</h1>
 </div>
 <div class="page-header">
-	<a href="{:url('Option/add')}" class="btn btn-primary">新增选项</a>
+	<a href="{:url('Option/add')}" class="btn btn-primary">{:lang('新增选项')}</a>
 </div>	
 	
 <div class="row">
@@ -19,11 +19,11 @@
 			<table class="table table-striped table-bordered table-hover">
 				<thead>
 					<tr>											
-						<th>选项名称</th>
-						<th>选项值</th> 
-						<th>类型</th>  
+						<th>{:lang('选项名称')}</th>
+						<th>{:lang('选项值')}</th> 
+						<th>{:lang('类型')}</th>  
 						
-						<th>操作</th>				
+						<th>{:lang('操作')}</th>				
 					</tr>
 				</thead>
 				<tbody>
@@ -33,9 +33,9 @@
 							<td>{$o.value}</td>	
 							<td>								
 							{switch name="o.type"}
-							    {case value="select"}下拉列表{/case}							
-							    {case value="radio"}单选组{/case}
-							    {case value="checkbox"}多选组{/case}
+							    {case value="select"}{:lang('下拉列表')}{/case}							
+							    {case value="radio"}{:lang('单选组')}{/case}
+							    {case value="checkbox"}{:lang('多选组')}{/case}
 							{/switch}
 							</td>				
 							<td>

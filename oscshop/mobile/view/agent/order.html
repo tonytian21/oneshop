@@ -17,7 +17,7 @@
             <img src="{$order.userpic}/64" />
             <div class="info">
                 <p>{$order.nickname}</p>
-                <p>订单：<a href='{:url("Order/order_info",array("order_id"=>$order["order_id"]))}'><b>{$order.order_num_alias}</b></a> 收益：<b>&yen;{$order.bonus}</b></p>
+                <p>{:lang('订单：')}<a href='{:url("Order/order_info",array("order_id"=>$order["order_id"]))}'><b>{$order.order_num_alias}</b></a> {:lang('收益：')}<b>&yen;{$order.bonus}</b></p>
             </div>
         </section>
     {/volist}
