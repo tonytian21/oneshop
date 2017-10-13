@@ -18,7 +18,8 @@
     "require": {
         "php": ">=5.4.0",
         "topthink/framework": "*",
-        "topthink/think-captcha": "^1.0"
+        "topthink/think-captcha": "^1.0",
+		"phpoffice/phpexcel": "^1.8"
     },
     "extra": {
         "think-path": "thinkphp"
@@ -26,5 +27,11 @@
     "minimum-stability": "dev",
     "config": {
         "preferred-install": "dist"
-    }
+    },
+	"repositories": {
+		"packagist": {
+			"type": "composer",
+			"url": "https://packagist.phpcomposer.com"
+		}
+	}
 }

@@ -107,14 +107,12 @@ class File extends Driver
             return $default;
         }
         $content = file_get_contents($filename);
-
         if (false !== $content) {
             $expire = (int) substr($content, 8, 12);
             if (0 != $expire && $_SERVER['REQUEST_TIME'] > filemtime($filename) + $expire) {
                 return $default;
             }
             $content = substr($content, 32);
-
             if ($this->options['data_compress'] && function_exists('gzcompress')) {
                 //启用数据压缩
                 $content = gzuncompress($content);
@@ -191,7 +189,7 @@ class File extends Driver
         if ($this->has($name)) {
             $value = $this->get($name) - $step;
         } else {
-            $value = $step;
+            $value = -$step;
         }
         return $this->set($name, $value, 0) ? $value : false;
     }
