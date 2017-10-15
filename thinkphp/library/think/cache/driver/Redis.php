@@ -46,6 +46,7 @@ class Redis extends Driver
         if (!empty($options)) {
             $this->options = array_merge($this->options, $options);
         }
+
         $func          = $this->options['persistent'] ? 'pconnect' : 'connect';
         $this->handler = new \Redis;
         $this->handler->$func($this->options['host'], $this->options['port'], $this->options['timeout']);
@@ -176,4 +177,57 @@ class Redis extends Driver
         return $this->handler->flushDB();
     }
 
+    /**
+     * 写hash数据
+     */
+    public function hset($key, $field, $value)
+    {
+        return $this->handler->hset($key, $field, $value);
+    }
+
+    /**
+     * 读redis  hash数据
+     */
+    public function hget($key, $field)
+    {
+        return $this->handler->hget($key, $field);
+    }
+
+    /**
+     * 删除redis hash记录
+     */
+    public function hdel($key, $field)
+    {
+        return $this->handler->hdel($key, $field);
+    }
+
+    public function lpush($key, $value)
+    {
+        return $this->handler->lpush($key, $value);
+    }
+
+    public function rpush($key, $value)
+    {
+        return $this->handler->rpush($key, $value);
+    }
+
+    public function lpop($key)
+    {
+        return $this->handler->lpop($key);
+    }
+
+    public function rpop($key)
+    {
+        return $this->handler->rpop($key);
+    }
+
+    public function llen($key)
+    {
+        return $this->handler->llen($key);
+    }
+
+    public function lrem($key,$count,$value)
+    {
+        return $this->handler->lrem($key,$count,$value);
+    }
 }

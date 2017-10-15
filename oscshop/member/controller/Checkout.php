@@ -42,7 +42,7 @@ class Checkout extends HomeBase
 			$param['goods_id']=$v['goods_id'];
 			$param['quantity']=$v['quantity'];
 			
-			//判断商品是否存在，验证最小起订量   		
+			//判断商品是否存在，验证最小购买数量   		
 	   		if($error=$cart->check_minimum($param)){
 				$this->error($error['error'],'/cart');		
 	   		}			
@@ -259,7 +259,7 @@ class Checkout extends HomeBase
 			$param['goods_id']=$v['goods_id'];
 			$param['quantity']=$v['quantity'];
 			
-			//判断商品是否存在，验证最小起订量   		
+			//判断商品是否存在，验证最小购买数量   		
 	   		if($error=$cart->check_minimum($param)){   			
 	   			return $error;			
 	   		}			

@@ -36,6 +36,7 @@
 		                    <tr>
 		                      <td class="text-left">{:lang('详情图片')}</td>
 		                      <td class="text-left">{:lang('图片描述')}</td>
+		                      <td class="text-left">{:lang('图片英文描述')}</td>
 		                      <td class="text-right">{:lang('选项排序')}</td>
 		                      <td></td>
 		                    </tr>
@@ -47,7 +48,7 @@
 					                    <tr id="mobile-image-row<?php echo $mobile_image_row; ?>">
 					                      <td class="text-left"><a href="#" id="mobile-thumb-image<?php echo $mobile_image_row; ?>" data-toggle="image" class="img-thumbnail"><img src="/<?php echo resize($mobile_image['image'],100,100); ?>" /></a><input type="hidden" name="goods_mobile_description_image[<?php echo $mobile_image_row; ?>][image]" value="<?php echo $mobile_image['image']; ?>" id="mobile-input-image<?php echo $mobile_image_row; ?>" /></td>
 					                      <td class="text-right"><input type="text" name="goods_mobile_description_image[<?php echo $mobile_image_row; ?>][description]" value="<?php echo $mobile_image['description']; ?>" class="form-control" /></td>
-					                      
+					                      <td class="text-right"><input type="text" name="goods_mobile_description_image[<?php echo $mobile_image_row; ?>][description_en]" value="<?php echo $mobile_image['description_en']; ?>" class="form-control" /></td>
 					                      <td class="text-right"><input type="text" name="goods_mobile_description_image[<?php echo $mobile_image_row; ?>][sort_order]" value="<?php echo $mobile_image['sort_order']; ?>" size="1" class="form-control" /></td>
 					                      <td class="text-left">
 			                     			<input type="hidden" name="table" value="goods_mobile_description_image" />

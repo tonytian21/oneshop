@@ -20,7 +20,9 @@
 				<thead>
 					<tr>											
 						<th>{:lang('选项名称')}</th>
+						<th>{:lang('英文选项名称')}</th>
 						<th>{:lang('选项值')}</th> 
+						<th>{:lang('英文选项值')}</th> 
 						<th>{:lang('类型')}</th>  
 						
 						<th>{:lang('操作')}</th>				
@@ -29,8 +31,10 @@
 				<tbody>
 						{volist name="list" id="o" empty="$empty"}
 						<tr>		
-							<td>{$o.name}</td>		
+							<td>{$o.name}</td>	
+							<td>{$o.name_en}</td>	
 							<td>{$o.value}</td>	
+							<td>{$o.value_en}</td>	
 							<td>								
 							{switch name="o.type"}
 							    {case value="select"}{:lang('下拉列表')}{/case}							

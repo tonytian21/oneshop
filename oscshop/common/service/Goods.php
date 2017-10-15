@@ -43,7 +43,7 @@ class Goods{
 		
 		//名称筛选
 		if(isset($filter['name'])){
-			$map['Goods.name']=['like',"%".$filter['name']."%"];	
+			$map['GoodsDesription.name']=['like',"%".$filter['name']."%"];	
 			$query['name']=urlencode($filter['name']);	
 		}
 		
@@ -53,7 +53,9 @@ class Goods{
 		$map['Goods.status']=['eq',1];	
 		$map['GoodsAttribute.attribute_value_id']=['in',$attribute_value_id];
 		
-		return Db::view('Goods','goods_id,image,name,price,shipping')
+		return Db::view('Goods','goods_id,image,price,shipping')
+		->view('GoodsDesription','name','Goods.goods_id=GoodsDesription.goods_id')
+		->view('GoodsDesriptionEn','name_en','Goods.goods_id=GoodsDesriptionEn.goods_en_id')
 		->view('GoodsAttribute','attribute_value_id','Goods.goods_id=GoodsAttribute.goods_id')
 		->view('GoodsToCategory','category_id','GoodsToCategory.goods_id=Goods.goods_id')
 		->where($map)
@@ -79,7 +81,7 @@ class Goods{
 		}
 		//名称筛选
 		if(isset($filter['name'])){
-			$map['g.name']=['like',"%".$filter['name']."%"];	
+			$map['gtd.name']=['like',"%".$filter['name']."%"];	
 			$query['name']=urlencode($filter['name']);	
 		}
 		//后台台分类商品搜索
@@ -101,6 +103,8 @@ class Goods{
 		
 		return Db::name('goods')->alias('g')->field($field)		
 		->join('__GOODS_TO_CATEGORY__ gtc','g.goods_id = gtc.goods_id')
+		->join('__GOODS_DESCRIPTION__ gtd','g.goods_id = gtc.goods_id')
+		->join('__GOODS_DESCRIPTION_EN__ gtcen','g.goods_id = gtcen.goods_en_id','left')
 		->where($map)->order('g.goods_id desc')
 		->paginate($page_num,false,['query'=>$query]);
 		
@@ -116,17 +120,19 @@ class Goods{
 		$map=[];
 		
 		if(isset($filter['name'])){
-			$map['name']=['like',$filter['name']];		
+			$map['t.name']=['like',$filter['name']];		
 		}
 
 		if(isset($filter['status'])){	
-			$map['status']=['eq',$filter['status']];	
+			$map['g.status']=['eq',$filter['status']];	
 		}
 		
-		$map['goods_id']=['GT','0'];
+		$map['g.goods_id']=['GT','0'];
 		
-		return Db::name('goods')
-		->where($map)->order('goods_id desc')
+		return Db::name('goods')->alias('g')
+		->join('__GOODS_DESCRIPTION__ t','g.goods_id = t.goods_id')
+		->join('__GOODS_DESCRIPTION_EN__ t1','g.goods_id = t1.goods_en_id','left')
+		->where($map)->order('g.goods_id desc')
 		->paginate($page_num);
 		
 	}
@@ -137,7 +143,10 @@ class Goods{
 		//数据量
 		$limit = ((int)$limit_num * (int)$page) . ",".(int)$limit_num;
 					
-		$sql='SELECT goods_id,image,price,name FROM '.config('database.prefix').'goods WHERE status=1 ORDER BY goods_id LIMIT '.$limit;
+		$sql='SELECT g.goods_id,g.image,g.price,gd.name,gde.name_en FROM '.config('database.prefix').'goods g 
+		inner join '.config('database.prefix').'goods_description gd on g.goods_id=gd.goods_id
+		left join '.config('database.prefix').'goods_description_en gde on g.goods_id=gde.goods_en_id
+		WHERE g.status=1 ORDER BY g.goods_id LIMIT '.$limit;
 		
 		$list=Db::query($sql);				
 		
@@ -273,7 +282,8 @@ class Goods{
 	//商品详情信息
 	public function get_goods_info($goods_id){
 		
-		if(!$goods=Db::name('goods')->alias('g')->join('__GOODS_DESCRIPTION__ gd','g.goods_id = gd.goods_id')->where('g.goods_id',$goods_id)->find()){
+		if(!$goods=Db::name('goods')->alias('g')->join('__GOODS_DESCRIPTION__ gd','g.goods_id = gd.goods_id')
+			->join('__GOODS_DESCRIPTION_EN__ gde','g.goods_id = gde.goods_en_id','left')->where('g.goods_id',$goods_id)->find()){
 			return false;
 		}
 		return [

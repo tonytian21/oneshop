@@ -1,0 +1,72 @@
+{extend name="public:base" /}
+{block name="content"}
+
+<div class="page-header">
+	<h1>	
+		{$breadcrumb1}
+		<small>
+			<i class="ace-icon fa fa-angle-double-right"></i>
+			{$breadcrumb2}
+		</small>
+	</h1>
+</div>
+	
+<div class="row">
+	<div class="col-xs-12">	
+		<div class="table-responsive">
+			<table class="table table-striped table-bordered table-hover">
+				<thead>
+					<tr>		
+						<th>{:lang('编号')}</th> 
+						<th>{:lang('期号')}</th> 
+						<th>{:lang('图片')}</th> 									
+						<th>{:lang('商品名称')}</th>		
+						<th>{:lang('商品英文名称')}</th>	
+						<th>{:lang('最小购买数量')}</th>	
+						<th>{:lang('最大自购比例')}</th>	
+						<th>{:lang('机器人必中')}</th>
+						<th>{:lang('总需购买数量')}</th>
+						<th>{:lang('已购买数量')}</th>	
+						<th>{:lang('操作')}</th>				
+					</tr>
+				</thead>
+				<tbody>
+						{volist name="list" id="data" empty="$empty"}
+						<tr>	
+							<td>{$data.term_id}</td>
+							<td>{$data.term_num}</td>						
+							<td>
+							{if condition="$data['image']"}
+		                  		<img src="IMG_ROOT{$data.image|resize=100,100}" title="{$data.name}" />
+		                  	{else /}
+		                  		<img src="__PUBLIC__/image/no_image_100x100.jpg" title="{:lang('暂无图片')}" />
+		                  	{/if}
+							</td>
+							<td>{$data.name}</td>
+							<td>{$data.name_en}</td>
+							<td>{if condition="$data.minimum"}{$data.minimum}{else/}{$data.gminimum}{/if}</td>
+							<td>{if condition="$data.robot_buy_ratio"}{$data.robot_buy_ratio}{else/}{$data.grobot_buy_ratio}{/if}%</td>
+							<td>{if condition="$data.robot_win"}{:lang('必中')}{else/}{if condition="$data.grobot_win"}{:lang('必中')}{else/}{:lang('随机')}{/if}{/if}</td>
+							<td>{$data.totalcopies}</td>
+							<td>{$data.saledcopies}</td>
+							<td>
+								<!--a  class="btn btn-xs btn-info" href='{:url("term/edit",array("id"=>$data["term_id"]))}'>
+									<i class="fa fa-edit bigger-120"></i>
+								</a--> 
+								<a class="delete btn btn-xs btn-danger" href='{:url("term/del",array("id"=>$data["term_id"]))}' >
+									<i class="fa fa-trash bigger-120"></i>
+								</a>
+							</td>
+						</tr>
+						{/volist}	
+						
+						<tr>
+							<td colspan="10" class="page">{$list->render()}</td>
+						</tr>
+				</tbody>
+				
+			</table>
+		</div>
+	</div>
+</div>
+{/block}

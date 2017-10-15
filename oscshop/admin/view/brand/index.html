@@ -21,7 +21,8 @@
 				<thead>
 					<tr>		
 						<th>{:lang('图片')}</th> 									
-						<th>{:lang('品牌名称')}</th>					
+						<th>{:lang('品牌名称')}</th>		
+						<th>{:lang('英文品牌名称')}</th>				
 						<th>{:lang('操作')}</th>				
 					</tr>
 				</thead>
@@ -36,6 +37,7 @@
 		                  	{/if}
 							</td>
 							<td>{$data.name}</td>
+							<td>{$data.name_en}</td>
 							<td>
 								<a  class="btn btn-xs btn-info" href='{:url("brand/edit",array("id"=>$data["brand_id"]))}'>
 									<i class="fa fa-edit bigger-120"></i>

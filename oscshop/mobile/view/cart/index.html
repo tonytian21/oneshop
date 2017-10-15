@@ -532,7 +532,7 @@ function change_quantity(goods_id,input,cart_id,key){
 	var min=$(input).attr('minimum');	
 	
 	if(qty<min){		
-		$.toast('{:lang('最小起订量是')}'+min,"forbidden");
+		$.toast('{:lang('最小购买数量是')}'+min,"forbidden");
 		qty=min;
 	}
 	

@@ -6,7 +6,9 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'think\\worker\\' => array($vendorDir . '/topthink/think-worker/src'),
     'think\\composer\\' => array($vendorDir . '/topthink/think-installer/src'),
     'think\\captcha\\' => array($vendorDir . '/topthink/think-captcha/src'),
     'think\\' => array($baseDir . '/thinkphp/library/think'),
+    'Workerman\\' => array($vendorDir . '/workerman/workerman'),
 );

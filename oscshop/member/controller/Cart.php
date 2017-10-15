@@ -62,7 +62,7 @@ class Cart extends HomeBase
 		
 		$param=input('post.');
 		
-   		//判断商品是否存在，并验证最小起订量   		
+   		//判断商品是否存在，并验证最小购买数量   		
    		if($error=$cart->check_minimum($param)){   			
    			return $error;			
    		}		
@@ -106,7 +106,7 @@ class Cart extends HomeBase
 		$param['goods_id']=$goods_id;
 		$param['quantity']=$quantity;	
 		
-		//判断商品是否存在，验证最小起订量   		
+		//判断商品是否存在，验证最小购买数量   		
    		if($error=$cart->check_minimum($param)){   			
    			return $error;			
    		}			

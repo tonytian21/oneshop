@@ -38,16 +38,20 @@ class Option{
 	
 	public function add_option($data){			
 		
-			$option['name']=$data['name'];	
+			$option['name']=$data['name'];
+			$option['name_en']=$data['name_en'];	
 			$option['type']=$data['type'];		
 			$option['update_time']=date('Y-m-d H:i:s',time());	
 			$option['value']='';	
+			$option['value_en']='';
 			foreach ($data['option_value'] as $k=> $v) {
 				if(!empty($v)){
 					if($v!=end($data['option_value'])){
 						$option['value'].=$v['name'].',';
+						$option['value_en'].=$v['name_en'].',';
 					}else{
 						$option['value'].=$v['name'];
+						$option['value_en'].=$v['name_en'];
 					}					
 				}				
 			}	
@@ -60,7 +64,8 @@ class Option{
 						if(!empty($v)){
 							
 							$value['option_id']=$option_id;
-							$value['value_name']=$v['name'];						
+							$value['value_name']=$v['name'];	
+							$value['value_name_en']=$v['name_en'];						
 							$value['value_sort_order']=$v['sort_order'];
 							
 							Db::name('OptionValue')->insert($value);
@@ -75,17 +80,20 @@ class Option{
 	public function edit_option($data){		
 			
 			$option['option_id']=$data['id'];
-			$option['name']=$data['name'];	
+			$option['name']=$data['name'];
+			$option['name_en']=$data['name_en'];	
 			$option['type']=$data['type'];		
 			$option['update_time']=date('Y-m-d H:i:s',time());		
 			$option['value']='';	
-			
+			$option['value_en']='';
 			foreach ($data['option_value'] as $k=> $v) {
 				if(!empty($v)){
 					if($v!=end($data['option_value'])){
 						$option['value'].=$v['name'].',';
+						$option['value_en'].=$v['name_en'].',';
 					}else{
 						$option['value'].=$v['name'];
+						$option['value_en'].=$v['name_en'].',';
 					}					
 				}				
 			}	
@@ -100,7 +108,8 @@ class Option{
 						if(!empty($v)){
 							
 							$value['option_id']=$data['id'];
-							$value['value_name']=$v['name'];						
+							$value['value_name']=$v['name'];	
+							$value['value_name_en']=$v['name_en'];					
 							$value['value_sort_order']=$v['sort_order'];
 							
 							Db::name('OptionValue')->insert($value,false,true);

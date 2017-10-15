@@ -14,6 +14,7 @@
 namespace osc\admin\controller;
 use osc\common\controller\AdminBase;
 use think\Db;
+
 class Goods extends AdminBase{
 	
 	protected function _initialize(){
@@ -43,7 +44,6 @@ class Goods extends AdminBase{
 	 }
 	 //新增商品
 	 public function add(){
-		
 		if(request()->isPost()){
 			
 			$data=input('post.');
@@ -56,12 +56,13 @@ class Goods extends AdminBase{
 				$this->error($error['error']);	
 			}
 			
-			$return=$model->add_goods($data);		
+			$goods_id = 0;
+
+			$return=$model->add_goods($data,$goods_id);		
 			
 			if($return){
-												
 				storage_user_action(UID,session('user_auth.username'),config('BACKEND_USER'),'新增了商品');		
-			
+				
 				$this->success('新增成功！',url('Goods/index'));			
 			}else{
 				$this->error('新增失败！');			
@@ -84,7 +85,7 @@ class Goods extends AdminBase{
 			
 			$data=input('post.');
 			
-			if(empty($data['name'])){
+			if(empty($data['description']['name'])){
 		
 				$this->error('商品名称必填！');	
 			}
@@ -92,23 +93,35 @@ class Goods extends AdminBase{
 			$description=$data['description'];
 			unset($data['description']);
 			
+			$description_en=$data['description_en'];
+			unset($data['description_en']);
 			
 			try{
 				
 				Db::name('goods')->update($data,false,true);
 				Db::name('goods_description')->where('goods_id',$data['goods_id'])->update($description,false,true);
-				storage_user_action(UID,session('user_auth.username'),config('BACKEND_USER'),'更新商品基本信息');							
-				return $this->success('更新成功！',url('Goods/index'));
+
+				$description_enModel = Db::name('goods_description_en')->where('goods_en_id',$data['goods_id'])->find();
+
+				if($description_enModel){
+					Db::name('goods_description_en')->where('goods_en_id',$data['goods_id'])->update($description_en,false,true);
+				}else{
+					$description_en['goods_en_id'] = $data['goods_id'];
+					Db::name('goods_description_en')->where('goods_en_id',$data['goods_id'])->insert($description_en,false,true);
+				}
 				
+				storage_user_action(UID,session('user_auth.username'),config('BACKEND_USER'),'更新商品基本信息');	
 			}catch(\Exception $e){
 				return $this->error('更新失败！'.$e);	
 			}
 			
+			return $this->success('更新成功！',url('Goods/index'));
 		}
 		
 		$this->assign('weight_class',Db::name('WeightClass')->select());
 		$this->assign('length_class',Db::name('LengthClass')->select());
 		$this->assign('description',Db::name('goods_description')->where('goods_id',(int)input('id'))->find());
+		$this->assign('description_en',Db::name('goods_description_en')->where('goods_en_id',(int)input('id'))->find());
 	 	$this->assign('goods',Db::name('Goods')->find((int)input('id')));
 		
 	 	$this->assign('crumbs', '编辑基本信息');	

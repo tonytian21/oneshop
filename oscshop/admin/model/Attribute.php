@@ -36,15 +36,19 @@ class Attribute{
 	
 	public function add_attribute($data){			
 		
-			$attribute['name']=$data['name'];				
+			$attribute['name']=$data['name'];		
+			$attribute['name_en']=$data['name_en'];		
 			$attribute['update_time']=time();	
 			$attribute['value']='';	
+			$attribute['value_en']='';	
 			foreach ($data['attribute_value'] as $k=> $v) {
 				if(!empty($v)){
 					if($v!=end($data['attribute_value'])){
 						$attribute['value'].=$v['name'].',';
+						$attribute['value_en'].=$v['name_en'].',';
 					}else{
 						$attribute['value'].=$v['name'];
+						$attribute['value_en'].=$v['name_en'];
 					}					
 				}				
 			}	
@@ -58,7 +62,9 @@ class Attribute{
 							
 							$value['attribute_id']=$attribute_id;
 							$value['value_name']=$v['name'];	
-							$value['name']=$attribute['name'];					
+							$value['value_name_en']=$v['name_en'];
+							$value['name']=$attribute['name'];	
+							$value['name_en']=$attribute['name_en'];				
 							$value['value_sort_order']=$v['sort_order'];
 						
 							Db::name('attribute_value')->insert($value);
@@ -74,16 +80,18 @@ class Attribute{
 			
 			$attribute['attribute_id']=$data['id'];
 			$attribute['name']=$data['name'];	
-
+			$attribute['name_en']=$data['name_en'];
 			$attribute['update_time']=time();		
 			$attribute['value']='';	
-			
+			$attribute['value_en']='';
 			foreach ($data['attribute_value'] as $k=> $v) {
 				if(!empty($v)){
 					if($v!=end($data['attribute_value'])){
 						$attribute['value'].=$v['name'].',';
+						$attribute['value_en'].=$v['name_en'].',';
 					}else{
 						$attribute['value'].=$v['name'];
+						$attribute['value_en'].=$v['name_en'];
 					}					
 				}				
 			}	
@@ -98,9 +106,11 @@ class Attribute{
 						if(!empty($v)){
 							
 							$value['attribute_id']=$data['id'];
-							$value['value_name']=$v['name'];						
+							$value['value_name']=$v['name'];	
+							$value['value_name_en']=$v['name_en'];					
 							$value['value_sort_order']=$v['sort_order'];						
 							$value['name']=$attribute['name'];	
+							$value['name_en']=$attribute['name_en'];
 							Db::name('attributeValue')->insert($value,false,true);
 						}
 					}

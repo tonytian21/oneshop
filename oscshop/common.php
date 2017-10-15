@@ -293,7 +293,7 @@ function resize($filename, $width, $height=null) {
 				copy(DIR_IMAGE . $old_image, DIR_IMAGE . $new_image);
 			}
 		}			
-	return 'public/uploads/' . $new_image;			
+	return 'uploads/' . $new_image;			
 }
 
 

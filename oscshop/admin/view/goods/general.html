@@ -26,6 +26,7 @@
           	
           	<li class="active"><a href="#tab-data" data-toggle="tab">{:lang('基本信息')}</a></li>
             <li><a href="#tab-general" data-toggle="tab">{:lang('商品描述')}</a></li>
+            <li><a href="#tab-general-en" data-toggle="tab">{:lang('英文商品描述')}</a></li>
           </ul>
           <div class="tab-content">
           		
@@ -34,7 +35,7 @@
 	          		
 	          		<div class="form-group required">
 		                <label class="col-sm-2 control-label" for="input-image">
-		                <span title="" data-toggle="tooltip" data-original-title="{:lang('上传')}800x800{:lang('的图片')}">{:lang('缩略图：')}</span>
+		                <span title="" data-toggle="tooltip" data-original-title="{:lang('上传')}800x800{:lang('的图片')}">{:lang('缩略图')}</span>
 		                </label>
 		                
 		                <div class="col-sm-10" id="thumb">
@@ -49,78 +50,60 @@
 		            </div>
 		            
 		            </div>   
-		            
-		            <div class="form-group required">
-						<label class="col-sm-2 control-label" for="input-name2">{:lang('商品名称：')}</label>
-						<div class="col-sm-10">
-							<input id="input-name2" class="form-control" type="text" placeholder="{:lang('商品名称')}" value="{$goods.name}" name="name">
-						</div>
-					</div>
-		            
-		            <div class="form-group required">
-						<label class="col-sm-2 control-label" for="input-meta-title2">{:lang('商品型号：')}</label>
-						<div class="col-sm-10">
-							<input id="input-meta-title2" class="form-control" type="text" placeholder="{:lang('商品型号')}" value="{$goods.model}" name="model">
-						</div>
-					</div>
 					
 					<div class="form-group required">
-						<label class="col-sm-2 control-label" for="input-meta-title2">{:lang('库存单位：')}</label>
+						<label class="col-sm-2 control-label" for="input-meta-title2">{:lang('库存单位')}</label>
 						<div class="col-sm-10">
 							<input id="input-meta-title2" class="form-control" type="text" placeholder="{:lang('库存单位')}" value="{$goods.sku}" name="sku">
 						</div>
 					</div>
 					
 					<div class="form-group required">
-						<label class="col-sm-2 control-label" for="input-meta-title2">{:lang('生产地：')}</label>
+						<label class="col-sm-2 control-label" for="input-meta-title2">{:lang('生产地')}</label>
 						<div class="col-sm-10">
 							<input id="input-meta-title2" class="form-control" type="text" placeholder="{:lang('商品位置')}" value="{$goods.location}" name="location">
 						</div>
 					</div>
 					
 					<div class="form-group required">
-						<label class="col-sm-2 control-label" for="input-meta-title2">{:lang('销售价格：')}</label>
-						<div class="col-sm-10">
-							<input id="input-meta-title2" class="form-control" type="text" placeholder="{:lang('销售价格')}" value="{$goods.price}" name="price">
-						</div>
-					</div>
-					
-					<div class="form-group required">
-						<label class="col-sm-2 control-label" for="input-meta-title2">{:lang('商品数量：')}</label>
-						<div class="col-sm-10">
-							<input id="input-meta-title2" class="form-control" type="text" placeholder="{:lang('商品数量')}" value="{$goods.quantity}" name="quantity">
-						</div>
-					</div>
-					
-					<div class="form-group required">
-						<label class="col-sm-2 control-label" for="input-meta-title2">{:lang('购买可得积分：')}</label>
+						<label class="col-sm-2 control-label" for="input-meta-title2">{:lang('购买可得积分')}</label>
 						<div class="col-sm-10">
 							<input id="input-meta-title2" class="form-control" type="text" placeholder="{:lang('购买可得积分')}" value="{$goods.points}" name="points">
 						</div>
 					</div>
 					
 					<div class="form-group required">
-						<label class="col-sm-2 control-label" for="input-meta-title2">{:lang('兑换所需积分：')}</label>
+						<label class="col-sm-2 control-label" for="input-meta-title2">{:lang('兑换所需积分')}</label>
 						<div class="col-sm-10">
 							<input id="input-meta-title2" class="form-control" type="text" placeholder="{:lang('兑换所需积分')}" value="{$goods.pay_points}" name="pay_points">
 						</div>
 					</div>
-					
 					<div class="form-group required">
-						<label class="col-sm-2 control-label" for="input-meta-title2">{:lang('最小订定量：')}</label>
+						<label class="col-sm-2 control-label" for="input-meta-title2">{:lang('最大自购比例')}</label>
 						<div class="col-sm-10">
-							<input id="input-meta-title2" class="form-control" type="text" placeholder="{:lang('最小起定量')}" value="{$goods.minimum}" name="minimum">
+							<input id="input-meta-title2" class="form-control" type="text" placeholder="{:lang('最大自购比例，最大为100%')}" name="robot_buy_ratio" value="{$goods.robot_buy_ratio}">%
 						</div>
 					</div>
-					
+
 					<div class="form-group">
-						<label class="col-sm-2 control-label" for="input-subtract">{:lang('扣减库存：')}</label>
+						<label class="col-sm-2 control-label" for="input-subtract">{:lang('机器人必中')}</label>
 						
 							<div class="col-sm-10">
 								<label class="radio-inline">
-								<input type="radio" checked="checked" value="1" name="subtract">{:lang('是')}</label>
+								<input type="radio" value="1" {if condition="$goods.robot_win" checked="checked" {/if} name="robot_win">{:lang('是')}</label>
 								<label class="radio-inline">
-								<input type="radio" value="0" name="subtract">{:lang('否')}</label>
+								<input type="radio" value="0" {if condition="!$goods.robot_win" checked="checked" {/if}  name="robot_win">{:lang('否')}</label>
+							</div>
+						
+					</div>	
+					<div class="form-group">
+						<label class="col-sm-2 control-label" for="input-subtract">{:lang('扣减库存')}</label>
+						
+							<div class="col-sm-10">
+								<label class="radio-inline">
+								<input type="radio" {if condition="$goods.subtract" checked="checked" {/if}  value="1" name="subtract">{:lang('是')}</label>
+								<label class="radio-inline">
+								<input type="radio" value="0" {if condition="!$goods.subtract" checked="checked" {/if}   name="subtract">{:lang('否')}</label>
 							</div>
 						
 					</div>
@@ -128,26 +111,26 @@
 		           
 					
 					<div class="form-group">
-						<label class="col-sm-2 control-label">{:lang('需要配送：')}</label>
+						<label class="col-sm-2 control-label">{:lang('需要配送')}</label>
 						<div class="col-sm-10">
 							<label class="radio-inline">
-							<input type="radio" checked="checked" value="1" name="shipping">{:lang('是')}</label>
+							<input type="radio" {if condition="$goods.shipping" checked="checked" {/if}   value="1" name="shipping">{:lang('是')}</label>
 							<label class="radio-inline">
-							<input type="radio" value="0" name="shipping">{:lang('否')}</label>
+							<input type="radio" {if condition="!$goods.shipping" checked="checked" {/if}  value="0" name="shipping">{:lang('否')}</label>
 						</div>
 					</div>
 
 					
 					
 					<div class="form-group required">
-						<label class="col-sm-2 control-label" for="input-meta-title2">{:lang('重量：')}</label>
+						<label class="col-sm-2 control-label" for="input-meta-title2">{:lang('重量')}</label>
 						<div class="col-sm-10">
 							<input id="input-meta-title2" class="form-control" type="text" placeholder="{:lang('重量')}" value="{$goods.weight}" name="weight">
 						</div>
 					</div>
 
 					<div class="form-group">
-						<label class="col-sm-2 control-label" for="input-length-class">{:lang('重量单位：')}</label>
+						<label class="col-sm-2 control-label" for="input-length-class">{:lang('重量单位')}</label>
 						<div class="col-sm-10">
 							
 							<select id="input-length-class" class="form-control" name="weight_class_id">
@@ -159,7 +142,7 @@
 					</div>
 		            
 		            <div class="form-group">
-						<label class="col-sm-2 control-label" for="input-length">{:lang('尺寸')}(L x W x H){:lang('：')}</label>
+						<label class="col-sm-2 control-label" for="input-length">{:lang('尺寸')}(L x W x H)</label>
 						<div class="col-sm-10">
 							<div class="row">
 								<div class="col-sm-4">
@@ -177,7 +160,7 @@
 
 
 					<div class="form-group">
-						<label class="col-sm-2 control-label" for="input-length-class">{:lang('尺寸单位：')}</label>
+						<label class="col-sm-2 control-label" for="input-length-class">{:lang('尺寸单位')}</label>
 						<div class="col-sm-10">
 							
 							<select id="input-length-class" class="form-control" name="length_class_id">
@@ -189,17 +172,17 @@
 					</div>
 		            
 		            <div class="form-group">
-						<label class="col-sm-2 control-label">{:lang('商品状态：')}</label>
+						<label class="col-sm-2 control-label">{:lang('商品状态')}</label>
 						<div class="col-sm-10">
 							<label class="radio-inline">
-							<input type="radio" checked="checked" value="1" name="status">{:lang('启用')}</label>
+							<input type="radio" {if condition="$goods.status == '1'" checked="checked" {/if} value="1" name="status">{:lang('启用')}</label>
 							<label class="radio-inline">
-							<input type="radio" value="2" name="status">{:lang('停用')}</label>
+							<input type="radio" value="2" {if condition="$goods.status == '2'" checked="checked" {/if} name="status">{:lang('停用')}</label>
 						</div>
 					</div>
 		            
 		            <div class="form-group required">
-						<label class="col-sm-2 control-label" for="input-meta-title2">{:lang('排序：')}</label>
+						<label class="col-sm-2 control-label" for="input-meta-title2">{:lang('排序')}</label>
 						<div class="col-sm-10">
 							<input id="input-meta-title2" class="form-control" type="text" placeholder="{:lang('排序')}" value="{$goods.sort_order}" name="sort_order">
 						</div>
@@ -210,16 +193,28 @@
 	          	
 	          	<!-- {:lang('商品描述')}  START -->
 	          	<div class="tab-pane" id="tab-general">	          		
-					
+					<div class="form-group required">
+						<label class="col-sm-2 control-label" for="input-name2">{:lang('商品名称')}</label>
+						<div class="col-sm-10">
+							<input id="input-name2" class="form-control" type="text" placeholder="{:lang('商品名称')}" value="{$description.name}" name="description[name]">
+						</div>
+					</div>
+		            
+		            <div class="form-group required">
+						<label class="col-sm-2 control-label" for="input-meta-title2">{:lang('商品型号')}</label>
+						<div class="col-sm-10">
+							<input id="input-meta-title2" class="form-control" type="text" placeholder="{:lang('商品型号')}" value="{$description.model}" name="description[model]">
+						</div>
+					</div>
 					<div class="form-group">
-	                    <label class="col-sm-2 control-label" for="input-description">{:lang('商品简介：')}</label>
+	                    <label class="col-sm-2 control-label" for="input-description">{:lang('商品简介')}</label>
 	                    <div class="col-sm-10">
 	                      <textarea name="description[summary]" class="form-control" rows="5">{$description.summary|default=''}</textarea>	
 	                    </div>
                   	</div>
 					
 					<div class="form-group">
-	                    <label class="col-sm-2 control-label" for="input-description">{:lang('商品详情：')}</label>
+	                    <label class="col-sm-2 control-label" for="input-description">{:lang('商品详情')}</label>
 	                    <div class="col-sm-10">
 	                      <textarea name="description[description]" id="description">{$description.description|default=''}</textarea>	
 	                    </div>
@@ -227,13 +222,13 @@
 		
 					
 					<div class="form-group">
-						<label class="col-sm-2 control-label" for="input-meta-description2">Meta{:lang('标签描述：')}</label>
+						<label class="col-sm-2 control-label" for="input-meta-description2">Meta{:lang('标签描述')}</label>
 						<div class="col-sm-10">
 							<textarea id="input-meta-description2" class="form-control" placeholder="Meta{:lang('标签描述')}" rows="5" name="description[meta_description]">{$description.meta_description|default=''}</textarea>
 						</div>
 					</div>
 					<div class="form-group">
-						<label class="col-sm-2 control-label" for="input-meta-keyword2">Meta{:lang('标签关键词：')}</label>
+						<label class="col-sm-2 control-label" for="input-meta-keyword2">Meta{:lang('标签关键词')}</label>
 						<div class="col-sm-10">
 							<textarea id="input-meta-keyword2" class="form-control" placeholder="Meta{:lang('标签关键词')}" rows="5" name="description[meta_keyword]">{$description.meta_keyword|default=''}</textarea>
 						</div>
@@ -244,7 +239,53 @@
 	          	</div>
 	          	<!-- {:lang('商品描述')} END -->  
 	          	
-        
+        		<!-- {:lang('英文商品描述')}  START -->
+	          	<div class="tab-pane" id="tab-general-en">	          		
+					<div class="form-group required">
+						<label class="col-sm-2 control-label" for="input-name2">{:lang('商品名称')}</label>
+						<div class="col-sm-10">
+							<input id="input-name2" class="form-control" type="text" placeholder="{:lang('商品名称')}" value="{$description_en.name_en}" name="description_en[name_en]">
+						</div>
+					</div>
+		            
+		            <div class="form-group required">
+						<label class="col-sm-2 control-label" for="input-meta-title2">{:lang('商品型号')}</label>
+						<div class="col-sm-10">
+							<input id="input-meta-title2" class="form-control" type="text" placeholder="{:lang('商品型号')}" value="{$description_en.model_en}" name="description_en[model_en]">
+						</div>
+					</div>
+					<div class="form-group">
+	                    <label class="col-sm-2 control-label" for="input-description">{:lang('商品简介')}</label>
+	                    <div class="col-sm-10">
+	                      <textarea name="description_en[summary_en]" class="form-control" rows="5">{$description_en.summary_en|default=''}</textarea>	
+	                    </div>
+                  	</div>
+					
+					<div class="form-group">
+	                    <label class="col-sm-2 control-label" for="input-description">{:lang('商品详情')}</label>
+	                    <div class="col-sm-10">
+	                      <textarea name="description_en[description_en]" id="description">{$description_en.description_en|default=''}</textarea>	
+	                    </div>
+                  	</div>
+		
+					
+					<div class="form-group">
+						<label class="col-sm-2 control-label" for="input-meta-description2">Meta{:lang('标签描述')}</label>
+						<div class="col-sm-10">
+							<textarea id="input-meta-description2" class="form-control" placeholder="Meta{:lang('标签描述')}" rows="5" name="description_en[meta_description_en]">{$description_en.meta_description_en|default=''}</textarea>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label" for="input-meta-keyword2">Meta{:lang('标签关键词')}</label>
+						<div class="col-sm-10">
+							<textarea id="input-meta-keyword2" class="form-control" placeholder="Meta{:lang('标签关键词')}" rows="5" name="description_en[meta_keyword_en]">{$description_en.meta_keyword_en|default=''}</textarea>
+						</div>
+					</div>
+					
+					
+					
+	          	</div>
+	          	<!-- {:lang('英文商品描述')} END -->  
           </div>
         </form>
 	</div>

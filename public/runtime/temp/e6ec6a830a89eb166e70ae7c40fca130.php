@@ -1,10 +1,10 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:39:"../oscshop/admin/view/public/login.html";i:1506516777;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:39:"../oscshop/admin/view/public/login.html";i:1507895017;}*/ ?>
 
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<title>登录 - 后台管理系统</title>
+		<title><?php echo lang('登录'); ?> - <?php echo lang('后台管理系统'); ?></title>
 
 		<meta name="description" content="User login page" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -45,9 +45,9 @@
 						<div class="login-container">
 							<div class="center">
 								<h1>
-									<i class="fa fa-leaf已经安装"></i>
+									<i class="fa fa-leaf<?php echo lang('已经安装'); ?>"></i>
 									<span class="red"><?php echo \think\Config::get('SITE_NAME'); ?></span>
-									<span class="white">网站管理</span>
+									<span class="white"><?php echo lang('网站管理'); ?></span>
 								</h1>
 								<h4 class="blue">&copy; <?php echo \think\Config::get('SHORT_URL'); ?></h4>
 							</div>
@@ -60,7 +60,7 @@
 										<div class="widget-main">
 											<h4 class="header blue lighter bigger">
 												<i class="fa fa-coffee green"></i>
-												请输入你的登录信息
+												<?php echo lang('请输入你的登录信息'); ?>
 											</h4>
 
 											<div class="space-6"></div>
@@ -69,14 +69,14 @@
 												<fieldset>
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input name="username" type="text" class="form-control" placeholder="用户名" />
+															<input name="username" type="text" class="form-control" placeholder="<?php echo lang('用户名'); ?>" />
 															<i class="ace-icon fa fa-user"></i>
 														</span>
 													</label>
 
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="password" name="password" class="form-control" placeholder="密码" />
+															<input type="password" name="password" class="form-control" placeholder="<?php echo lang('密码'); ?>" />
 															<i class="ace-icon fa fa-lock"></i>
 														</span>
 													</label>
@@ -86,12 +86,12 @@
 													<div class="clearfix">
 														<label class="inline">
 															<input type="checkbox" class="ace" />
-															<span class="lbl"> 记住我</span>
+															<span class="lbl"> <?php echo lang('记住我'); ?></span>
 														</label>
 
 														<button type="submit" class="login-btn width-35 pull-right btn btn-sm btn-primary">
 															<i class="fa fa-key"></i>
-															登录
+															<?php echo lang('登录'); ?>
 														</button>
 														<div class="check-tips" style="color:red;"></div>
 													</div>
@@ -133,7 +133,7 @@
 		</script>
 		<script type="text/javascript">
     	
-    	//表单提交
+    	//<?php echo lang('表单提交'); ?>
 
 
     	$("form").submit(function(){

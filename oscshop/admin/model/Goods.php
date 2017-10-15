@@ -13,17 +13,22 @@
  */
 namespace osc\admin\model;
 use think\Db;
+use think\cache\Driver\Redis;
 class Goods{
 	
 	public function validate($data){
 
 		$error=array();
-		if(empty($data['name'])){
+		if(empty($data['goods_description']['name'])){
 			$error['error']='产品名称必填';
 		}elseif(!isset($data['goods_category'])){
 			$error['error']='产品分类必填';
 		}
 		
+		if(intval($data['robot_buy_ratio']) <0 || intval($data['robot_buy_ratio']) > 100){
+			$error['error']='最大自购比例只能是介于0-100之间的数字';
+		}
+
 		if (isset($data['goods_option'])) {
 				foreach ($data['goods_option'] as $goods_option) {
 					
@@ -46,10 +51,7 @@ class Goods{
 	}
 	
 	public function add_goods($data){		
-			
-			$goods['name']=$data['name'];
 			$goods['image']=$data['image'];
-			$goods['model']=$data['model'];
 			$goods['sku']=$data['sku'];
 			$goods['location']=$data['location'];
 			$goods['price']=(float)$data['price'];
@@ -79,15 +81,22 @@ class Goods{
 			$goods['status']=$data['status'];
 			$goods['sort_order']=(int)$data['sort_order'];
 			$goods['date_added']=date('Y-m-d H:i:s',time());
-		
+			$goods['max_term_count'] = intval($data['max_term_count']);
+			$goods['robot_buy_ratio'] = intval($data['robot_buy_ratio']);
+			$goods['robot_win'] = intval($data['robot_win']);
 			
 			$goods_id=Db::name('goods')->insert($goods,false,true);
 			
 			if($goods_id){
 				
 				try{
+					$redis = new Redis();
+
+					$redis->lpush('GOODS:ADDTERM',$goods_id);
+
 					$goods_description['goods_id']=$goods_id;
-				
+					$goods_description['name']=$data['goods_description']['name'];
+					$goods_description['model']=$data['goods_description']['model'];
 					$goods_description['summary']=$data['goods_description']['summary'];
 					$goods_description['description']=$data['goods_description']['description'];
 					$goods_description['meta_description']=$data['goods_description']['meta_description'];
@@ -95,6 +104,17 @@ class Goods{
 					
 					
 					Db::name('goods_description')->insert($goods_description);
+
+					$goods_description_en['goods_en_id']=$goods_id;
+					$goods_description_en['name_en']=$data['goods_description_en']['name_en'];
+					$goods_description_en['model_en']=$data['goods_description_en']['model_en'];
+					$goods_description_en['summary_en']=$data['goods_description_en']['summary_en'];
+					$goods_description_en['description_en']=$data['goods_description_en']['description_en'];
+					$goods_description_en['meta_description_en']=$data['goods_description_en']['meta_description_en'];
+					$goods_description_en['meta_keyword_en']=$data['goods_description_en']['meta_keyword_en'];
+					
+					
+					Db::name('goods_description_en')->insert($goods_description_en);
 					
 					if (isset($data['goods_category'])) {
 						foreach ($data['goods_category'] as $category_id) {
@@ -122,7 +142,8 @@ class Goods{
 					
 					if (isset($data['mobile_image'])){
 						foreach ($data['mobile_image'] as $mobile_image) {
-							Db::execute("INSERT INTO " . config('database.prefix'). "goods_mobile_description_image SET goods_id =" . (int)$goods_id . ", image = '" . $mobile_image['image']."', description = '" . $mobile_image['description'] .  "', sort_order =" . (int)$mobile_image['sort_order']);
+							Db::execute("INSERT INTO " . config('database.prefix'). "goods_mobile_description_image SET goods_id =" . (int)$goods_id . ", image = '" . $mobile_image['image']."', description = '" . $mobile_image['description'] .  "', 
+								, description_en = '" . $mobile_image['description_en'] .  "', sort_order =" . (int)$mobile_image['sort_order']);
 						}
 					}
 					
@@ -204,6 +225,8 @@ class Goods{
 				unset($data['goods_id']);
 								
 				$data['goods_description'] =Db::name('goods_description')->where('goods_id',$goods_id)->find();
+
+				$data['goods_description_en'] =Db::name('goods_description_en')->where('goods_en_id',$goods_id)->find();
 				
 				$data['goods_discount'] = Db::name('goods_discount')->where('goods_id',$goods_id)->select();
 				
@@ -242,6 +265,7 @@ class Goods{
 									
 				Db::name('goods')->where('goods_id',$goods_id)->delete();
 				Db::name('goods_description')->where('goods_id',$goods_id)->delete();
+				Db::name('goods_description_en')->where('goods_en_id',$goods_id)->delete();
 				Db::name('goods_image')->where('goods_id',$goods_id)->delete();
 				Db::name('goods_to_category')->where('goods_id',$goods_id)->delete();	
 				

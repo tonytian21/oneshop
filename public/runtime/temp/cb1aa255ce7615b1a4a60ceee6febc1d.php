@@ -1,10 +1,10 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:48:"../oscshop/member/view/member_backend/index.html";i:1505890083;s:38:"../oscshop/admin/view/public/base.html";i:1505885316;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:48:"../oscshop/member/view/member_backend/index.html";i:1507895017;s:38:"../oscshop/admin/view/public/base.html";i:1507895017;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta charset="utf-8" />
-		<title><?php echo \think\Config::get('SITE_NAME'); ?>-后台管理中心</title>
+		<title><?php echo \think\Config::get('SITE_NAME'); ?>-<?php echo lang('后台管理中心'); ?></title>
 
 		<meta name="description" content="<?php echo \think\Config::get('SITE_NAME'); ?>" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
@@ -76,7 +76,7 @@
 				<div class="navbar-header pull-left">
 					<a href="<?php echo url('admin/Index/index'); ?>" class="navbar-brand">
 						<small>							
-							<?php echo \think\Config::get('SITE_NAME'); ?> 后台管理
+							<?php echo \think\Config::get('SITE_NAME'); ?> <?php echo lang('后台管理'); ?>
 						</small>
 					</a>
 					<button class="pull-right navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#sidebar">
@@ -106,17 +106,17 @@
 							<ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
 								
 								<li>
-									<a target="_blank" href="<?php echo \think\Request::instance()->root(true); ?>">网站前台</a>
+									<a target="_blank" href="<?php echo \think\Request::instance()->root(true); ?>"><?php echo lang('网站前台'); ?></a>
 								</li>
 								
 								<li>
-									<a href="<?php echo url('admin/User/edit',array('id'=>session('user_auth.uid'))); ?>">修改密码</a>
+									<a href="<?php echo url('admin/User/edit',array('id'=>session('user_auth.uid'))); ?>"><?php echo lang('修改密码'); ?></a>
 								</li>
 								
-								<li><a href="<?php echo url('admin/Index/clear'); ?>">清空缓存</a></li>
+								<li><a href="<?php echo url('admin/Index/clear'); ?>"><?php echo lang('清空缓存'); ?></a></li>
 
 								<li>
-									<a href="<?php echo url('admin/Index/logout'); ?>">退出系统</a>
+									<a href="<?php echo url('admin/Index/logout'); ?>"><?php echo lang('退出系统'); ?></a>
 								</li>
 							</ul>
 						</li>
@@ -141,7 +141,7 @@
 					<li class="hover">
 						<a target="_blank" href="<?php echo \think\Request::instance()->root(true); ?>">
 							<i class="menu-icon fa fa fa-home fa-lg"></i>
-							<span class="menu-text">前台 </span>
+							<span class="menu-text"><?php echo lang('前台'); ?> </span>
 							<b class="arrow fa fa-angle-down"></b>
 						</a>
 						<b class="arrow"></b>
@@ -215,15 +215,15 @@
 </div>
 
 <div class="page-header">	
-	<a href="<?php echo url('MemberBackend/add'); ?>" class="btn btn-primary">新增</a>
+	<a href="<?php echo url('MemberBackend/add'); ?>" class="btn btn-primary"><?php echo lang('新增'); ?></a>
 </div>		
 <table class="table table-striped table-bordered table-hover search-form">
 	<thead>
 		
-		<th><input name="user_name" type="text" placeholder="输入会员用户名" value="<?php echo input('param.user_name'); ?>" /></th>		
+		<th><input name="user_name" type="text" placeholder="<?php echo lang('输入会员用户名'); ?>" value="<?php echo input('param.user_name'); ?>" /></th>		
 		
 		<th>
-			<a class="btn btn-primary" href="javascript:;" id="search" url="<?php echo url('MemberBackend/index'); ?>">查询</a>
+			<a class="btn btn-primary" href="javascript:;" id="search" url="<?php echo url('MemberBackend/index'); ?>"><?php echo lang('查询'); ?></a>
 		</th>
 	</thead>
 </table>	
@@ -235,14 +235,14 @@
 				<thead>
 					<tr>											
 						<th>ID</th>
-						<th>客户端</th> 
-						<th>用户名</th> 
-						<th>用户组</th>
-						<th>登录次数</th> 						
-						<th>创建时间</th>							
-						<th>最后登录</th>		
+						<th><?php echo lang('客户端'); ?></th> 
+						<th><?php echo lang('用户名'); ?></th> 
+						<th><?php echo lang('用户组'); ?></th>
+						<th><?php echo lang('登录次数'); ?></th> 						
+						<th><?php echo lang('创建时间'); ?></th>							
+						<th><?php echo lang('最后登录'); ?></th>		
 					
-						<th>操作</th>	
+						<th><?php echo lang('操作'); ?></th>	
 					</tr>
 				</thead>
 				<tbody>
@@ -259,9 +259,9 @@
 								<?php echo $v['title']; ?>
 							</td>
 							<td><?php echo $v['loginnum']; ?></td>
-							<td><?php if($v['regdate'] != 0): ?><?php echo date("Y-m-d",$v['regdate']); else: ?>无<?php endif; ?></td>
+							<td><?php if($v['regdate'] != 0): ?><?php echo date("Y-m-d",$v['regdate']); else: ?><?php echo lang('无'); endif; ?></td>
 							<td>
-								<?php if($v['lastdate'] != 0): ?><?php echo date("Y-m-d",$v['lastdate']); else: ?>无<?php endif; ?>							
+								<?php if($v['lastdate'] != 0): ?><?php echo date("Y-m-d",$v['lastdate']); else: ?><?php echo lang('无'); endif; ?>							
 							</td>
 							<td>
 								<a  class="btn btn-xs btn-info" href='<?php echo url("MemberBackend/edit",array("id"=>$v["uid"])); ?>'>

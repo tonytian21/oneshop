@@ -1,10 +1,10 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:52:"../oscshop/mobile/view/agent_backend/agent_list.html";i:1505890083;s:38:"../oscshop/admin/view/public/base.html";i:1505885316;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:52:"../oscshop/mobile/view/agent_backend/agent_list.html";i:1507895017;s:38:"../oscshop/admin/view/public/base.html";i:1507895017;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta charset="utf-8" />
-		<title><?php echo \think\Config::get('SITE_NAME'); ?>-后台管理中心</title>
+		<title><?php echo \think\Config::get('SITE_NAME'); ?>-<?php echo lang('后台管理中心'); ?></title>
 
 		<meta name="description" content="<?php echo \think\Config::get('SITE_NAME'); ?>" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
@@ -76,7 +76,7 @@
 				<div class="navbar-header pull-left">
 					<a href="<?php echo url('admin/Index/index'); ?>" class="navbar-brand">
 						<small>							
-							<?php echo \think\Config::get('SITE_NAME'); ?> 后台管理
+							<?php echo \think\Config::get('SITE_NAME'); ?> <?php echo lang('后台管理'); ?>
 						</small>
 					</a>
 					<button class="pull-right navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#sidebar">
@@ -106,17 +106,17 @@
 							<ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
 								
 								<li>
-									<a target="_blank" href="<?php echo \think\Request::instance()->root(true); ?>">网站前台</a>
+									<a target="_blank" href="<?php echo \think\Request::instance()->root(true); ?>"><?php echo lang('网站前台'); ?></a>
 								</li>
 								
 								<li>
-									<a href="<?php echo url('admin/User/edit',array('id'=>session('user_auth.uid'))); ?>">修改密码</a>
+									<a href="<?php echo url('admin/User/edit',array('id'=>session('user_auth.uid'))); ?>"><?php echo lang('修改密码'); ?></a>
 								</li>
 								
-								<li><a href="<?php echo url('admin/Index/clear'); ?>">清空缓存</a></li>
+								<li><a href="<?php echo url('admin/Index/clear'); ?>"><?php echo lang('清空缓存'); ?></a></li>
 
 								<li>
-									<a href="<?php echo url('admin/Index/logout'); ?>">退出系统</a>
+									<a href="<?php echo url('admin/Index/logout'); ?>"><?php echo lang('退出系统'); ?></a>
 								</li>
 							</ul>
 						</li>
@@ -141,7 +141,7 @@
 					<li class="hover">
 						<a target="_blank" href="<?php echo \think\Request::instance()->root(true); ?>">
 							<i class="menu-icon fa fa fa-home fa-lg"></i>
-							<span class="menu-text">前台 </span>
+							<span class="menu-text"><?php echo lang('前台'); ?> </span>
 							<b class="arrow fa fa-angle-down"></b>
 						</a>
 						<b class="arrow"></b>
@@ -207,14 +207,14 @@
 <div class="page-header">
 	
 <h1>	
-	移动端
+	<?php echo lang('移动端'); ?>
 	<small>
 		<i class="ace-icon fa fa-angle-double-right"></i>
 		<?php echo $breadcrumb1; ?>
 	</small>
 	<small>
 		<i class="ace-icon fa fa-angle-double-right"></i>
-		代理管理
+		<?php echo lang('代理管理'); ?>
 	</small>
 </h1>	
 
@@ -227,18 +227,18 @@
 				<thead>
 					<tr>
 						
-						<th>姓名</th> 
-						<th>级别</th> 
-						<th>电话</th> 
-						<th>加入时间</th>
-						<th>返点</th>
-						<th>名下会员</th>
-						<th>成交</th>						
-						<th>本月收益</th>								
-						<th>总收益</th>	
-						<th>未结算</th>	
-						<th>状态</th>	
-						<th>操作</th>
+						<th><?php echo lang('姓名'); ?></th> 
+						<th><?php echo lang('级别'); ?></th> 
+						<th><?php echo lang('电话'); ?></th> 
+						<th><?php echo lang('加入时间'); ?></th>
+						<th><?php echo lang('返点'); ?></th>
+						<th><?php echo lang('名下会员'); ?></th>
+						<th><?php echo lang('成交'); ?></th>						
+						<th><?php echo lang('本月收益'); ?></th>								
+						<th><?php echo lang('总收益'); ?></th>	
+						<th><?php echo lang('未结算'); ?></th>	
+						<th><?php echo lang('状态'); ?></th>	
+						<th><?php echo lang('操作'); ?></th>
 					</tr>
 				</thead>
 				<tbody>
@@ -251,16 +251,16 @@
 							<td><?php echo $v['tel']; ?></td>
 							<td><?php echo date('Y-m-d',$v['create_time']); ?></td>
 							<td><?php echo num_to_percent($v['return_percent']); ?></td>
-							<td><a href="<?php echo url('AgentBackend/sub_member',array('uid'=>$v['uid'])); ?>"> <?php echo (isset($v['member']) && ($v['member'] !== '')?$v['member']:'0'); ?>人 </a></td>
-							<td><a href="<?php echo url('AgentBackend/sub_order',array('uid'=>$v['uid'])); ?>"> <?php echo (isset($v['order']) && ($v['order'] !== '')?$v['order']:'0'); ?>笔 </a></td>
-							<td><span class="red bold">￥<?php echo (isset($v['month']) && ($v['month'] !== '')?$v['month']:'0.00'); ?></span></td>
-							<td><span class="red bold">￥<?php echo (isset($v['total_bonus']) && ($v['total_bonus'] !== '')?$v['total_bonus']:'0.00'); ?></span></td>
-							<td><span class="red bold">￥<?php echo (isset($v['no_cash']) && ($v['no_cash'] !== '')?$v['no_cash']:'0.00'); ?></span></td>
+							<td><a href="<?php echo url('AgentBackend/sub_member',array('uid'=>$v['uid'])); ?>"> <?php echo (isset($v['member']) && ($v['member'] !== '')?$v['member']:'0'); ?><?php echo lang('人'); ?> </a></td>
+							<td><a href="<?php echo url('AgentBackend/sub_order',array('uid'=>$v['uid'])); ?>"> <?php echo (isset($v['order']) && ($v['order'] !== '')?$v['order']:'0'); ?><?php echo lang('笔'); ?> </a></td>
+							<td><span class="red bold"><?php echo lang('￥'); ?><?php echo (isset($v['month']) && ($v['month'] !== '')?$v['month']:'0.00'); ?></span></td>
+							<td><span class="red bold"><?php echo lang('￥'); ?><?php echo (isset($v['total_bonus']) && ($v['total_bonus'] !== '')?$v['total_bonus']:'0.00'); ?></span></td>
+							<td><span class="red bold"><?php echo lang('￥'); ?><?php echo (isset($v['no_cash']) && ($v['no_cash'] !== '')?$v['no_cash']:'0.00'); ?></span></td>
 							<td>
-								<?php switch($v['status']): case "1": ?><span class="green bold">开启</span><?php break; case "0": ?><span class="red bold">关闭</span><?php break; endswitch; ?>
+								<?php switch($v['status']): case "1": ?><span class="green bold"><?php echo lang('开启'); ?></span><?php break; case "0": ?><span class="red bold"><?php echo lang('关闭'); ?></span><?php break; endswitch; ?>
 							</td>
 							<td>
-								<a href="<?php echo url('AgentBackend/edit_agent',array('id'=>$v['agent_id'])); ?>">编辑</a>
+								<a href="<?php echo url('AgentBackend/edit_agent',array('id'=>$v['agent_id'])); ?>"><?php echo lang('编辑'); ?></a>
 							</td>
 						</tr>
 						<?php endforeach; endif; else: echo "$empty" ;endif; ?>	
@@ -269,7 +269,7 @@
 							<td colspan="20" class="page"><?php echo $page->render(); ?></td>
 						</tr>
 						<tr>
-							<td colspan="20" class="page">总计 <?php echo ($page->total() ?: "0"); ?> 个代理</td>
+							<td colspan="20" class="page"><?php echo lang('总计'); ?> <?php echo ($page->total() ?: "0"); ?> <?php echo lang('个代理'); ?></td>
 						</tr>
 				</tbody>
 				

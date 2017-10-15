@@ -10,7 +10,7 @@ define('OSCSHOP_VERSION', '2.0');
 //根目录，物理路径
 define('ROOT_PATH',str_replace('\\','/',dirname(__FILE__)) . '/'); 
 //图片上传目录
-define('DIR_IMAGE',ROOT_PATH.'public/uploads/');
+define('DIR_IMAGE',ROOT_PATH.'uploads/');
 //类库包
 define('EXTEND_PATH','../extend/');
 //扩展类库包

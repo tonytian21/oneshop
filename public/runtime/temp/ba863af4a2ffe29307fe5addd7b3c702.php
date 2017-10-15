@@ -1,10 +1,10 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:37:"../oscshop/admin/view/goods/edit.html";i:1506516777;s:38:"../oscshop/admin/view/public/base.html";i:1506516777;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:37:"../oscshop/admin/view/goods/edit.html";i:1507951754;s:38:"../oscshop/admin/view/public/base.html";i:1507895017;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta charset="utf-8" />
-		<title><?php echo \think\Config::get('SITE_NAME'); ?>-后台管理中心</title>
+		<title><?php echo \think\Config::get('SITE_NAME'); ?>-<?php echo lang('后台管理中心'); ?></title>
 
 		<meta name="description" content="<?php echo \think\Config::get('SITE_NAME'); ?>" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
@@ -76,7 +76,7 @@
 				<div class="navbar-header pull-left">
 					<a href="<?php echo url('admin/Index/index'); ?>" class="navbar-brand">
 						<small>							
-							<?php echo \think\Config::get('SITE_NAME'); ?> 后台管理
+							<?php echo \think\Config::get('SITE_NAME'); ?> <?php echo lang('后台管理'); ?>
 						</small>
 					</a>
 					<button class="pull-right navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#sidebar">
@@ -106,17 +106,17 @@
 							<ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
 								
 								<li>
-									<a target="_blank" href="<?php echo \think\Request::instance()->root(true); ?>">网站前台</a>
+									<a target="_blank" href="<?php echo \think\Request::instance()->root(true); ?>"><?php echo lang('网站前台'); ?></a>
 								</li>
 								
 								<li>
-									<a href="<?php echo url('admin/User/edit',array('id'=>session('user_auth.uid'))); ?>">修改密码</a>
+									<a href="<?php echo url('admin/User/edit',array('id'=>session('user_auth.uid'))); ?>"><?php echo lang('修改密码'); ?></a>
 								</li>
 								
-								<li><a href="<?php echo url('admin/Index/clear'); ?>">清空缓存</a></li>
+								<li><a href="<?php echo url('admin/Index/clear'); ?>"><?php echo lang('清空缓存'); ?></a></li>
 
 								<li>
-									<a href="<?php echo url('admin/Index/logout'); ?>">退出系统</a>
+									<a href="<?php echo url('admin/Index/logout'); ?>"><?php echo lang('退出系统'); ?></a>
 								</li>
 							</ul>
 						</li>
@@ -141,7 +141,7 @@
 					<li class="hover">
 						<a target="_blank" href="<?php echo \think\Request::instance()->root(true); ?>">
 							<i class="menu-icon fa fa fa-home fa-lg"></i>
-							<span class="menu-text">前台 </span>
+							<span class="menu-text"><?php echo lang('前台'); ?> </span>
 							<b class="arrow fa fa-angle-down"></b>
 						</a>
 						<b class="arrow"></b>
@@ -215,7 +215,7 @@
 				<i class="ace-icon fa fa-angle-double-right"></i>
 				<?php echo $crumbs; ?>
 			</small>			
-			<button id="send" form="form-goods" type="submit" style="float:right;"  class="btn btn-sm btn-primary">提交</button>			
+			<button id="send" form="form-goods" type="submit" style="float:right;"  class="btn btn-sm btn-primary"><?php echo lang('提交'); ?></button>			
 		</h1>
 </div>
 	<div class="row">
@@ -226,24 +226,24 @@
     
           <ul class="nav nav-tabs">
           	
-          	<li class="active"><a href="#tab-data" data-toggle="tab">基本信息</a></li>
+          	<li class="active"><a href="#tab-data" data-toggle="tab"><?php echo lang('基本信息'); ?></a></li>
           	
-            <li><a href="#tab-general" data-toggle="tab">商品描述</a></li>
-            
-            <li><a href="#tab-links" data-toggle="tab">关联</a></li>   
-            <li><a href="#tab-option" data-toggle="tab">选项</a></li>  
-            <li><a href="#tab-discount" data-toggle="tab">折扣</a></li>                    
-            <li><a href="#tab-image" data-toggle="tab">商品相册</a></li>      
-            <li><a href="#tab-mobile" data-toggle="tab">手机端描述</a></li>       
+            <li><a href="#tab-general" data-toggle="tab"><?php echo lang('商品描述'); ?></a></li>
+            <li><a href="#tab-general-en" data-toggle="tab"><?php echo lang('英文商品描述'); ?></a></li>
+            <li><a href="#tab-links" data-toggle="tab"><?php echo lang('关联'); ?></a></li>   
+            <li><a href="#tab-option" data-toggle="tab"><?php echo lang('选项'); ?></a></li>  
+            <li><a href="#tab-discount" data-toggle="tab"><?php echo lang('折扣'); ?></a></li>                    
+            <li><a href="#tab-image" data-toggle="tab"><?php echo lang('商品相册'); ?></a></li>      
+            <li><a href="#tab-mobile" data-toggle="tab"><?php echo lang('手机端描述'); ?></a></li>       
           </ul>
           <div class="tab-content">
           		
-	          	<!-- 基本信息 START -->
+	          	<!-- <?php echo lang('基本信息'); ?> START -->
 	          	<div class="tab-pane active" id="tab-data">
 	          		
 	          		<div class="form-group required">
 		                <label class="col-sm-2 control-label" for="input-image">
-		                	<span title="" data-toggle="tooltip" data-original-title="上传800x800的图片">缩略图：</span>
+		                	<span title="" data-toggle="tooltip" data-original-title="<?php echo lang('上传'); ?>800x800<?php echo lang('的图片'); ?>"><?php echo lang('缩略图'); ?></span>
 		                </label>
 		                
 		                <div class="col-sm-10" id="thumb">
@@ -252,101 +252,112 @@
 		            	</div>
 		            
 		            </div>   
-		            
-		            <div class="form-group required">
-						<label class="col-sm-2 control-label" for="input-name2">商品名称：</label>
+					<div class="form-group required">
+						<label class="col-sm-2 control-label" for="input-meta-title2"><?php echo lang('库存单位'); ?></label>
 						<div class="col-sm-10">
-							<input id="input-name2" class="form-control" type="text" placeholder="商品名称" value="" name="name">
-						</div>
-					</div>
-		            
-		            <div class="form-group required">
-						<label class="col-sm-2 control-label" for="input-meta-title2">商品型号：</label>
-						<div class="col-sm-10">
-							<input id="input-meta-title2" class="form-control" type="text" placeholder="商品型号" value="" name="model">
+							<input id="input-meta-title2" class="form-control" type="text" placeholder="<?php echo lang('库存单位'); ?>" value="" name="sku">
 						</div>
 					</div>
 					
 					<div class="form-group required">
-						<label class="col-sm-2 control-label" for="input-meta-title2">库存单位：</label>
+						<label class="col-sm-2 control-label" for="input-meta-title2"><?php echo lang('生产地'); ?></label>
 						<div class="col-sm-10">
-							<input id="input-meta-title2" class="form-control" type="text" placeholder="库存单位" value="" name="sku">
+							<input id="input-meta-title2" class="form-control" type="text" placeholder="<?php echo lang('商品位置'); ?>" value="" name="location">
 						</div>
 					</div>
 					
 					<div class="form-group required">
-						<label class="col-sm-2 control-label" for="input-meta-title2">生产地：</label>
+						<label class="col-sm-2 control-label" for="input-meta-title2"><?php echo lang('销售价格'); ?></label>
 						<div class="col-sm-10">
-							<input id="input-meta-title2" class="form-control" type="text" placeholder="商品位置" value="" name="location">
+							<input id="input-meta-title2" class="form-control" type="text" placeholder="<?php echo lang('销售价格'); ?>" value="" name="price">
 						</div>
 					</div>
 					
 					<div class="form-group required">
-						<label class="col-sm-2 control-label" for="input-meta-title2">销售价格：</label>
+						<label class="col-sm-2 control-label" for="input-meta-title2"><?php echo lang('商品数量'); ?></label>
 						<div class="col-sm-10">
-							<input id="input-meta-title2" class="form-control" type="text" placeholder="销售价格" value="" name="price">
+							<input id="input-meta-title2" class="form-control" type="text" placeholder="<?php echo lang('商品数量'); ?>" value="" name="quantity">
 						</div>
 					</div>
 					
 					<div class="form-group required">
-						<label class="col-sm-2 control-label" for="input-meta-title2">商品数量：</label>
+						<label class="col-sm-2 control-label" for="input-meta-title2"><?php echo lang('购买可得积分'); ?></label>
 						<div class="col-sm-10">
-							<input id="input-meta-title2" class="form-control" type="text" placeholder="商品数量" value="" name="quantity">
+							<input id="input-meta-title2" class="form-control" type="text" placeholder="<?php echo lang('购买可得积分'); ?>" value="" name="points">
 						</div>
 					</div>
 					
 					<div class="form-group required">
-						<label class="col-sm-2 control-label" for="input-meta-title2">购买可得积分：</label>
+						<label class="col-sm-2 control-label" for="input-meta-title2"><?php echo lang('兑换所需积分'); ?></label>
 						<div class="col-sm-10">
-							<input id="input-meta-title2" class="form-control" type="text" placeholder="购买可得积分" value="" name="points">
+							<input id="input-meta-title2" class="form-control" type="text" placeholder="<?php echo lang('兑换所需积分'); ?>" value="" name="pay_points">
 						</div>
 					</div>
 					
 					<div class="form-group required">
-						<label class="col-sm-2 control-label" for="input-meta-title2">兑换所需积分：</label>
+						<label class="col-sm-2 control-label" for="input-meta-title2"><?php echo lang('最小购买数量'); ?></label>
 						<div class="col-sm-10">
-							<input id="input-meta-title2" class="form-control" type="text" placeholder="兑换所需积分" value="" name="pay_points">
+							<input id="input-meta-title2" class="form-control" type="text" placeholder="<?php echo lang('最小购买数量'); ?>" value="1" name="minimum">
+						</div>
+					</div>
+
+					<div class="form-group required">
+						<label class="col-sm-2 control-label" for="input-meta-title2"><?php echo lang('最大期数'); ?></label>
+						<div class="col-sm-10">
+							<input id="input-meta-title2" class="form-control" type="text" placeholder="<?php echo lang('最大期数'); ?>" value="1" name="max_term_count">
 						</div>
 					</div>
 					
 					<div class="form-group required">
-						<label class="col-sm-2 control-label" for="input-meta-title2">最小起订量：</label>
+						<label class="col-sm-2 control-label" for="input-meta-title2"><?php echo lang('最大自购比例'); ?></label>
 						<div class="col-sm-10">
-							<input id="input-meta-title2" class="form-control" type="text" placeholder="最小起定量" value="1" name="minimum">
+							<input id="input-meta-title2" class="form-control" type="text" placeholder="<?php echo lang('最大自购比例，最大为100%'); ?>" name="robot_buy_ratio">%
 						</div>
 					</div>
-					
+
 					<div class="form-group">
-						<label class="col-sm-2 control-label" for="input-subtract">扣减库存：</label>
+						<label class="col-sm-2 control-label" for="input-subtract"><?php echo lang('机器人必中'); ?></label>
 						
 							<div class="col-sm-10">
 								<label class="radio-inline">
-								<input type="radio" checked="checked" value="1" name="subtract">是</label>
+								<input type="radio" value="1" name="robot_win"><?php echo lang('是'); ?></label>
 								<label class="radio-inline">
-								<input type="radio" value="0" name="subtract">否</label>
+								<input type="radio" checked="checked" value="0" name="robot_win"><?php echo lang('否'); ?></label>
+							</div>
+						
+					</div>	
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label" for="input-subtract"><?php echo lang('扣减库存'); ?></label>
+						
+							<div class="col-sm-10">
+								<label class="radio-inline">
+								<input type="radio" checked="checked" value="1" name="subtract"><?php echo lang('是'); ?></label>
+								<label class="radio-inline">
+								<input type="radio" value="0" name="subtract"><?php echo lang('否'); ?></label>
 							</div>
 						
 					</div>		           
 					
 					<div class="form-group">
-						<label class="col-sm-2 control-label">需要配送：</label>
+						<label class="col-sm-2 control-label"><?php echo lang('需要配送'); ?></label>
 						<div class="col-sm-10">
 							<label class="radio-inline">
-							<input type="radio" checked="checked" value="1" name="shipping">是</label>
+							<input type="radio" checked="checked" value="1" name="shipping"><?php echo lang('是'); ?></label>
 							<label class="radio-inline">
-							<input type="radio" value="0" name="shipping">否</label>
+							<input type="radio" value="0" name="shipping"><?php echo lang('否'); ?></label>
 						</div>
 					</div>					
 					
 					<div class="form-group required">
-						<label class="col-sm-2 control-label" for="input-meta-title2">重量：</label>
+						<label class="col-sm-2 control-label" for="input-meta-title2"><?php echo lang('重量'); ?></label>
 						<div class="col-sm-10">
-							<input id="input-meta-title2" class="form-control" type="text" placeholder="重量" value="" name="weight">
+							<input id="input-meta-title2" class="form-control" type="text" placeholder="<?php echo lang('重量'); ?>" value="" name="weight">
 						</div>
 					</div>
 
 					<div class="form-group">
-						<label class="col-sm-2 control-label" for="input-length-class">重量单位：</label>
+						<label class="col-sm-2 control-label" for="input-length-class"><?php echo lang('重量单位'); ?></label>
 						<div class="col-sm-10">
 							
 							<select id="input-length-class" class="form-control" name="weight_class_id">
@@ -358,17 +369,17 @@
 					</div>
 		            
 		            <div class="form-group">
-						<label class="col-sm-2 control-label" for="input-length">尺寸(L x W x H)：</label>
+						<label class="col-sm-2 control-label" for="input-length"><?php echo lang('尺寸'); ?>(L x W x H)</label>
 						<div class="col-sm-10">
 							<div class="row">
 								<div class="col-sm-4">
-									<input id="input-length" class="form-control" type="text" placeholder="长度" value="" name="length">
+									<input id="input-length" class="form-control" type="text" placeholder="<?php echo lang('长度'); ?>" value="" name="length">
 								</div>
 								<div class="col-sm-4">
-									<input id="input-width" class="form-control" type="text" placeholder="宽度" value="" name="width">
+									<input id="input-width" class="form-control" type="text" placeholder="<?php echo lang('宽度'); ?>" value="" name="width">
 								</div>
 								<div class="col-sm-4">
-									<input id="input-height" class="form-control" type="text" placeholder="高度" value="" name="height">
+									<input id="input-height" class="form-control" type="text" placeholder="<?php echo lang('高度'); ?>" value="" name="height">
 								</div>
 							</div>
 						</div>
@@ -376,7 +387,7 @@
 
 
 					<div class="form-group">
-						<label class="col-sm-2 control-label" for="input-length-class">尺寸单位：</label>
+						<label class="col-sm-2 control-label" for="input-length-class"><?php echo lang('尺寸单位'); ?></label>
 						<div class="col-sm-10">
 							
 							<select id="input-length-class" class="form-control" name="length_class_id">
@@ -388,37 +399,49 @@
 					</div>
 		            
 		            <div class="form-group">
-						<label class="col-sm-2 control-label">商品状态：</label>
+						<label class="col-sm-2 control-label"><?php echo lang('商品状态'); ?></label>
 						<div class="col-sm-10">
 							<label class="radio-inline">
-							<input type="radio" checked="checked" value="1" name="status">启用</label>
+							<input type="radio" checked="checked" value="1" name="status"><?php echo lang('启用'); ?></label>
 							<label class="radio-inline">
-							<input type="radio" value="2" name="status">停用</label>
+							<input type="radio" value="2" name="status"><?php echo lang('停用'); ?></label>
 						</div>
 					</div>
 		            
 		            <div class="form-group required">
-						<label class="col-sm-2 control-label" for="input-meta-title2">排序：</label>
+						<label class="col-sm-2 control-label" for="input-meta-title2"><?php echo lang('排序'); ?></label>
 						<div class="col-sm-10">
-							<input id="input-meta-title2" class="form-control" type="text" placeholder="排序" value="" name="sort_order">
+							<input id="input-meta-title2" class="form-control" type="text" placeholder="<?php echo lang('排序'); ?>" value="" name="sort_order">
 						</div>
 					</div>
 		            
 	          	</div>
-	          	<!-- 基本信息 END -->
+	          	<!-- <?php echo lang('基本信息'); ?> END -->
 	          	
-	          	<!-- 商品描述  START -->
+	          	<!-- <?php echo lang('商品描述'); ?>  START -->
 	          	<div class="tab-pane" id="tab-general">	          		
-					
+					<div class="form-group required">
+						<label class="col-sm-2 control-label" for="input-name2"><?php echo lang('商品名称'); ?></label>
+						<div class="col-sm-10">
+							<input id="input-name2" class="form-control" type="text" placeholder="<?php echo lang('商品名称'); ?>" value="" name="goods_description[name]">
+						</div>
+					</div>
+		            
+		            <div class="form-group required">
+						<label class="col-sm-2 control-label" for="input-meta-title2"><?php echo lang('商品型号'); ?></label>
+						<div class="col-sm-10">
+							<input id="input-meta-title2" class="form-control" type="text" placeholder="<?php echo lang('商品型号'); ?>" value="" name="goods_description[model]">
+						</div>
+					</div>
 					<div class="form-group">
-	                    <label class="col-sm-2 control-label" for="input-description">商品简介：</label>
+	                    <label class="col-sm-2 control-label" for="input-description"><?php echo lang('商品简介'); ?></label>
 	                    <div class="col-sm-10">
 	                      <textarea name="goods_description[summary]" class="form-control" rows="5"></textarea>	
 	                    </div>
                   	</div>
 					
 					<div class="form-group">
-	                    <label class="col-sm-2 control-label" for="input-description">商品详情：</label>
+	                    <label class="col-sm-2 control-label" for="input-description"><?php echo lang('商品详情'); ?></label>
 	                    <div class="col-sm-10">
 	                      <textarea name="goods_description[description]" id="description"></textarea>	
 	                    </div>
@@ -426,54 +449,96 @@
 		
 					
 					<div class="form-group">
-						<label class="col-sm-2 control-label" for="input-meta-description2">Meta标签描述：</label>
+						<label class="col-sm-2 control-label" for="input-meta-description2">Meta<?php echo lang('标签描述'); ?></label>
 						<div class="col-sm-10">
-							<textarea id="input-meta-description2" class="form-control" placeholder="Meta标签描述" rows="5" name="goods_description[meta_description]"></textarea>
+							<textarea id="input-meta-description2" class="form-control" placeholder="Meta<?php echo lang('标签描述'); ?>" rows="5" name="goods_description[meta_description]"></textarea>
 						</div>
 					</div>
 					<div class="form-group">
-						<label class="col-sm-2 control-label" for="input-meta-keyword2">Meta标签关键词：</label>
+						<label class="col-sm-2 control-label" for="input-meta-keyword2">Meta<?php echo lang('标签关键词'); ?></label>
 						<div class="col-sm-10">
-							<textarea id="input-meta-keyword2" class="form-control" placeholder="Meta标签关键词" rows="5" name="goods_description[meta_keyword]"></textarea>
+							<textarea id="input-meta-keyword2" class="form-control" placeholder="Meta<?php echo lang('标签关键词'); ?>" rows="5" name="goods_description[meta_keyword]"></textarea>
 						</div>
 					</div>
-					
-					
-					
 	          	</div>
-	          	<!-- 商品描述 END --> 	          	
+	          	<!-- <?php echo lang('商品描述'); ?> END --> 	  
+
+	          	<!-- <?php echo lang('英文商品描述'); ?>  START -->
+	          	<div class="tab-pane" id="tab-general-en">	          		
+					<div class="form-group required">
+						<label class="col-sm-2 control-label" for="input-name2"><?php echo lang('商品名称'); ?></label>
+						<div class="col-sm-10">
+							<input id="input-name2" class="form-control" type="text" placeholder="<?php echo lang('商品名称'); ?>" value="" name="goods_description_en[name_en]">
+						</div>
+					</div>
+		            
+		            <div class="form-group required">
+						<label class="col-sm-2 control-label" for="input-meta-title2"><?php echo lang('商品型号'); ?></label>
+						<div class="col-sm-10">
+							<input id="input-meta-title2" class="form-control" type="text" placeholder="<?php echo lang('商品型号'); ?>" value="" name="goods_description_en[model_en]">
+						</div>
+					</div>
+					<div class="form-group">
+	                    <label class="col-sm-2 control-label" for="input-description"><?php echo lang('商品简介'); ?></label>
+	                    <div class="col-sm-10">
+	                      <textarea name="goods_description_en[summary_en]" class="form-control" rows="5"></textarea>	
+	                    </div>
+                  	</div>
+					
+					<div class="form-group">
+	                    <label class="col-sm-2 control-label" for="input-description"><?php echo lang('商品详情'); ?></label>
+	                    <div class="col-sm-10">
+	                      <textarea name="goods_description_en[description_en]" id="description"></textarea>	
+	                    </div>
+                  	</div>
+		
+					
+					<div class="form-group">
+						<label class="col-sm-2 control-label" for="input-meta-description2">Meta<?php echo lang('标签描述'); ?></label>
+						<div class="col-sm-10">
+							<textarea id="input-meta-description2" class="form-control" placeholder="Meta<?php echo lang('标签描述'); ?>" rows="5" name="goods_description_en[meta_description_en]"></textarea>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label" for="input-meta-keyword2">Meta<?php echo lang('标签关键词'); ?></label>
+						<div class="col-sm-10">
+							<textarea id="input-meta-keyword2" class="form-control" placeholder="Meta<?php echo lang('标签关键词'); ?>" rows="5" name="goods_description_en[meta_keyword_en]"></textarea>
+						</div>
+					</div>
+	          	</div>
+	          	<!-- <?php echo lang('英文商品描述'); ?> END --> 	          	
 	          	
-	          	<!-- 关联 START -->
+	          	<!-- <?php echo lang('关联'); ?> START -->
 	          	<div class="tab-pane" id="tab-links">
 	          		
 	          		<div class="form-group">
-		                <label class="col-sm-2 control-label" for="input-category"><span data-toggle="tooltip" title="(自动完成)">商品分类</span></label>
+		                <label class="col-sm-2 control-label" for="input-category"><span data-toggle="tooltip" title="(<?php echo lang('自动完成'); ?>)"><?php echo lang('商品分类'); ?></span></label>
 		                <div class="col-sm-10">
-		                  <input type="text" name="category" value="" placeholder="商品分类" id="input-category" class="form-control" />
+		                  <input type="text" name="category" value="" placeholder="<?php echo lang('商品分类'); ?>" id="input-category" class="form-control" />
 		                  <div id="goods-category" class="well well-sm" style="height: 150px; overflow: auto;"></div>	                  
 		                </div>
 	              	</div>	 
 	              	
 	              	<div class="form-group">
-		                <label class="col-sm-2 control-label" for="input-attribute"><span data-toggle="tooltip" title="(自动完成)">商品属性</span></label>
+		                <label class="col-sm-2 control-label" for="input-attribute"><span data-toggle="tooltip" title="(<?php echo lang('自动完成'); ?>)"><?php echo lang('商品属性'); ?></span></label>
 		                <div class="col-sm-10">
-		                  <input type="text" name="attribute" value="" placeholder="商品属性" id="input-attribute" class="form-control" />
+		                  <input type="text" name="attribute" value="" placeholder="<?php echo lang('商品属性'); ?>" id="input-attribute" class="form-control" />
 		                  <div id="goods-attribute" class="well well-sm" style="height: 150px; overflow: auto;"></div>	                  
 		                </div>
 	              	</div>	
 	              	
 	              	<div class="form-group">
-		                <label class="col-sm-2 control-label" for="input-brand"><span data-toggle="tooltip" title="(自动完成)">商品品牌</span></label>
+		                <label class="col-sm-2 control-label" for="input-brand"><span data-toggle="tooltip" title="(<?php echo lang('自动完成'); ?>)"><?php echo lang('商品品牌'); ?></span></label>
 		                <div class="col-sm-10">
-		                  <input type="text" name="brand" value="" placeholder="商品品牌" id="input-brand" class="form-control" />
+		                  <input type="text" name="brand" value="" placeholder="<?php echo lang('商品品牌'); ?>" id="input-brand" class="form-control" />
 		                  <div id="goods-brand" class="well well-sm" style="height: 150px; overflow: auto;"></div>	                  
 		                </div>
 	              	</div>
 	              	             
 	          	</div>
-	          	<!-- 关联 END -->
+	          	<!-- <?php echo lang('关联'); ?> END -->
 	          	
-	       		<!-- 选项 START -->
+	       		<!-- <?php echo lang('选项'); ?> START -->
 	       		<div class="tab-pane" id="tab-option">
 	       			<div class="row">
 	       				<div class="col-sm-2">
@@ -491,16 +556,16 @@
 	       				</div>
 	       			</div>
 	       		</div>
-	       		<!-- 选项 END -->
+	       		<!-- <?php echo lang('选项'); ?> END -->
 	       		
-        		<!--折扣 START -->
+        		<!--<?php echo lang('折扣'); ?> START -->
 	          	<div class="tab-pane" id="tab-discount">
 	          		<div class="table-responsive">
 	                	<table id="discount" class="table table-striped table-bordered table-hover">
 							<thead>
 								<tr>
-								  <td class="text-left">数量</td>
-								  <td class="text-right">价格</td>
+								  <td class="text-left"><?php echo lang('数量'); ?></td>
+								  <td class="text-right"><?php echo lang('价格'); ?></td>
 								  <td></td>
 								</tr>
 							</thead>
@@ -508,48 +573,49 @@
 							
 							</tbody>
 						</table>
-		                <div><a  onclick="addDiscount();" class="add_image btn btn-primary ">添加折扣</a></div>
+		                <div><a  onclick="addDiscount();" class="add_image btn btn-primary "><?php echo lang('添加折扣'); ?></a></div>
                   </div>	          		
 	          	</div>
-	          	<!--折扣 END -->
+	          	<!--<?php echo lang('折扣'); ?> END -->
 	          	
-	          	<!-- 商品相册 START -->
+	          	<!-- <?php echo lang('商品相册'); ?> START -->
 	          	<div class="tab-pane" id="tab-image">
 	          		<div class="table-responsive">
 	                	<table id="images" class="table table-striped table-bordered table-hover">
 			                  <thead>
 			                    <tr>
-			                      <td class="text-left">商品图片</td>
-			                      <td class="text-right">选项排序</td>
+			                      <td class="text-left"><?php echo lang('商品图片'); ?></td>
+			                      <td class="text-right"><?php echo lang('选项排序'); ?></td>
 			                      <td></td>
 			                    </tr>
 			                  </thead>
 		                	 <tbody></tbody>		                  
 				          </table>
-		                <div><a  onclick="addImage();" class="add_image btn btn-primary ">添加图片</a></div>
+		                <div><a  onclick="addImage();" class="add_image btn btn-primary "><?php echo lang('添加图片'); ?></a></div>
                   </div>
 	          	</div>
-	          	<!-- 商品相册 END -->
+	          	<!-- <?php echo lang('商品相册'); ?> END -->
 	          	
 	          	
-	          	<!-- 手机端描述 START -->
+	          	<!-- <?php echo lang('手机端描述'); ?> START -->
 	          	<div class="tab-pane" id="tab-mobile">
 	          		<div class="table-responsive">
 	                	<table id="mobile_images" class="table table-striped table-bordered table-hover">
 		                  <thead>
 		                    <tr>
-		                      <td class="text-left">详情图片</td>
-		                      <td class="text-left">图片描述</td>
-		                      <td class="text-right">选项排序</td>
+		                      <td class="text-left"><?php echo lang('详情图片'); ?></td>
+		                      <td class="text-left"><?php echo lang('图片描述'); ?></td>
+		                      <td class="text-left"><?php echo lang('图片英文描述'); ?></td>
+		                      <td class="text-right"><?php echo lang('选项排序'); ?></td>
 		                      <td></td>
 		                    </tr>
 		                  </thead>
 		                	 <tbody></tbody>
 			              </table>  					          
-		               	  <div><a  onclick="add_mobile_image();" class="add_image btn btn-primary ">添加图片</a></div>
+		               	  <div><a  onclick="add_mobile_image();" class="add_image btn btn-primary "><?php echo lang('添加图片'); ?></a></div>
                   </div>
 	          	</div>
-	          	<!-- 手机端描述 END -->
+	          	<!-- <?php echo lang('手机端描述'); ?> END -->
 	          	
           </div>
         </form>
@@ -617,7 +683,7 @@ $('#send').click(function(){
 		
 		$('.quantity').each(function(i){			
 			if($(this).val()==''){				
-				alert('选择数量必填');		
+				alert('<?php echo lang('选择数量必填'); ?>');		
 				send=false;
 				return false;
 			}			
@@ -625,17 +691,17 @@ $('#send').click(function(){
 		
 	}else{
 		if(option>0){
-			alert('选项值不能为空');
+			alert('<?php echo lang('选项值不能为空'); ?>');
 			return false;
 		}
 	}
 	
 	if(name==''){
-		alert('商品名称必填');
+		alert('<?php echo lang('商品名称必填'); ?>');
 		return false;
 	}
 	if(category==null){
-		alert('分类必填');
+		alert('<?php echo lang('分类必填'); ?>');
 		return false;
 	}	
 
@@ -687,10 +753,10 @@ $('input[name=\'option\']').autocomplete({
 		html += '	<input type="hidden" name="goods_option[' + option_row + '][type]" value="' + item['type'] + '" />';
 		
 		html += '	<div class="form-group">';
-		html += '	  <label class="col-sm-2 control-label" for="input-required' + option_row + '">必选</label>';
+		html += '	  <label class="col-sm-2 control-label" for="input-required' + option_row + '"><?php echo lang('必选'); ?></label>';
 		html += '	  <div class="col-sm-10"><select name="goods_option[' + option_row + '][required]" id="input-required' + option_row + '" class="form-control">';
-		html += '	      <option value="1">是</option>';
-		html += '	      <option value="0">否</option>';
+		html += '	      <option value="1"><?php echo lang('是'); ?></option>';
+		html += '	      <option value="0"><?php echo lang('否'); ?></option>';
 		html += '	  </select></div>';
 		html += '	</div>';
 			
@@ -702,16 +768,16 @@ $('input[name=\'option\']').autocomplete({
 			html += '      <tr>';
 			
 			if(item['type']!='select'){			
-				html += '    <td class="text-right">图片</td>';				
+				html += '    <td class="text-right"><?php echo lang('图片'); ?></td>';				
 			}else{
 				html += '    <td class="text-right"></td>';	
 			}	
 			
-			html += '        <td class="text-left">选项值</td>';			
-			html += '        <td class="text-right">商品数量</td>';
-			html += '        <td class="text-left">扣减库存</td>';
-			html += '        <td class="text-right">销售价格</td>';				
-			html += '        <td class="text-right">重  量</td>';					
+			html += '        <td class="text-left"><?php echo lang('选项值'); ?></td>';			
+			html += '        <td class="text-right"><?php echo lang('商品数量'); ?></td>';
+			html += '        <td class="text-left"><?php echo lang('扣减库存'); ?></td>';
+			html += '        <td class="text-right"><?php echo lang('销售价格'); ?></td>';				
+			html += '        <td class="text-right"><?php echo lang('重'); ?>  <?php echo lang('量'); ?></td>';					
 			html += '        <td></td>';
 			html += '      </tr>';
 			html += '  	 </thead>';
@@ -720,7 +786,7 @@ $('input[name=\'option\']').autocomplete({
 			html += '    <tfoot>';
 			html += '      <tr>';
 			html += '        <td colspan="6"></td>';
-			html += '        <td class="text-left"><button type="button" onclick="addOptionValue(' + option_row+",'"+item['type']+"'"+');" data-toggle="tooltip" class="btn btn-primary">新增</button></td>';
+			html += '        <td class="text-left"><button type="button" onclick="addOptionValue(' + option_row+",'"+item['type']+"'"+');" data-toggle="tooltip" class="btn btn-primary"><?php echo lang('新增'); ?></button></td>';
 			html += '      </tr>';
 			html += '    </tfoot>';
 			html += '  </table>';
@@ -762,8 +828,8 @@ function addOptionValue(option_row,type) {
 	html += '  </select><input type="hidden" name="goods_option[' + option_row + '][goods_option_value][' + option_value_row + '][goods_option_value_id]" value="" /></td>';
 	html += '  <td class="text-right"><input type="text" name="goods_option[' + option_row + '][goods_option_value][' + option_value_row + '][quantity]" value=""  class="form-control quantity" /></td>'; 
 	html += '  <td class="text-left"><select name="goods_option[' + option_row + '][goods_option_value][' + option_value_row + '][subtract]" class="form-control">';
-	html += '    <option value="1">是</option>';
-	html += '    <option value="0">否</option>';
+	html += '    <option value="1"><?php echo lang('是'); ?></option>';
+	html += '    <option value="0"><?php echo lang('否'); ?></option>';
 	html += '  </select></td>';
 	html += '  <td class="text-right"><select name="goods_option[' + option_row + '][goods_option_value][' + option_value_row + '][price_prefix]" class="form-control">';
 	html += '    <option value="+">+</option>';
@@ -895,6 +961,7 @@ $('#goods-brand').delegate('.fa-minus-circle', 'click', function() {
 		html  = '<tr id="mobile-image-row' + mobile_image_row + '">';
 		html += '  <td class="text-left"><a href="#" id="mobile-thumb-image' + mobile_image_row + '"data-toggle="image" class="img-thumbnail"><img src="__PUBLIC__/image/no_image_100x100.jpg" /><input type="hidden" name="mobile_image[' + mobile_image_row + '][image]" value="" id="mobile-input-image' + mobile_image_row + '" /></td>';
 		html += '<td class="text-right"><input type="text" name="mobile_image['+mobile_image_row+'][description]" value="" class="form-control" /></td>';
+		html += '<td class="text-right"><input type="text" name="mobile_image['+mobile_image_row+'][description_en]" value="" class="form-control" /></td>';
 		html += '  <td class="text-right"><input type="text" name="mobile_image[' + mobile_image_row + '][sort_order]" value="'+mobile_image_row+'"  size="1" class="form-control" /></td>';
 		html += '  <td class="text-left"><button type="button" onclick="$(\'#mobile-image-row' + mobile_image_row  + '\').remove();" data-toggle="tooltip" class="btn btn-danger"><i class="fa fa-trash"></i></button></td>';
 		html += '</tr>';

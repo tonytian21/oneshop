@@ -1,10 +1,10 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:47:"../oscshop/mobile/view/agent_backend/index.html";i:1505890083;s:38:"../oscshop/admin/view/public/base.html";i:1505885316;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:47:"../oscshop/mobile/view/agent_backend/index.html";i:1507895017;s:38:"../oscshop/admin/view/public/base.html";i:1507895017;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta charset="utf-8" />
-		<title><?php echo \think\Config::get('SITE_NAME'); ?>-后台管理中心</title>
+		<title><?php echo \think\Config::get('SITE_NAME'); ?>-<?php echo lang('后台管理中心'); ?></title>
 
 		<meta name="description" content="<?php echo \think\Config::get('SITE_NAME'); ?>" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
@@ -76,7 +76,7 @@
 				<div class="navbar-header pull-left">
 					<a href="<?php echo url('admin/Index/index'); ?>" class="navbar-brand">
 						<small>							
-							<?php echo \think\Config::get('SITE_NAME'); ?> 后台管理
+							<?php echo \think\Config::get('SITE_NAME'); ?> <?php echo lang('后台管理'); ?>
 						</small>
 					</a>
 					<button class="pull-right navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#sidebar">
@@ -106,17 +106,17 @@
 							<ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
 								
 								<li>
-									<a target="_blank" href="<?php echo \think\Request::instance()->root(true); ?>">网站前台</a>
+									<a target="_blank" href="<?php echo \think\Request::instance()->root(true); ?>"><?php echo lang('网站前台'); ?></a>
 								</li>
 								
 								<li>
-									<a href="<?php echo url('admin/User/edit',array('id'=>session('user_auth.uid'))); ?>">修改密码</a>
+									<a href="<?php echo url('admin/User/edit',array('id'=>session('user_auth.uid'))); ?>"><?php echo lang('修改密码'); ?></a>
 								</li>
 								
-								<li><a href="<?php echo url('admin/Index/clear'); ?>">清空缓存</a></li>
+								<li><a href="<?php echo url('admin/Index/clear'); ?>"><?php echo lang('清空缓存'); ?></a></li>
 
 								<li>
-									<a href="<?php echo url('admin/Index/logout'); ?>">退出系统</a>
+									<a href="<?php echo url('admin/Index/logout'); ?>"><?php echo lang('退出系统'); ?></a>
 								</li>
 							</ul>
 						</li>
@@ -141,7 +141,7 @@
 					<li class="hover">
 						<a target="_blank" href="<?php echo \think\Request::instance()->root(true); ?>">
 							<i class="menu-icon fa fa fa-home fa-lg"></i>
-							<span class="menu-text">前台 </span>
+							<span class="menu-text"><?php echo lang('前台'); ?> </span>
 							<b class="arrow fa fa-angle-down"></b>
 						</a>
 						<b class="arrow"></b>
@@ -206,14 +206,14 @@
 						
 <div class="page-header">
 	<h1>	
-		移动端
+		<?php echo lang('移动端'); ?>
 		<small>
 			<i class="ace-icon fa fa-angle-double-right"></i>
 			<?php echo $breadcrumb1; ?>
 		</small>
 		<small>
 			<i class="ace-icon fa fa-angle-double-right"></i>
-			代理审核
+			<?php echo lang('代理审核'); ?>
 		</small>
 	</h1>
 </div>	
@@ -224,14 +224,14 @@
 			<table id="table" class="table table-striped table-bordered table-hover">
 				<thead>
 					<tr>						
-						<th>姓名</th> 
-						<th>电话</th> 
-						<th>邮箱</th> 
-						<th>身份证</th> 
-						<th>申请时间</th>	
-						<th>审核时间</th>					
-						<th>状态</th>
-						<th>操作</th>
+						<th><?php echo lang('姓名'); ?></th> 
+						<th><?php echo lang('电话'); ?></th> 
+						<th><?php echo lang('邮箱'); ?></th> 
+						<th><?php echo lang('身份证'); ?></th> 
+						<th><?php echo lang('申请时间'); ?></th>	
+						<th><?php echo lang('审核时间'); ?></th>					
+						<th><?php echo lang('状态'); ?></th>
+						<th><?php echo lang('操作'); ?></th>
 					</tr>
 				</thead>
 				<tbody>
@@ -242,20 +242,20 @@
 							<td><?php echo $v['email']; ?></td>
 							<td><?php echo $v['id_cart']; ?></td>
 							<td>						
-								<?php if(!empty($v['create_time'])): ?><?php echo date("Y-m-d",$v['create_time']); else: ?>无<?php endif; ?>
+								<?php if(!empty($v['create_time'])): ?><?php echo date("Y-m-d",$v['create_time']); else: ?><?php echo lang('无'); endif; ?>
 							</td>
 							<td>
-								<?php if(!empty($v['deal_time'])): ?><?php echo date("Y-m-d",$v['deal_time']); else: ?>无<?php endif; ?>
+								<?php if(!empty($v['deal_time'])): ?><?php echo date("Y-m-d",$v['deal_time']); else: ?><?php echo lang('无'); endif; ?>
 							</td>
 						
 							<td>
-								<?php switch($v['status']): case "0": ?><span class="red bold">未审核</span><?php break; case "2": ?><span class="green bold">已拒绝</span><?php break; endswitch; ?>
+								<?php switch($v['status']): case "0": ?><span class="red bold"><?php echo lang('未审核'); ?></span><?php break; case "2": ?><span class="green bold"><?php echo lang('已拒绝'); ?></span><?php break; endswitch; ?>
 							</td>
 							<td>								
 								<?php if($v['status'] == 0): ?>	
-									<a href="<?php echo url('AgentBackend/pass',array('id'=>$v['aa_id'])); ?>">审核</a>
+									<a href="<?php echo url('AgentBackend/pass',array('id'=>$v['aa_id'])); ?>"><?php echo lang('审核'); ?></a>
 								<?php else: ?>		
-									<a href="<?php echo url('AgentBackend/look',array('id'=>$v['aa_id'],'status'=>$v['status'])); ?>">查看</a>	
+									<a href="<?php echo url('AgentBackend/look',array('id'=>$v['aa_id'],'status'=>$v['status'])); ?>"><?php echo lang('查看'); ?></a>	
 								<?php endif; ?>					
 							</td>
 						</tr>
@@ -265,7 +265,7 @@
 							<td colspan="20" class="page"><?php echo $list->render(); ?></td>
 						</tr>
 						<tr>
-							<td colspan="20" class="page">总计 <?php echo ($list->total() ?: "0"); ?> 个申请</td>
+							<td colspan="20" class="page"><?php echo lang('总计'); ?> <?php echo ($list->total() ?: "0"); ?> <?php echo lang('个申请'); ?></td>
 						</tr>
 				</tbody>
 				

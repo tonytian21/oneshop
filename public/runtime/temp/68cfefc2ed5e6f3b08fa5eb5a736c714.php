@@ -1,10 +1,10 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:38:"../oscshop/admin/view/goods/index.html";i:1507727274;s:38:"../oscshop/admin/view/public/base.html";i:1506516777;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:38:"../oscshop/admin/view/goods/index.html";i:1507951487;s:38:"../oscshop/admin/view/public/base.html";i:1507895017;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta charset="utf-8" />
-		<title><?php echo \think\Config::get('SITE_NAME'); ?>-后台管理中心</title>
+		<title><?php echo \think\Config::get('SITE_NAME'); ?>-<?php echo lang('后台管理中心'); ?></title>
 
 		<meta name="description" content="<?php echo \think\Config::get('SITE_NAME'); ?>" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
@@ -76,7 +76,7 @@
 				<div class="navbar-header pull-left">
 					<a href="<?php echo url('admin/Index/index'); ?>" class="navbar-brand">
 						<small>							
-							<?php echo \think\Config::get('SITE_NAME'); ?> 后台管理
+							<?php echo \think\Config::get('SITE_NAME'); ?> <?php echo lang('后台管理'); ?>
 						</small>
 					</a>
 					<button class="pull-right navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#sidebar">
@@ -106,17 +106,17 @@
 							<ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
 								
 								<li>
-									<a target="_blank" href="<?php echo \think\Request::instance()->root(true); ?>">网站前台</a>
+									<a target="_blank" href="<?php echo \think\Request::instance()->root(true); ?>"><?php echo lang('网站前台'); ?></a>
 								</li>
 								
 								<li>
-									<a href="<?php echo url('admin/User/edit',array('id'=>session('user_auth.uid'))); ?>">修改密码</a>
+									<a href="<?php echo url('admin/User/edit',array('id'=>session('user_auth.uid'))); ?>"><?php echo lang('修改密码'); ?></a>
 								</li>
 								
-								<li><a href="<?php echo url('admin/Index/clear'); ?>">清空缓存</a></li>
+								<li><a href="<?php echo url('admin/Index/clear'); ?>"><?php echo lang('清空缓存'); ?></a></li>
 
 								<li>
-									<a href="<?php echo url('admin/Index/logout'); ?>">退出系统</a>
+									<a href="<?php echo url('admin/Index/logout'); ?>"><?php echo lang('退出系统'); ?></a>
 								</li>
 							</ul>
 						</li>
@@ -141,7 +141,7 @@
 					<li class="hover">
 						<a target="_blank" href="<?php echo \think\Request::instance()->root(true); ?>">
 							<i class="menu-icon fa fa fa-home fa-lg"></i>
-							<span class="menu-text">前台 </span>
+							<span class="menu-text"><?php echo lang('前台'); ?> </span>
 							<b class="arrow fa fa-angle-down"></b>
 						</a>
 						<b class="arrow"></b>
@@ -216,14 +216,14 @@
 </div>
 
 <div class="page-header">	
-	<a href="<?php echo url('Goods/add'); ?>" class="btn btn-primary">新增</a>
-	<span href="<?php echo url('Goods/copy_goods'); ?>" class="btn btn-primary copy">复制</span>
+	<a href="<?php echo url('Goods/add'); ?>" class="btn btn-primary"><?php echo lang('新增'); ?></a>
+	<span href="<?php echo url('Goods/copy_goods'); ?>" class="btn btn-primary copy"><?php echo lang('复制'); ?></span>
 </div>	
 	
 <table class="table table-striped table-bordered table-hover search-form">
 	<thead>
 		<input name="type" type="hidden"  value="search" />
-		<th><input name="name" type="text" placeholder="输入商品名称" value="<?php echo input('name'); ?>" /></th>
+		<th><input name="name" type="text" placeholder="<?php echo lang('输入商品名称'); ?>" value="<?php echo input('name'); ?>" /></th>
 		<th>    				
 			<select name="category">
 				<option value=""><?php echo lang('全部分类'); ?></option>			
@@ -236,12 +236,12 @@
 		<th>    				
 			<select name="status">
 				<option value=""><?php echo lang('全部状态'); ?></option>							
-				<option <?php if(input('status') == 1): ?> selected="selected"<?php endif; ?>value="1">启用</option>
-				<option <?php if(input('status') == 2): ?> selected="selected"<?php endif; ?> value="2">停用</option>
+				<option <?php if(input('status') == 1): ?> selected="selected"<?php endif; ?>value="1"><?php echo lang('启用'); ?></option>
+				<option <?php if(input('status') == 2): ?> selected="selected"<?php endif; ?> value="2"><?php echo lang('停用'); ?></option>
 			</select>
 		</th>
 		<th>
-			<a class="btn btn-primary" href="javascript:;" id="search" url="<?php echo url('Goods/index'); ?>">查询</a>
+			<a class="btn btn-primary" href="javascript:;" id="search" url="<?php echo url('Goods/index'); ?>"><?php echo lang('查询'); ?></a>
 		</th>
 	</thead>
 </table>	
@@ -261,13 +261,13 @@
 							</label>
 						</th>											
 						<th>ID</th> 
-						<th>图片</th> 
-						<th>商品名称</th> 			
-						<th>价格</th>
-						<th>数量</th>
-						<th>排序</th>
-						<th>状态</th>						
-						<th>操作</th>				
+						<th><?php echo lang('图片'); ?></th> 
+						<th><?php echo lang('商品名称'); ?></th> 			
+						<th><?php echo lang('价格'); ?></th>
+						<th><?php echo lang('数量'); ?></th>
+						<th><?php echo lang('期数'); ?></th>
+						<th><?php echo lang('排序'); ?></th>					
+						<th><?php echo lang('操作'); ?></th>				
 					</tr>
 				</thead>
 				<tbody>
@@ -288,23 +288,23 @@
 			                  	<?php endif; ?>
 							</td>
 							<td><?php echo $v['name']; if($v['shipping'] == 0): ?>
-								<span class="warning">免配送</span> 								
+								<span class="warning"><?php echo lang('免配送'); ?></span> 								
 								<?php endif; if($v['subtract'] == 0): ?>
-								<span class="warning">不减库存</span> 								
+								<span class="warning"><?php echo lang('不减库存'); ?></span> 								
 								<?php endif; ?>
 							</td>
 							
 							<td>
-								<input name="price" type="text" size="2" class="price" goods_id='<?php echo $v['goods_id']; ?>' value="<?php echo $v['price']; ?>" />
+								<input name="price" type="text" size="6" class="price" goods_id='<?php echo $v['goods_id']; ?>' value="<?php echo $v['price']; ?>" />
 							</td>
 							<td>							
-								<input name="quantity" type="text" size="2" class="quantity" goods_id='<?php echo $v['goods_id']; ?>' value="<?php echo $v['quantity']; ?>" />
+								<input name="quantity" type="text" size="4" class="quantity" goods_id='<?php echo $v['goods_id']; ?>' value="<?php echo $v['quantity']; ?>" />
+							</td>
+							<td>							
+								<?php echo $v['max_term_count']; ?>
 							</td>
 							<td>
-								<input name="sort" type="text" size="1" class="sort" goods_id='<?php echo $v['goods_id']; ?>' value="<?php echo $v['sort_order']; ?>" />								
-							</td>
-							<td>
-								<?php switch($v['status']): case "1": ?><a href='<?php echo url("Goods/set_status",array("id"=>$v["goods_id"],"status"=>2)); ?>'><span class="btn btn-xs btn-info"><i class="fa fa-unlock bigger-120"></i></span></a><?php break; case "2": ?><a href='<?php echo url("Goods/set_status",array("id"=>$v["goods_id"],"status"=>1)); ?>'><span class="btn btn-xs btn-danger"><i class="fa fa-lock bigger-120"></i></span></a><?php break; endswitch; ?>
+								<input name="sort" type="text" size="2" class="sort" goods_id='<?php echo $v['goods_id']; ?>' value="<?php echo $v['sort_order']; ?>" />								
 							</td>
 							<td>
 								
@@ -318,23 +318,23 @@
 									</button>
 									<ul class="dropdown-menu dropdown-info dropdown-menu-right">																
 										<li>
-											<a href='<?php echo url("Goods/edit_general",array("id"=>$v["goods_id"])); ?>'>基本信息</a>
+											<a href='<?php echo url("Goods/edit_general",array("id"=>$v["goods_id"])); ?>'><?php echo lang('基本信息'); ?></a>
 										</li>									
 																		
 										<li>
-											<a href='<?php echo url("Goods/edit_links",array("id"=>$v["goods_id"])); ?>'>关联</a>
+											<a href='<?php echo url("Goods/edit_links",array("id"=>$v["goods_id"])); ?>'><?php echo lang('关联'); ?></a>
 										</li>
 										<li>
-											<a href='<?php echo url("Goods/edit_option",array("id"=>$v["goods_id"])); ?>'>选项</a>
+											<a href='<?php echo url("Goods/edit_option",array("id"=>$v["goods_id"])); ?>'><?php echo lang('选项'); ?></a>
 										</li>
 										<li>
-											<a href='<?php echo url("Goods/edit_discount",array("id"=>$v["goods_id"])); ?>'>折扣</a>
+											<a href='<?php echo url("Goods/edit_discount",array("id"=>$v["goods_id"])); ?>'><?php echo lang('折扣'); ?></a>
 										</li>
 										<li>
-											<a href='<?php echo url("Goods/edit_image",array("id"=>$v["goods_id"])); ?>'>商品相册</a>
+											<a href='<?php echo url("Goods/edit_image",array("id"=>$v["goods_id"])); ?>'><?php echo lang('商品相册'); ?></a>
 										</li>
 										<li>
-											<a href='<?php echo url("Goods/edit_mobile",array("id"=>$v["goods_id"])); ?>'>手机端描述</a>
+											<a href='<?php echo url("Goods/edit_mobile",array("id"=>$v["goods_id"])); ?>'><?php echo lang('手机端描述'); ?></a>
 										</li>									
 									</ul>
 								</div>
@@ -351,7 +351,7 @@
 							<td colspan="20" class="page"><?php echo $list->render(); ?></td>
 						</tr>
 						<tr>
-							<td colspan="20">总计 <?php echo ($list->total() ?: "0"); ?> 个商品</td>
+							<td colspan="20"><?php echo lang('总计'); ?> <?php echo ($list->total() ?: "0"); ?> <?php echo lang('个商品'); ?></td>
 						</tr>
 				</tbody>
 				
@@ -465,7 +465,7 @@ $(function(){
 	$('.copy').click(function(){
 		
 		if($('input:checked').size()==0){
-			alert('请选择一个商品');
+			alert('<?php echo lang('请选择一个商品'); ?>');
 			return ;
 		}
 		
@@ -492,7 +492,7 @@ $(function(){
 			} 
 		},
 		error: function(xhr, ajaxOptions, thrownError) {
-			alert('修改失败');
+			alert('<?php echo lang('修改失败'); ?>');
 		}
 	});	
 	});

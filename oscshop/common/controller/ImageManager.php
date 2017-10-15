@@ -425,7 +425,6 @@ class ImageManager extends Base{
 				
 				
 			} elseif (is_file($image)) {
-
 				$images_and_directory['images'][] = array(
 					'thumb' => resize(mb_substr($image, mb_strlen(DIR_IMAGE),mb_strlen($image)), 100, 100),
 					'name'  => implode(' ', $name),

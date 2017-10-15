@@ -1,10 +1,10 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:38:"../oscshop/admin/view/index/index.html";i:1506516777;s:38:"../oscshop/admin/view/public/base.html";i:1506516777;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:38:"../oscshop/admin/view/index/index.html";i:1507895017;s:38:"../oscshop/admin/view/public/base.html";i:1507895017;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta charset="utf-8" />
-		<title><?php echo \think\Config::get('SITE_NAME'); ?>-后台管理中心</title>
+		<title><?php echo \think\Config::get('SITE_NAME'); ?>-<?php echo lang('后台管理中心'); ?></title>
 
 		<meta name="description" content="<?php echo \think\Config::get('SITE_NAME'); ?>" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
@@ -76,7 +76,7 @@
 				<div class="navbar-header pull-left">
 					<a href="<?php echo url('admin/Index/index'); ?>" class="navbar-brand">
 						<small>							
-							<?php echo \think\Config::get('SITE_NAME'); ?> 后台管理
+							<?php echo \think\Config::get('SITE_NAME'); ?> <?php echo lang('后台管理'); ?>
 						</small>
 					</a>
 					<button class="pull-right navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#sidebar">
@@ -106,17 +106,17 @@
 							<ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
 								
 								<li>
-									<a target="_blank" href="<?php echo \think\Request::instance()->root(true); ?>">网站前台</a>
+									<a target="_blank" href="<?php echo \think\Request::instance()->root(true); ?>"><?php echo lang('网站前台'); ?></a>
 								</li>
 								
 								<li>
-									<a href="<?php echo url('admin/User/edit',array('id'=>session('user_auth.uid'))); ?>">修改密码</a>
+									<a href="<?php echo url('admin/User/edit',array('id'=>session('user_auth.uid'))); ?>"><?php echo lang('修改密码'); ?></a>
 								</li>
 								
-								<li><a href="<?php echo url('admin/Index/clear'); ?>">清空缓存</a></li>
+								<li><a href="<?php echo url('admin/Index/clear'); ?>"><?php echo lang('清空缓存'); ?></a></li>
 
 								<li>
-									<a href="<?php echo url('admin/Index/logout'); ?>">退出系统</a>
+									<a href="<?php echo url('admin/Index/logout'); ?>"><?php echo lang('退出系统'); ?></a>
 								</li>
 							</ul>
 						</li>
@@ -141,7 +141,7 @@
 					<li class="hover">
 						<a target="_blank" href="<?php echo \think\Request::instance()->root(true); ?>">
 							<i class="menu-icon fa fa fa-home fa-lg"></i>
-							<span class="menu-text">前台 </span>
+							<span class="menu-text"><?php echo lang('前台'); ?> </span>
 							<b class="arrow fa fa-angle-down"></b>
 						</a>
 						<b class="arrow"></b>
@@ -211,59 +211,59 @@
 		      <div class="col-lg-3 col-md-3 col-sm-6">
 					<div class="tile">
 						<div class="tile-heading">
-							今日订单
-							<span class="pull-right"> 总<?php echo $total_order; ?>单</span>
+							<?php echo lang('今日订单'); ?>
+							<span class="pull-right"> <?php echo lang('总'); ?><?php echo $total_order; ?><?php echo lang('单'); ?></span>
 						</div>
 						<div class="tile-body">
 							<i class="fa fa-shopping-cart"></i>
 							<h2 class="pull-right"><?php echo $today_order; ?></h2>
 						</div>
 						<div class="tile-footer">
-							<a href="<?php echo url('member/OrderBackend/index'); ?>">显示详细...</a>
+							<a href="<?php echo url('member/OrderBackend/index'); ?>"><?php echo lang('显示详细'); ?>...</a>
 						</div>
 					</div>
 			  </div>
 		      <div class="col-lg-3 col-md-3 col-sm-6">
 					<div class="tile">
 					<div class="tile-heading">
-					今日销售额 
-					<span class="pull-right"> 总<?php echo $total_money; ?> </span>
+					<?php echo lang('今日销售额'); ?> 
+					<span class="pull-right"> <?php echo lang('总'); ?><?php echo $total_money; ?> </span>
 					</div>
 					<div class="tile-body">
 					<i class="fa fa-credit-card"></i>
 					<h2 class="pull-right"><?php echo $today_money; ?></h2>
 					</div>
 					<div class="tile-footer">
-					<a href="<?php echo url('member/OrderBackend/index'); ?>">显示详细...</a>
+					<a href="<?php echo url('member/OrderBackend/index'); ?>"><?php echo lang('显示详细'); ?>...</a>
 					</div>
 					</div> 	
 		      </div>
 		      <div class="col-lg-3 col-md-3 col-sm-6">
 					<div class="tile">
 					<div class="tile-heading">
-					新增客户 
-					<span class="pull-right"> 总<?php echo $member_count; ?>个</span>
+					<?php echo lang('新增客户'); ?> 
+					<span class="pull-right"> <?php echo lang('总'); ?><?php echo $member_count; ?><?php echo lang('个'); ?></span>
 					</div>
 					<div class="tile-body">
 					<i class="fa fa-user"></i>
 					<h2 class="pull-right"><?php echo $today_member; ?></h2>
 					</div>
 					<div class="tile-footer">
-					<a href="<?php echo url('member/MemberBackend/index'); ?>">显示详细...</a>
+					<a href="<?php echo url('member/MemberBackend/index'); ?>"><?php echo lang('显示详细'); ?>...</a>
 					</div>
 					</div>
 			  </div>
 		      <div class="col-lg-3 col-md-3 col-sm-6">
 					<div class="tile">
-					<div class="tile-heading">新增用户行为
-					<span class="pull-right"> 总<?php echo $user_action_total; ?>个</span>	
+					<div class="tile-heading"><?php echo lang('新增用户行为'); ?>
+					<span class="pull-right"> <?php echo lang('总'); ?><?php echo $user_action_total; ?><?php echo lang('个'); ?></span>	
 					</div>
 					<div class="tile-body">
 					<i class="fa fa-eye"></i>
-					<h2 class="pull-right"><?php echo $today_user_action; ?>个</h2>
+					<h2 class="pull-right"><?php echo $today_user_action; ?><?php echo lang('个'); ?></h2>
 					</div>
 					<div class="tile-footer">
-					<a href="<?php echo url('admin/UserAction/index'); ?>">显示详细...</a>
+					<a href="<?php echo url('admin/UserAction/index'); ?>"><?php echo lang('显示详细'); ?>...</a>
 					</div>
 					</div>	  
 			  </div>
@@ -274,8 +274,8 @@
 					<div class="panel-heading">
 					<h3 class="panel-title">
 					<i class="fa fa-calendar"></i>
-					用户行为
-					<a style="font-size: 14px" href="<?php echo url('UserAction/index'); ?>" class="pull-right">更多..</a>
+					<?php echo lang('用户行为'); ?>
+					<a style="font-size: 14px" href="<?php echo url('UserAction/index'); ?>" class="pull-right"><?php echo lang('更多'); ?>..</a>
 					</h3>
 					</div>
 					<ul class="list-group">
@@ -302,22 +302,22 @@
 		      		<div class="panel-heading">
 						<h3 class="panel-title">
 						<i class="fa fa-shopping-cart"></i>
-						最新订单
-						<a style="font-size: 14px" href="<?php echo url('member/OrderBackend/index'); ?>" class="pull-right">更多..</a>
+						<?php echo lang('最新订单'); ?>
+						<a style="font-size: 14px" href="<?php echo url('member/OrderBackend/index'); ?>" class="pull-right"><?php echo lang('更多'); ?>..</a>
 						</h3>
 					</div>
 					<div class="table-responsive">
 						<table class="table">
 							<thead>
 							<tr>
-							<td>订单号</td>
-							<td>支付方式</td>
-							<th>客户端</th> 
-							<td>客户名称</td>
-							<td>状态</td>
-							<td>生成日期</td>
-							<td>金额</td>
-							<td>操作</td>
+							<td><?php echo lang('订单号'); ?></td>
+							<td><?php echo lang('支付方式'); ?></td>
+							<th><?php echo lang('客户端'); ?></th> 
+							<td><?php echo lang('客户名称'); ?></td>
+							<td><?php echo lang('状态'); ?></td>
+							<td><?php echo lang('生成日期'); ?></td>
+							<td><?php echo lang('金额'); ?></td>
+							<td><?php echo lang('操作'); ?></td>
 							</tr>
 							</thead>
 							<tbody>								
@@ -345,7 +345,7 @@
 									</td>
 									<td>
 										<?php if($v['points_order'] == 1): ?>
-											积分 <?php echo $v['pay_points']; else: ?>
+											<?php echo lang('积分'); ?> <?php echo $v['pay_points']; else: ?>
 											&yen; <?php echo $v['total']; endif; ?>										
 									</td>
 									<td>

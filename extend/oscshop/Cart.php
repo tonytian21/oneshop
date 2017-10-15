@@ -238,7 +238,7 @@ class Cart{
 	
 	
 	/**
-	 * 判断商品是否存在，并验证最小起订量
+	 * 判断商品是否存在，并验证最小购买数量
 	 *@param goods_id  商品id
 	 *@param quantity  商品数量 
 	 */
@@ -250,7 +250,7 @@ class Cart{
 		
 		if($goods=Db::name('goods')->find((int)$param['goods_id'])){			
 			if((int)$param['quantity']<$goods['minimum']){
-   				return ['error'=>'最小起订量是'.$goods['minimum'],'minimum'=>$goods['minimum']];
+   				return ['error'=>'最小购买数量是'.$goods['minimum'],'minimum'=>$goods['minimum']];
    			} 			
 		}else{
 			return ['error'=>'商品不存在'];

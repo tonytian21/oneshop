@@ -1,0 +1,1712 @@
+2017-10-15 12:38:03 pid:4646 Workerman[server.php] start in DEBUG mode
+2017-10-15 12:38:12 pid:4646 Workerman[server.php] Stopping ...
+2017-10-15 12:38:12 pid:4646 Workerman[server.php] has been stopped
+2017-10-15 12:40:46 pid:4657 Workerman[server.php] start in DEBUG mode
+2017-10-15 12:40:50 pid:4657 Workerman[server.php] Stopping ...
+2017-10-15 12:40:50 pid:4657 Workerman[server.php] has been stopped
+2017-10-15 12:40:58 pid:4676 Workerman[server.php] start in DEBUG mode
+2017-10-15 12:41:09 pid:4676 Workerman[server.php] Stopping ...
+2017-10-15 12:41:09 pid:4676 Workerman[server.php] has been stopped
+2017-10-15 12:41:29 pid:4683 Workerman[server.php] reload 
+2017-10-15 12:41:29 pid:4683 Workerman[server.php] not run
+2017-10-15 12:41:31 pid:4684 Workerman[server.php] start in DEBUG mode
+2017-10-15 12:41:41 pid:4684 Workerman[server.php] Stopping ...
+2017-10-15 12:41:41 pid:4684 Workerman[server.php] has been stopped
+2017-10-15 12:42:04 pid:4702 Workerman[server.php] start in DEBUG mode
+2017-10-15 12:42:06 pid:4702 Workerman[server.php] Stopping ...
+2017-10-15 12:42:07 pid:4702 Workerman[server.php] has been stopped
+2017-10-15 12:42:31 pid:4712 Workerman[server.php] start in DEBUG mode
+2017-10-15 12:42:34 pid:4712 Workerman[server.php] Stopping ...
+2017-10-15 12:42:34 pid:4712 Workerman[server.php] has been stopped
+2017-10-15 12:42:55 pid:4719 Workerman[server.php] start in DEBUG mode
+2017-10-15 12:42:57 pid:4719 Workerman[server.php] Stopping ...
+2017-10-15 12:42:57 pid:4719 Workerman[server.php] has been stopped
+2017-10-15 12:44:14 pid:4728 Workerman[server.php] start in DEBUG mode
+2017-10-15 12:44:23 pid:4728 Workerman[server.php] Stopping ...
+2017-10-15 12:44:23 pid:4728 Workerman[server.php] has been stopped
+2017-10-15 12:48:04 pid:4893 Workerman[server.php] start in DEBUG mode
+2017-10-15 12:48:11 pid:4893 Workerman[server.php] Stopping ...
+2017-10-15 12:48:11 pid:4893 Workerman[server.php] has been stopped
+2017-10-15 12:48:50 pid:4904 Workerman[server.php] start in DEBUG mode
+2017-10-15 12:48:53 pid:4904 Workerman[server.php] Stopping ...
+2017-10-15 12:48:53 pid:4904 Workerman[server.php] has been stopped
+2017-10-15 12:49:57 pid:4911 Workerman[server.php] start in DEBUG mode
+2017-10-15 12:50:04 pid:4911 Workerman[server.php] Stopping ...
+2017-10-15 12:50:04 pid:4911 Workerman[server.php] has been stopped
+2017-10-15 12:50:51 pid:4928 Workerman[server.php] start in DEBUG mode
+2017-10-15 12:50:51 pid:4929 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(431): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#6 [internal function]: think\worker\Server->__construct()
+#7 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#13 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#14 {main}
+2017-10-15 12:50:51 pid:4932 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(431): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#6 [internal function]: think\worker\Server->__construct()
+#7 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#13 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#14 {main}
+2017-10-15 12:50:51 pid:4933 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(431): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#6 [internal function]: think\worker\Server->__construct()
+#7 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#13 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#14 {main}
+2017-10-15 12:50:51 pid:4934 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(431): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#6 [internal function]: think\worker\Server->__construct()
+#7 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#13 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#14 {main}
+2017-10-15 12:50:51 pid:4931 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(431): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#6 [internal function]: think\worker\Server->__construct()
+#7 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#13 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#14 {main}
+2017-10-15 12:50:51 pid:4930 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(431): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#6 [internal function]: think\worker\Server->__construct()
+#7 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#13 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#14 {main}
+2017-10-15 12:50:51 pid:4935 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(431): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#6 [internal function]: think\worker\Server->__construct()
+#7 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#13 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#14 {main}
+2017-10-15 12:50:51 pid:4936 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(431): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#6 [internal function]: think\worker\Server->__construct()
+#7 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#13 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#14 {main}
+2017-10-15 12:50:51 pid:4938 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(431): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#6 [internal function]: think\worker\Server->__construct()
+#7 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#13 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#14 {main}
+2017-10-15 12:50:51 pid:4937 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(431): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#6 [internal function]: think\worker\Server->__construct()
+#7 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#13 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#14 {main}
+2017-10-15 12:50:52 pid:4932 Worker[4932] process terminated
+2017-10-15 12:50:52 pid:4929 Worker[4929] process terminated
+2017-10-15 12:50:52 pid:4934 Worker[4934] process terminated
+2017-10-15 12:50:52 pid:4933 Worker[4933] process terminated
+2017-10-15 12:50:52 pid:4930 Worker[4930] process terminated
+2017-10-15 12:50:52 pid:4931 Worker[4931] process terminated
+2017-10-15 12:50:52 pid:4935 Worker[4935] process terminated
+2017-10-15 12:50:52 pid:4936 Worker[4936] process terminated
+2017-10-15 12:50:52 pid:4938 Worker[4938] process terminated
+2017-10-15 12:50:52 pid:4937 Worker[4937] process terminated
+2017-10-15 12:50:52 pid:4928 worker[none:4934] exit with status 64000
+2017-10-15 12:50:52 pid:4928 worker[none:4935] exit with status 64000
+2017-10-15 12:50:52 pid:4928 worker[none:4933] exit with status 64000
+2017-10-15 12:50:52 pid:4928 worker[none:4936] exit with status 64000
+2017-10-15 12:50:52 pid:4928 worker[none:4932] exit with status 64000
+2017-10-15 12:50:52 pid:4928 worker[none:4931] exit with status 64000
+2017-10-15 12:50:52 pid:4928 worker[none:4930] exit with status 64000
+2017-10-15 12:50:52 pid:4928 worker[none:4929] exit with status 64000
+2017-10-15 12:50:52 pid:4940 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:52 pid:4928 worker[none:4938] exit with status 64000
+2017-10-15 12:50:52 pid:4939 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:52 pid:4928 worker[none:4937] exit with status 64000
+2017-10-15 12:50:52 pid:4941 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:52 pid:4942 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:52 pid:4943 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:52 pid:4944 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:52 pid:4945 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:52 pid:4946 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:52 pid:4947 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:52 pid:4948 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:53 pid:4940 Worker[4940] process terminated
+2017-10-15 12:50:53 pid:4942 Worker[4942] process terminated
+2017-10-15 12:50:53 pid:4941 Worker[4941] process terminated
+2017-10-15 12:50:53 pid:4939 Worker[4939] process terminated
+2017-10-15 12:50:53 pid:4943 Worker[4943] process terminated
+2017-10-15 12:50:53 pid:4944 Worker[4944] process terminated
+2017-10-15 12:50:53 pid:4945 Worker[4945] process terminated
+2017-10-15 12:50:53 pid:4946 Worker[4946] process terminated
+2017-10-15 12:50:53 pid:4948 Worker[4948] process terminated
+2017-10-15 12:50:53 pid:4947 Worker[4947] process terminated
+2017-10-15 12:50:53 pid:4928 worker[none:4943] exit with status 64000
+2017-10-15 12:50:53 pid:4928 worker[none:4944] exit with status 64000
+2017-10-15 12:50:53 pid:4928 worker[none:4946] exit with status 64000
+2017-10-15 12:50:53 pid:4928 worker[none:4945] exit with status 64000
+2017-10-15 12:50:53 pid:4928 worker[none:4942] exit with status 64000
+2017-10-15 12:50:53 pid:4928 worker[none:4941] exit with status 64000
+2017-10-15 12:50:53 pid:4928 worker[none:4940] exit with status 64000
+2017-10-15 12:50:53 pid:4949 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:53 pid:4950 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:53 pid:4928 worker[none:4948] exit with status 64000
+2017-10-15 12:50:53 pid:4928 worker[none:4947] exit with status 64000
+2017-10-15 12:50:53 pid:4951 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:53 pid:4928 worker[none:4939] exit with status 64000
+2017-10-15 12:50:53 pid:4952 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:53 pid:4953 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:53 pid:4954 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:53 pid:4955 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:53 pid:4956 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:53 pid:4957 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:53 pid:4958 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:54 pid:4951 Worker[4951] process terminated
+2017-10-15 12:50:54 pid:4949 Worker[4949] process terminated
+2017-10-15 12:50:54 pid:4950 Worker[4950] process terminated
+2017-10-15 12:50:54 pid:4952 Worker[4952] process terminated
+2017-10-15 12:50:54 pid:4953 Worker[4953] process terminated
+2017-10-15 12:50:54 pid:4954 Worker[4954] process terminated
+2017-10-15 12:50:54 pid:4955 Worker[4955] process terminated
+2017-10-15 12:50:54 pid:4956 Worker[4956] process terminated
+2017-10-15 12:50:54 pid:4957 Worker[4957] process terminated
+2017-10-15 12:50:54 pid:4958 Worker[4958] process terminated
+2017-10-15 12:50:54 pid:4928 worker[none:4952] exit with status 64000
+2017-10-15 12:50:54 pid:4928 worker[none:4951] exit with status 64000
+2017-10-15 12:50:54 pid:4928 worker[none:4956] exit with status 64000
+2017-10-15 12:50:54 pid:4928 worker[none:4955] exit with status 64000
+2017-10-15 12:50:54 pid:4928 worker[none:4954] exit with status 64000
+2017-10-15 12:50:54 pid:4928 worker[none:4953] exit with status 64000
+2017-10-15 12:50:54 pid:4928 worker[none:4950] exit with status 64000
+2017-10-15 12:50:54 pid:4959 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:54 pid:4928 worker[none:4949] exit with status 64000
+2017-10-15 12:50:54 pid:4960 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:54 pid:4961 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:54 pid:4962 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:54 pid:4928 worker[none:4958] exit with status 64000
+2017-10-15 12:50:54 pid:4963 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:54 pid:4964 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:54 pid:4928 worker[none:4957] exit with status 64000
+2017-10-15 12:50:54 pid:4965 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:54 pid:4966 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:54 pid:4967 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:54 pid:4968 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:55 pid:4959 Worker[4959] process terminated
+2017-10-15 12:50:55 pid:4960 Worker[4960] process terminated
+2017-10-15 12:50:55 pid:4961 Worker[4961] process terminated
+2017-10-15 12:50:55 pid:4962 Worker[4962] process terminated
+2017-10-15 12:50:55 pid:4964 Worker[4964] process terminated
+2017-10-15 12:50:55 pid:4963 Worker[4963] process terminated
+2017-10-15 12:50:55 pid:4965 Worker[4965] process terminated
+2017-10-15 12:50:55 pid:4966 Worker[4966] process terminated
+2017-10-15 12:50:55 pid:4967 Worker[4967] process terminated
+2017-10-15 12:50:55 pid:4968 Worker[4968] process terminated
+2017-10-15 12:50:55 pid:4928 worker[none:4961] exit with status 64000
+2017-10-15 12:50:55 pid:4928 worker[none:4964] exit with status 64000
+2017-10-15 12:50:55 pid:4928 worker[none:4965] exit with status 64000
+2017-10-15 12:50:55 pid:4928 worker[none:4966] exit with status 64000
+2017-10-15 12:50:55 pid:4928 worker[none:4963] exit with status 64000
+2017-10-15 12:50:55 pid:4928 worker[none:4962] exit with status 64000
+2017-10-15 12:50:55 pid:4928 worker[none:4960] exit with status 64000
+2017-10-15 12:50:55 pid:4969 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:55 pid:4970 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:55 pid:4928 worker[none:4959] exit with status 64000
+2017-10-15 12:50:55 pid:4971 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:55 pid:4972 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:55 pid:4928 worker[none:4968] exit with status 64000
+2017-10-15 12:50:55 pid:4973 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:55 pid:4928 worker[none:4967] exit with status 64000
+2017-10-15 12:50:55 pid:4974 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:55 pid:4975 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:55 pid:4976 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:55 pid:4977 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:55 pid:4978 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:56 pid:4971 Worker[4971] process terminated
+2017-10-15 12:50:56 pid:4970 Worker[4970] process terminated
+2017-10-15 12:50:56 pid:4969 Worker[4969] process terminated
+2017-10-15 12:50:56 pid:4973 Worker[4973] process terminated
+2017-10-15 12:50:56 pid:4972 Worker[4972] process terminated
+2017-10-15 12:50:56 pid:4974 Worker[4974] process terminated
+2017-10-15 12:50:56 pid:4975 Worker[4975] process terminated
+2017-10-15 12:50:56 pid:4976 Worker[4976] process terminated
+2017-10-15 12:50:56 pid:4977 Worker[4977] process terminated
+2017-10-15 12:50:56 pid:4978 Worker[4978] process terminated
+2017-10-15 12:50:56 pid:4928 worker[none:4972] exit with status 64000
+2017-10-15 12:50:56 pid:4928 worker[none:4974] exit with status 64000
+2017-10-15 12:50:56 pid:4928 worker[none:4976] exit with status 64000
+2017-10-15 12:50:56 pid:4928 worker[none:4975] exit with status 64000
+2017-10-15 12:50:56 pid:4928 worker[none:4973] exit with status 64000
+2017-10-15 12:50:56 pid:4928 worker[none:4971] exit with status 64000
+2017-10-15 12:50:56 pid:4928 worker[none:4970] exit with status 64000
+2017-10-15 12:50:56 pid:4979 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:56 pid:4928 worker[none:4969] exit with status 64000
+2017-10-15 12:50:56 pid:4980 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:56 pid:4981 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:56 pid:4982 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:56 pid:4928 worker[none:4978] exit with status 64000
+2017-10-15 12:50:56 pid:4928 worker[none:4977] exit with status 64000
+2017-10-15 12:50:56 pid:4983 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:56 pid:4984 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:56 pid:4985 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:56 pid:4986 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:56 pid:4987 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:56 pid:4988 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:57 pid:4980 Worker[4980] process terminated
+2017-10-15 12:50:57 pid:4979 Worker[4979] process terminated
+2017-10-15 12:50:57 pid:4981 Worker[4981] process terminated
+2017-10-15 12:50:57 pid:4982 Worker[4982] process terminated
+2017-10-15 12:50:57 pid:4983 Worker[4983] process terminated
+2017-10-15 12:50:57 pid:4984 Worker[4984] process terminated
+2017-10-15 12:50:57 pid:4986 Worker[4986] process terminated
+2017-10-15 12:50:57 pid:4987 Worker[4987] process terminated
+2017-10-15 12:50:57 pid:4985 Worker[4985] process terminated
+2017-10-15 12:50:57 pid:4988 Worker[4988] process terminated
+2017-10-15 12:50:57 pid:4928 worker[none:4983] exit with status 64000
+2017-10-15 12:50:57 pid:4928 worker[none:4982] exit with status 64000
+2017-10-15 12:50:57 pid:4928 worker[none:4988] exit with status 64000
+2017-10-15 12:50:57 pid:4928 worker[none:4985] exit with status 64000
+2017-10-15 12:50:57 pid:4928 worker[none:4984] exit with status 64000
+2017-10-15 12:50:57 pid:4928 worker[none:4981] exit with status 64000
+2017-10-15 12:50:57 pid:4928 worker[none:4987] exit with status 64000
+2017-10-15 12:50:57 pid:4989 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:57 pid:4990 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:57 pid:4928 worker[none:4986] exit with status 64000
+2017-10-15 12:50:57 pid:4928 worker[none:4980] exit with status 64000
+2017-10-15 12:50:57 pid:4928 worker[none:4979] exit with status 64000
+2017-10-15 12:50:57 pid:4991 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:57 pid:4992 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:57 pid:4993 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:57 pid:4994 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:57 pid:4995 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:57 pid:4996 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:57 pid:4997 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:57 pid:4998 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:58 pid:4990 Worker[4990] process terminated
+2017-10-15 12:50:58 pid:4989 Worker[4989] process terminated
+2017-10-15 12:50:58 pid:4991 Worker[4991] process terminated
+2017-10-15 12:50:58 pid:4992 Worker[4992] process terminated
+2017-10-15 12:50:58 pid:4993 Worker[4993] process terminated
+2017-10-15 12:50:58 pid:4994 Worker[4994] process terminated
+2017-10-15 12:50:58 pid:4995 Worker[4995] process terminated
+2017-10-15 12:50:58 pid:4997 Worker[4997] process terminated
+2017-10-15 12:50:58 pid:4996 Worker[4996] process terminated
+2017-10-15 12:50:58 pid:4998 Worker[4998] process terminated
+2017-10-15 12:50:58 pid:4928 worker[none:4993] exit with status 64000
+2017-10-15 12:50:58 pid:4928 worker[none:4991] exit with status 64000
+2017-10-15 12:50:58 pid:4928 worker[none:4990] exit with status 64000
+2017-10-15 12:50:58 pid:4928 worker[none:4995] exit with status 64000
+2017-10-15 12:50:58 pid:4928 worker[none:4996] exit with status 64000
+2017-10-15 12:50:58 pid:4928 worker[none:4994] exit with status 64000
+2017-10-15 12:50:58 pid:4928 worker[none:4997] exit with status 64000
+2017-10-15 12:50:58 pid:4928 worker[none:4992] exit with status 64000
+2017-10-15 12:50:58 pid:4999 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:58 pid:4928 worker[none:4998] exit with status 64000
+2017-10-15 12:50:58 pid:5000 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:58 pid:5001 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:58 pid:4928 worker[none:4989] exit with status 64000
+2017-10-15 12:50:58 pid:5002 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:58 pid:5003 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:58 pid:5004 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:58 pid:5005 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:58 pid:5006 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:58 pid:5007 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:58 pid:5008 Error: Class 'osc\worker\controller\Timer' not found in /Users/tonytian/project/PHP/OneShop/oscshop/worker/controller/GoodsTerm.php:16
+Stack trace:
+#0 [internal function]: osc\worker\controller\Goodsterm->onWorkerStart(Object(Workerman\Worker))
+#1 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1708): call_user_func(Array, Object(Workerman\Worker))
+#2 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1025): Workerman\Worker->run()
+#3 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(988): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#4 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(1143): Workerman\Worker::forkWorkers()
+#5 /Users/tonytian/project/PHP/OneShop/vendor/workerman/workerman/Worker.php(433): Workerman\Worker::monitorWorkers()
+#6 /Users/tonytian/project/PHP/OneShop/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#7 [internal function]: think\worker\Server->__construct()
+#8 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#9 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/Loader.php(420): think\App::invokeClass('osc\\worker\\cont...')
+#10 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(388): think\Loader::controller('GoodsTerm', 'controller', false, 'Error')
+#11 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(296): think\App::module(Array, Array, false)
+#12 /Users/tonytian/project/PHP/OneShop/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#13 /Users/tonytian/project/PHP/OneShop/thinkphp/start.php(18): think\App::run()
+#14 /Users/tonytian/project/PHP/OneShop/public/server.php(6): require('/Users/tonytian...')
+#15 {main}
+2017-10-15 12:50:58 pid:5008 Worker[5008] process terminated
+2017-10-15 12:50:58 pid:5003 Worker[5003] process terminated
+2017-10-15 12:50:58 pid:5004 Worker[5004] process terminated
+2017-10-15 12:50:58 pid:5002 Worker[5002] process terminated
+2017-10-15 12:50:58 pid:4928 Workerman[server.php] Stopping ...
+2017-10-15 12:50:58 pid:5001 Worker[5001] process terminated
+2017-10-15 12:50:58 pid:5006 Worker[5006] process terminated
+2017-10-15 12:50:58 pid:5007 Worker[5007] process terminated
+2017-10-15 12:50:58 pid:5000 Worker[5000] process terminated
+2017-10-15 12:50:58 pid:4999 Worker[4999] process terminated
+2017-10-15 12:50:58 pid:5005 Worker[5005] process terminated
+2017-10-15 12:50:58 pid:4928 worker[none:5008] exit with status 64000
+2017-10-15 12:50:58 pid:4928 worker[none:5007] exit with status 64000
+2017-10-15 12:50:58 pid:4928 worker[none:5005] exit with status 64000
+2017-10-15 12:50:58 pid:4928 worker[none:5003] exit with status 64000
+2017-10-15 12:50:58 pid:4928 worker[none:5006] exit with status 64000
+2017-10-15 12:50:58 pid:4928 worker[none:5004] exit with status 64000
+2017-10-15 12:50:58 pid:4928 worker[none:5000] exit with status 64000
+2017-10-15 12:50:58 pid:4928 worker[none:5001] exit with status 64000
+2017-10-15 12:50:58 pid:4928 worker[none:5002] exit with status 64000
+2017-10-15 12:50:58 pid:4928 worker[none:4999] exit with status 64000
+2017-10-15 12:50:58 pid:4928 Workerman[server.php] has been stopped
+2017-10-15 12:51:32 pid:5026 Workerman[server.php] start in DEBUG mode
+2017-10-15 12:51:43 pid:5026 Workerman[server.php] Stopping ...
+2017-10-15 12:51:43 pid:5026 Workerman[server.php] has been stopped
+2017-10-15 13:18:49 pid:5152 Workerman[server.php] start in DEBUG mode
+2017-10-15 13:18:50 pid:5156 Worker[5156] process terminated
+2017-10-15 13:18:50 pid:5153 Worker[5153] process terminated
+2017-10-15 13:18:50 pid:5155 Worker[5155] process terminated
+2017-10-15 13:18:50 pid:5159 Worker[5159] process terminated
+2017-10-15 13:18:50 pid:5161 Worker[5161] process terminated
+2017-10-15 13:18:50 pid:5157 Worker[5157] process terminated
+2017-10-15 13:18:50 pid:5154 Worker[5154] process terminated
+2017-10-15 13:18:50 pid:5160 Worker[5160] process terminated
+2017-10-15 13:18:50 pid:5158 Worker[5158] process terminated
+2017-10-15 13:18:50 pid:5162 Worker[5162] process terminated
+2017-10-15 13:18:51 pid:5223 Worker[5223] process terminated
+2017-10-15 13:18:51 pid:5225 Worker[5225] process terminated
+2017-10-15 13:18:51 pid:5224 Worker[5224] process terminated
+2017-10-15 13:18:51 pid:5228 Worker[5228] process terminated
+2017-10-15 13:18:51 pid:5227 Worker[5227] process terminated
+2017-10-15 13:18:51 pid:5229 Worker[5229] process terminated
+2017-10-15 13:18:51 pid:5231 Worker[5231] process terminated
+2017-10-15 13:18:51 pid:5230 Worker[5230] process terminated
+2017-10-15 13:18:51 pid:5226 Worker[5226] process terminated
+2017-10-15 13:18:51 pid:5232 Worker[5232] process terminated
+2017-10-15 13:18:52 pid:5293 Worker[5293] process terminated
+2017-10-15 13:18:52 pid:5296 Worker[5296] process terminated
+2017-10-15 13:18:52 pid:5301 Worker[5301] process terminated
+2017-10-15 13:18:52 pid:5299 Worker[5299] process terminated
+2017-10-15 13:18:52 pid:5297 Worker[5297] process terminated
+2017-10-15 13:18:52 pid:5298 Worker[5298] process terminated
+2017-10-15 13:18:52 pid:5294 Worker[5294] process terminated
+2017-10-15 13:18:52 pid:5300 Worker[5300] process terminated
+2017-10-15 13:18:52 pid:5295 Worker[5295] process terminated
+2017-10-15 13:18:52 pid:5302 Worker[5302] process terminated
+2017-10-15 13:18:53 pid:5363 Worker[5363] process terminated
+2017-10-15 13:18:53 pid:5367 Worker[5367] process terminated
+2017-10-15 13:18:53 pid:5365 Worker[5365] process terminated
+2017-10-15 13:18:53 pid:5366 Worker[5366] process terminated
+2017-10-15 13:18:53 pid:5369 Worker[5369] process terminated
+2017-10-15 13:18:53 pid:5370 Worker[5370] process terminated
+2017-10-15 13:18:53 pid:5364 Worker[5364] process terminated
+2017-10-15 13:18:53 pid:5368 Worker[5368] process terminated
+2017-10-15 13:18:53 pid:5371 Worker[5371] process terminated
+2017-10-15 13:18:53 pid:5372 Worker[5372] process terminated
+2017-10-15 13:18:54 pid:5437 Worker[5437] process terminated
+2017-10-15 13:18:54 pid:5435 Worker[5435] process terminated
+2017-10-15 13:18:54 pid:5436 Worker[5436] process terminated
+2017-10-15 13:18:54 pid:5440 Worker[5440] process terminated
+2017-10-15 13:18:54 pid:5434 Worker[5434] process terminated
+2017-10-15 13:18:54 pid:5433 Worker[5433] process terminated
+2017-10-15 13:18:54 pid:5441 Worker[5441] process terminated
+2017-10-15 13:18:54 pid:5438 Worker[5438] process terminated
+2017-10-15 13:18:54 pid:5442 Worker[5442] process terminated
+2017-10-15 13:18:54 pid:5439 Worker[5439] process terminated
+2017-10-15 13:18:56 pid:5508 Worker[5508] process terminated
+2017-10-15 13:18:56 pid:5504 Worker[5504] process terminated
+2017-10-15 13:18:56 pid:5505 Worker[5505] process terminated
+2017-10-15 13:18:56 pid:5503 Worker[5503] process terminated
+2017-10-15 13:18:56 pid:5506 Worker[5506] process terminated
+2017-10-15 13:18:56 pid:5507 Worker[5507] process terminated
+2017-10-15 13:18:56 pid:5509 Worker[5509] process terminated
+2017-10-15 13:18:56 pid:5510 Worker[5510] process terminated
+2017-10-15 13:18:56 pid:5512 Worker[5512] process terminated
+2017-10-15 13:18:56 pid:5511 Worker[5511] process terminated
+2017-10-15 13:18:56 pid:5152 Workerman[server.php] Stopping ...
+2017-10-15 13:18:56 pid:5152 Workerman[server.php] has been stopped
+2017-10-15 13:19:29 pid:5584 Workerman[server.php] start in DEBUG mode
+2017-10-15 13:19:50 pid:5592 Worker[5592] process terminated
+2017-10-15 13:20:02 pid:5584 Workerman[server.php] Stopping ...
+2017-10-15 13:20:02 pid:5584 Workerman[server.php] has been stopped
+2017-10-15 13:20:49 pid:5608 Workerman[server.php] start in DEBUG mode
+2017-10-15 13:22:33 pid:5608 Workerman[server.php] Stopping ...
+2017-10-15 13:22:33 pid:5608 Workerman[server.php] has been stopped
+2017-10-15 15:12:17 pid:5921 Workerman[server.php] start in DEBUG mode
+2017-10-15 15:25:05 pid:5921 Workerman[server.php] Stopping ...
+2017-10-15 15:25:05 pid:5921 Workerman[server.php] has been stopped
+2017-10-15 15:25:07 pid:5998 Workerman[server.php] start in DEBUG mode
+2017-10-15 20:46:32 pid:5998 Workerman[server.php] Stopping ...
+2017-10-15 20:46:32 pid:5998 Workerman[server.php] has been stopped
+2017-10-15 20:48:01 pid:6241 Workerman[server.php] start in DEBUG mode
+2017-10-15 20:48:06 pid:6248 Worker[6248] process terminated
+2017-10-15 20:48:55 pid:6241 Workerman[server.php] Stopping ...
+2017-10-15 20:48:55 pid:6241 Workerman[server.php] has been stopped
+2017-10-15 20:48:55 pid:6262 Workerman[server.php] start in DEBUG mode

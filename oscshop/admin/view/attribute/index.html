@@ -20,7 +20,9 @@
 				<thead>
 					<tr>											
 						<th>{:lang('属性名称')}</th>
+						<th>{:lang('属性英文名称')}</th>
 						<th>{:lang('属性值')}</th> 
+						<th>{:lang('属性英文值')}</th> 
 				
 						
 						<th>{:lang('操作')}</th>				
@@ -29,9 +31,10 @@
 				<tbody>
 						{volist name="list" id="a" empty="$empty"}
 						<tr>		
-							<td>{$a.name}</td>		
+							<td>{$a.name}</td>	
+							<td>{$a.name_en}</td>		
 							<td>{$a.value}</td>	
-								
+							<td>{$a.value_en}</td>		
 							<td>
 								<a  class="btn btn-xs btn-info" href='{:url("Attribute/edit",array("id"=>$a["attribute_id"]))}'>
 									<i class="fa fa-edit bigger-120"></i>

@@ -28,6 +28,9 @@ class Category extends Model{
 		$category['name']=$data['name'];
 		$category['meta_keyword']=$data['meta_keyword'];
 		$category['meta_description']=$data['meta_description'];
+		$category['name_en']=$data['name_en'];
+		$category['meta_keyword_en']=$data['meta_keyword_en'];
+		$category['meta_description_en']=$data['meta_description_en'];
 		$category['update_time']=time();
 		
 		$cid=Db::name('category')->insert($category,false,true);
@@ -65,6 +68,9 @@ class Category extends Model{
 		$category['name']=$data['name'];
 		$category['meta_keyword']=$data['meta_keyword'];
 		$category['meta_description']=$data['meta_description'];
+		$category['name_en']=$data['name_en'];
+		$category['meta_keyword_en']=$data['meta_keyword_en'];
+		$category['meta_description_en']=$data['meta_description_en'];
 		$category['update_time']=time();
 		
 		$r=Db::name('category')->where('id',$cid)->update($category,false,true);

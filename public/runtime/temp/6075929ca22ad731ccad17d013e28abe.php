@@ -1,10 +1,10 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:39:"../oscshop/admin/view/module/index.html";i:1506516777;s:38:"../oscshop/admin/view/public/base.html";i:1506516777;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:39:"../oscshop/admin/view/module/index.html";i:1507895017;s:38:"../oscshop/admin/view/public/base.html";i:1507895017;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta charset="utf-8" />
-		<title><?php echo \think\Config::get('SITE_NAME'); ?>-后台管理中心</title>
+		<title><?php echo \think\Config::get('SITE_NAME'); ?>-<?php echo lang('后台管理中心'); ?></title>
 
 		<meta name="description" content="<?php echo \think\Config::get('SITE_NAME'); ?>" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
@@ -76,7 +76,7 @@
 				<div class="navbar-header pull-left">
 					<a href="<?php echo url('admin/Index/index'); ?>" class="navbar-brand">
 						<small>							
-							<?php echo \think\Config::get('SITE_NAME'); ?> 后台管理
+							<?php echo \think\Config::get('SITE_NAME'); ?> <?php echo lang('后台管理'); ?>
 						</small>
 					</a>
 					<button class="pull-right navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#sidebar">
@@ -106,17 +106,17 @@
 							<ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
 								
 								<li>
-									<a target="_blank" href="<?php echo \think\Request::instance()->root(true); ?>">网站前台</a>
+									<a target="_blank" href="<?php echo \think\Request::instance()->root(true); ?>"><?php echo lang('网站前台'); ?></a>
 								</li>
 								
 								<li>
-									<a href="<?php echo url('admin/User/edit',array('id'=>session('user_auth.uid'))); ?>">修改密码</a>
+									<a href="<?php echo url('admin/User/edit',array('id'=>session('user_auth.uid'))); ?>"><?php echo lang('修改密码'); ?></a>
 								</li>
 								
-								<li><a href="<?php echo url('admin/Index/clear'); ?>">清空缓存</a></li>
+								<li><a href="<?php echo url('admin/Index/clear'); ?>"><?php echo lang('清空缓存'); ?></a></li>
 
 								<li>
-									<a href="<?php echo url('admin/Index/logout'); ?>">退出系统</a>
+									<a href="<?php echo url('admin/Index/logout'); ?>"><?php echo lang('退出系统'); ?></a>
 								</li>
 							</ul>
 						</li>
@@ -141,7 +141,7 @@
 					<li class="hover">
 						<a target="_blank" href="<?php echo \think\Request::instance()->root(true); ?>">
 							<i class="menu-icon fa fa fa-home fa-lg"></i>
-							<span class="menu-text">前台 </span>
+							<span class="menu-text"><?php echo lang('前台'); ?> </span>
 							<b class="arrow fa fa-angle-down"></b>
 						</a>
 						<b class="arrow"></b>
@@ -220,13 +220,13 @@
 			<table class="table table-striped table-bordered table-hover">
 				<thead>
 					<tr>
-						<td>模块</td> 
-						<td>模块名称</td> 	
-						<td>依赖的模块</td> 	
-						<td>作者</td>	
-						<td>描述</td>
-						<td>状态</td>
-						<td>操作</td>				
+						<td><?php echo lang('模块'); ?></td> 
+						<td><?php echo lang('模块名称'); ?></td> 	
+						<td><?php echo lang('依赖的模块'); ?></td> 	
+						<td><?php echo lang('作者'); ?></td>	
+						<td><?php echo lang('描述'); ?></td>
+						<td><?php echo lang('状态'); ?></td>
+						<td><?php echo lang('操作'); ?></td>				
 					</tr>
 				</thead>
 				<tbody>
@@ -239,10 +239,10 @@
 						<td><?php echo $module['author']; ?></td>
 						<td><?php echo $module['description']; ?></td>
 						<td>
-							<?php switch($module['disabled']): case "1": ?><span class="green">已经安装</span> <?php break; case "0": ?><span class="red">未安装</span><?php break; endswitch; ?>
+							<?php switch($module['disabled']): case "1": ?><span class="green"><?php echo lang('已经安装'); ?></span> <?php break; case "0": ?><span class="red"><?php echo lang('未安装'); ?></span><?php break; endswitch; ?>
 						</td>
 						<td>
-							<?php switch($module['disabled']): case "1": ?><a title="点击卸载" href='<?php echo \think\Request::instance()->root(true); ?>/<?php echo $module['module']; ?>/install/uninstall'><span id="<?php echo $module['module']; ?>" class="del btn btn-xs btn-danger"><i class="fa fa-minus-circle bigger-120"></i></span></a><?php break; case "0": ?><a title="点击安装" href='<?php echo \think\Request::instance()->root(true); ?>/<?php echo $module['module']; ?>/install/install'><span class="btn btn-xs btn-success"><i class="fa fa-plus-circle bigger-120"></i></span></a><?php break; endswitch; ?>
+							<?php switch($module['disabled']): case "1": ?><a title="<?php echo lang('点击卸载'); ?>" href='<?php echo \think\Request::instance()->root(true); ?>/<?php echo $module['module']; ?>/install/uninstall'><span id="<?php echo $module['module']; ?>" class="del btn btn-xs btn-danger"><i class="fa fa-minus-circle bigger-120"></i></span></a><?php break; case "0": ?><a title="<?php echo lang('点击安装'); ?>" href='<?php echo \think\Request::instance()->root(true); ?>/<?php echo $module['module']; ?>/install/install'><span class="btn btn-xs btn-success"><i class="fa fa-plus-circle bigger-120"></i></span></a><?php break; endswitch; ?>
 						</td>
 					</tr>
 				<?php endforeach; endif; else: echo "" ;endif; ?>
@@ -298,13 +298,13 @@
 $('.del').click(function(){
 	var module=$(this).attr('id');		
 	
-	var info='确认要执行该操作吗？';
+	var info='<?php echo lang('确认要执行该操作吗？'); ?>';
 	
 	if(module=='member'){
-		info='该操作将删除用户数据，订单数据，确认要执行该操作吗？';
+		info='<?php echo lang('该操作将删除用户数据，订单数据，确认要执行该操作吗？'); ?>';
 	}
 	if(module=='mobile'){
-		info='该操作将删除代理商数据，自动回复数据，确认要执行该操作吗？';
+		info='<?php echo lang('该操作将删除代理商数据，自动回复数据，确认要执行该操作吗？'); ?>';
 	}
 	
 	var f=confirm(info);

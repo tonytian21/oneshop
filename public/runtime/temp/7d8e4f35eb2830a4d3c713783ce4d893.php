@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:38:"../oscshop/index/view/index/index.html";i:1506516777;s:38:"../oscshop/index/view/public/base.html";i:1506516777;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:38:"../oscshop/index/view/index/index.html";i:1507895017;s:38:"../oscshop/index/view/public/base.html";i:1507895017;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,16 +19,16 @@
 			<div class="allWrap">
 				<ul class="left">
 					<?php if(member('uid')): ?>
-						<li><a href="<?php echo url('member/order_member/index'); ?>">会员中心</a></li>
-						<li><a href="<?php echo url('/logout'); ?>">退出</a></li>
+						<li><a href="<?php echo url('member/order_member/index'); ?>"><?php echo lang('会员中心'); ?></a></li>
+						<li><a href="<?php echo url('/logout'); ?>"><?php echo lang('退出'); ?></a></li>
 					<?php else: ?>
-						<li><a class="pointer" id="reg">注册</a></li>
-						<li><a class="pointer" id="login">登录</a></li>
+						<li><a class="pointer" id="reg"><?php echo lang('注册'); ?></a></li>
+						<li><a class="pointer" id="login"><?php echo lang('登录'); ?></a></li>
 					<?php endif; ?>
 				</ul>
 				<ul class="right">
 					<li id="cart">
-						 购物车(<a href="<?php echo url('/cart'); ?>"> <?php if(session('total')): ?><?php echo \think\Session::get('total'); else: ?>0<?php endif; ?> </a>)
+						 <?php echo lang('购物车'); ?>(<a href="<?php echo url('/cart'); ?>"> <?php if(session('total')): ?><?php echo \think\Session::get('total'); else: ?>0<?php endif; ?> </a>)
 					</li>
 				</ul>
 				<div class="clearfix"></div>
@@ -38,7 +38,7 @@
 	
 	<div id="header" class="allWrap">
 		<ul id="home">
-			<li><a href="<?php echo \think\Request::instance()->root(true); ?>">首页</a></li>
+			<li><a href="<?php echo \think\Request::instance()->root(true); ?>"><?php echo lang('首页'); ?></a></li>
 		</ul>  
 		<ul class="nav">
 		<?php if(is_array($top_nav) || $top_nav instanceof \think\Collection || $top_nav instanceof \think\Paginator): $i = 0; $__LIST__ = $top_nav;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$category): $mod = ($i % 2 );++$i;?>
@@ -61,7 +61,7 @@
 			<?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "$empty" ;else: foreach($__LIST__ as $key=>$goods): $mod = ($i % 2 );++$i;?>
 			 <dl>
 			 	<?php if(isset($goods['shipping']) and ($goods['shipping'] == 0)): ?>
-			 	<span class="no_shipping">免配送商品</span>
+			 	<span class="no_shipping"><?php echo lang('免配送商品'); ?></span>
 			 	<?php endif; ?>
 			 	<dt><a href="<?php echo url('/goods/'.$goods['goods_id']); ?>">
 			 		<?php if(!empty($goods['image'])): ?>
@@ -83,7 +83,7 @@
 		
 	<div id="footer">
 		<div class="allWrap">
-		<p>Copyright © 2015-<?php echo date('Y',time()); ?> <?php echo \think\Config::get('SITE_TITLE'); ?>  <?php echo \think\Config::get('SITE_URL'); ?> All Rights Reserved. 备案号：<?php echo \think\Config::get('SITE_ICP'); ?> </p>
+		<p>Copyright © 2015-<?php echo date('Y',time()); ?> <?php echo \think\Config::get('SITE_TITLE'); ?>  <?php echo \think\Config::get('SITE_URL'); ?> All Rights Reserved. <?php echo lang('备案号：'); ?><?php echo \think\Config::get('SITE_ICP'); ?> </p>
 		</div>
 	</div>	
 </body>

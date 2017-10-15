@@ -26,7 +26,8 @@
 					<tr>
 						<th>{:lang('排序')}</th> 		
 						<th>{:lang('图片')}</th> 									
-						<th>{:lang('分类名称')}</th>					
+						<th>{:lang('分类名称')}</th>		
+						<th>{:lang('英文分类名称')}</th>				
 						<th>{:lang('操作')}</th>				
 					</tr>
 				</thead>
@@ -46,6 +47,7 @@
 		                  	</a>
 						</td>
 						<td>{$cat.name}</td>
+						<td>{$cat.name_en}</td>
 						<td>
 							<a  class="btn btn-xs btn-info" href='{:url("category/edit",array("id"=>$cat["id"]))}'>
 								<i class="fa fa-edit bigger-120"></i>
