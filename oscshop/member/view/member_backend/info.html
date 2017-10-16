@@ -26,7 +26,23 @@
 				    <td>ID</td>
 				    <td>{$data.info.uid}</td>
 				</tr>
-	
+				<div class="form-group required">
+	                <label class="col-sm-2 control-label" for="input-image">
+	                	<span title="" data-toggle="tooltip" data-original-title="{:lang('上传')}800x800{:lang('用户头像')}">{:lang('用户头像')}</span>
+	                </label>
+	                
+	                <div class="col-sm-10" id="thumb">
+		                  <a id="thumb-image" href="#" data-toggle="image" class="img-thumbnail">
+		                  		{if condition="!empty($data['info']['userpic'])"}
+		                  			<img src="IMG_ROOT{$data.info.userpic|resize=100,100}" />
+			                  	{else /}
+			                  		<img src="__PUBLIC__/image/no_image_100x100.jpg" />
+			                  	{/if}
+								</a>
+		                  <input type="hidden" name="userpic" value="{$data.info.userpic}" id="input-image" />
+		            </div>
+	            
+	            </div> 
 				<tr>
 					<td>{:lang('用户名')}</td>
 					<td>

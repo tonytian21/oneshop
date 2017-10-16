@@ -1,5 +1,6 @@
 {extend name="../oscshop/admin/view/public/base.html" /}
 {block name="content"}
+<script src="__PUBLIC__/js/worldAddress.js"></script>
 <div class="page-header">
 		<h1>
 			{$breadcrumb2}
@@ -13,30 +14,40 @@
 	<div class="col-xs-12">	
 		<div class="form-horizontal">
 			
-					
 			<div class="form-group required">
-				<label class="col-sm-2 control-label">{:lang('用户名：')}</label>
+                <label class="col-sm-2 control-label" for="input-image">
+                	<span title="" data-toggle="tooltip" data-original-title="{:lang('上传')}800x800{:lang('用户头像')}">{:lang('用户头像')}</span>
+                </label>
+                
+                <div class="col-sm-10" id="thumb">
+                  <a id="thumb-image" href="#" data-toggle="image" class="img-thumbnail"><img src="__PUBLIC__/image/no_image_100x100.jpg" /></a>
+                  <input type="hidden" name="userpic" value="" id="input-image" />
+            	</div>
+            
+            </div> 		
+			<div class="form-group required">
+				<label class="col-sm-2 control-label">{:lang('用户名')}</label>
 				<div class="col-sm-10">
 					<input  class="form-control" type="text" placeholder="{:lang('用户名')}" name="username"  value="" />
 				</div>
 			</div>			
 			
 			<div class="form-group required">
-				<label class="col-sm-2 control-label">{:lang('密码：')}</label>
+				<label class="col-sm-2 control-label">{:lang('密码')}</label>
 				<div class="col-sm-10">
 					<input  class="form-control" type="text" placeholder="{:lang('密码')}" name="password"  value="888888" />
 				</div>
 			</div>
 									
 			<div class="form-group required">
-				<label class="col-sm-2 control-label">{:lang('邮箱：')}</label>
+				<label class="col-sm-2 control-label">{:lang('邮箱')}</label>
 				<div class="col-sm-10">
 					<input  class="form-control" type="text" placeholder="{:lang('邮箱')}" name="email"  value="" />
 				</div>
 			</div>
 			
 			<div class="form-group required">
-				<label class="col-sm-2 control-label">{:lang('手机号码：')}</label>
+				<label class="col-sm-2 control-label">{:lang('手机号码')}</label>
 				<div class="col-sm-10">
 					<input  class="form-control" type="text" placeholder="{:lang('手机号码')}" name="telephone"  value="" />
 				</div>
@@ -44,17 +55,47 @@
 			
 			<div class="form-group">
 				<label class="col-sm-2 control-label no-padding-left">{:lang('会员组')} </label>
-			<div class="col-sm-10">
-				<div class="clearfix">					
-						<select class="form-control" name="groupid">							
-						{volist name="group" id="group" }
-							<option value="{$group.id}">{$group.title}</option>
-						{/volist}				
-						</select>		
+				<div class="col-sm-10">
+					<div class="clearfix">					
+							<select class="form-control" name="groupid">							
+							{volist name="group" id="group" }
+								<option value="{$group.id}">{$group.title}</option>
+							{/volist}				
+							</select>		
+					</div>
 				</div>
 			</div>
+			<div class="form-group required">
+				<label class="col-sm-2 control-label">{:lang('请选择地址')}</label>
+				<div class="col-sm-10">
+					<table id="tab">
+						<tr>
+							<td><font size="3" face="楷体"></font></td>
+							<td><select id="s1" onchange="getCountry()" name="country"><option>请选择国家</option></select></td>
+							<td><select id="s2" onchange="getProvince()"
+								style="display: none" name="province"><option>省份、州</option></select> <select
+								id="id_provSelect" name="provSelect" style="display: none"
+								onChange="getChinaProv(this.value);"><option>请选择省份</option></select>
+							</td>
+							<td><select id="s3" style="display: none" name="city"><option>地级市、县</option></select>
+								<select id="id_citySelect" name="citySelect"
+								style="display: none" onChange="getChinaCity(this.value);"><option>请选择城市</option></select>
+							</td>
+						</tr>
+					</table>
+				</div>
 			</div>
-			
+			<div class="form-group">
+				<label class="col-sm-2 control-label" for="input-subtract">{:lang('虚拟用户')}</label>
+				
+					<div class="col-sm-10">
+						<label class="radio-inline">
+						<input type="radio" checked="checked" value="1" name="subtract">{:lang('是')}</label>
+						<label class="radio-inline">
+						<input type="radio" value="0" name="subtract">{:lang('否')}</label>
+					</div>
+				
+			</div>	
 			<div class="form-group">
 				<label class="col-sm-1 control-label no-padding-left"> </label>	
 				<div class="col-sm-11">
@@ -74,11 +115,36 @@ var back_index="{:url('member_backend/index')}";
 $('#send').click(function(){
 	$.post(
 		'{:url("MemberBackend/add")}',
-		$('input[type=\'text\'],select'),
+		$('input[type=\'text\'],input[type=\'hidden\'],select'),
 		function(d){
 			art_dialog(d,back_index);
 		}
 	);
 });
+
+function getCountry() {
+	change(1);
+	var country = document.getElementById("s1");
+	var province = document.getElementById("s2");
+	var city = document.getElementById("s3");
+	var provSelect = document.getElementById("id_provSelect");
+	var citySelect = document.getElementById("id_citySelect");
+	var areaSelect = document.getElementById("id_areaSelect");
+	province.style.display = "block";
+	provSelect.style.display = "none";
+	citySelect.style.display = "none";
+	areaSelect.style.display = "none";
+}
+
+function getProvince() {
+	change(2);
+	var province = document.getElementById("s2");
+	var city = document.getElementById("s3");
+	city.style.display = 'block';
+}
+
+var s = [ "s1", "s2", "s3" ];
+var opt0 = [ "国家", "省份、州", "地级市、县" ];
+change(0);
 </script>							
 {/block}

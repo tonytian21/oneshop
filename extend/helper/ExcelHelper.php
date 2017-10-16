@@ -1,8 +1,8 @@
 <?php
 
-namespace common\helper;
+namespace helper;
 
-use Yii;
+use PHPExcel;
 
 class ExcelHelper
 {
@@ -376,148 +376,6 @@ class ExcelHelper
         fclose($fp);
 
         return $filename;
-    }
-
-    /**
-     * 导出客户签收的xml版的Excel
-     * @param unknown $path
-     * @param unknown $arr
-     * @param string $template
-     * @return string
-     */
-    public function WriteXmlExcel($path, $arr, $template = '')
-    {
-        if (empty($arr) || !is_array($arr))
-            return "";
-
-        if (!is_dir($path))
-            mkdir($path, 0777, true);
-
-        $filepath = $path . "/" . date('YmdHis') . rand(100, 999) . ".xls";
-        copy($template, $filepath);
-        $file = fopen($filepath, "w");
-
-        $xmlexcel = '';
-        $xmlexcel .= "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Workbook xmlns=\"urn:schemas-microsoft-com:office:spreadsheet\" xmlns:x=\"urn:schemas-microsoft-com:office:excel\" xmlns:ss=\"urn:schemas-microsoft-com:office:spreadsheet\" xmlns:html=\"http://www.w3.org/TR/REC-html40\">\n";
-
-        $xmlexcel .= "<Worksheet ss:Name=\"Sheet1\">\n";
-        $xmlexcel .= "<Table>\n";
-
-        $xmlexcel .= "<Row>\n";
-        $xmlexcel .= '<Cell><Data ss:Type="String">客户</Data></Cell>' . "\n";
-        $xmlexcel .= '<Cell><Data ss:Type="String">收货人</Data></Cell>' . "\n";
-        $xmlexcel .= '<Cell><Data ss:Type="String">收货人省份</Data></Cell>' . "\n";
-        $xmlexcel .= '<Cell><Data ss:Type="String">收货人城市</Data></Cell>' . "\n";
-        $xmlexcel .= '<Cell><Data ss:Type="String">主要货物名称</Data></Cell>' . "\n";
-        $xmlexcel .= '<Cell><Data ss:Type="String">实际重量</Data></Cell>' . "\n";
-        $xmlexcel .= '<Cell><Data ss:Type="String">支付金额</Data></Cell>' . "\n";
-        $xmlexcel .= '<Cell><Data ss:Type="String">主单号</Data></Cell>' . "\n";
-        $xmlexcel .= '<Cell><Data ss:Type="String">分单号</Data></Cell>' . "\n";
-        $xmlexcel .= '<Cell><Data ss:Type="String">国内单号</Data></Cell>' . "\n";
-        $xmlexcel .= '<Cell><Data ss:Type="String">国内仓发货时间</Data></Cell>' . "\n";
-        $xmlexcel .= '<Cell><Data ss:Type="String">签收时间</Data></Cell>' . "\n";
-        $xmlexcel .= '<Cell><Data ss:Type="String">签收人</Data></Cell>' . "\n";
-        $xmlexcel .= "</Row>\n";
-
-        foreach ($arr as $v) {
-            $xmlexcel .= "<Row>\n";
-            $xmlexcel .= '<Cell><Data ss:Type="String">' . $v['TITLE'] . '</Data></Cell>' . "\n";
-            $xmlexcel .= '<Cell><Data ss:Type="String">' . $v['RECEIVEPEOPLE'] . '</Data></Cell>' . "\n";
-            $xmlexcel .= '<Cell><Data ss:Type="String">' . $v['RECEIVEPROVINCE'] . '</Data></Cell>' . "\n";
-            $xmlexcel .= '<Cell><Data ss:Type="String">' . $v['RECEIVECITY'] . '</Data></Cell>' . "\n";
-            $xmlexcel .= '<Cell><Data ss:Type="String">' . $v['GOODSNAME'] . '</Data></Cell>' . "\n";
-            $xmlexcel .= '<Cell><Data ss:Type="Number">' . $v['ACTUALWEIGHT'] . '</Data></Cell>' . "\n";
-            $xmlexcel .= '<Cell><Data ss:Type="Number">' . $v['PAYMONEY'] . '</Data></Cell>' . "\n";
-            $xmlexcel .= '<Cell><Data ss:Type="String">' . $v['MAWB'] . '</Data></Cell>' . "\n";
-            $xmlexcel .= '<Cell><Data ss:Type="String">' . $v['TRACKINGNO'] . '</Data></Cell>' . "\n";
-            $xmlexcel .= '<Cell><Data ss:Type="String">' . $v['LOCALEXPRESSNO'] . '</Data></Cell>' . "\n";
-            $xmlexcel .= '<Cell><Data ss:Type="String">' . $v['INLANDSENDTIME'] . '</Data></Cell>' . "\n";
-            $xmlexcel .= '<Cell><Data ss:Type="String">' . $v['CREATETIME'] . '</Data></Cell>' . "\n";
-            $xmlexcel .= '<Cell><Data ss:Type="String">' . $v['SIGNNAME'] . '</Data></Cell>' . "\n";
-            $xmlexcel .= "</Row>\n";
-        }
-
-        $xmlexcel .= "</Table>\n";
-        $xmlexcel .= "</Worksheet>\n";
-        $xmlexcel .= "</Workbook>";
-
-        fwrite($file, $xmlexcel);
-        fclose($file);
-
-        return $filepath;
-    }
-
-    /**
-     * 导出文件打包成xls或zip文件
-     * @param unknown $Data
-     * @param unknown $TemplateFileName
-     * @param unknown $sign 多个sheet
-     * @param unknown $Multsheet 判断sheet
-     * @return array
-     */
-    public function Packingcompression($Data, $TemplateFileName, $sign = "", $Multsheet = "")
-    {
-        try {
-            //多个sheet处理
-//             if($Multsheet == 1)
-//             {
-//                 $DataArr = [];
-//                 foreach ($Data as $key=>$k)
-//                 {                    
-//                     for($i = 0; (count($k) >= ($i*50000)); $i++)
-//                     {
-//                         $DataArr[$i][$key] = array_slice($k,$i*50000,50000);                        
-//                     }  
-//                 }
-//             }
-
-            if (count($Data) <= 50000) {
-                $DictName = date('Ymd') . '/' . Yii::$app->user->identity->ID . rand(10000, 99999);
-                $downPath = 'downloads/' . $DictName;
-
-                $path = $this->WriteExcel($downPath, $Data, $TemplateFileName, $sign);
-
-                $result['success'] = 1;
-                $result['url'] = $path;
-            } else {
-                $DataArr = [];
-                for ($i = 0; (count($Data) >= ($i * 50000)); $i++) {
-                    $DataArr[$i] = array_slice($Data, $i * 50000, 50000);
-                }
-
-                foreach ($DataArr as $key => $v) {
-                    $DictName = date('Ymd') . '/' . Yii::$app->user->identity->ID . rand(10000, 99999);
-                    $downPath = 'downloads/' . $DictName;
-
-                    $path = $this->WriteExcel($downPath, $v, $TemplateFileName, $sign);
-                    $fileNameArr[] = $path;
-                }
-
-                $Compressname = date('Ymd') . '/' . Yii::$app->user->identity->ID . rand(10000, 99999); // 压缩文件的最终生成文件名（含路径）
-                $Compressname = 'downloads/' . $DictName . '.zip';
-
-                // 生成文件
-                $zip = new \ZipArchive (); // 使用本类，linux需开启zlib，windows需取消php_zip.dll前的注释
-                if ($zip->open($Compressname, \ZIPARCHIVE::CREATE) !== TRUE) {
-                    $result['message'] = "无法打开文件，或者文件创建失败!";
-                    $result['success'] = 0;
-                } else {
-                    //$fileNameArr 就是一个存储文件路径的数组 比如 array('/a/1.jpg,/a/2.jpg....');
-                    foreach ($fileNameArr as $val) {
-                        $zip->addFile($val, basename($val)); // 第二个参数是放在压缩包中的文件名称，如果文件可能会有重复，就需要注意一下
-                    }
-
-                    $url = substr($zip->filename, -29);
-                    $zip->close(); // 关闭
-
-                    $result['success'] = 1;
-                    $result['url'] = $url;
-                }
-            }
-        } catch (\Exception $ex) {
-            $result['message'] = $ex->getMessage();
-        }
-        return $result;
     }
 
 }

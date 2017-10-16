@@ -1,10 +1,10 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:43:"../oscshop/member/view/transport/index.html";i:1505890083;s:38:"../oscshop/admin/view/public/base.html";i:1505885316;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:43:"../oscshop/member/view/transport/index.html";i:1507895017;s:38:"../oscshop/admin/view/public/base.html";i:1508162033;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta charset="utf-8" />
-		<title><?php echo \think\Config::get('SITE_NAME'); ?>-后台管理中心</title>
+		<title><?php echo \think\Config::get('SITE_NAME'); ?>-<?php echo lang('后台管理中心'); ?></title>
 
 		<meta name="description" content="<?php echo \think\Config::get('SITE_NAME'); ?>" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
@@ -76,7 +76,7 @@
 				<div class="navbar-header pull-left">
 					<a href="<?php echo url('admin/Index/index'); ?>" class="navbar-brand">
 						<small>							
-							<?php echo \think\Config::get('SITE_NAME'); ?> 后台管理
+							<?php echo \think\Config::get('SITE_NAME'); ?> <?php echo lang('后台管理'); ?>
 						</small>
 					</a>
 					<button class="pull-right navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#sidebar">
@@ -106,17 +106,17 @@
 							<ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
 								
 								<li>
-									<a target="_blank" href="<?php echo \think\Request::instance()->root(true); ?>">网站前台</a>
+									<a target="_blank" href="<?php echo \think\Request::instance()->root(true); ?>"><?php echo lang('网站前台'); ?></a>
 								</li>
 								
 								<li>
-									<a href="<?php echo url('admin/User/edit',array('id'=>session('user_auth.uid'))); ?>">修改密码</a>
+									<a href="<?php echo url('admin/User/edit',array('id'=>session('user_auth.uid'))); ?>"><?php echo lang('修改密码'); ?></a>
 								</li>
 								
-								<li><a href="<?php echo url('admin/Index/clear'); ?>">清空缓存</a></li>
+								<li><a href="<?php echo url('admin/Index/clear'); ?>"><?php echo lang('清空缓存'); ?></a></li>
 
 								<li>
-									<a href="<?php echo url('admin/Index/logout'); ?>">退出系统</a>
+									<a href="<?php echo url('admin/Index/logout'); ?>"><?php echo lang('退出系统'); ?></a>
 								</li>
 							</ul>
 						</li>
@@ -141,7 +141,7 @@
 					<li class="hover">
 						<a target="_blank" href="<?php echo \think\Request::instance()->root(true); ?>">
 							<i class="menu-icon fa fa fa-home fa-lg"></i>
-							<span class="menu-text">前台 </span>
+							<span class="menu-text"><?php echo lang('前台'); ?> </span>
 							<b class="arrow fa fa-angle-down"></b>
 						</a>
 						<b class="arrow"></b>
@@ -235,7 +235,7 @@
 	</h1>
 </div>	
 	<div class="page-header">
-	<a href="<?php echo url('Transport/add'); ?>" class="btn btn-primary">新增</a>
+	<a href="<?php echo url('Transport/add'); ?>" class="btn btn-primary"><?php echo lang('新增'); ?></a>
 
 	</div>	
 	
@@ -248,12 +248,12 @@
 			<table class="table table-striped table-bordered table-hover">
 				<thead>
 					<tr>											
-						<th>运送方式</th>
-						<th>运送到</th> 
-						<th>首重(<?php echo $unit; ?>)</th>  
-						<th>运费(元)</th>	
-						<th>续重(<?php echo $unit; ?>)</th>  
-						<th>续费(元)</th>				
+						<th><?php echo lang('运送方式'); ?></th>
+						<th><?php echo lang('运送到'); ?></th> 
+						<th><?php echo lang('首重'); ?>(<?php echo $unit; ?>)</th>  
+						<th><?php echo lang('运费'); ?>(<?php echo lang('元'); ?>)</th>	
+						<th><?php echo lang('续重'); ?>(<?php echo $unit; ?>)</th>  
+						<th><?php echo lang('续费'); ?>(<?php echo lang('元'); ?>)</th>				
 					</tr>
 				</thead>
 				 
@@ -268,8 +268,8 @@
 				        <h5 class="fl"><?php echo $v['title'];?></h5>
 				        
 				        <span class="fr mr5">
-				        <time title="最后编辑时间"><i class="icon-time"></i><?php echo date('Y-m-d H:i:s',$v['update_time']);?></time>
-				        <a class="J_Clone ncsc-btn-mini" href="javascript:void(0)" data-id="<?php echo $v['id'];?>"><i class="icon-copy"></i>复制模板</a> <a class="J_Modify ncsc-btn-mini" href="javascript:void(0)" data-id="<?php echo $v['id'];?>"><i class="icon-edit"></i>修改</a> <a class="J_Delete ncsc-btn-mini" href="javascript:void(0)" data-id="<?php echo $v['id'];?>"><i class="icon-trash"></i>删除</a></span></th>
+				        <time title="<?php echo lang('最后编辑时间'); ?>"><i class="icon-time"></i><?php echo date('Y-m-d H:i:s',$v['update_time']);?></time>
+				        <a class="J_Clone ncsc-btn-mini" href="javascript:void(0)" data-id="<?php echo $v['id'];?>"><i class="icon-copy"></i><?php echo lang('复制模板'); ?></a> <a class="J_Modify ncsc-btn-mini" href="javascript:void(0)" data-id="<?php echo $v['id'];?>"><i class="icon-edit"></i><?php echo lang('修改'); ?></a> <a class="J_Delete ncsc-btn-mini" href="javascript:void(0)" data-id="<?php echo $v['id'];?>"><i class="icon-trash"></i><?php echo lang('删除'); ?></a></span></th>
 				    </tr>
 				    <?php if (isset($output['extend'])&&is_array($output['extend'][$v['id']]['data'])){foreach ($output['extend'][$v['id']]['data'] as $value){?>
 				    <tr>
@@ -286,7 +286,7 @@
 				
 			</table>
 			<?php endforeach; endif; else: echo "" ;endif; } else {?>
-			<div>~~暂无数据</div>
+			<div>~~<?php echo lang('暂无数据'); ?></div>
 			<?php } ?>
 			
 			
@@ -342,7 +342,7 @@ $(function(){
 		var id = $(this).attr('data-id');
 		if(typeof(id) == 'undefined') return false;
 		
-		var f=confirm('确认要执行该操作吗？');
+		var f=confirm('<?php echo lang('确认要执行该操作吗？'); ?>');
 		
 		if(f){
 			$(this).attr('href','<?php echo url("Transport/del"); ?>'+'/id/'+id);

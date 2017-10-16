@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:48:"../oscshop/member/view/member_backend/index.html";i:1507895017;s:38:"../oscshop/admin/view/public/base.html";i:1507895017;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:48:"../oscshop/member/view/member_backend/index.html";i:1508163864;s:38:"../oscshop/admin/view/public/base.html";i:1508162033;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -216,6 +216,7 @@
 
 <div class="page-header">	
 	<a href="<?php echo url('MemberBackend/add'); ?>" class="btn btn-primary"><?php echo lang('新增'); ?></a>
+	<a href="<?php echo url('MemberBackend/import'); ?>" class="btn btn-primary"><?php echo lang('批量导入虚拟用户'); ?></a>
 </div>		
 <table class="table table-striped table-bordered table-hover search-form">
 	<thead>
@@ -236,9 +237,15 @@
 					<tr>											
 						<th>ID</th>
 						<th><?php echo lang('客户端'); ?></th> 
+						<th><?php echo lang('头像'); ?></th>
 						<th><?php echo lang('用户名'); ?></th> 
 						<th><?php echo lang('用户组'); ?></th>
-						<th><?php echo lang('登录次数'); ?></th> 						
+						<th><?php echo lang('省份'); ?></th>
+						<th><?php echo lang('城市'); ?></th>
+						<th><?php echo lang('中奖次数'); ?></th>
+						<th><?php echo lang('最后中奖'); ?></th>
+						<th><?php echo lang('来源'); ?></th>
+						<th><?php echo lang('登录次数'); ?></th>
 						<th><?php echo lang('创建时间'); ?></th>							
 						<th><?php echo lang('最后登录'); ?></th>		
 					
@@ -251,12 +258,34 @@
 							<td><?php echo $v['uid']; ?></td>
 							<td><?php echo $v['reg_type']; ?></td>
 							<td>
+								<?php if($v['userpic']): ?>
+		                  			<img src="IMG_ROOT<?php echo resize($v['userpic'],50,50); ?>" />
+			                  	<?php else: ?>
+			                  		<img src="__PUBLIC__/image/no_image_50x50.jpg" />
+			                  	<?php endif; ?>
+							</td>
+							<td>
 								<?php if($v['reg_type'] != 'weixin'): ?>
 									<?php echo $v['username']; else: ?>
 									<?php echo $v['nickname']; endif; ?>
 							</td>
 							<td>
 								<?php echo $v['title']; ?>
+							</td>
+							<td>
+								<?php echo $v['province']; ?>
+							</td>
+							<td>
+								<?php echo $v['city']; ?>
+							</td>
+							<td>
+								<?php echo $v['wincount']; ?>
+							</td>
+							<td>
+								<?php echo $v['lastwintime']; ?>
+							</td>
+							<td>
+								<?php echo $v['from']; ?>
 							</td>
 							<td><?php echo $v['loginnum']; ?></td>
 							<td><?php if($v['regdate'] != 0): ?><?php echo date("Y-m-d",$v['regdate']); else: ?><?php echo lang('无'); endif; ?></td>

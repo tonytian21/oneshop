@@ -1,0 +1,42 @@
+{extend name="../oscshop/admin/view/public/base.html" /}
+{block name="content"}
+<div class="page-header">
+		<h1>
+			{$breadcrumb2}
+			<small>
+				<i class="ace-icon fa fa-angle-double-right"></i>
+				{$crumbs}
+			</small>
+		</h1>
+</div>	
+<div class="row">
+	<div class="col-xs-12">	
+		<div class="form-horizontal">
+			<form class="form-horizontal" id="validation-form"  method="post" action='{:url("MemberBackend/import")}' enctype="multipart/form-data">
+				<div class="form-group required">
+					<label class="col-sm-2 control-label">{:lang('选择导入文件')}</label>
+					<div class="col-sm-10">
+						<input  class="form-control" type="file" placeholder="{:lang('选择导入文件')}" name="userfile" />
+					</div>
+				</div>	
+				<div class="form-group">
+					<div style="margin-left:50px;">
+						<a class="btn btn-primary" href='{:url("MemberBackend/template")}'>{:lang('下载导入模板')}</a>
+						<input name="send" type="submit" value="{:lang('确认导入')}" class="btn btn-primary" />
+					</div>
+				</div>	
+			</form>
+			<div style="padding:15px; width:90%; border-radius:5px; margin-top:30px; border:1px solid #3c8dbc; margin-left:10px;">
+				<p>注：</p>
+				<p>用户名,密码,邮箱,手机</p>
+				<p>用户名和密码可以不填写</p>
+				<p>邮箱和手机必须填写其中一个，也可以两个都填写</p>
+				<p style="color:red">重点说明：用户名和邮箱是不能重复的，如果重复，重复项会被过滤。</p>
+				<p>密码不写默认为  888888   六个8</p>
+				<p style="color:red">我们给定的示例excel格式请不要修改，直接在里面填写数据即可</p>
+				
+			</div>
+		</div>
+	</div>
+</div>
+{/block}

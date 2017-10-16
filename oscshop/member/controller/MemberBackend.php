@@ -15,6 +15,7 @@
 namespace osc\member\controller;
 use osc\common\controller\AdminBase;
 use think\Db;
+
 class MemberBackend extends AdminBase{
 	
 	protected function _initialize(){
@@ -49,7 +50,6 @@ class MemberBackend extends AdminBase{
     	return $this->fetch();
 	 }
 	 public function add(){
-	 	
 		if(request()->isPost()){
 			$date=input('post.');
 			$result = $this->validate($date,'Member');			
@@ -64,7 +64,12 @@ class MemberBackend extends AdminBase{
 			$member['email']=$date['email'];
 			$member['telephone']=$date['telephone'];
 			$member['groupid']=$date['groupid'];
-			
+			$member['country'] = $date['country'];
+			$member['province'] = $date['province'];
+			$member['city'] = $date['city'];
+			$member['from'] = '后台添加';
+			$member['checked'] = '1';
+			$member['userpic'] = $date['userpic'];
 			$uid=Db::name('member')->insert($member,false,true);
 			
 			if($uid){
@@ -94,6 +99,7 @@ class MemberBackend extends AdminBase{
 			$member['checked']=$date['checked'];
 			$member['telephone']=$date['telephone'];
 			$member['groupid']=$date['groupid'];
+			$member['userpic'] = $date['userpic'];
 			
 			if(Db::name('member')->where('uid',$date['uid'])->update($member)){
 				
@@ -115,6 +121,80 @@ class MemberBackend extends AdminBase{
 		$this->assign('crumbs','会员资料');
 	 	return $this->fetch('info');
 	 }
- 
+ 	
+ 	public function template(){
+ 		$file_name = 'importuser.xls';
+		$file_sub_path=$_SERVER['DOCUMENT_ROOT']."/static/resource/";
+		$file_path=$file_sub_path.$file_name; 
+		$fp=fopen($file_path,"r"); 
+		$file_size=filesize($file_path);
+		//下载文件需要用到的头 
+		Header("Content-type: application/octet-stream"); 
+		Header("Accept-Ranges: bytes"); 
+		Header("Accept-Length:".$file_size); 
+		Header("Content-Disposition: attachment; filename=".$file_name); 
+		$buffer=1024; 
+		$file_count=0; 
+		while(!feof($fp) && $file_count<$file_size){ 
+			$file_con=fread($fp,$buffer); 
+			$file_count+=$buffer; 
+			echo $file_con; 
+		} 
+		fclose($fp);    
+		exit();
+ 	}
+
+ 	public function import(){
+	 	
+		if(request()->isPost()){
+			$config = [
+		        'headrow' => '0',
+		        'columns' => [
+		            0 => [
+		                'name' => 'username'
+		            ],
+		            1 => [
+		                'name' => 'password'
+		            ],
+		            2 => [
+		                'name' => 'email'
+		            ],
+		            3 => [
+		                'name' => 'telephone'
+		            ],
+		        ]
+		    ];
+
+		    if(!$_FILE['userfile'])
+		    	$this->error('请选择导入文件');
+                    
+            $DictName = date('Ymd').'/'.rand(100000000,999999999);
+                    
+            $path = $_SERVER['DOCUMENT_ROOT'].'/uploads/'. $DictName.'/';
+            if(!is_dir($path))
+                mkdir($path, 0777, true);
+                
+            $filename = date('YmdHis').rand(100,999).'.' . $fileModel->file->extension;
+            
+            /*
+                
+            $excel = new ExcelHelper();
+            
+            $tmpDataArr = $excel->ReadExcel($path. $filename, 'OrderConfig');
+            
+            if(empty($tmpDataArr))
+            {
+                $message = '导入表格为空。';
+                break;
+            }          
+            //print_r(count($tmpDataArr['success']));
+            //insert success records
+            if(isset($tmpDataArr['success']) && count($tmpDataArr['success']) > 0) {
+            }
+            */
+		}
+		$this->assign('crumbs','批量导入虚拟会员');
+	 	return $this->fetch('import');
+	 }
 }
 ?>
