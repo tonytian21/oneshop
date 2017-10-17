@@ -165,33 +165,37 @@ class MemberBackend extends AdminBase{
 		        ]
 		    ];
 
-		    if(!$_FILE['userfile'])
+			$file = request()->file('userfile');
+			    
+			// 移动到框架应用根目录/public/uploads/ 目录下
+			if($file){
+				$DictName = date('Ymd').'/'.rand(100000000,999999999);
+                    
+	            $path = $_SERVER['DOCUMENT_ROOT'].'/uploads/'. $DictName.'/';
+	            if(!is_dir($path))
+	                mkdir($path, 0777, true);
+	                
+			    $info = $file->move($path);
+			    if($info){
+			        $excel = new ExcelHelper();
+            
+		            $tmpDataArr = $excel->ReadExcel($path. $info->getSaveName(), $config);
+		            
+		            if(empty($tmpDataArr))
+		            {
+		            	$this->error('导入表格为空。');
+		            	return;
+		            }          
+		            
+		            if(isset($tmpDataArr['success']) && count($tmpDataArr['success']) > 0) {
+		            	
+		            }
+			    }else{
+			        $this->error($file->getError());
+			    }
+			}else{
 		    	$this->error('请选择导入文件');
-                    
-            $DictName = date('Ymd').'/'.rand(100000000,999999999);
-                    
-            $path = $_SERVER['DOCUMENT_ROOT'].'/uploads/'. $DictName.'/';
-            if(!is_dir($path))
-                mkdir($path, 0777, true);
-                
-            $filename = date('YmdHis').rand(100,999).'.' . $fileModel->file->extension;
-            
-            /*
-                
-            $excel = new ExcelHelper();
-            
-            $tmpDataArr = $excel->ReadExcel($path. $filename, 'OrderConfig');
-            
-            if(empty($tmpDataArr))
-            {
-                $message = '导入表格为空。';
-                break;
-            }          
-            //print_r(count($tmpDataArr['success']));
-            //insert success records
-            if(isset($tmpDataArr['success']) && count($tmpDataArr['success']) > 0) {
-            }
-            */
+			}
 		}
 		$this->assign('crumbs','批量导入虚拟会员');
 	 	return $this->fetch('import');
