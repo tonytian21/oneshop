@@ -1,10 +1,10 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:37:"../oscshop/admin/view/menu/index.html";i:1505885316;s:38:"../oscshop/admin/view/public/base.html";i:1505885316;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:37:"../oscshop/admin/view/menu/index.html";i:1508245853;s:38:"../oscshop/admin/view/public/base.html";i:1508162033;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta charset="utf-8" />
-		<title><?php echo \think\Config::get('SITE_NAME'); ?>-后台管理中心</title>
+		<title><?php echo \think\Config::get('SITE_NAME'); ?>-<?php echo lang('后台管理中心'); ?></title>
 
 		<meta name="description" content="<?php echo \think\Config::get('SITE_NAME'); ?>" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
@@ -76,7 +76,7 @@
 				<div class="navbar-header pull-left">
 					<a href="<?php echo url('admin/Index/index'); ?>" class="navbar-brand">
 						<small>							
-							<?php echo \think\Config::get('SITE_NAME'); ?> 后台管理
+							<?php echo \think\Config::get('SITE_NAME'); ?> <?php echo lang('后台管理'); ?>
 						</small>
 					</a>
 					<button class="pull-right navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#sidebar">
@@ -106,17 +106,17 @@
 							<ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
 								
 								<li>
-									<a target="_blank" href="<?php echo \think\Request::instance()->root(true); ?>">网站前台</a>
+									<a target="_blank" href="<?php echo \think\Request::instance()->root(true); ?>"><?php echo lang('网站前台'); ?></a>
 								</li>
 								
 								<li>
-									<a href="<?php echo url('admin/User/edit',array('id'=>session('user_auth.uid'))); ?>">修改密码</a>
+									<a href="<?php echo url('admin/User/edit',array('id'=>session('user_auth.uid'))); ?>"><?php echo lang('修改密码'); ?></a>
 								</li>
 								
-								<li><a href="<?php echo url('admin/Index/clear'); ?>">清空缓存</a></li>
+								<li><a href="<?php echo url('admin/Index/clear'); ?>"><?php echo lang('清空缓存'); ?></a></li>
 
 								<li>
-									<a href="<?php echo url('admin/Index/logout'); ?>">退出系统</a>
+									<a href="<?php echo url('admin/Index/logout'); ?>"><?php echo lang('退出系统'); ?></a>
 								</li>
 							</ul>
 						</li>
@@ -141,7 +141,7 @@
 					<li class="hover">
 						<a target="_blank" href="<?php echo \think\Request::instance()->root(true); ?>">
 							<i class="menu-icon fa fa fa-home fa-lg"></i>
-							<span class="menu-text">前台 </span>
+							<span class="menu-text"><?php echo lang('前台'); ?> </span>
 							<b class="arrow fa fa-angle-down"></b>
 						</a>
 						<b class="arrow"></b>
@@ -214,9 +214,9 @@
 	</h1>
 </div>
 <div class="page-header">
-	<a id="addParent" class="btn btn-primary">新增</a>
-	<a id="edit" class="btn btn-primary">编辑</a>
-	<a id="remove" class="btn btn-primary">删除</a>
+	<a id="addParent" class="btn btn-primary"><?php echo lang('新增'); ?></a>
+	<a id="edit" class="btn btn-primary"><?php echo lang('编辑'); ?></a>
+	<a id="remove" class="btn btn-primary"><?php echo lang('删除'); ?></a>
 </div>
 
 <div class="row">
@@ -228,28 +228,28 @@
     <div class="dialog_content">
     
         <dl>
-        	<dt>菜单名称</dt>
+        	<dt><?php echo lang('菜单名称'); ?></dt>
         	<dd><input type="text" name="title" class="text" /></dd>
         	<dt>URL</dt>
     		<dd><input name="url" type="text" value="" size="50"  /></dd>    	
     		
-    		<dt>模块</dt>
+    		<dt><?php echo lang('模块'); ?></dt>
     		<dd><input name="module" type="text" value=""  /></dd>  
     		
-    		<dt>图标</dt>
+    		<dt><?php echo lang('图标'); ?></dt>
     		<dd><input name="icon" type="text" value=""  /></dd> 
     		
-    		<dt>类型</dt>
+    		<dt><?php echo lang('类型'); ?></dt>
     		<dd>
     			<label>
-    				<input id="nav" name="type" type="radio" value="nav" checked="checked" /> 显示 
+    				<input id="nav" name="type" type="radio" value="nav" checked="checked" /> <?php echo lang('显示'); ?> 
     			</label>
     			<label>
-    				<input id="auth" name="type" type="radio" value="auth"  /> 不显示 
+    				<input id="auth" name="type" type="radio" value="auth"  /> <?php echo lang('不显示'); ?> 
     			</label>
     		</dd>   
     			
-    		<dt>排序</dt>
+    		<dt><?php echo lang('排序'); ?></dt>
     		<dd>
     			<input name="sort_order" type="text" value="" />
     		</dd>
@@ -358,41 +358,34 @@ function save(type){
 				'sort_order':$("input[name='sort_order']").val(),		
 				'module':$("input[name='module']").val(),	
 				'icon':$("input[name='icon']").val(),	
-				'type':$("input[name='type']:checked").val(),			
-				
-				
+				'type':$("input[name='type']:checked").val(),				
 			},
 			function(d){	
-				
 			    if(type=='add'){						
-						if(d.error){
-							alert(d.error);
+					if(d.error){
+						alert(d.error);
+					}else if(d.status=='success'){	
+				    	if(treeNode){
+				    		treeNode = zTree.addNodes(treeNode, {id:d.id, pId:id, isParent:isp, name:d.name});
+				    	}else{
+				    		treeNode = zTree.addNodes(treeNode, {id:d.id, pId:0, isParent:isp, name:d.name});
+				    	}
+				    	
+				    	close_artDialog();
+				    }	
+				}else if(type=='edit'){
+					
+					if(d.success){
+						nodes[0].name = d.name;
+						zTree.updateNode(nodes[0]);
 						
-						}else if(d.status=='success'){											
-							//有父节点
-					    	if(treeNode){
-					    		treeNode = zTree.addNodes(treeNode, {id:d.id, pId:id, isParent:isp, name:d.name});
-					    	}else{
-					    		treeNode = zTree.addNodes(treeNode, {id:d.id, pId:0, isParent:isp, name:d.name});
-					    	}
-					    	
-					    	close_artDialog();
-					    }	
-					}else if(type=='edit'){
-						
-						if(d.success){
-							nodes[0].name = d.name;
-							zTree.updateNode(nodes[0]);
-							
-							close_artDialog();
-						}
-						if(d.error){
-							alert(d.error);
-						}
-						
-						
+						close_artDialog();
 					}
-			}
+					if(d.error){
+						alert(d.error);
+					}
+				}
+			}	
 		);	
 }
 
@@ -475,7 +468,7 @@ function remove(e) {
 			nodes = zTree.getSelectedNodes(),
 			treeNode = nodes[0];
 			if (nodes.length == 0) {
-				alert("请先选择一个节点");
+				alert("'请先选择一个节点'");
 				return;
 			}
 			$.post(

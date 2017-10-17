@@ -66,8 +66,7 @@ function save(type){
 						if(d.error){
 							alert(d.error);
 						
-						}else if(d.status=='success'){											
-							//{:lang('有父节点')}
+						}else if(d.status=='success'){	
 					    	if(treeNode){
 					    		treeNode = zTree.addNodes(treeNode, {id:d.id, pId:id, isParent:isp, name:d.name});
 					    	}else{

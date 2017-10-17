@@ -15,6 +15,7 @@
 namespace osc\member\controller;
 use osc\common\controller\AdminBase;
 use think\Db;
+use oscshop\ExcelHelper;
 
 class MemberBackend extends AdminBase{
 	
@@ -70,6 +71,7 @@ class MemberBackend extends AdminBase{
 			$member['from'] = '后台添加';
 			$member['checked'] = '1';
 			$member['userpic'] = $date['userpic'];
+			$member['isrobot'] = $date['isrobot'];
 			$uid=Db::name('member')->insert($member,false,true);
 			
 			if($uid){
@@ -167,7 +169,6 @@ class MemberBackend extends AdminBase{
 
 			$file = request()->file('userfile');
 			    
-			// 移动到框架应用根目录/public/uploads/ 目录下
 			if($file){
 				$DictName = date('Ymd').'/'.rand(100000000,999999999);
                     
@@ -188,7 +189,37 @@ class MemberBackend extends AdminBase{
 		            }          
 		            
 		            if(isset($tmpDataArr['success']) && count($tmpDataArr['success']) > 0) {
-		            	
+		            	$successCount = 0;
+		            	foreach ($tmpDataArr['success'] as $data) {
+		            		$username = $data['username'] ? $data['username'] : ($data['email'] ? $data['email'] : $data['telephone']);
+
+		            		if(!$username)
+		            			break;
+
+		            		$member['username']= $username;
+
+							$member['password']= think_ucenter_encrypt(($data['password'] ? $data['password'] : '888888'),config('PWD_KEY'));
+							$member['regdate']=time();
+							$member['reg_type']='pc';
+							$member['email']= $data['email'];
+							$member['telephone']= $data['telephone'];
+							$member['groupid']= 2;
+							$member['from'] = '后台导入';
+							$member['checked'] = '1';
+							//$member['userpic'] = 'images/osc1/11/3';
+							$member['isrobot'] = 1;
+							$uid=Db::name('member')->insert($member,false,true);
+							
+							if($uid){
+								$successCount++;
+							}
+		            	}
+
+		            	$this->success('导入成功,成功导入'.$successCount.'条，失败：'.(count($tmpDataArr['success']) - $successCount).'条。',url('MemberBackend/index'));
+		            }
+		            else{
+		            	$this->error('导入表格失败，请检查导入内容。');
+		            	return;
 		            }
 			    }else{
 			        $this->error($file->getError());
@@ -199,6 +230,75 @@ class MemberBackend extends AdminBase{
 		}
 		$this->assign('crumbs','批量导入虚拟会员');
 	 	return $this->fetch('import');
+	 }
+
+	 public function setwinner(){
+		if(request()->isPost()){
+			$data=input('post.');
+
+			if(!$data['term_id'] || !$data['uid']){
+				return ['error'=>'参数错误'];
+			}
+
+			$member['winneruid'] = $data['uid'];
+			$map['winneruid'] = 0;
+			$map['term_id'] = $data['term_id']; 
+			if(Db::name('goods_term')->where($map)->update($member)){
+				storage_user_action(UID,session('user_auth.username'),config('BACKEND_USER'),'指定了中奖人');
+				return ['success'=>'指定中奖人成功','action'=>'add'];
+			}else{
+				return ['error'=>'指定中奖人失败'];
+			}
+		}
+		$this->assign('crumbs','指定中奖人');
+
+		$param=input('param.');
+		
+		$query=[];
+		
+		if(isset($param['goods_id'])){		
+			$map['og.goods_id']= $param['goods_id'];
+			$query['og.goods_id']=urlencode($param['goods_id']);
+		}
+
+		if(isset($param['user_name'])){		
+			$map['m.username|m.nickname']=['like',"%".$param['user_name']."%"];
+			$query['m.username']=urlencode($param['user_name']);
+		}
+
+		if(isset($param['province']) && $param['province'] != '省份、州'){		
+			$map['m.province']=['like',"%".$param['province']."%"];
+			$query['m.province']=urlencode($param['province']);
+		}
+
+		if(isset($param['city']) && $param['city'] != '地级市、县'){		
+			$map['m.username']=['like',"%".$param['city']."%"];
+			$query['m.city']=urlencode($param['city']);
+		}
+
+		$map['m.isrobot'] = 0;
+		$map['gt.winneruid'] = 0;
+		$map['gt.complate'] = ['in','1,2'];
+		$list=[];
+		
+		$list=Db::name('member')->alias('m')->field('m.*,mag.title,og.goods_id,gd.name as goodsname,gt.term_id,gt.term_num,o.total as paytotal')	
+		->join('member_auth_group mag','m.groupid = mag.id')
+		->join('order o','o.uid=m.uid')
+		->join('order_goods og','og.order_id=o.order_id')
+		->join('goods_term gt','gt.term_id=og.term_id')
+		->join('goods_description gd','og.goods_id=gd.goods_id')
+		->where($map)->paginate(config('page_num'),false,$query);		
+		
+		$this->assign('list',$list);
+
+		//获取所有销售中以及等待开奖的商品信息
+		$goodsMap['gt.complate'] = ['in','1,2'];
+		$goodsInfo = Db::name('goods_term')->alias('gt')->field('gd.name,gd.goods_id')	
+		->join('goods_description gd','gt.goods_id=gd.goods_id')->where($goodsMap)->distinct(true)->select();
+		$this->assign('goodsInfo',$goodsInfo);		
+		$this->assign('empty','<tr><td colspan="20">没有数据~</td></tr>');
+		
+	 	return $this->fetch('setwinner');
 	 }
 }
 ?>

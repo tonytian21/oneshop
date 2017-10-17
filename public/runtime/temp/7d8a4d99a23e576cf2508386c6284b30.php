@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:47:"../oscshop/member/view/order_backend/index.html";i:1507895017;s:38:"../oscshop/admin/view/public/base.html";i:1507895017;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:47:"../oscshop/member/view/order_backend/index.html";i:1508253116;s:38:"../oscshop/admin/view/public/base.html";i:1508162033;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -230,9 +230,12 @@
 					<tr>											
 						<th>ID</th>
 						<th><?php echo lang('订单号'); ?></th> 
+						<th><?php echo lang('商品名称'); ?></th>	
+						<th><?php echo lang('期号'); ?></th>	
 						<th><?php echo lang('支付方式'); ?></th> 
 						<th><?php echo lang('总计'); ?></th> 						
-						<th><?php echo lang('会员名'); ?></th>					
+						<th><?php echo lang('会员名'); ?></th>
+						<th><?php echo lang('是否中奖'); ?></th>						
 						<th><?php echo lang('状态'); ?></th>	
 						<th><?php echo lang('下单时间'); ?></th>					
 						<th><?php echo lang('操作'); ?></th>	
@@ -242,6 +245,8 @@
 						<?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "$empty" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?>
 						<tr>						
 							<td><?php echo $v['order_id']; ?></td>
+							<td><?php echo $v['goods_name']; ?></td>
+							<td><?php echo $v['term_num']; ?></td>
 							<td><?php echo $v['order_num_alias']; if($v['shipping_method'] == ''): ?>
 								<span style="border:1px solid red;color:#f60;"><?php echo lang('免运输'); ?></span>
 								<?php endif; ?>
@@ -254,6 +259,11 @@
 								<?php if($v['reg_type'] != 'weixin'): ?>
 									<?php echo $v['username']; else: ?>
 									<?php echo $v['nickname']; ?><?php echo lang('（微信用户）'); endif; ?>
+							</td>
+							<td>
+								<?php if($v['winner']): ?>
+									<?php echo lang('已中奖'); else: ?>
+									<?php echo lang('未中奖'); endif; ?>
 							</td>
 							<td><?php echo $v['name']; ?></td>
 							<td>

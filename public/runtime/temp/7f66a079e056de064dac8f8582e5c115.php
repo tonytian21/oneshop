@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:46:"../oscshop/member/view/menu_backend/index.html";i:1507895017;s:38:"../oscshop/admin/view/public/base.html";i:1507895017;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:46:"../oscshop/member/view/menu_backend/index.html";i:1508245899;s:38:"../oscshop/admin/view/public/base.html";i:1508162033;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -368,8 +368,7 @@ function save(type){
 						if(d.error){
 							alert(d.error);
 						
-						}else if(d.status=='success'){											
-							//<?php echo lang('有父节点'); ?>
+						}else if(d.status=='success'){	
 					    	if(treeNode){
 					    		treeNode = zTree.addNodes(treeNode, {id:d.id, pId:id, isParent:isp, name:d.name});
 					    	}else{

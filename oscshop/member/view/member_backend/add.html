@@ -90,9 +90,9 @@
 				
 					<div class="col-sm-10">
 						<label class="radio-inline">
-						<input type="radio" checked="checked" value="1" name="subtract">{:lang('是')}</label>
+						<input type="radio" checked="checked" value="1" name="isrobot">{:lang('是')}</label>
 						<label class="radio-inline">
-						<input type="radio" value="0" name="subtract">{:lang('否')}</label>
+						<input type="radio" value="0" name="isrobot">{:lang('否')}</label>
 					</div>
 				
 			</div>	
@@ -115,7 +115,7 @@ var back_index="{:url('member_backend/index')}";
 $('#send').click(function(){
 	$.post(
 		'{:url("MemberBackend/add")}',
-		$('input[type=\'text\'],input[type=\'hidden\'],select'),
+		$('input[type=\'text\'],input[type=\'hidden\'],input[type=\'radio\'],select'),
 		function(d){
 			art_dialog(d,back_index);
 		}

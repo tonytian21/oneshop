@@ -84,7 +84,9 @@ class Order{
 			->join('__MEMBER__ m','o.uid = m.uid','left')			
 			->join('__ORDER_STATUS__ os','o.order_status_id = os.order_status_id','left')
 			->join('__ADDRESS__ a','o.address_id = a.address_id','left')
-			->field('o.*,m.username,a.*')
+			->join('__GOODS_TERM__ gt','o.term_id = gt.term_id')
+			->join('__GOODS_DESCRIPTION__ gd','o.goods_id = gd.goods_id')
+			->field('o.*,m.username,a.*,gd.name as goods_name,gt.term_num')
 			->where($map)
 			->find();
 		
@@ -96,7 +98,8 @@ class Order{
 			'order'=>$order,
 			'order_product'=>Db::name('order_goods')->alias('og')
 			->join('__GOODS__ g','og.goods_id = g.goods_id','left')
-			->field('og.*,g.image')->where('og.order_id',$order_id)->select(),			
+			->join('__GOODS_TERM__ gt','gt.term_id=og.term_id')
+			->field('og.*,g.image,gt.term_num')->where('og.order_id',$order_id)->select(),			
 			'order_total'=>Db::name('order_total')->where('order_id',$order_id)->select(),
 			'order_statuses'=>Db::name('OrderStatus')->select(),
 			'order_history'=>Db::name('order_history')->where('order_id',$order_id)->select()
@@ -130,6 +133,8 @@ class Order{
 		return Db::view('Order','*')
 		->view('Member','username,reg_type,nickname','Order.uid=Member.uid')
 		->view('OrderStatus','order_status_id,name','Order.order_status_id=OrderStatus.order_status_id')
+		->view('GoodsDescription','name as goods_name','GoodsDescription.goods_id=Order.goods_id')
+		->view('GoodsTerm','term_num','GoodsTerm.term_id=Order.term_id')
 		->where($map)
 		->order('Order.order_id desc')
 		->paginate($page_num,false,['query'=>$query]);

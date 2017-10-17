@@ -162,8 +162,8 @@ class Worker extends Server
         //(余数) + 10000001 即为中奖号码
         $lastTicket = 10000001 + $tmpMod;
         
-        //更改期数表 为等待开奖状态 complate = 2  winneruid order_id
-        $termInfo['complate'] = 2;
+        //更改期数表 为等待开奖状态 complate = 3  winneruid order_id
+        $termInfo['complate'] = 3;
         $termInfo['ticketnum'] = $lastTicket;
         //获取中奖的订单信息
         $orderGoodsInfo = Db::name('order_goods')->where("term_id = ".$termInfo['term_id']." and ticketnum='".$lastTicket."'")->find();

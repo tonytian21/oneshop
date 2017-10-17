@@ -27,9 +27,12 @@
 					<tr>											
 						<th>ID</th>
 						<th>{:lang('订单号')}</th> 
+						<th>{:lang('商品名称')}</th>	
+						<th>{:lang('期号')}</th>	
 						<th>{:lang('支付方式')}</th> 
 						<th>{:lang('总计')}</th> 						
-						<th>{:lang('会员名')}</th>					
+						<th>{:lang('会员名')}</th>
+						<th>{:lang('是否中奖')}</th>						
 						<th>{:lang('状态')}</th>	
 						<th>{:lang('下单时间')}</th>					
 						<th>{:lang('操作')}</th>	
@@ -39,6 +42,8 @@
 						{volist name="list" id="v" empty="$empty"}
 						<tr>						
 							<td>{$v.order_id}</td>
+							<td>{$v.goods_name}</td>
+							<td>{$v.term_num}</td>
 							<td>{$v.order_num_alias}
 								{if condition="$v['shipping_method'] eq ''"}
 								<span style="border:1px solid red;color:#f60;">{:lang('免运输')}</span>
@@ -53,6 +58,13 @@
 									{$v.username}
 								{else/}
 									{$v.nickname}{:lang('（微信用户）')}
+								{/if}
+							</td>
+							<td>
+								{if condition="$v['winner']"}
+									{:lang('已中奖')}
+								{else/}
+									{:lang('未中奖')}
 								{/if}
 							</td>
 							<td>{$v.name}</td>

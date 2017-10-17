@@ -56,41 +56,34 @@ function save(type){
 				'sort_order':$("input[name='sort_order']").val(),		
 				'module':$("input[name='module']").val(),	
 				'icon':$("input[name='icon']").val(),	
-				'type':$("input[name='type']:checked").val(),			
-				
-				
+				'type':$("input[name='type']:checked").val(),				
 			},
 			function(d){	
-				
 			    if(type=='add'){						
-						if(d.error){
-							alert(d.error);
+					if(d.error){
+						alert(d.error);
+					}else if(d.status=='success'){	
+				    	if(treeNode){
+				    		treeNode = zTree.addNodes(treeNode, {id:d.id, pId:id, isParent:isp, name:d.name});
+				    	}else{
+				    		treeNode = zTree.addNodes(treeNode, {id:d.id, pId:0, isParent:isp, name:d.name});
+				    	}
+				    	
+				    	close_artDialog();
+				    }	
+				}else if(type=='edit'){
+					
+					if(d.success){
+						nodes[0].name = d.name;
+						zTree.updateNode(nodes[0]);
 						
-						}else if(d.status=='success'){											
-							//{:lang('有父节点')}
-					    	if(treeNode){
-					    		treeNode = zTree.addNodes(treeNode, {id:d.id, pId:id, isParent:isp, name:d.name});
-					    	}else{
-					    		treeNode = zTree.addNodes(treeNode, {id:d.id, pId:0, isParent:isp, name:d.name});
-					    	}
-					    	
-					    	close_artDialog();
-					    }	
-					}else if(type=='edit'){
-						
-						if(d.success){
-							nodes[0].name = d.name;
-							zTree.updateNode(nodes[0]);
-							
-							close_artDialog();
-						}
-						if(d.error){
-							alert(d.error);
-						}
-						
-						
+						close_artDialog();
 					}
-			}
+					if(d.error){
+						alert(d.error);
+					}
+				}
+			}	
 		);	
 }
 
@@ -98,7 +91,7 @@ function add(e) {
 	
 	var dialog=$('#dialog').html();
 	
-	var title='{:lang('新增菜单')}';
+	var title='新增菜单';
 	
 	art.dialog({
 		title: title,
@@ -108,7 +101,7 @@ function add(e) {
 	 	  save('add');	    	
 	      return false;
 	    },
-	    cancelVal: '{:lang('关闭')}',
+	    cancelVal: '关闭',
 		cancel: true 
 	});	
 }
@@ -118,7 +111,7 @@ function edit() {
 		nodes = zTree.getSelectedNodes(),
 		treeNode = nodes[0];
 		if (nodes.length == 0) {
-			alert("{:lang('请先选择一个节点')}");
+			alert("请先选择一个节点");
 			return;
 		}else{
 			var id=treeNode.id;
@@ -147,7 +140,7 @@ function edit() {
 			
 	var dialog=$('#dialog').html();
 
-	var title='{:lang('修改菜单')}';
+	var title='修改菜单';
 	
 	art.dialog({
 		title: title,
@@ -157,7 +150,7 @@ function edit() {
 				save('edit');
 				return false;
 			},
-		    cancelVal: '{:lang('关闭')}',
+		    cancelVal: '关闭',
 			cancel: true 
 	});	
 				
@@ -165,7 +158,7 @@ function edit() {
 }
 function remove(e) {
 	
-			if(!confirm('{:lang('确认要删除吗！！')}')){
+			if(!confirm('确认要删除吗！！')){
 				return false;
 			}
 			
@@ -173,7 +166,7 @@ function remove(e) {
 			nodes = zTree.getSelectedNodes(),
 			treeNode = nodes[0];
 			if (nodes.length == 0) {
-				alert("{:lang('请先选择一个节点')}");
+				alert("'请先选择一个节点'");
 				return;
 			}
 			$.post(

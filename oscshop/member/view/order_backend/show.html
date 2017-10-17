@@ -33,6 +33,14 @@
 					<td>{:lang('订单编号')}</td>
 					<td>{$data.order.order_num_alias}</td>
 				</tr>
+				<tr>
+					<td>{:lang('商品名称')}</td>
+					<td>{$data.order.goods_name}</td>
+				</tr>
+				<tr>
+					<td>{:lang('期号')}</td>
+					<td>{$data.order.term_num}</td>
+				</tr>
 				 <tr>
 		            <td>{:lang('支付方式')}</td>
 		            <td>
@@ -143,66 +151,13 @@
             <tr>
               <td class="left">{:lang('商品品名')}</td>
               <td class="left">{:lang('型号')}</td>
-              <td class="right">{:lang('数量')}</td>
-              <?php if($data['order']['points_order']==0){ ?>
-              <td class="right">{:lang('价格')}</td>              
-              <td class="right">{:lang('总计')}</td>
-              <?php } ?>
+              <td class="right">{:lang('期号')}</td>
+              <td class="right">{:lang('兑奖码')}</td>              
+              <td class="right">{:lang('是否中奖')}</td>
+              <td class="right">{:lang('购买时间')}</td>
             </tr>
           </thead>
-          
-          <?php if($data['order']['points_order']==0){ ?>
-          
           <tbody>
-          	<?php if(isset($data['order_product'])&&is_array($data['order_product'])){ ?>
-	            <?php foreach ($data['order_product'] as $product) { ?>
-	            <tr>
-	              <td class="left">
-	              	<a><?php echo $product['name']; ?></a>
-	              	<?php if($option_list=Db::query('select * from '.config('database.prefix').'order_option where order_goods_id='.$product['order_goods_id'].' and order_id='.$product['order_id'])){ ?>
-					<?php foreach ($option_list as $option) { ?>
-	                <br />
-	                &nbsp;<small> - <?php echo $option['name']; ?>: <?php echo $option['value']; ?></small>
-	                <?php } ?>
-	                <?php } ?>
-	              </td>
-	              <td class="left"><?php echo $product['model']; ?></td>
-	              <td class="right">	              	
-	              	<input name="quantity" type="text" size="2" class="quantity" order_id="<?php echo $data['order']['order_id']; ?>" order_goods_id="<?php echo $product['order_goods_id']; ?>" value="<?php echo $product['quantity']; ?>" />
-	              </td>
-	              
-	              <td class="right">{:lang('￥')}
-	              	<input name="price" type="text" size="8" class="price" order_id="<?php echo $data['order']['order_id']; ?>" order_goods_id="<?php echo $product['order_goods_id']; ?>" value="<?php echo $product['price']; ?>" />
-	              </td>
-	              <td class="right">{:lang('￥')}<?php echo $product['total']; ?></td>
-	            </tr>
-	            <?php } ?>
-            <?php } ?>
-    
-          </tbody>
-          <?php if(isset($data['order_total'])&&is_array($data['order_total'])){ ?>
-	          <?php foreach ($data['order_total'] as $totals) { ?>
-	          <tbody>
-	            <tr>
-	              <?php if($totals['code']=='shipping'){ ?>	
-	              	<td colspan="4" class="right"><?php echo $totals['title']; ?>:</td>
-	              	<td class="right">{:lang('￥')}
-	                	<input id="shipping" order_id="<?php echo $data['order']['order_id']; ?>" type="text" size="8" value="<?php echo $totals['value']; ?>" />
-	                </td>
-	              <?php }else{ ?>	
-		              <td colspan="4" class="right"><?php echo $totals['title']; ?>:</td>
-		              
-		              <td class="right"><?php echo $totals['text']; ?></td>
-	              <?php } ?>
-	              
-	              
-	            </tr>
-	          </tbody>
-	          <?php } ?>
-          <?php } ?>
-          
-          <?php }elseif($data['order']['points_order']==1){ ?>
-          	<tbody>
           	<?php if(isset($data['order_product'])&&is_array($data['order_product'])){ ?>
 	            <?php foreach ($data['order_product'] as $product) { ?>
 	            <tr>
@@ -216,19 +171,29 @@
 	                <?php } ?>
 	              </td>
 	              <td class="left"><?php echo $product['model']; ?></td>
-	              <td class="right">	              	
-	              	<?php echo $product['quantity']; ?>
+	              <td class="left">	              	
+	              	<?php echo $product['term_num']; ?>
 	              </td>
-	              
+	              <td class="left">	              	
+	              	<?php echo $product['ticketnum']; ?>
+	              </td>
+	              <td class="left">	              	
+	              	<?php if($product['winner']){ ?>
+	              		{:lang('已中奖')}
+	              		<?php }else{?>
+	              		{:lang('未中奖')}
+	              		<?php }?>
+	              </td>
+	              <td class="right">	              	
+	              	<?php echo date('Y-m-d H:i:s.',substr($product['createtime'], 0, -3)). substr($product['createtime'], -3); ?>
+	              </td>
 	            </tr>
-	            <?php } ?>
-            <?php } ?>
-    
+    		<?php } ?>
           </tbody>
           
 	          <tbody>
 	            <tr>	             
-		              <td colspan="2" class="right">{:lang('积分')}: <?php echo $data['order']['pay_points']; ?> </td>
+		              <td colspan="5" class="right">{:lang('积分')}: <?php echo $data['order']['pay_points']; ?> </td>
 		              
 		              <td class="right"></td>	              
 	            </tr>

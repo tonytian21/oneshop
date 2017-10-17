@@ -1,6 +1,6 @@
 <?php
 
-namespace helper;
+namespace oscshop;
 
 use PHPExcel;
 
@@ -49,15 +49,15 @@ class ExcelHelper
      * @param string $config
      * @return mixed
      */
-    public function ReadExcel($path, $config)
+    public function ReadExcel($path, $arrConfig)
     {
         if (empty($path) || !file_exists($path)) {
-            $this->addError('NotExist', Yii::t('app', 'FileDoNotExist'));
+            $this->addError('NotExist', 'FileDoNotExist');
             return false;
         }
 
-        if (empty($config) || !isset(Yii::$app->params[$config]) || empty(Yii::$app->params[$config])) {
-            $this->addError('MissConfig', Yii::t('app', 'MissConfig'));
+        if (empty($arrConfig)) {
+            $this->addError('MissConfig', 'MissConfig');
             return false;
         }
 
@@ -74,7 +74,7 @@ class ExcelHelper
                 ->setSheetIndex(0);
             $objPHPExcel = $objReader->load($path);
         } else {
-            $this->addError('ErrorFileType', Yii::t('app', 'ErrorFileType'));
+            $this->addError('ErrorFileType', 'ErrorFileType');
             return false;
         }
 
@@ -84,8 +84,6 @@ class ExcelHelper
         $highestRowNum = $sheet->getHighestRow();
         $highestColumn = $sheet->getHighestColumn();
         $highestColumnNum = \PHPExcel_Cell::columnIndexFromString($highestColumn);
-
-        $arrConfig = Yii::$app->params[$config];
 
         $headRow = intval($arrConfig['headrow']);
 
@@ -126,7 +124,7 @@ class ExcelHelper
                     $required = isset($columnConfig['required']) ? $columnConfig['required'] : false;
 
                     if ($required && trim($cellVal) == '') {
-                        $rowError .= $filed[$columnConfig['name']] . Yii::t('app', 'required') . "\r\n";
+                        $rowError .= $filed[$columnConfig['name']] . 'required' . "\r\n";
                         continue;
                     }
 
