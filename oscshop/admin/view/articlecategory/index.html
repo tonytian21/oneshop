@@ -1,0 +1,241 @@
+{extend name="public:base" /}
+{block name="javascript"}
+<script src="__PUBLIC__/ztree/jquery.ztree.all-3.5.min.js"></script>
+<link  rel="stylesheet" type="text/css" href="__PUBLIC__/ztree/zTreeStyle.css" />
+<link  rel="stylesheet" type="text/css" href="__PUBLIC__/ztree/tree.css" />
+<script>
+		var setting = {
+			view: {
+				addHoverDom: false,
+				removeHoverDom: false,
+				selectedMulti: false
+			},
+			edit: {
+				enable: true,
+				editNameSelectAll: true,
+				showRemoveBtn: false,
+				showRenameBtn: false
+			},
+			data: {
+				simpleData: {
+					enable: true
+				}
+			}
+		};
+
+	
+	
+	var zNodes ={$list};
+
+
+function save(type){
+		var zTree = $.fn.zTree.getZTreeObj("category_tree"),
+
+		nodes = zTree.getSelectedNodes(),
+		treeNode = nodes[0];
+
+		if(treeNode!=undefined){
+			var isp= nodes[0].isParent;
+		}else{
+			var isp= true;
+		}			
+		var id=(treeNode==undefined?0:treeNode.id);
+
+		if(type=='add'){
+			url='{:url("ArticleCategory/add")}';
+		}else if(type=='edit'){
+			url='{:url("ArticleCategory/edit")}';
+		}
+
+		$.post(
+			url,
+			{					
+				'cateid':id,
+				'name':$("input[name='name']").val(),
+				'pic_url':$("input[name='pic_url']").val(),		
+				'order':$("input[name='order']").val(),			
+			},
+			function(d){	
+			    if(type=='add'){						
+					if(d.error){
+						alert(d.error);
+					}else if(d.status=='success'){	
+				    	if(treeNode){
+				    		treeNode = zTree.addNodes(treeNode, {id:d.cateid, pId:id, isParent:isp, name:d.name});
+				    	}else{
+				    		treeNode = zTree.addNodes(treeNode, {id:d.cateid, pId:0, isParent:isp, name:d.name});
+				    	}
+				    	
+				    	close_artDialog();
+				    }	
+				}else if(type=='edit'){
+					
+					if(d.success){
+						nodes[0].name = d.name;
+						zTree.updateNode(nodes[0]);
+						
+						close_artDialog();
+					}
+					if(d.error){
+						alert(d.error);
+					}
+				}
+			}	
+		);	
+}
+
+function add(e) {
+	
+	var dialog=$('#dialog').html();
+	
+	var title='新增文章栏目';
+	
+	art.dialog({
+		title: title,
+		content:dialog,
+		lock: true,
+		zIndex:100,
+		ok: function () {	 		
+	 	  save('add');	    	
+	      return false;
+	    },
+	    cancelVal: '关闭',
+		cancel: true 
+	});	
+}
+function edit() {
+	
+	var zTree = $.fn.zTree.getZTreeObj("category_tree"),
+		nodes = zTree.getSelectedNodes(),
+		treeNode = nodes[0];
+		if (nodes.length == 0) {
+			alert("请先选择一个节点");
+			return;
+		}else{
+			var id=treeNode.id;
+			$.post(
+				'{:url("ArticleCategory/get_info")}',
+				{					
+					'cateid':id,
+					
+				},
+				function(d){			
+					$("input[name='name']").val(d.name);
+					$("input[name='pic_url']").val(d.url);
+					$("input[name='order']").val(d.order);
+					if(d.pic_url){
+						$("#thumb-image").html('<img src="IMG_ROOT' + d.pic_url + '" />');
+					}
+					
+					$("#nav").attr("checked","checked");
+				}
+			);				
+		}
+			
+	var dialog=$('#dialog').html();
+
+	var title='修改文章栏目';
+	
+	art.dialog({
+		title: title,
+			content:dialog,
+			lock: true,
+			ok: function () {
+				save('edit');
+				return false;
+			},
+		    cancelVal: '关闭',
+			cancel: true 
+	});	
+				
+	
+}
+function remove(e) {
+	
+			if(!confirm('确认要删除吗！！')){
+				return false;
+			}
+			
+			var zTree = $.fn.zTree.getZTreeObj("category_tree"),
+			nodes = zTree.getSelectedNodes(),
+			treeNode = nodes[0];
+			if (nodes.length == 0) {
+				alert("'请先选择一个节点'");
+				return;
+			}
+			$.post(
+				'{:url("ArticleCategory/del")}',
+				{					
+					'id':treeNode.id,					
+				},
+				function(d){			
+					if(d.error){
+						alert(d.error);
+					}else{						
+						zTree.removeNode(treeNode);
+					}
+					
+					
+				}
+			);
+}
+
+
+$(document).ready(function(){
+	$.fn.zTree.init($("#category_tree"), setting, zNodes);
+	$("#addParent").bind("click", {isParent:true}, add);
+	$("#edit").bind("click", edit);
+	$("#remove").bind("click", remove);
+});
+	
+</script>
+{/block}
+
+{block name="content"}
+<div class="page-header">
+	<h1>	
+		{$breadcrumb1}
+		<small>
+			<i class="ace-icon fa fa-angle-double-right"></i>
+			{$breadcrumb2}
+		</small>
+	</h1>
+</div>
+<div class="page-header">
+	<a id="addParent" class="btn btn-primary">{:lang('新增')}</a>
+	<a id="edit" class="btn btn-primary">{:lang('编辑')}</a>
+	<a id="remove" class="btn btn-primary">{:lang('删除')}</a>
+</div>
+
+<div class="row">
+	<div id="category_tree" class="ztree"></div>
+</div>
+
+	
+	<div id="dialog" class="dialog" style="display:none">
+    <div class="dialog_content">
+    
+        <dl>
+        	<dt>{:lang('文章栏目')}</dt>
+        	<dd><input type="text" name="name" class="text" /></dd>
+    		<dt>{:lang('图标')}</dt>
+    		<dd>
+				<div id="thumb">
+                  <a id="thumb-image" href="#" data-toggle="image" class="img-thumbnail"><img src="__PUBLIC__/image/no_image_100x100.jpg" /></a>
+                  <input type="hidden" name="pic_url" value="" id="input-image" />
+            	</div>
+    		</dd> 	
+    		<dt>{:lang('排序')}</dt>
+    		<dd>
+    			<input name="order" type="text" value="" />
+    		</dd>
+    		
+    		
+        </dl>       
+   
+      
+    </div>
+  </div> 
+	
+{/block}
+
