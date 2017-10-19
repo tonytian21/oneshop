@@ -68,6 +68,8 @@ class RechargeBackend extends AdminBase{
 			$id=Db::name('recharge_list')->insert($recharge,false,true);
 			
 			if($id){
+				$userInfo['balance'] = doubleval($userInfo['balance']) + doubleval($data['money']);
+				Db::name('member')->update($userInfo);
 				storage_user_action(UID,session('user_auth.username'),config('BACKEND_USER'),'新增了充值记录');
 			
 				return ['success'=>'充值成功','action'=>'add'];

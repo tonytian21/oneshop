@@ -1,0 +1,101 @@
+{extend name="public:base" /}
+{block name="content"}	
+<div class="page-header">
+	<h1>	
+		{$breadcrumb1}
+		<small>
+			<i class="ace-icon fa fa-angle-double-right"></i>
+			{$breadcrumb2}
+		</small>
+	</h1>
+</div>
+<div class="page-header">
+	<a href="{:url('Moment/add')}" class="btn btn-primary">{:lang('新增圈子')}</a>
+</div>	
+<table class="table table-striped table-bordered table-hover search-form">
+	<thead>
+		<input name="type" type="hidden"  value="search" />
+		<th><input name="title" type="text" placeholder="{:lang('输入圈子名称')}" value="{:input('title')}" /></th>
+		<th>
+			<a class="btn btn-primary" href="javascript:;" id="search" url="{:url('Moment/index')}">{:lang('查询')}</a>
+		</th>
+	</thead>
+</table>		
+<div class="row">
+	<div class="col-xs-12">	
+		<div class="table-responsive">
+			<table class="table table-striped table-bordered table-hover">
+				<thead>
+					<tr>		
+						<th>{:lang('缩略图')}</th>									
+						<th>{:lang('圈子名称')}</th>
+						<th>{:lang('简介')}</th>
+						<th>{:lang('公告')}</th> 
+						<th>{:lang('成员数')}</th> 
+						<th>{:lang('帖子数')}</th>
+						<th>{:lang('创建时间')}</th>
+						<th>{:lang('操作')}</th>		
+					</tr>
+				</thead>
+				<tbody>
+						{volist name="list" id="a" empty="$empty"}
+						<tr>	
+							<td>
+								{if condition="$a['image']"}
+		                  			<img src="IMG_ROOT{$a.image|resize=50,50}" />
+			                  	{else /}
+			                  		<img src="__PUBLIC__/image/no_image_50x50.jpg" />
+			                  	{/if}
+							</td>	
+							<td>{$a.title}</td>	
+							<td>{$a.description}</td>
+							<td>{$a.notice}</td>
+							<td>{$a.membercount}</td>
+							<td>{$a.postcount}</td>
+							<td><?php echo date('Y-m-d H:i:s',$a['createtime']) ?></td>		
+							<td>
+								<a  class="btn btn-xs btn-info" href='{:url("Moment/edit",array("id"=>$a["id"]))}'>
+									<i class="fa fa-edit bigger-120"></i>
+								</a> 
+								<a class="delete btn btn-xs btn-danger" href='{:url("Moment/del",array("id"=>$a["id"]))}' >
+									<i class="fa fa-trash bigger-120"></i>
+								</a>
+							</td>
+						</tr>
+						{/volist}	
+						
+						<tr>
+							<td colspan="20" class="page">{$list->render()}</td>
+						</tr>
+				</tbody>
+				
+			</table>
+		</div>
+	</div>
+</div>
+{/block}
+{block name="javascript"}
+<style>
+.warning{
+	border:1px solid red;
+	color:#f60;
+}	
+</style>
+<script>
+$(function(){
+	
+	$("#search").click(function () {
+        var url = $(this).attr('url');
+        var query = $('.search-form').find('input,select').serialize();
+        query = query.replace(/(&|^)(\w*?\d*?\-*?_*?)*?=?((?=&)|(?=$))/g, '');
+        query = query.replace(/^&/g, '');
+        if (url.indexOf('?') > 0) {
+            url += '&' + query;
+        } else {
+            url += '?' + query;
+        }
+        window.location.href = url;
+    });
+});		
+</script>
+{/block}
