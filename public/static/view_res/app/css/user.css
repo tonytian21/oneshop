@@ -1,0 +1,15 @@
+.headwrap{ padding: 50px 0 0 20px; line-height: 80px; }
+.headwrap a{ display: inline-block;width: 80px; height:80px; float: left;}
+.headwrap span{ margin-left: 10px; font-size: 16px; color: #FFFFFF;}
+.mui-content .mui-bar-tab{ background: rgba(0,0,0,.4);margin-top: 20px;}
+.mui-content .mui-bar-tab .mui-tab-item{color: #FFFFFF; border-right: 1px solid rgba(255,255,255,.3);}
+.mui-content .mui-bar-tab .mui-tab-item b{display: block;}
+.mui-content .mui-bar-tab .mui-tab-item.iconfont{ font-size: 36px;}
+
+
+.mui-navigate-right >.mui-pull-right{ margin-right: 20px;}
+
+
+.mui-table-view-cell .iconfont,.mui-table-view-cell .mui-icon{font-size: 14px;}
+.mui-table-view .mui-radio input[type=radio]:before{ font-size:18px; line-height: 28px; }
+.mui-table-view .mui-radio input[type=number]{height: auto; padding: 0px;} 

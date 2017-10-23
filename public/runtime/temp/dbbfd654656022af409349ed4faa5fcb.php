@@ -1,10 +1,10 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:41:"../oscshop/admin/view/settings/other.html";i:1506516777;s:38:"../oscshop/admin/view/public/base.html";i:1506516777;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:41:"../oscshop/admin/view/settings/other.html";i:1507895017;s:38:"../oscshop/admin/view/public/base.html";i:1508162033;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta charset="utf-8" />
-		<title><?php echo \think\Config::get('SITE_NAME'); ?>-后台管理中心</title>
+		<title><?php echo \think\Config::get('SITE_NAME'); ?>-<?php echo lang('后台管理中心'); ?></title>
 
 		<meta name="description" content="<?php echo \think\Config::get('SITE_NAME'); ?>" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
@@ -76,7 +76,7 @@
 				<div class="navbar-header pull-left">
 					<a href="<?php echo url('admin/Index/index'); ?>" class="navbar-brand">
 						<small>							
-							<?php echo \think\Config::get('SITE_NAME'); ?> 后台管理
+							<?php echo \think\Config::get('SITE_NAME'); ?> <?php echo lang('后台管理'); ?>
 						</small>
 					</a>
 					<button class="pull-right navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#sidebar">
@@ -106,17 +106,17 @@
 							<ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
 								
 								<li>
-									<a target="_blank" href="<?php echo \think\Request::instance()->root(true); ?>">网站前台</a>
+									<a target="_blank" href="<?php echo \think\Request::instance()->root(true); ?>"><?php echo lang('网站前台'); ?></a>
 								</li>
 								
 								<li>
-									<a href="<?php echo url('admin/User/edit',array('id'=>session('user_auth.uid'))); ?>">修改密码</a>
+									<a href="<?php echo url('admin/User/edit',array('id'=>session('user_auth.uid'))); ?>"><?php echo lang('修改密码'); ?></a>
 								</li>
 								
-								<li><a href="<?php echo url('admin/Index/clear'); ?>">清空缓存</a></li>
+								<li><a href="<?php echo url('admin/Index/clear'); ?>"><?php echo lang('清空缓存'); ?></a></li>
 
 								<li>
-									<a href="<?php echo url('admin/Index/logout'); ?>">退出系统</a>
+									<a href="<?php echo url('admin/Index/logout'); ?>"><?php echo lang('退出系统'); ?></a>
 								</li>
 							</ul>
 						</li>
@@ -141,7 +141,7 @@
 					<li class="hover">
 						<a target="_blank" href="<?php echo \think\Request::instance()->root(true); ?>">
 							<i class="menu-icon fa fa fa-home fa-lg"></i>
-							<span class="menu-text">前台 </span>
+							<span class="menu-text"><?php echo lang('前台'); ?> </span>
 							<b class="arrow fa fa-angle-down"></b>
 						</a>
 						<b class="arrow"></b>
@@ -216,7 +216,7 @@
 <div class="row">
 	<div class="col-xs-12">	
 		<div class="form-horizontal">	
-			<legend>系统参数 </legend>
+			<legend><?php echo lang('系统参数'); ?> </legend>
 			
 			<div class="form-group">
 				<label class="col-sm-2 control-label no-padding-left">page_num </label>
@@ -228,37 +228,37 @@
 			</div>
 			
 			<div class="form-group">
-				<label class="col-sm-2 control-label no-padding-left">是否保存用户行为 </label>
+				<label class="col-sm-2 control-label no-padding-left"><?php echo lang('是否保存用户行为'); ?> </label>
 			<div class="col-sm-10">
 				<div class="clearfix">					
-						<label class="radio-inline"><input type="radio" checked="checked" value="true" name="storage_user_action">是</label>	
-						<label class="radio-inline"><input type="radio" value="false" name="storage_user_action">否</label>				
+						<label class="radio-inline"><input type="radio" checked="checked" value="true" name="storage_user_action"><?php echo lang('是'); ?></label>	
+						<label class="radio-inline"><input type="radio" value="false" name="storage_user_action"><?php echo lang('否'); ?></label>				
 				</div>
 			</div>
 			</div>
 			
 			<div class="form-group">
-				<label class="col-sm-2 control-label no-padding-left">会员登录状态持久化 </label>
+				<label class="col-sm-2 control-label no-padding-left"><?php echo lang('会员登录状态持久化'); ?> </label>
 			<div class="col-sm-10">
 				<div class="clearfix">					
-						<label class="radio-inline"><input type="radio" checked="checked" value="cookie" name="member_login_type">是</label>	
-						<label class="radio-inline"><input type="radio" value="session" name="member_login_type">否</label>				
+						<label class="radio-inline"><input type="radio" checked="checked" value="cookie" name="member_login_type"><?php echo lang('是'); ?></label>	
+						<label class="radio-inline"><input type="radio" value="session" name="member_login_type"><?php echo lang('否'); ?></label>				
 				</div>
 			</div>
 			</div>
 			
 			<div class="form-group">
-				<label class="col-sm-2 control-label no-padding-left">注册需要审核 </label>
+				<label class="col-sm-2 control-label no-padding-left"><?php echo lang('注册需要审核'); ?> </label>
 			<div class="col-sm-10">
 				<div class="clearfix">					
-						<label class="radio-inline"><input type="radio" checked="checked" value="1" name="reg_check">是</label>	
-						<label class="radio-inline"><input type="radio" value="0" name="reg_check">否</label>				
+						<label class="radio-inline"><input type="radio" checked="checked" value="1" name="reg_check"><?php echo lang('是'); ?></label>	
+						<label class="radio-inline"><input type="radio" value="0" name="reg_check"><?php echo lang('否'); ?></label>				
 				</div>
 			</div>
 			</div>
 			
 			<div class="form-group">
-				<label class="col-sm-2 control-label no-padding-left">默认会员组 </label>
+				<label class="col-sm-2 control-label no-padding-left"><?php echo lang('默认会员组'); ?> </label>
 			<div class="col-sm-10">
 				<div class="clearfix">					
 						<select class="form-control" name="default_group_id">							
@@ -271,9 +271,9 @@
 			</div>
 			
 		
-			<legend>单位参数 </legend>
+			<legend><?php echo lang('单位参数'); ?> </legend>
 			<div class="form-group">
-				<label class="col-sm-2 control-label no-padding-left">  长度单位 </label>
+				<label class="col-sm-2 control-label no-padding-left">  <?php echo lang('长度单位'); ?> </label>
 			<div class="col-sm-10">
 				<div class="clearfix">
 					<select class="form-control" name="length_id">							
@@ -286,7 +286,7 @@
 			</div>
 			
 			<div class="form-group">
-				<label class="col-sm-2 control-label no-padding-left">  重量单位 </label>
+				<label class="col-sm-2 control-label no-padding-left">  <?php echo lang('重量单位'); ?> </label>
 			<div class="col-sm-10">
 				<div class="clearfix">
 					<select class="form-control" name="weight_id">							
@@ -297,9 +297,9 @@
 				</div>
 			</div>
 			</div>
-			<legend>订单状态 </legend>
+			<legend><?php echo lang('订单状态'); ?> </legend>
 			<div class="form-group">			
-				<label class="col-sm-2 control-label no-padding-left"> 默认订单状态 </label>
+				<label class="col-sm-2 control-label no-padding-left"> <?php echo lang('默认订单状态'); ?> </label>
 			<div class="col-sm-10">
 				<div class="clearfix">
 					<select class="form-control" name="default_order_status_id">						
@@ -312,7 +312,7 @@
 			</div>
 			
 			<div class="form-group">			
-				<label class="col-sm-2 control-label no-padding-left"> 订单付款状态 </label>
+				<label class="col-sm-2 control-label no-padding-left"> <?php echo lang('订单付款状态'); ?> </label>
 			<div class="col-sm-10">
 				<div class="clearfix">
 					<select class="form-control" name="paid_order_status_id">						
@@ -325,7 +325,7 @@
 			</div>
 			
 			<div class="form-group">			
-				<label class="col-sm-2 control-label no-padding-left"> 订单完成状态 </label>
+				<label class="col-sm-2 control-label no-padding-left"> <?php echo lang('订单完成状态'); ?> </label>
 			<div class="col-sm-10">
 				<div class="clearfix">
 					<select class="form-control" name="complete_order_status_id">						
@@ -338,7 +338,7 @@
 			</div>
 			
 			<div class="form-group">			
-				<label class="col-sm-2 control-label no-padding-left"> 订单取消状态 </label>
+				<label class="col-sm-2 control-label no-padding-left"> <?php echo lang('订单取消状态'); ?> </label>
 			<div class="col-sm-10">
 				<div class="clearfix">
 					<select class="form-control" name="cancel_order_status_id">						
@@ -354,7 +354,7 @@
 		<div class="form-group">
 			<label class="col-sm-1 control-label no-padding-left"> </label>	
 			<div class="col-sm-11">
-				<button form="form" type="submit" id="send"  class="btn btn-sm btn-primary">提交</button>		
+				<button form="form" type="submit" id="send"  class="btn btn-sm btn-primary"><?php echo lang('提交'); ?></button>		
 			</div>
 		</div>
 	</div>

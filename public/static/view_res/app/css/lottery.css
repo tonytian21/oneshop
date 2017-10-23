@@ -1,0 +1,17 @@
+.lotteryitme{ padding: 20px 10px; border-bottom: 1px solid #eee;}
+.lotteryitme .fr,.lotteryitme .fl{padding: 0px; margin: 0px;}
+.lotteryitme .fl{ width: 80px;}
+.lotteryitme .fr{ margin-top: 15px;}
+.lotteryitme .fr img{border-radius: 50%;width: 50px;}
+.lotteryitme .fr.mui-icon-arrowright{ margin-top:35px;font-size: 18px; color: #CCCCCC;}
+.lotteryitme dt,.lotteryitme dd{ padding-left: 90px;}
+
+
+
+.cartitme{ padding: 20px 10px; border-bottom: 1px solid #eee;}
+.cartitme .fl{padding: 0px; margin: 0px;}
+.cartitme .fl{ width: 100px;}
+.cartitme dd .fr{margin-top: 5px;}
+.cartitme dt,.cartitme dd{ padding-left: 110px;}
+.cartitme dd.tags{ width: 100%; margin-top: 10px; padding: 0; text-align: center;}
+.cartitme dd.tags span{border: 1px solid #eee; border-radius: 5px;padding: 5px 10px; margin: 0 10px;}

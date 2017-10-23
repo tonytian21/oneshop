@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:42:"../oscshop/mobile/view/category/index.html";i:1505885316;s:39:"../oscshop/mobile/view/public/base.html";i:1505885316;s:41:"../oscshop/mobile/view/public/search.html";i:1505885316;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:42:"../oscshop/mobile/view/category/index.html";i:1507895017;s:39:"../oscshop/mobile/view/public/base.html";i:1506516777;s:41:"../oscshop/mobile/view/public/search.html";i:1507895017;}*/ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -23,7 +23,7 @@
 <body>
 
 <form class="search-w-box" onsubmit='searchdo(this);return false;'>
-	<input type="search" name="search" id="searchBox" targ="<?php echo url('search/index'); ?>" value="<?php echo input('param.search'); ?>"  class="search-w-input" placeholder="搜一搜，找到你想要的" /> 
+	<input type="search" name="search" id="searchBox" targ="<?php echo url('search/index'); ?>" value="<?php echo input('param.search'); ?>"  class="search-w-input" placeholder="<?php echo lang('搜一搜，找到你想要的'); ?>" /> 
 </form>
 <script>
 function searchdo(form) {
@@ -74,10 +74,10 @@ var _hmt = _hmt || [];
 
 
 <script>
-        // 对应分类id
+        // <?php echo lang('对应分类'); ?>id
         var cat = $('#cat').val() !== '' && parseInt($('#cat').val()) !== 0 ? parseInt($("#cat").val()) : parseInt($('.viewCatTopItem').eq(0).attr('data-catid'));
 
-        // 左侧按钮点击
+        // <?php echo lang('左侧按钮点击'); ?>
         $('.viewCatTopItem').bind({'touchend touchcancel mouseup': function (event) {
                 var node = $(this);
                 event.preventDefault();
@@ -99,11 +99,11 @@ var _hmt = _hmt || [];
 
         // window resizer
         $(window).bind('resize', function () {
-            // 调整高度
+            // <?php echo lang('调整高度'); ?>
             $('#viewCatRight').height($(window).height() - $('.search-w-box').height() - 35);
             $('#viewCatLeft').height($(window).height() - $('.search-w-box').height() - 20);
             $('#whiteWrap').height($('#viewCatRight').height() + 35);
-            // 调整圆图标宽高
+            // <?php echo lang('调整圆图标宽高'); ?>
             $('.subcat_item').each(function () {
                 $(this).css({
                     'height': $(this).width() + 25 + 'px'
@@ -111,12 +111,12 @@ var _hmt = _hmt || [];
             });
         }).resize();
 
-        // 默认load第一个分类的列表
+        // <?php echo lang('默认'); ?>load<?php echo lang('第一个分类的列表'); ?>
         $('.viewCatTopItem[data-catid="' + cat + '"]').eq(0).addClass('hov');
         fnLoadCatlist(cat);
 
         /**
-         *列表加载函数
+         *<?php echo lang('列表加载函数'); ?>
          * @param {type} cat
          * @returns {undefined}
          */
@@ -129,7 +129,7 @@ var _hmt = _hmt || [];
             
             $('#viewCatRight').load("<?php echo url('category/get_goods'); ?>" +'/id/'+ cat,
                     function () {
-                        // 调整圆图标宽高
+                        // <?php echo lang('调整圆图标宽高'); ?>
                         $('.subcat_item img').each(function () {
                             $(this).css({
                                 'height': $(this).width() + 'px'

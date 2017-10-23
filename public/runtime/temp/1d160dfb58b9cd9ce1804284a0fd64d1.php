@@ -1,10 +1,10 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:39:"../oscshop/admin/view/config/index.html";i:1505885316;s:38:"../oscshop/admin/view/public/base.html";i:1505885316;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:39:"../oscshop/admin/view/config/index.html";i:1507895017;s:38:"../oscshop/admin/view/public/base.html";i:1508162033;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta charset="utf-8" />
-		<title><?php echo \think\Config::get('SITE_NAME'); ?>-后台管理中心</title>
+		<title><?php echo \think\Config::get('SITE_NAME'); ?>-<?php echo lang('后台管理中心'); ?></title>
 
 		<meta name="description" content="<?php echo \think\Config::get('SITE_NAME'); ?>" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
@@ -76,7 +76,7 @@
 				<div class="navbar-header pull-left">
 					<a href="<?php echo url('admin/Index/index'); ?>" class="navbar-brand">
 						<small>							
-							<?php echo \think\Config::get('SITE_NAME'); ?> 后台管理
+							<?php echo \think\Config::get('SITE_NAME'); ?> <?php echo lang('后台管理'); ?>
 						</small>
 					</a>
 					<button class="pull-right navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#sidebar">
@@ -106,17 +106,17 @@
 							<ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
 								
 								<li>
-									<a target="_blank" href="<?php echo \think\Request::instance()->root(true); ?>">网站前台</a>
+									<a target="_blank" href="<?php echo \think\Request::instance()->root(true); ?>"><?php echo lang('网站前台'); ?></a>
 								</li>
 								
 								<li>
-									<a href="<?php echo url('admin/User/edit',array('id'=>session('user_auth.uid'))); ?>">修改密码</a>
+									<a href="<?php echo url('admin/User/edit',array('id'=>session('user_auth.uid'))); ?>"><?php echo lang('修改密码'); ?></a>
 								</li>
 								
-								<li><a href="<?php echo url('admin/Index/clear'); ?>">清空缓存</a></li>
+								<li><a href="<?php echo url('admin/Index/clear'); ?>"><?php echo lang('清空缓存'); ?></a></li>
 
 								<li>
-									<a href="<?php echo url('admin/Index/logout'); ?>">退出系统</a>
+									<a href="<?php echo url('admin/Index/logout'); ?>"><?php echo lang('退出系统'); ?></a>
 								</li>
 							</ul>
 						</li>
@@ -141,7 +141,7 @@
 					<li class="hover">
 						<a target="_blank" href="<?php echo \think\Request::instance()->root(true); ?>">
 							<i class="menu-icon fa fa fa-home fa-lg"></i>
-							<span class="menu-text">前台 </span>
+							<span class="menu-text"><?php echo lang('前台'); ?> </span>
 							<b class="arrow fa fa-angle-down"></b>
 						</a>
 						<b class="arrow"></b>
@@ -214,15 +214,15 @@
 	</h1>
 </div>	
 <div class="page-header">
-	<a href="<?php echo url('Config/add'); ?>" class="btn btn-primary">新增</a>
+	<a href="<?php echo url('Config/add'); ?>" class="btn btn-primary"><?php echo lang('新增'); ?></a>
 </div>		
 	
 <table class="table table-striped table-bordered table-hover search-form">
 	<thead>
-		<th><input name="name" type="text" placeholder="输入配置名称" value="<?php echo input('name'); ?>" /></th>
+		<th><input name="name" type="text" placeholder="<?php echo lang('输入配置名称'); ?>" value="<?php echo input('name'); ?>" /></th>
 		<th>    				
 			<select name="module">
-				<option value="">-所有分组-</option>
+				<option value="">-<?php echo lang('所有分组'); ?>-</option>
 				
 				<?php if(is_array($module) || $module instanceof \think\Collection || $module instanceof \think\Paginator): $i = 0; $__LIST__ = $module;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$config): $mod = ($i % 2 );++$i;?>
 					<option <?php if(input('module') == $config['module']): ?> selected="selected"<?php endif; ?> value="<?php echo $config['module']; ?>"><?php echo $config['module_name']; ?></option>
@@ -232,7 +232,7 @@
 			</select>
 		</th>
 		<th>
-			<a class="btn btn-primary" href="javascript:;" id="search" url="<?php echo url('Config/index'); ?>">查询</a>
+			<a class="btn btn-primary" href="javascript:;" id="search" url="<?php echo url('Config/index'); ?>"><?php echo lang('查询'); ?></a>
 		</th>
 	</thead>
 </table>	
@@ -243,11 +243,11 @@
 			<table class="table table-striped table-bordered table-hover">
 				<thead>
 					<tr>											
-						<th>名称</th>
-						<th>模块</th> 
-						<th>值</th>  		
-						<th>描述</th>  				
-						<th>操作</th>				
+						<th><?php echo lang('名称'); ?></th>
+						<th><?php echo lang('模块'); ?></th> 
+						<th><?php echo lang('值'); ?></th>  		
+						<th><?php echo lang('描述'); ?></th>  				
+						<th><?php echo lang('操作'); ?></th>				
 					</tr>
 				</thead>
 				<tbody>
@@ -272,7 +272,7 @@
 							<td colspan="20" class="page"><?php echo $list->render(); ?></td>
 						</tr>
 						<tr>
-							<td colspan="20">总计 <?php echo ($list->total() ?: "0"); ?> 个配置</td>
+							<td colspan="20"><?php echo lang('总计'); ?> <?php echo ($list->total() ?: "0"); ?> <?php echo lang('个配置'); ?></td>
 						</tr>
 				</tbody>
 				

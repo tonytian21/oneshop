@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:39:"../oscshop/mobile/view/index/index.html";i:1505885316;s:39:"../oscshop/mobile/view/public/base.html";i:1505885316;s:41:"../oscshop/mobile/view/public/search.html";i:1505885316;s:45:"../oscshop/mobile/view/public/footer-nav.html";i:1505885316;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:39:"../oscshop/mobile/view/index/index.html";i:1507895017;s:39:"../oscshop/mobile/view/public/base.html";i:1506516777;s:41:"../oscshop/mobile/view/public/search.html";i:1507895017;s:45:"../oscshop/mobile/view/public/footer-nav.html";i:1507895017;}*/ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -22,7 +22,7 @@
 <body>
 
 <form class="search-w-box" onsubmit='searchdo(this);return false;'>
-	<input type="search" name="search" id="searchBox" targ="<?php echo url('search/index'); ?>" value="<?php echo input('param.search'); ?>"  class="search-w-input" placeholder="搜一搜，找到你想要的" /> 
+	<input type="search" name="search" id="searchBox" targ="<?php echo url('search/index'); ?>" value="<?php echo input('param.search'); ?>"  class="search-w-input" placeholder="<?php echo lang('搜一搜，找到你想要的'); ?>" /> 
 </form>
 <script>
 function searchdo(form) {
@@ -62,10 +62,10 @@ function searchdo(form) {
 
 
 <footer id="footer">
-<div class="bottom_nav"><a class="nav_index <?php if(isset($flag) AND ($flag == 'index')): ?> hover<?php endif; ?>" href="<?php echo url('/mobile'); ?>"><i></i>购物</a>
-<a class="nav_search <?php if(isset($flag) AND ($flag == 'search')): ?> hover<?php endif; ?>" href="<?php echo url('category/index'); ?>"><i></i>搜索</a>	
-<a class="nav_shopcart" href="<?php echo url('cart/index'); ?>"><i></i>购物车</a>	
-<a class="nav_me <?php if(isset($flag) AND ($flag == 'user')): ?> hover<?php endif; ?>" href="<?php echo url('user/index'); ?>"><i></i>个人中心</a></div>		
+<div class="bottom_nav"><a class="nav_index <?php if(isset($flag) AND ($flag == 'index')): ?> hover<?php endif; ?>" href="<?php echo url('/mobile'); ?>"><i></i><?php echo lang('购物'); ?></a>
+<a class="nav_search <?php if(isset($flag) AND ($flag == 'search')): ?> hover<?php endif; ?>" href="<?php echo url('category/index'); ?>"><i></i><?php echo lang('搜索'); ?></a>	
+<a class="nav_shopcart" href="<?php echo url('cart/index'); ?>"><i></i><?php echo lang('购物车'); ?></a>	
+<a class="nav_me <?php if(isset($flag) AND ($flag == 'user')): ?> hover<?php endif; ?>" href="<?php echo url('user/index'); ?>"><i></i><?php echo lang('个人中心'); ?></a></div>		
 </footer>
 
 </body>
@@ -108,23 +108,23 @@ wx.ready(function(){
         	var url =site_url+'/mobile/';
         }           
    
-        //获取“分享到朋友圈”按钮点击状态及自定义分享内容接口
+        //<?php echo lang('获取“分享到朋友圈”按钮点击状态及自定义分享内容接口'); ?>
         wx.onMenuShareTimeline({
             title: '<?php echo config("SITE_NAME"); ?>',
             link: url, 
             imgUrl: site_url+'/uploads/<?php echo config("SITE_ICON"); ?>',
             success: function () {
-               pvShareCallback(url,'分享到朋友圈');
+               pvShareCallback(url,'<?php echo lang('分享到朋友圈'); ?>');
             }
         });
-        //获取“分享给朋友”按钮点击状态及自定义分享内容接口
+        //<?php echo lang('获取“分享给朋友”按钮点击状态及自定义分享内容接口'); ?>
         wx.onMenuShareAppMessage({
             title: '<?php echo config("SITE_NAME"); ?>',
             desc: '<?php echo config("SITE_NAME"); ?>',
             link: url,
             imgUrl: site_url+'/uploads/<?php echo config("SITE_ICON"); ?>',
             success: function () {
-              pvShareCallback(url,'分享给朋友');
+              pvShareCallback(url,'<?php echo lang('分享给朋友'); ?>');
             }
         });
         function pvShareCallback(url,type) {

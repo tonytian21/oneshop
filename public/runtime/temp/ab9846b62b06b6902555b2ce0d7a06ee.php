@@ -1,10 +1,10 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:43:"../oscshop/admin/view/settings/general.html";i:1505885316;s:38:"../oscshop/admin/view/public/base.html";i:1505885316;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:43:"../oscshop/admin/view/settings/general.html";i:1507895017;s:38:"../oscshop/admin/view/public/base.html";i:1508162033;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta charset="utf-8" />
-		<title><?php echo \think\Config::get('SITE_NAME'); ?>-后台管理中心</title>
+		<title><?php echo \think\Config::get('SITE_NAME'); ?>-<?php echo lang('后台管理中心'); ?></title>
 
 		<meta name="description" content="<?php echo \think\Config::get('SITE_NAME'); ?>" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
@@ -76,7 +76,7 @@
 				<div class="navbar-header pull-left">
 					<a href="<?php echo url('admin/Index/index'); ?>" class="navbar-brand">
 						<small>							
-							<?php echo \think\Config::get('SITE_NAME'); ?> 后台管理
+							<?php echo \think\Config::get('SITE_NAME'); ?> <?php echo lang('后台管理'); ?>
 						</small>
 					</a>
 					<button class="pull-right navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#sidebar">
@@ -106,17 +106,17 @@
 							<ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
 								
 								<li>
-									<a target="_blank" href="<?php echo \think\Request::instance()->root(true); ?>">网站前台</a>
+									<a target="_blank" href="<?php echo \think\Request::instance()->root(true); ?>"><?php echo lang('网站前台'); ?></a>
 								</li>
 								
 								<li>
-									<a href="<?php echo url('admin/User/edit',array('id'=>session('user_auth.uid'))); ?>">修改密码</a>
+									<a href="<?php echo url('admin/User/edit',array('id'=>session('user_auth.uid'))); ?>"><?php echo lang('修改密码'); ?></a>
 								</li>
 								
-								<li><a href="<?php echo url('admin/Index/clear'); ?>">清空缓存</a></li>
+								<li><a href="<?php echo url('admin/Index/clear'); ?>"><?php echo lang('清空缓存'); ?></a></li>
 
 								<li>
-									<a href="<?php echo url('admin/Index/logout'); ?>">退出系统</a>
+									<a href="<?php echo url('admin/Index/logout'); ?>"><?php echo lang('退出系统'); ?></a>
 								</li>
 							</ul>
 						</li>
@@ -141,7 +141,7 @@
 					<li class="hover">
 						<a target="_blank" href="<?php echo \think\Request::instance()->root(true); ?>">
 							<i class="menu-icon fa fa fa-home fa-lg"></i>
-							<span class="menu-text">前台 </span>
+							<span class="menu-text"><?php echo lang('前台'); ?> </span>
 							<b class="arrow fa fa-angle-down"></b>
 						</a>
 						<b class="arrow"></b>
@@ -218,7 +218,7 @@
 		<div class="form-horizontal">	
 		
 			<div class="form-group">
-				<label class="col-sm-2 control-label no-padding-left">网站ICON </label>
+				<label class="col-sm-2 control-label no-padding-left"><?php echo lang('网站'); ?>ICON </label>
 			<div class="col-sm-10">
 				 <div id="thumb">
 		                  <a href="#" id="thumb-icon" data-toggle="image" class="img-thumbnail">
@@ -234,7 +234,7 @@
 			</div>
 			
 			<div class="form-group">
-				<label class="col-sm-2 control-label no-padding-left"> * 网站标题 </label>
+				<label class="col-sm-2 control-label no-padding-left"> * <?php echo lang('网站标题'); ?> </label>
 			<div class="col-sm-10">
 				<div class="clearfix">
 					<input name="SITE_TITLE" class="col-xs-10 col-sm-10 form-control"  value="<?php echo (isset($common['SITE_TITLE']['value']) && ($common['SITE_TITLE']['value'] !== '')?$common['SITE_TITLE']['value']:''); ?>" type="text">
@@ -243,7 +243,7 @@
 			</div>
 			
 			<div class="form-group">
-				<label class="col-sm-2 control-label no-padding-left"> * 网站名称 </label>
+				<label class="col-sm-2 control-label no-padding-left"> * <?php echo lang('网站名称'); ?> </label>
 			<div class="col-sm-10">
 				<div class="clearfix">
 					<input name="SITE_NAME" class="col-xs-10 col-sm-10 form-control"  value="<?php echo (isset($common['SITE_NAME']['value']) && ($common['SITE_NAME']['value'] !== '')?$common['SITE_NAME']['value']:''); ?>" type="text">
@@ -252,7 +252,7 @@
 			</div>
 			
 			<div class="form-group">
-				<label class="col-sm-2 control-label no-padding-left"> * 网站描述 </label>
+				<label class="col-sm-2 control-label no-padding-left"> * <?php echo lang('网站描述'); ?> </label>
 			<div class="col-sm-10">
 				<div class="clearfix">
 					<textarea name="SITE_DESCRIPTION" id="input-meta-description2" class="form-control" rows="5" ><?php echo (isset($common['SITE_DESCRIPTION']['value']) && ($common['SITE_DESCRIPTION']['value'] !== '')?$common['SITE_DESCRIPTION']['value']:''); ?></textarea>
@@ -261,7 +261,7 @@
 			</div>
 			
 			<div class="form-group">
-				<label class="col-sm-2 control-label no-padding-left"> * 网站关键字 </label>
+				<label class="col-sm-2 control-label no-padding-left"> * <?php echo lang('网站关键字'); ?> </label>
 			<div class="col-sm-10">
 				<div class="clearfix">
 					<input name="SITE_KEYWORDS" class="col-xs-10 col-sm-10 form-control"  value="<?php echo (isset($common['SITE_KEYWORDS']['value']) && ($common['SITE_KEYWORDS']['value'] !== '')?$common['SITE_KEYWORDS']['value']:''); ?>" type="text">
@@ -271,7 +271,7 @@
 			
 			<div class="form-group">
 				<label class="col-sm-2 control-label" for="input-tag2">
-					网站slogan
+					<?php echo lang('网站'); ?>slogan
 				</label>
 			<div class="col-sm-10">
 				<div class="clearfix">
@@ -281,7 +281,7 @@
 			</div>
 			
 			<div class="form-group">
-				<label class="col-sm-2 control-label no-padding-left"> 网址 </label>
+				<label class="col-sm-2 control-label no-padding-left"> <?php echo lang('网址'); ?> </label>
 			<div class="col-sm-10">
 				<div class="clearfix">
 					<input name="SITE_URL" class="col-xs-10 col-sm-10 form-control"  value="<?php echo (isset($common['SITE_URL']['value']) && ($common['SITE_URL']['value'] !== '')?$common['SITE_URL']['value']:''); ?>" type="text">
@@ -290,7 +290,7 @@
 			</div>
 			
 			<div class="form-group">
-				<label class="col-sm-2 control-label no-padding-left">  备案号</label>
+				<label class="col-sm-2 control-label no-padding-left">  <?php echo lang('备案号'); ?></label>
 			<div class="col-sm-10">
 				<div class="clearfix">
 					<input name="SITE_ICP" class="col-xs-10 col-sm-10 form-control"  value="<?php echo (isset($common['SITE_ICP']['value']) && ($common['SITE_ICP']['value'] !== '')?$common['SITE_ICP']['value']:''); ?>" type="text">
@@ -299,7 +299,7 @@
 			</div>
 			
 			<div class="form-group">
-				<label class="col-sm-2 control-label no-padding-left">  邮箱</label>
+				<label class="col-sm-2 control-label no-padding-left">  <?php echo lang('邮箱'); ?></label>
 			<div class="col-sm-10">
 				<div class="clearfix">
 					<input name="EMAIL" class="col-xs-10 col-sm-10 form-control"  value="<?php echo (isset($common['EMAIL']['value']) && ($common['EMAIL']['value'] !== '')?$common['EMAIL']['value']:''); ?>" type="text">
@@ -308,7 +308,7 @@
 			</div>
 			
 			<div class="form-group">
-				<label class="col-sm-2 control-label no-padding-left">  联系电话</label>
+				<label class="col-sm-2 control-label no-padding-left">  <?php echo lang('联系电话'); ?></label>
 			<div class="col-sm-10">
 				<div class="clearfix">
 					<input name="TELEPHONE" class="col-xs-10 col-sm-10 form-control"  value="<?php echo (isset($common['TELEPHONE']['value']) && ($common['TELEPHONE']['value'] !== '')?$common['TELEPHONE']['value']:''); ?>" type="text">
@@ -317,11 +317,11 @@
 			</div>
 			
 			<div class="form-group">
-				<label class="col-sm-2 control-label no-padding-left"> 站点状态</label>
+				<label class="col-sm-2 control-label no-padding-left"> <?php echo lang('站点状态'); ?></label>
 			<div class="col-sm-10">
 				<div class="clearfix">					
-						<label class="radio-inline"><input <?php if($common['WEB_SITE_CLOSE']['value']==1){echo ' checked="checked"';} ?> type="radio" value="1" name="WEB_SITE_CLOSE">开启</label>	
-						<label class="radio-inline"><input <?php if($common['WEB_SITE_CLOSE']['value']==0){echo ' checked="checked"';} ?> type="radio" value="0" name="WEB_SITE_CLOSE">关闭</label>				
+						<label class="radio-inline"><input <?php if($common['WEB_SITE_CLOSE']['value']==1){echo ' checked="checked"';} ?> type="radio" value="1" name="WEB_SITE_CLOSE"><?php echo lang('开启'); ?></label>	
+						<label class="radio-inline"><input <?php if($common['WEB_SITE_CLOSE']['value']==0){echo ' checked="checked"';} ?> type="radio" value="0" name="WEB_SITE_CLOSE"><?php echo lang('关闭'); ?></label>				
 				</div>
 			</div>
 			</div>
@@ -331,7 +331,7 @@
 		<div class="form-group">
 			<label class="col-sm-1 control-label no-padding-left"> </label>	
 			<div class="col-sm-11">
-				<button form="form" type="submit" id="send"  class="btn btn-sm btn-primary">提交</button>		
+				<button form="form" type="submit" id="send"  class="btn btn-sm btn-primary"><?php echo lang('提交'); ?></button>		
 			</div>
 		</div>
 	</div>

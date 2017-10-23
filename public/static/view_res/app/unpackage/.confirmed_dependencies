@@ -1,0 +1,48 @@
+{
+  "home.html": {
+    "href": "home.html",
+    "resources": [
+      "js/mui.min.js",
+      "js/swiper.min.js",
+      "css/mui.css",
+      "css/swiper.css",
+      "css/style.css",
+      "img/43126997251066.jpg",
+      "img/18893713710495.jpg",
+      "img/99675852710485.jpg"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "glist.html": {
+    "href": "glist.html",
+    "resources": [
+      "js/mui.min.js",
+      "js/swiper.min.js",
+      "css/mui.css",
+      "css/iconfont.css",
+      "css/swiper.css",
+      "css/style.css"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "index.html": {
+    "href": "index.html",
+    "resources": [
+      "js/mui.min.js",
+      "js/swiper.min.js",
+      "js/jquery.js",
+      "css/mui.css",
+      "css/iconfont.css",
+      "css/swiper.css",
+      "css/style.css",
+      "js/app.js"
+    ],
+    "refer": [
+      "home.html",
+      "glist.html"
+    ],
+    "priority": 0
+  }
+}

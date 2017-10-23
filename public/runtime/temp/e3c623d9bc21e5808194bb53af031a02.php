@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:39:"../oscshop/mobile/view/login/login.html";i:1505885316;s:39:"../oscshop/mobile/view/public/base.html";i:1505885316;s:42:"../oscshop/mobile/view/public/top-nav.html";i:1505885316;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:39:"../oscshop/mobile/view/login/login.html";i:1507895017;s:39:"../oscshop/mobile/view/public/base.html";i:1506516777;s:42:"../oscshop/mobile/view/public/top-nav.html";i:1506516777;}*/ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -34,33 +34,33 @@
 <div id="container">
 	<div class="register">
 
-	    <div class="weui_cells_title">用户登录</div>
+	    <div class="weui_cells_title"><?php echo lang('用户登录'); ?></div>
 	    <div class="weui_cells weui_cells_form">
 	    	
 	        <div class="weui_cell">
 	            <div class="weui_cell_hd">
-	                <label for="" class="weui_label">用户名</label>
+	                <label for="" class="weui_label"><?php echo lang('用户名'); ?></label>
 	            </div>
 	            <div class="weui_cell_bd weui_cell_primary">
-	                <input name="username" class="weui_input" required="" placeholder="请输入用户名" type="text">
+	                <input name="username" class="weui_input" required="" placeholder="<?php echo lang('请输入用户名'); ?>" type="text">
 	            </div>            
 	        </div>
 	   
 	        <div class="weui_cell">
 	            <div class="weui_cell_hd">
-	                <label for="" class="weui_label">密码</label>
+	                <label for="" class="weui_label"><?php echo lang('密码'); ?></label>
 	            </div>
 	            <div class="weui_cell_bd weui_cell_primary">
-	                <input name="password" class="weui_input" required="" pattern="[\w]{6,}" notmatchtips="密码至少6位" placeholder="请输入密码" type="password">
+	                <input name="password" class="weui_input" required="" pattern="[\w]{6,}" notmatchtips="<?php echo lang('密码至少'); ?>6<?php echo lang('位'); ?>" placeholder="<?php echo lang('请输入密码'); ?>" type="password">
 	            </div>            
 	        </div>
 	        <?php if(1 == config('use_captcha')): ?>	
 	        <div class="weui_cell weui_vcode">
 			<div class="weui_cell_hd">
-				<label class="weui_label">验证码</label>
+				<label class="weui_label"><?php echo lang('验证码'); ?></label>
 			</div>
 			<div class="weui_cell_bd weui_cell_primary">
-				<input name="captcha" class="weui_input" type="text" placeholder="请输入验证码">
+				<input name="captcha" class="weui_input" type="text" placeholder="<?php echo lang('请输入验证码'); ?>">
 			</div>
 			<div class="weui_cell_ft">
 				<img class="verifyimg reloadverify" src="<?php echo url('login/verify'); ?>">
@@ -68,10 +68,10 @@
 			</div>
 			<?php endif; ?>
 	    </div>
-	    <p class="weui_cells_tips"><a href="<?php echo url('login/reg'); ?>">还没有账号？去注册</a></p>
+	    <p class="weui_cells_tips"><a href="<?php echo url('login/reg'); ?>"><?php echo lang('还没有账号？去注册'); ?></a></p>
 	
 	    <div class="weui_btn_area">
-	        <a class="weui_btn weui_btn_primary js_btn">登录</a>
+	        <a class="weui_btn weui_btn_primary js_btn"><?php echo lang('登录'); ?></a>
 	    </div>
 
 	</div>
@@ -97,7 +97,7 @@ var _hmt = _hmt || [];
 <script>
 
 <?php if(1==config('use_captcha')){ ?>
-	//刷新验证码
+	//<?php echo lang('刷新验证码'); ?>
 	var verifyimg = $(".verifyimg").attr("src");
     $(".reloadverify").click(function(){
         if( verifyimg.indexOf('?')>0){
